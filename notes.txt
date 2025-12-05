@@ -1,0 +1,18 @@
+Classes
+RabbitQuestion with properties like text, options, correctIndex, maybe a fact.
+RabbitQuiz holding an array of RabbitQuestion, tracking score, and exposing methods like start().
+
+Recursion
+Inside RabbitQuiz, write a function askQuestion(index: number) that calls itself with index + 1 until it reaches the end of the list.
+
+Asynchronous Functions
+Use Node’s readline/promises to ask questions with await to pause for user input.
+
+Exceptions
+When parsing answers, if the user enters something invalid (not a number, out of range), throw an error and catch it to show a friendly message while retrying.
+
+Lists
+The question bank is a simple array of RabbitQuestion instances.
+
+Terminal Output
+Use console.log for prompts, helpful hints, and final score.
