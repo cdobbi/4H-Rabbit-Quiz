@@ -483,7 +483,9 @@ function renderQuestion() {
 
 function recordAnswer(question, selectedIndex) {
     const chosen = selectedIndex >= 0 ? question.options[selectedIndex] : null;
+    const questionNumber = answersLog.length + 1;
     answersLog.push({
+        questionNumber,
         prompt: question.prompt,
         correct: question.options[question.correctIndex],
         chosen,
@@ -567,7 +569,7 @@ function renderSummary() {
         summaryNote.textContent = "Review these topics and try again:";
         misses.forEach((miss, index) => {
             const item = document.createElement("li");
-            item.innerHTML = `<strong>Q${index + 1}:</strong> ${miss.prompt}<br />Correct answer: ${miss.correct}`;
+            item.innerHTML = `<strong>Q${miss.questionNumber}:</strong> ${miss.prompt}<br />Correct answer: ${miss.correct}`;
             if (miss.chosen && miss.chosen !== miss.correct) {
                 item.innerHTML += `<br />You answered: ${miss.chosen}`;
             }
