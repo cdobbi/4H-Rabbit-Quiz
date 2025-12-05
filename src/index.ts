@@ -347,6 +347,78 @@ const allQuestions: RabbitQuestion[] = [
         ["Extra blue shading", "Warm red/orange richness", "White ticking"],
         1,
         "Rufus intensifies the orange/red tones, giving breeds like New Zealands their rich rust color."
+    ),
+    new RabbitQuestion(
+        "Which grooming tool lifts shed undercoat during a heavy molt without breaking guard hairs?",
+        ["Slicker brush with sharp wires", "Wide-tooth metal comb or rake", "Scissors to trim the coat"],
+        1,
+        "A wide-tooth rake reaches through the topcoat and teases out loose wool while leaving guard hairs intact."
+    ),
+    new RabbitQuestion(
+        "At what temperature should breeders begin emergency cooling steps such as frozen bottles or fans?",
+        ["65°F (18°C)", "75°F (24°C)", "85°F (29°C)"],
+        2,
+        "Once air temps climb into the mid-80s, rabbits struggle to dump heat, so active cooling prevents heat stress."
+    ),
+    new RabbitQuestion(
+        "What is the average gestation length for domestic rabbits?",
+        ["21 days", "31 days", "42 days"],
+        1,
+        "Most does kindle at 31 days give or take a day, so nest boxes go in around day 28."
+    ),
+    new RabbitQuestion(
+        "Which absorbent material works best in a drop pan under wire cages?",
+        ["Single layer of newspaper", "Kiln-dried pine pellets or shavings", "Clay-based cat litter"],
+        1,
+        "Pine pellets or shavings soak urine and control odor while remaining safe if chewed."
+    ),
+    new RabbitQuestion(
+        "How often should you scrub crocks or water bottles to prevent biofilm build-up?",
+        ["Monthly", "Weekly", "Daily or every other day"],
+        2,
+        "Biofilm forms fast; frequent washing keeps bacteria from colonizing drinking equipment."
+    ),
+    new RabbitQuestion(
+        "What is the safest first step when a rabbit shows signs of overheating?",
+        ["Immerse the rabbit in ice water", "Move it to a cool area and mist the ears with tepid water", "Feed chilled fruit treats"],
+        1,
+        "Cooling the ears with room-temperature water and airflow drops body temperature without shocking the rabbit."
+    ),
+    new RabbitQuestion(
+        "How long should new or returning rabbits remain in quarantine before joining the herd?",
+        ["7 days", "14 days", "30 days"],
+        2,
+        "A full 30-day quarantine lets hidden respiratory or GI issues appear before exposing the barn."
+    ),
+    new RabbitQuestion(
+        "What crude protein percentage do quality grower pellets supply for fryers and juniors?",
+        ["12%", "16%", "22%"],
+        1,
+        "Most breeders feed a balanced 16% pellet to support muscle growth without making rabbits overly fat."
+    ),
+    new RabbitQuestion(
+        "ARBA meat-pen fryers are typically shown at what individual weight range?",
+        ["3.0–3.5 lb (1.4–1.6 kg)", "4.5–5.5 lb (2.0–2.5 kg)", "6.5–7.0 lb (3.0–3.2 kg)"],
+        1,
+        "Uniform fryers around five pounds show prime muscling and dress out efficiently."
+    ),
+    new RabbitQuestion(
+        "How should you store bagged pellets to keep nutrients intact?",
+        ["Leave the bag open near the cages", "Seal them in a metal bin away from heat and sunlight", "Keep them beside lawn chemicals"],
+        1,
+        "A sealed metal bin in a cool, dry spot keeps pellets from absorbing moisture or odors."
+    ),
+    new RabbitQuestion(
+        "How often should you check nest boxes during the first few days after kindling?",
+        ["Once a week", "Once each day", "Only if you hear noise"],
+        1,
+        "Daily checks let you remove dead kits, add hay, and be sure everyone is warm and fed."
+    ),
+    new RabbitQuestion(
+        "What information belongs on a breeding record card to plan future pairings?",
+        ["Only the doe's name", "Breeding date, buck used, due date, and litter results", "A full pedigree for every ancestor"],
+        1,
+        "Recording dates, mates, and litter notes helps you spot productive crosses and schedule rebreeds."
     )
 ];
 

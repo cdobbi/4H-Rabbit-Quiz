@@ -26,6 +26,16 @@ h1 {
     font-size: 1.8rem;
 }
 
+.subtitle {
+    margin-top: -10px;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #7a8e87;
+    text-align: right;
+}
+
 #progress {
     margin-bottom: 4px;
 }

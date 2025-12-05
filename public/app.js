@@ -344,6 +344,118 @@ const allQuestions = [
         fact:
             "Rufus deepens the rusty orange tone, giving breeds like New Zealands a rich, warm color.",
     },
+    {
+        prompt: "Which grooming tool lifts shed undercoat during a heavy molt without breaking guard hairs?",
+        options: [
+            "Slicker brush with sharp wires",
+            "Wide-tooth metal comb or rake",
+            "Scissors to trim the coat",
+        ],
+        correctIndex: 1,
+        fact:
+            "A wide-tooth rake reaches through the topcoat and teases out loose wool while leaving guard hairs intact.",
+    },
+    {
+        prompt: "At what temperature should breeders begin emergency cooling steps such as frozen bottles or fans?",
+        options: [
+            "65°F (18°C)",
+            "75°F (24°C)",
+            "85°F (29°C)",
+        ],
+        correctIndex: 2,
+        fact:
+            "Once air temps climb into the mid-80s, rabbits struggle to dump heat, so active cooling prevents heat stress.",
+    },
+    {
+        prompt: "What is the average gestation length for domestic rabbits?",
+        options: ["21 days", "31 days", "42 days"],
+        correctIndex: 1,
+        fact:
+            "Most does kindle at 31 days give or take a day, so nest boxes go in around day 28.",
+    },
+    {
+        prompt: "Which absorbent material works best in a drop pan under wire cages?",
+        options: [
+            "Single layer of newspaper",
+            "Kiln-dried pine pellets or shavings",
+            "Clay-based cat litter",
+        ],
+        correctIndex: 1,
+        fact:
+            "Pine pellets or shavings soak urine and control odor while remaining safe if chewed.",
+    },
+    {
+        prompt: "How often should you scrub crocks or water bottles to prevent biofilm build-up?",
+        options: ["Monthly", "Weekly", "Daily or every other day"],
+        correctIndex: 2,
+        fact:
+            "Biofilm forms fast; frequent washing keeps bacteria from colonizing drinking equipment.",
+    },
+    {
+        prompt: "What is the safest first step when a rabbit shows signs of overheating?",
+        options: [
+            "Immerse the rabbit in ice water",
+            "Move it to a cool area and mist the ears with tepid water",
+            "Feed chilled fruit treats",
+        ],
+        correctIndex: 1,
+        fact:
+            "Cooling the ears with room-temperature water and airflow drops body temperature without shocking the rabbit.",
+    },
+    {
+        prompt: "How long should new or returning rabbits remain in quarantine before joining the herd?",
+        options: ["7 days", "14 days", "30 days"],
+        correctIndex: 2,
+        fact:
+            "A full 30-day quarantine lets hidden respiratory or GI issues appear before exposing the barn.",
+    },
+    {
+        prompt: "What crude protein percentage do quality grower pellets supply for fryers and juniors?",
+        options: ["12%", "16%", "22%"],
+        correctIndex: 1,
+        fact:
+            "Most breeders feed a balanced 16% pellet to support muscle growth without making rabbits overly fat.",
+    },
+    {
+        prompt: "ARBA meat-pen fryers are typically shown at what individual weight range?",
+        options: [
+            "3.0–3.5 lb (1.4–1.6 kg)",
+            "4.5–5.5 lb (2.0–2.5 kg)",
+            "6.5–7.0 lb (3.0–3.2 kg)",
+        ],
+        correctIndex: 1,
+        fact:
+            "Uniform fryers around five pounds show prime muscling and dress out efficiently.",
+    },
+    {
+        prompt: "How should you store bagged pellets to keep nutrients intact?",
+        options: [
+            "Leave the bag open near the cages",
+            "Seal them in a metal bin away from heat and sunlight",
+            "Keep them beside lawn chemicals",
+        ],
+        correctIndex: 1,
+        fact:
+            "A sealed metal bin in a cool, dry spot keeps pellets from absorbing moisture or odors.",
+    },
+    {
+        prompt: "How often should you check nest boxes during the first few days after kindling?",
+        options: ["Once a week", "Once each day", "Only if you hear noise"],
+        correctIndex: 1,
+        fact:
+            "Daily checks let you remove dead kits, add hay, and ensure everyone is warm and fed.",
+    },
+    {
+        prompt: "What information belongs on a breeding record card to plan future pairings?",
+        options: [
+            "Only the doe's name",
+            "Breeding date, buck used, due date, and litter results",
+            "A full pedigree for every ancestor",
+        ],
+        correctIndex: 1,
+        fact:
+            "Recording dates, mates, and litter notes helps you spot productive crosses and schedule rebreeds.",
+    },
 ];
 
 function pickRandomQuestions(pool, count) {
@@ -409,7 +521,6 @@ function loadStats() {
 
 let stats = loadStats();
 let answersLog = [];
-let celebrationTimer;
 
 function saveStats() {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(stats));
@@ -444,10 +555,6 @@ function stopCelebration() {
         return;
     }
     celebration.classList.remove("show");
-    if (celebrationTimer) {
-        clearTimeout(celebrationTimer);
-        celebrationTimer = undefined;
-    }
 }
 
 function playCelebration() {
@@ -455,12 +562,6 @@ function playCelebration() {
         return;
     }
     celebration.classList.add("show");
-    if (celebrationTimer) {
-        clearTimeout(celebrationTimer);
-    }
-    celebrationTimer = setTimeout(() => {
-        stopCelebration();
-    }, 1200);
 }
 
 function startNewGame() {
