@@ -103,6 +103,18 @@ const questions: RabbitQuestion[] = [
         "A simple Punnett square for two carriers predicts one out of four kits showing the recessive color."
     ),
     new RabbitQuestion(
+        "How does a kit receive its coat-color genes?",
+        ["Both copies come from the buck", "One allele comes from each parent", "Whichever grandparent had the darkest coat"],
+        1,
+        "Every kit inherits two alleles per locus—one from the sire, one from the dam—so pedigrees pair up genes."
+    ),
+    new RabbitQuestion(
+        "If a heterozygous agouti (Aa) is bred to a self-colored recessive (aa), what percent of kits show the dominant agouti pattern?",
+        ["0%", "25%", "50%"],
+        2,
+        "Half the kits receive the dominant A from the heterozygous parent, so about 50% present agouti."
+    ),
+    new RabbitQuestion(
         "What is the safest way to lift a show rabbit onto the table?",
         ["Grab ears only", "Support chest while cradling hindquarters", "Scoop from the belly and swing"],
         1,
@@ -161,6 +173,12 @@ const questions: RabbitQuestion[] = [
         ["All Aa, showing agouti", "All aa, showing self", "Half Aa and half aa"],
         0,
         "Agouti (A) is dominant, so every kit from AA × aa turns out agouti while carrying the recessive self gene."
+    ),
+    new RabbitQuestion(
+        "What phenotype results from pairing two homozygous recessive self rabbits (aa × aa)?",
+        ["All kits agouti", "All kits self-colored", "Half agouti and half self"],
+        1,
+        "With only recessive alleles available, every kit receives aa and expresses the self color."
     )
 ];
 
