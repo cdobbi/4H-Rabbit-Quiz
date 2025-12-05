@@ -47,8 +47,21 @@
             <span class="bunny bunny-k"></span>
             <span class="bunny bunny-l"></span>
         </div>
-        <button id="next" type="button" hidden>Next Question</button>
-        <button id="finished" type="button" hidden>Finished</button>
+        <div class="action-buttons">
+            <button id="next" type="button" hidden>Next Question</button>
+            <button id="finished" type="button" hidden>Finished</button>
+            <button id="exit" type="button" hidden>Exit</button>
+        </div>
+        <div id="farewell-modal" class="modal" hidden aria-hidden="true">
+            <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="farewell-title">
+                <h3 id="farewell-title">That was hopping fun!</h3>
+                <p id="farewell-message">Thanks for practicing rabbit husbandry with us. Hop back again soon!</p>
+                <button id="close-modal" type="button">Close</button>
+            </div>
+        </div>
+        <div id="reminder-toast" class="toast" hidden role="status" aria-live="polite">
+            We missed you! Come play again soon.
+        </div>
     </main>
     <script src="app.js" defer></script>
 </body>

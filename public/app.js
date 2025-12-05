@@ -494,11 +494,16 @@ const feedback = document.getElementById("feedback");
 const score = document.getElementById("score");
 const nextButton = document.getElementById("next");
 const finishedButton = document.getElementById("finished");
+const exitButton = document.getElementById("exit");
 const statsElement = document.getElementById("stats");
 const summarySection = document.getElementById("summary");
 const summaryNote = document.getElementById("summary-note");
 const summaryList = document.getElementById("summary-list");
 const celebration = document.getElementById("celebration");
+const farewellModal = document.getElementById("farewell-modal");
+const farewellMessage = document.getElementById("farewell-message");
+const closeModalButton = document.getElementById("close-modal");
+const reminderToast = document.getElementById("reminder-toast");
 
 const STORAGE_KEY = "rabbitHusbandryStats";
 const DEFAULT_STATS = { bestScore: 0, gamesPlayed: 0 };
@@ -540,6 +545,8 @@ let currentIndex = 0;
 let currentScore = 0;
 let waitingForNext = false;
 let readyToRestart = false;
+let pageWasHidden = false;
+let toastTimeoutId = null;
 
 function unlockQuiz() {
     answerInput.disabled = false;

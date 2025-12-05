@@ -96,9 +96,14 @@ button:disabled {
     cursor: not-allowed;
 }
 
-#next,
-#finished {
+.action-buttons {
     margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.action-buttons button {
     width: 100%;
 }
 
@@ -338,6 +343,63 @@ button:disabled {
 #celebration.show .firework,
 #celebration.show .bunny {
     animation-play-state: running;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 31, 28, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 40;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease;
+}
+
+.modal.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-content {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    width: min(420px, 90vw);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.modal-content p {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #123f32;
+    color: #ffffff;
+    padding: 12px 16px;
+    border-radius: 10px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+    z-index: 45;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @keyframes burst {
