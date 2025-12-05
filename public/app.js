@@ -493,6 +493,7 @@ const answerInput = document.getElementById("answer");
 const feedback = document.getElementById("feedback");
 const score = document.getElementById("score");
 const nextButton = document.getElementById("next");
+const finishedButton = document.getElementById("finished");
 const statsElement = document.getElementById("stats");
 const summarySection = document.getElementById("summary");
 const summaryNote = document.getElementById("summary-note");
@@ -572,6 +573,9 @@ function startNewGame() {
     readyToRestart = false;
     answersLog = [];
     stopCelebration();
+    if (finishedButton) {
+        finishedButton.hidden = true;
+    }
     if (summarySection) {
         summarySection.hidden = true;
     }
@@ -607,6 +611,9 @@ function renderQuestion() {
     answerInput.focus();
     waitingForNext = false;
     nextButton.hidden = true;
+    if (finishedButton) {
+        finishedButton.hidden = true;
+    }
     stopCelebration();
 }
 
@@ -674,6 +681,10 @@ function showCompletionState() {
     readyToRestart = true;
     nextButton.hidden = false;
     nextButton.textContent = "Play Again";
+    if (finishedButton) {
+        finishedButton.hidden = false;
+        finishedButton.textContent = "Finished";
+    }
     finalizeRound();
 }
 
@@ -730,5 +741,17 @@ nextButton.addEventListener("click", () => {
         showCompletionState();
     }
 });
+
+if (finishedButton) {
+    finishedButton.addEventListener("click", () => {
+        if (!readyToRestart) {
+            return;
+        }
+        stopCelebration();
+        feedback.textContent = "Great job today! Feel free to review your recap or close the quiz.";
+        setFeedbackState();
+        finishedButton.hidden = true;
+    });
+}
 
 startNewGame();
