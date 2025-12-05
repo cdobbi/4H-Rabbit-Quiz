@@ -26,6 +26,22 @@ h1 {
     font-size: 1.8rem;
 }
 
+#progress {
+    margin-bottom: 4px;
+}
+
+#stats {
+    margin-top: 0;
+    font-size: 0.95rem;
+    color: #48645a;
+}
+
+.question-card {
+    background: #f7fbf9;
+    border-radius: 12px;
+    padding: 16px;
+}
+
 ol {
     padding-left: 20px;
 }
@@ -78,4 +94,37 @@ button:disabled {
 #feedback {
     min-height: 1.2rem;
     margin-top: 12px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 200ms ease, color 200ms ease;
+}
+
+#feedback.correct {
+    background: #dff7ea;
+    color: #20553b;
+}
+
+#feedback.incorrect {
+    background: #fdecea;
+    color: #7d1f1f;
+}
+
+#summary {
+    margin-top: 20px;
+    border-radius: 12px;
+    border: 1px solid #dfe8e4;
+    padding: 16px;
+    background: #fdfefc;
+}
+
+#summary h2 {
+    margin-top: 0;
+}
+
+#summary-list {
+    padding-left: 18px;
+}
+
+#summary-list li {
+    margin-bottom: 8px;
 }

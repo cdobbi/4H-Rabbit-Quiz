@@ -11,18 +11,24 @@
 <body>
     <main>
         <h1>Rabbit Husbandry Quiz</h1>
-        <p id="progress"></p>
-        <section>
-            <p id="question"></p>
+        <p id="progress" aria-live="polite"></p>
+        <p id="stats" aria-live="polite"></p>
+        <section aria-label="Question" class="question-card">
+            <p id="question" aria-live="polite"></p>
             <ol id="options"></ol>
-            <div class="fact" id="fact"></div>
+            <div class="fact" id="fact" aria-live="polite"></div>
         </section>
         <form id="answer-form">
-            <input id="answer" type="number" min="1" placeholder="Type option number" required />
+            <input id="answer" type="number" min="1" placeholder="Type option number" aria-label="Answer option number" required />
             <button type="submit">Submit</button>
         </form>
-        <p id="feedback"></p>
+        <p id="feedback" role="status" aria-live="assertive"></p>
         <p id="score"></p>
+        <section id="summary" hidden tabindex="-1" aria-live="polite">
+            <h2>Round Recap</h2>
+            <p id="summary-note"></p>
+            <ol id="summary-list"></ol>
+        </section>
         <button id="next" type="button" hidden>Next Question</button>
     </main>
     <script src="app.js" defer></script>
