@@ -198,10 +198,13 @@ button:disabled {
 
 .bunny {
     --hop-scale: 1;
+    --body-highlight: #ffffff;
+    --body-base: #ffeef7;
+    --accent-color: #f5c4d6;
     width: 48px;
     height: 36px;
-    background: radial-gradient(circle at 30% 30%, #ffffff 20%, #ffeef7 70%);
-    border: 2px solid #f5c4d6;
+    background: radial-gradient(circle at 30% 30%, var(--body-highlight) 20%, var(--body-base) 75%);
+    border: 2px solid var(--accent-color);
     border-radius: 50% 50% 46% 46%;
     box-shadow: 0 12px 30px rgba(28, 56, 47, 0.2);
     animation: hop 1.25s ease-in-out infinite;
@@ -214,7 +217,7 @@ button:disabled {
     position: absolute;
     width: 16px;
     height: 32px;
-    background: linear-gradient(180deg, #ffeef5 0%, #ffd2e5 90%);
+    background: linear-gradient(180deg, var(--body-highlight) 0%, var(--body-base) 90%);
     border-radius: 50% 50% 0 0;
     top: -26px;
     box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.9);
@@ -265,6 +268,60 @@ button:disabled {
     bottom: 16%;
     left: 70%;
     animation-delay: 0.85s;
+}
+
+.bunny-g {
+    bottom: 34%;
+    left: 36%;
+    animation-delay: 0.95s;
+    --hop-scale: 0.88;
+    --body-base: #f2ffdf;
+    --accent-color: #c9ec7f;
+}
+
+.bunny-h {
+    bottom: 12%;
+    right: 35%;
+    animation-delay: 1.1s;
+    --hop-scale: 1.15;
+    --body-base: #e5f2ff;
+    --accent-color: #7ac5ff;
+}
+
+.bunny-i {
+    bottom: 20%;
+    left: 5%;
+    animation-delay: 1.25s;
+    --hop-scale: 0.92;
+    --body-base: #ffe7d8;
+    --accent-color: #ffb07a;
+}
+
+.bunny-j {
+    bottom: 27%;
+    right: 5%;
+    animation-delay: 1.35s;
+    --hop-scale: 1.05;
+    --body-base: #f0e2ff;
+    --accent-color: #c09dff;
+}
+
+.bunny-k {
+    bottom: 14%;
+    left: 58%;
+    animation-delay: 1.45s;
+    --hop-scale: 0.86;
+    --body-base: #e3fff6;
+    --accent-color: #6fe3c7;
+}
+
+.bunny-l {
+    bottom: 32%;
+    left: 82%;
+    animation-delay: 1.55s;
+    --hop-scale: 1.12;
+    --body-base: #fff3e1;
+    --accent-color: #ffcd82;
 }
 
 #celebration.show .firework,
