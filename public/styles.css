@@ -128,3 +128,164 @@ button:disabled {
 #summary-list li {
     margin-bottom: 8px;
 }
+
+#celebration {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    display: block;
+    opacity: 0;
+    transition: opacity 180ms ease;
+    z-index: 10;
+}
+
+#celebration.show {
+    opacity: 1;
+}
+
+.firework,
+.bunny {
+    position: absolute;
+    animation-play-state: paused;
+}
+
+.firework {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ffe066 0%, #ff8fa3 70%);
+    box-shadow: 0 0 20px rgba(255, 199, 94, 0.6);
+    animation: burst 1s ease-out infinite;
+}
+
+.firework::after,
+.firework::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 24px;
+    background: #fffbec;
+    transform-origin: center;
+}
+
+.firework::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.firework::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.firework-a {
+    top: 28%;
+    left: 32%;
+    animation-delay: 0s;
+}
+
+.firework-b {
+    top: 22%;
+    right: 26%;
+    animation-delay: 0.15s;
+}
+
+.firework-c {
+    top: 40%;
+    left: 58%;
+    animation-delay: 0.3s;
+}
+
+.bunny {
+    width: 32px;
+    height: 28px;
+    background: #ffffff;
+    border-radius: 50% 50% 40% 40%;
+    box-shadow: 0 6px 18px rgba(37, 64, 56, 0.15);
+    animation: hop 1.2s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+
+.bunny::before,
+.bunny::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 22px;
+    background: #ffffff;
+    border-radius: 50% 50% 0 0;
+    top: -18px;
+}
+
+.bunny::before {
+    left: 6px;
+}
+
+.bunny::after {
+    right: 6px;
+}
+
+.bunny::after {
+    transform: rotate(-6deg);
+}
+
+.bunny::before {
+    transform: rotate(6deg);
+}
+
+.bunny-a {
+    bottom: 22%;
+    left: 25%;
+}
+
+.bunny-b {
+    bottom: 18%;
+    left: 48%;
+    animation-delay: 0.2s;
+}
+
+.bunny-c {
+    bottom: 24%;
+    right: 20%;
+    animation-delay: 0.4s;
+}
+
+#celebration.show .firework,
+#celebration.show .bunny {
+    animation-play-state: running;
+}
+
+@keyframes burst {
+    0% {
+        transform: scale(0.3);
+        opacity: 0.2;
+    }
+
+    60% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+}
+
+@keyframes hop {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+
+    30% {
+        transform: translateY(-28px) scale(1.06);
+    }
+
+    60% {
+        transform: translateY(0) scale(0.96);
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
