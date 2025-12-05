@@ -189,9 +189,9 @@ function renderQuestion() {
     progress.textContent = `Question ${currentIndex + 1} of ${questions.length}`;
     questionText.textContent = current.prompt;
     optionsList.innerHTML = "";
-    current.options.forEach((option, idx) => {
+    current.options.forEach((option) => {
         const li = document.createElement("li");
-        li.textContent = `${idx + 1}. ${option}`;
+        li.textContent = option;
         optionsList.appendChild(li);
     });
     factBox.textContent = "";
@@ -228,7 +228,7 @@ form.addEventListener("submit", (event) => {
 
     currentIndex += 1;
     if (currentIndex < questions.length) {
-        setTimeout(renderQuestion, 1200);
+        setTimeout(renderQuestion, 3000);
     } else {
         feedback.textContent += " Quiz complete.";
         lockQuiz();

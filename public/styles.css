@@ -43,6 +43,10 @@ form {
     gap: 12px;
 }
 
+form + p {
+    margin-top: 12px;
+}
+
 input[type="number"] {
     flex: 1;
     padding: 10px;
@@ -64,6 +68,11 @@ button {
 button:disabled {
     background: #c3cfc9;
     cursor: not-allowed;
+}
+
+#next {
+    margin-top: 16px;
+    width: 100%;
 }
 
 #feedback {
