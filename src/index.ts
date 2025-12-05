@@ -22,7 +22,7 @@ export class RabbitQuiz {
     constructor(private questions: RabbitQuestion[]) { }
 
     async start(): Promise<void> {
-        console.log("🐇 Welcome to the Rabbit Care Quiz!");
+        console.log("🐇 Welcome to the Rabbit Husbandry Quiz!");
         await this.askQuestion(0);
         console.log(`Quiz complete! You scored ${this.score} out of ${this.questions.length}.`);
         this.reader.close();
@@ -70,8 +70,62 @@ export class RabbitQuiz {
     }
 }
 
+const QUESTIONS_PER_GAME = 10;
+
+function pickRandomQuestions<T>(pool: T[], count: number): T[] {
+    const copy = [...pool];
+    for (let i = copy.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+    return copy.slice(0, Math.min(count, copy.length));
+}
+
+function shuffleOptions(question: RabbitQuestion): RabbitQuestion {
+    const optionEntries = question.options.map((text, index) => ({ text, index }));
+    for (let i = optionEntries.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [optionEntries[i], optionEntries[j]] = [optionEntries[j], optionEntries[i]];
+    }
+    const shuffledOptions = optionEntries.map((entry) => entry.text);
+    const newCorrectIndex = optionEntries.findIndex((entry) => entry.index === question.correctIndex);
+    return new RabbitQuestion(
+        question.prompt,
+        shuffledOptions,
+        newCorrectIndex,
+        question.funFact
+    );
+}
+
+async function askToReplay(): Promise<boolean> {
+    const replayReader = readline.createInterface({ input, output });
+    while (true) {
+        const answer = (await replayReader.question("Play another round? (y/n): ")).trim().toLowerCase();
+        if (answer === "y" || answer === "yes") {
+            replayReader.close();
+            return true;
+        }
+        if (answer === "n" || answer === "no") {
+            replayReader.close();
+            return false;
+        }
+        console.log("Please enter y or n.");
+    }
+}
+
+async function runQuizLoop(): Promise<void> {
+    let playAgain = true;
+    while (playAgain) {
+        const selectedQuestions = pickRandomQuestions(allQuestions, QUESTIONS_PER_GAME).map(shuffleOptions);
+        const quiz = new RabbitQuiz(selectedQuestions);
+        await quiz.start();
+        playAgain = await askToReplay();
+    }
+    console.log("Thanks for training with the rabbit quiz!");
+}
+
 // Building the rabbit-care questions and starting the quiz.
-const questions: RabbitQuestion[] = [
+const allQuestions: RabbitQuestion[] = [
     new RabbitQuestion(
         "What should be the foundation of a meat or show rabbit's daily diet?",
         ["High-sugar treats", "Unlimited grass hay with balanced pellets", "Only fresh garden greens"],
@@ -179,15 +233,127 @@ const questions: RabbitQuestion[] = [
         ["All kits agouti", "All kits self-colored", "Half agouti and half self"],
         1,
         "With only recessive alleles available, every kit receives aa and expresses the self color."
+    ),
+    new RabbitQuestion(
+        "What is a common early sign of rabbit pasteurella (snuffles)?",
+        ["Bright clear eyes", "Sneezing with white nasal discharge", "Blue tongue"],
+        1,
+        "Pasteurella often shows up as frequent sneezing and a thick white mucus on the forepaws from wiping the nose."
+    ),
+    new RabbitQuestion(
+        "How can breeders reduce the risk of RHDV2 entering their rabbitry?",
+        ["Share water crocks between barns", "Quarantine new or returning rabbits for 30+ days", "Allow visitors to handle rabbits freely"],
+        1,
+        "A strict quarantine plus dedicated equipment helps keep rabbit hemorrhagic disease outside your herd."
+    ),
+    new RabbitQuestion(
+        "What is the recommended response when you suspect a contagious disease in your herd?",
+        ["Sell the rabbits quickly", "Isolate symptomatic rabbits and call a rabbit-savvy vet", "Ignore it until show season"],
+        1,
+        "Immediate isolation, sanitation, and professional guidance slow outbreaks and protect the rest of the colony."
+    ),
+    new RabbitQuestion(
+        "Which fur type features short guard hairs about half the length of normal coats, creating a plush texture?",
+        ["Satin", "Rex", "Wool"],
+        1,
+        "Rex fur stands upright with very short guard hairs, so it feels like velvet when you brush it backward."
+    ),
+    new RabbitQuestion(
+        "What ARBA body type describes meat breeds like the New Zealand or Californian?",
+        ["Semi-arch", "Commercial", "Compact"],
+        1,
+        "Commercial body types are deep and rounded for efficient muscling and ideal meat production."
+    ),
+    new RabbitQuestion(
+        "Flemish Giants are placed in which body type category?",
+        ["Semi-arch", "Full-arch", "Compact"],
+        0,
+        "Semi-arch breeds show a smooth rise starting behind the shoulders and peaking over the hips."
+    ),
+    new RabbitQuestion(
+        "Which ARBA grouping highlights primarily pet or fancy breeds such as Dutch or Holland Lops?",
+        ["Commercial", "Fancy", "Meat pen"],
+        1,
+        "Fancy breeds are exhibited for color, markings, and uniqueness rather than production traits."
+    ),
+    new RabbitQuestion(
+        "What does the term 'moon eye' describe in rabbit judging?",
+        ["A desirable blue sheen", "A milky white spot or film on the eye", "A copper-colored iris"],
+        1,
+        "Moon eye is a fault/possible disqualification caused by scarring, creating a white opaque area on the cornea."
+    ),
+    new RabbitQuestion(
+        "Which gene is required to produce blue-eyed white (BEW) rabbits?",
+        ["Vienna gene", "Agouti gene", "Steel gene"],
+        0,
+        "BEW color results from the Vienna (V) gene, while red-eyed white (REW) comes from the recessive c series."
+    ),
+    new RabbitQuestion(
+        "Which of the following is recognized as a giant breed by ARBA?",
+        ["Netherland Dwarf", "Flemish Giant", "Dutch"],
+        1,
+        "Flemish Giants regularly exceed 14 pounds and represent the giant category on show tables."
+    ),
+    new RabbitQuestion(
+        "Which breed consistently ranks among the most popular show entries in the U.S.?",
+        ["Holland Lop", "Silver Marten", "Belgian Hare"],
+        0,
+        "Holland Lops top ARBA registration numbers year after year thanks to their size and personality."
+    ),
+    new RabbitQuestion(
+        "How should you properly pose a full-arch breed like a Tan or Checkered Giant?",
+        ["Press the belly to the table", "Let it stand up on its own showing daylight under the body", "Stretch it flat like a rug"],
+        1,
+        "Full-arch breeds are posed on their feet with minimal handling so judges can see the arch from shoulders to hips."
+    ),
+    new RabbitQuestion(
+        "What is a 'charlie' in broken rabbits?",
+        ["A rabbit with no markings", "A broken pattern with less than 10% color", "Any rabbit with blue eyes"],
+        1,
+        "Charlies miss most of their spots because the En gene doubled up, so they usually have only ear and nose color."
+    ),
+    new RabbitQuestion(
+        "Which description best matches the broken pattern?",
+        ["Solid coat with ticking", "White base with patches of color and a butterfly nose marking", "Only agouti banding"],
+        1,
+        "Broken patterned rabbits show white fur plus distinct patches of color, ideally with a butterfly mark on the nose."
+    ),
+    new RabbitQuestion(
+        "How should a Harlequin rabbit's color be arranged?",
+        ["Random splashes everywhere", "Alternating bars or blocks of two colors on the face, body, and feet", "Solid body with colored ears"],
+        1,
+        "True Harlequins display alternating orange and black (or blue, chocolate, lilac) sections like a checkerboard."
+    ),
+    new RabbitQuestion(
+        "What does 'brindling' mean when judging coat color?",
+        ["Evenly mixed guard hairs and undercolor", "Random streaks of two colors mixed together", "A solid self color"],
+        1,
+        "Brindling is when two colors intermix in streaks, common in some Harlequins and treated as either a fault or allowance per breed."
+    ),
+    new RabbitQuestion(
+        "Which marking error will fault a Dutch rabbit?",
+        ["Straight saddle", "Uneven stop markings on the back feet", "Clean blaze"],
+        1,
+        "Dutch markings must be crisp; uneven white stops on the hind feet lower the score."
+    ),
+    new RabbitQuestion(
+        "What happens when a rabbit carries only one copy of the Vienna gene (Vv)?",
+        ["It becomes albino", "It shows Vienna marks like white paws or nose", "It turns rex coated"],
+        1,
+        "Single Vienna carriers often have cute white mittens or snips even though they are not full blue-eyed whites."
+    ),
+    new RabbitQuestion(
+        "What does the rufus modifier add to a rabbit's coat?",
+        ["Extra blue shading", "Warm red/orange richness", "White ticking"],
+        1,
+        "Rufus intensifies the orange/red tones, giving breeds like New Zealands their rich rust color."
     )
 ];
 
 // instantiate and start the quiz unless tests are running
 if (process.env.NODE_ENV !== "test") {
-    const quiz = new RabbitQuiz(questions);
-
-    quiz.start().catch((err) => {
-        console.error("Unexpected error starting the quiz:", err);
+    runQuizLoop().catch((err) => {
+        console.error("Unexpected error running the quiz:", err);
     });
 }
 

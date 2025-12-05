@@ -1,4 +1,6 @@
-const questions = [
+const QUESTIONS_PER_GAME = 10;
+
+const allQuestions = [
     {
         prompt: "What should be the foundation of a meat or show rabbit's daily diet?",
         options: [
@@ -166,7 +168,209 @@ const questions = [
         fact:
             "With only recessive alleles available, every kit receives aa and expresses the self color.",
     },
+    {
+        prompt: "What is a common early sign of rabbit pasteurella (snuffles)?",
+        options: ["Bright clear eyes", "Sneezing with white nasal discharge", "Blue tongue"],
+        correctIndex: 1,
+        fact:
+            "Snuffles often leaves thick white mucus on the forepaws where the rabbit wipes its nose.",
+    },
+    {
+        prompt: "How can breeders reduce the risk of RHDV2 entering their rabbitry?",
+        options: [
+            "Share water crocks between barns",
+            "Quarantine new or returning rabbits for 30+ days",
+            "Allow visitors to handle rabbits freely",
+        ],
+        correctIndex: 1,
+        fact:
+            "Dedicated equipment and strict quarantine help keep rabbit hemorrhagic disease outside your herd.",
+    },
+    {
+        prompt: "What is the recommended response when you suspect a contagious disease in your herd?",
+        options: [
+            "Sell the rabbits quickly",
+            "Isolate symptomatic rabbits and call a rabbit-savvy vet",
+            "Ignore it until show season",
+        ],
+        correctIndex: 1,
+        fact:
+            "Immediate isolation, sanitation, and veterinary guidance slow outbreaks and protect the colony.",
+    },
+    {
+        prompt:
+            "Which fur type features short guard hairs about half the length of normal coats, creating a plush texture?",
+        options: ["Satin", "Rex", "Wool"],
+        correctIndex: 1,
+        fact:
+            "Rex fur stands upright with very short guard hairs, so it feels like velvet when brushed backward.",
+    },
+    {
+        prompt: "What ARBA body type describes meat breeds like the New Zealand or Californian?",
+        options: ["Semi-arch", "Commercial", "Compact"],
+        correctIndex: 1,
+        fact:
+            "Commercial body types are deep and rounded for efficient muscling and meat production.",
+    },
+    {
+        prompt: "Flemish Giants are placed in which body type category?",
+        options: ["Semi-arch", "Full-arch", "Compact"],
+        correctIndex: 0,
+        fact:
+            "Semi-arch breeds rise slowly behind the shoulders and peak over the hips, just like the Flemish.",
+    },
+    {
+        prompt:
+            "Which ARBA grouping highlights primarily pet or fancy breeds such as Dutch or Holland Lops?",
+        options: ["Commercial", "Fancy", "Meat pen"],
+        correctIndex: 1,
+        fact:
+            "Fancy breeds are prized for their markings and personality rather than production traits.",
+    },
+    {
+        prompt: "What does the term 'moon eye' describe in rabbit judging?",
+        options: [
+            "A desirable blue sheen",
+            "A milky white spot or film on the eye",
+            "A copper-colored iris",
+        ],
+        correctIndex: 1,
+        fact:
+            "Moon eye is a fault or disqualification caused by scarring, leaving a white opaque corneal patch.",
+    },
+    {
+        prompt: "Which gene is required to produce blue-eyed white (BEW) rabbits?",
+        options: ["Vienna gene", "Agouti gene", "Steel gene"],
+        correctIndex: 0,
+        fact:
+            "BEW color expresses the Vienna (V) gene, while REW rabbits result from the recessive c series.",
+    },
+    {
+        prompt: "Which of the following is recognized as a giant breed by ARBA?",
+        options: ["Netherland Dwarf", "Flemish Giant", "Dutch"],
+        correctIndex: 1,
+        fact:
+            "Flemish Giants regularly exceed 14 pounds, placing them squarely in the giant breed class.",
+    },
+    {
+        prompt: "Which breed consistently ranks among the most popular show entries in the U.S.?",
+        options: ["Holland Lop", "Silver Marten", "Belgian Hare"],
+        correctIndex: 0,
+        fact:
+            "Holland Lops top ARBA registration lists due to their small size and friendly nature.",
+    },
+    {
+        prompt:
+            "How should you properly pose a full-arch breed like a Tan or Checkered Giant?",
+        options: [
+            "Press the belly to the table",
+            "Let it stand naturally showing daylight under the body",
+            "Stretch it flat like a rug",
+        ],
+        correctIndex: 1,
+        fact:
+            "Full-arch breeds are posed on their feet with minimal handling so the arch is visible from shoulders to hips.",
+    },
+    {
+        prompt: "What is a 'charlie' in broken patterned rabbits?",
+        options: [
+            "A rabbit with no markings",
+            "A broken pattern with less than 10% color",
+            "Any rabbit with blue eyes",
+        ],
+        correctIndex: 1,
+        fact:
+            "Charlies have two copies of the broken gene, so they show only tiny bits of color on ears or nose.",
+    },
+    {
+        prompt: "Which description best matches the broken pattern?",
+        options: [
+            "Solid coat with ticking",
+            "White base with patches of color and a butterfly nose marking",
+            "Only agouti banding",
+        ],
+        correctIndex: 1,
+        fact:
+            "Broken rabbits display white fur and colored patches, ideally with a butterfly marking on the muzzle.",
+    },
+    {
+        prompt: "How should a Harlequin rabbit's color be arranged?",
+        options: [
+            "Random splashes everywhere",
+            "Alternating bars or blocks of two colors on the face, body, and feet",
+            "Solid body with colored ears",
+        ],
+        correctIndex: 1,
+        fact:
+            "Harlequins look best with alternating orange and black (or blue/chocolate/lilac) sections like a checkerboard.",
+    },
+    {
+        prompt: "What does 'brindling' mean when judging coat color?",
+        options: [
+            "Evenly mixed guard hairs and undercolor",
+            "Random streaks of two colors mixed together",
+            "A solid self color",
+        ],
+        correctIndex: 1,
+        fact:
+            "Brindling is when two colors streak together, often seen in Harlequins and sometimes faulted if too heavy.",
+    },
+    {
+        prompt: "Which marking error will fault a Dutch rabbit?",
+        options: [
+            "Straight saddle",
+            "Uneven stop markings on the back feet",
+            "Clean blaze",
+        ],
+        correctIndex: 1,
+        fact:
+            "Dutch stops should be even; a longer white foot on one side drops the score.",
+    },
+    {
+        prompt: "What happens when a rabbit carries only one copy of the Vienna gene (Vv)?",
+        options: [
+            "It becomes albino",
+            "It shows Vienna marks like white paws or nose",
+            "It turns rex coated",
+        ],
+        correctIndex: 1,
+        fact:
+            "Vienna carriers often have white mittens or a snip even though they are not full blue-eyed whites.",
+    },
+    {
+        prompt: "What does the rufus modifier add to a rabbit's coat?",
+        options: ["Extra blue shading", "Warm red/orange richness", "White ticking"],
+        correctIndex: 1,
+        fact:
+            "Rufus deepens the rusty orange tone, giving breeds like New Zealands a rich, warm color.",
+    },
 ];
+
+function pickRandomQuestions(pool, count) {
+    const copy = [...pool];
+    for (let i = copy.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+    return copy.slice(0, Math.min(count, copy.length));
+}
+
+function shuffleOptions(question) {
+    const optionEntries = question.options.map((text, index) => ({ text, index }));
+    for (let i = optionEntries.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [optionEntries[i], optionEntries[j]] = [optionEntries[j], optionEntries[i]];
+    }
+    const shuffledOptions = optionEntries.map((entry) => entry.text);
+    const newCorrectIndex = optionEntries.findIndex((entry) => entry.index === question.correctIndex);
+    return {
+        ...question,
+        options: shuffledOptions,
+        correctIndex: newCorrectIndex,
+    };
+}
+
+let questions = [];
 
 const questionText = document.getElementById("question");
 const optionsList = document.getElementById("options");
@@ -176,9 +380,32 @@ const form = document.getElementById("answer-form");
 const answerInput = document.getElementById("answer");
 const feedback = document.getElementById("feedback");
 const score = document.getElementById("score");
+const nextButton = document.getElementById("next");
 
 let currentIndex = 0;
 let currentScore = 0;
+let waitingForNext = false;
+let readyToRestart = false;
+
+function unlockQuiz() {
+    answerInput.disabled = false;
+    form.querySelector("button").disabled = false;
+}
+
+function lockQuiz() {
+    answerInput.disabled = true;
+    form.querySelector("button").disabled = true;
+}
+
+function startNewGame() {
+    questions = pickRandomQuestions(allQuestions, QUESTIONS_PER_GAME).map(shuffleOptions);
+    currentIndex = 0;
+    currentScore = 0;
+    waitingForNext = false;
+    readyToRestart = false;
+    unlockQuiz();
+    renderQuestion();
+}
 
 function renderQuestion() {
     if (!questionText || !optionsList || !factBox || !progress) {
@@ -199,15 +426,15 @@ function renderQuestion() {
     score.textContent = `Score: ${currentScore} / ${questions.length}`;
     answerInput.value = "";
     answerInput.focus();
-}
-
-function lockQuiz() {
-    answerInput.disabled = true;
-    form.querySelector("button").disabled = true;
+    waitingForNext = false;
+    nextButton.hidden = true;
 }
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
+    if (waitingForNext || readyToRestart) {
+        return;
+    }
     const current = questions[currentIndex];
     const value = Number(answerInput.value) - 1;
 
@@ -226,13 +453,37 @@ form.addEventListener("submit", (event) => {
     factBox.textContent = current.fact || "";
     score.textContent = `Score: ${currentScore} / ${questions.length}`;
 
+    waitingForNext = true;
+    nextButton.hidden = false;
+    nextButton.textContent = currentIndex === questions.length - 1 ? "Finish" : "Next Question";
+});
+
+function showCompletionState() {
+    feedback.textContent += " Quiz complete.";
+    factBox.textContent = "Thanks for practicing rabbit husbandry!";
+    lockQuiz();
+    waitingForNext = false;
+    readyToRestart = true;
+    nextButton.hidden = false;
+    nextButton.textContent = "Play Again";
+}
+
+nextButton.addEventListener("click", () => {
+    if (readyToRestart) {
+        startNewGame();
+        return;
+    }
+
+    if (!waitingForNext) {
+        return;
+    }
+
     currentIndex += 1;
     if (currentIndex < questions.length) {
-        setTimeout(renderQuestion, 3000);
+        renderQuestion();
     } else {
-        feedback.textContent += " Quiz complete.";
-        lockQuiz();
+        showCompletionState();
     }
 });
 
-renderQuestion();
+startNewGame();
