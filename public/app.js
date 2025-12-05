@@ -580,9 +580,8 @@ function startNewGame() {
     readyToRestart = false;
     answersLog = [];
     stopCelebration();
-    if (finishedButton) {
-        finishedButton.hidden = true;
-    }
+    hideFarewellModal();
+    hideReminderToast();
     if (summarySection) {
         summarySection.hidden = true;
     }
@@ -593,6 +592,7 @@ function startNewGame() {
         summaryNote.textContent = "";
     }
     unlockQuiz();
+    updateActionButtons();
     renderQuestion();
 }
 
@@ -617,10 +617,8 @@ function renderQuestion() {
     answerInput.value = "";
     answerInput.focus();
     waitingForNext = false;
-    nextButton.hidden = true;
-    if (finishedButton) {
-        finishedButton.hidden = true;
-    }
+    readyToRestart = false;
+    updateActionButtons();
     stopCelebration();
 }
 
@@ -643,6 +641,89 @@ function setFeedbackState(isCorrect) {
     } else if (isCorrect === false) {
         feedback.classList.add("incorrect");
     }
+}
+
+function updateActionButtons() {
+    if (!nextButton) {
+        return;
+    }
+    const shouldShowNext = waitingForNext || readyToRestart;
+    nextButton.hidden = !shouldShowNext;
+    if (readyToRestart) {
+        nextButton.textContent = "Play Again";
+    } else if (questions.length && currentIndex === questions.length - 1) {
+        nextButton.textContent = "Finish";
+    } else {
+        nextButton.textContent = "Next Question";
+    }
+
+    const shouldShowSecondary = shouldShowNext;
+    if (finishedButton) {
+        finishedButton.hidden = !shouldShowSecondary;
+        finishedButton.textContent = readyToRestart ? "Finished" : "Finish Round";
+    }
+    if (exitButton) {
+        exitButton.hidden = !shouldShowSecondary;
+        exitButton.textContent = readyToRestart ? "Exit" : "Exit Early";
+    }
+}
+
+function showFarewellModal(message) {
+    if (!farewellModal || !farewellMessage || !closeModalButton) {
+        return;
+    }
+    farewellMessage.textContent = message;
+    farewellModal.hidden = false;
+    farewellModal.setAttribute("aria-hidden", "false");
+    requestAnimationFrame(() => {
+        farewellModal.classList.add("show");
+        closeModalButton.focus();
+    });
+}
+
+function hideFarewellModal() {
+    if (!farewellModal) {
+        return;
+    }
+    farewellModal.classList.remove("show");
+    farewellModal.setAttribute("aria-hidden", "true");
+    setTimeout(() => {
+        if (farewellModal.classList.contains("show")) {
+            return;
+        }
+        farewellModal.hidden = true;
+    }, 220);
+}
+
+function showReminderToast(message = "We missed you! Come play again, please.") {
+    if (!reminderToast) {
+        return;
+    }
+    reminderToast.textContent = message;
+    reminderToast.hidden = false;
+    requestAnimationFrame(() => reminderToast.classList.add("show"));
+    if (toastTimeoutId) {
+        clearTimeout(toastTimeoutId);
+    }
+    toastTimeoutId = setTimeout(() => {
+        hideReminderToast();
+    }, 5000);
+}
+
+function hideReminderToast() {
+    if (!reminderToast) {
+        return;
+    }
+    reminderToast.classList.remove("show");
+    if (toastTimeoutId) {
+        clearTimeout(toastTimeoutId);
+        toastTimeoutId = null;
+    }
+    setTimeout(() => {
+        if (!reminderToast.classList.contains("show")) {
+            reminderToast.hidden = true;
+        }
+    }, 220);
 }
 
 form.addEventListener("submit", (event) => {
@@ -676,23 +757,18 @@ form.addEventListener("submit", (event) => {
     score.textContent = `Score: ${currentScore} / ${questions.length}`;
 
     waitingForNext = true;
-    nextButton.hidden = false;
-    nextButton.textContent = currentIndex === questions.length - 1 ? "Finish" : "Next Question";
+    updateActionButtons();
 });
 
 function showCompletionState() {
     feedback.textContent += " Quiz complete.";
-    factBox.textContent = "Thanks for practicing rabbit husbandry!";
+    factBox.textContent = "";
     lockQuiz();
     waitingForNext = false;
     readyToRestart = true;
-    nextButton.hidden = false;
-    nextButton.textContent = "Play Again";
-    if (finishedButton) {
-        finishedButton.hidden = false;
-        finishedButton.textContent = "Finished";
-    }
+    updateActionButtons();
     finalizeRound();
+    showFarewellModal("Thanks for practicing rabbit husbandry!");
 }
 
 function finalizeRound() {
@@ -751,14 +827,63 @@ nextButton.addEventListener("click", () => {
 
 if (finishedButton) {
     finishedButton.addEventListener("click", () => {
-        if (!readyToRestart) {
+        if (readyToRestart) {
+            showFarewellModal("We hope you had fun! Hop back in anytime.");
             return;
         }
-        stopCelebration();
-        feedback.textContent = "Great job today! Feel free to review your recap or close the quiz.";
-        setFeedbackState();
-        finishedButton.hidden = true;
+        if (!waitingForNext) {
+            return;
+        }
+        showCompletionState();
     });
 }
+
+if (exitButton) {
+    exitButton.addEventListener("click", () => {
+        if (!waitingForNext && !readyToRestart) {
+            return;
+        }
+        lockQuiz();
+        waitingForNext = false;
+        readyToRestart = true;
+        stopCelebration();
+        feedback.textContent = "Taking a break? We will be ready when you are.";
+        setFeedbackState();
+        updateActionButtons();
+        showFarewellModal("We already miss you! Come play again soon.");
+    });
+}
+
+if (closeModalButton) {
+    closeModalButton.addEventListener("click", () => {
+        hideFarewellModal();
+    });
+}
+
+if (farewellModal) {
+    farewellModal.addEventListener("click", (event) => {
+        if (event.target === farewellModal) {
+            hideFarewellModal();
+        }
+    });
+}
+
+if (reminderToast) {
+    reminderToast.addEventListener("click", () => {
+        hideReminderToast();
+    });
+}
+
+document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") {
+        pageWasHidden = true;
+        hideReminderToast();
+        return;
+    }
+    if (pageWasHidden) {
+        pageWasHidden = false;
+        showReminderToast("We missed you! Come play again, please.");
+    }
+});
 
 startNewGame();

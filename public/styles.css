@@ -107,6 +107,18 @@ button:disabled {
     width: 100%;
 }
 
+#finished,
+#exit {
+    background: #dbe6e1;
+    color: #2d3d38;
+    border: 1px solid #c0d2ca;
+}
+
+#finished:hover,
+#exit:hover {
+    background: #cfded7;
+}
+
 #feedback {
     min-height: 1.2rem;
     margin-top: 12px;
