@@ -197,12 +197,14 @@ button:disabled {
 }
 
 .bunny {
-    width: 32px;
-    height: 28px;
-    background: #ffffff;
-    border-radius: 50% 50% 40% 40%;
-    box-shadow: 0 6px 18px rgba(37, 64, 56, 0.15);
-    animation: hop 1.2s ease-in-out infinite;
+    --hop-scale: 1;
+    width: 48px;
+    height: 36px;
+    background: radial-gradient(circle at 30% 30%, #ffffff 20%, #ffeef7 70%);
+    border: 2px solid #f5c4d6;
+    border-radius: 50% 50% 46% 46%;
+    box-shadow: 0 12px 30px rgba(28, 56, 47, 0.2);
+    animation: hop 1.25s ease-in-out infinite;
     transform-origin: center bottom;
 }
 
@@ -210,27 +212,22 @@ button:disabled {
 .bunny::after {
     content: "";
     position: absolute;
-    width: 10px;
-    height: 22px;
-    background: #ffffff;
+    width: 16px;
+    height: 32px;
+    background: linear-gradient(180deg, #ffeef5 0%, #ffd2e5 90%);
     border-radius: 50% 50% 0 0;
-    top: -18px;
+    top: -26px;
+    box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.9);
 }
 
 .bunny::before {
-    left: 6px;
+    left: 8px;
+    transform: rotate(10deg);
 }
 
 .bunny::after {
-    right: 6px;
-}
-
-.bunny::after {
-    transform: rotate(-6deg);
-}
-
-.bunny::before {
-    transform: rotate(6deg);
+    right: 8px;
+    transform: rotate(-10deg);
 }
 
 .bunny-a {
@@ -248,6 +245,26 @@ button:disabled {
     bottom: 24%;
     right: 20%;
     animation-delay: 0.4s;
+}
+
+.bunny-d {
+    bottom: 28%;
+    left: 12%;
+    animation-delay: 0.55s;
+    --hop-scale: 0.9;
+}
+
+.bunny-e {
+    bottom: 30%;
+    right: 8%;
+    animation-delay: 0.7s;
+    --hop-scale: 1.1;
+}
+
+.bunny-f {
+    bottom: 16%;
+    left: 70%;
+    animation-delay: 0.85s;
 }
 
 #celebration.show .firework,
@@ -274,18 +291,18 @@ button:disabled {
 
 @keyframes hop {
     0% {
-        transform: translateY(0) scale(1);
+        transform: translateY(0) scale(var(--hop-scale, 1));
     }
 
     30% {
-        transform: translateY(-28px) scale(1.06);
+        transform: translateY(-32px) scale(calc(var(--hop-scale, 1) + 0.08));
     }
 
     60% {
-        transform: translateY(0) scale(0.96);
+        transform: translateY(0) scale(calc(var(--hop-scale, 1) - 0.05));
     }
 
     100% {
-        transform: translateY(0) scale(1);
+        transform: translateY(0) scale(var(--hop-scale, 1));
     }
 }
