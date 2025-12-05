@@ -1,7 +1,7 @@
 import readline from "readline/promises";
 import { stdin as input, stdout as output } from "node:process";
 
-class RabbitQuestion {
+export class RabbitQuestion {
     constructor(
         public prompt: string,
         public options: string[],
@@ -15,7 +15,7 @@ class RabbitQuestion {
 }
 
 // This handles recursion (askQuestion calls itself), async input, and exception handling via parseAnswer.
-class RabbitQuiz {
+export class RabbitQuiz {
     private score = 0;
     private reader = readline.createInterface({ input, output });
 
@@ -116,12 +116,14 @@ const questions: RabbitQuestion[] = [
     )
 ];
 
-// instantiate and start the quiz
-const quiz = new RabbitQuiz(questions);
+// instantiate and start the quiz unless tests are running
+if (process.env.NODE_ENV !== "test") {
+    const quiz = new RabbitQuiz(questions);
 
-quiz.start().catch((err) => {
-    console.error("Unexpected error starting the quiz:", err);
-});
+    quiz.start().catch((err) => {
+        console.error("Unexpected error starting the quiz:", err);
+    });
+}
 
 // Explanation:
 // prompt is the question text.

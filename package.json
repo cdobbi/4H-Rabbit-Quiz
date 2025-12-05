@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -16,7 +18,7 @@
     "url": "https://github.com/cdobbi/4H-Rabbit-Quiz/issues"
   },
   "homepage": "https://github.com/cdobbi/4H-Rabbit-Quiz#readme",
-  "description": "",
+  "description": "Command-line rabbit husbandry quiz built with TypeScript",
   "devDependencies": {
     "@types/jest": "^30.0.0",
     "jest": "^30.2.0",
