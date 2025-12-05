@@ -381,6 +381,46 @@ const answerInput = document.getElementById("answer");
 const feedback = document.getElementById("feedback");
 const score = document.getElementById("score");
 const nextButton = document.getElementById("next");
+const statsElement = document.getElementById("stats");
+const summarySection = document.getElementById("summary");
+const summaryNote = document.getElementById("summary-note");
+const summaryList = document.getElementById("summary-list");
+
+const STORAGE_KEY = "rabbitHusbandryStats";
+const DEFAULT_STATS = { bestScore: 0, gamesPlayed: 0 };
+
+function loadStats() {
+    try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) {
+            return { ...DEFAULT_STATS };
+        }
+        const parsed = JSON.parse(raw);
+        return {
+            bestScore: Number(parsed.bestScore) || 0,
+            gamesPlayed: Number(parsed.gamesPlayed) || 0,
+        };
+    } catch (error) {
+        console.warn("Unable to load stats", error);
+        return { ...DEFAULT_STATS };
+    }
+}
+
+let stats = loadStats();
+let answersLog = [];
+
+function saveStats() {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(stats));
+}
+
+function updateStatsDisplay() {
+    if (!statsElement) {
+        return;
+    }
+    statsElement.textContent = `Best Score: ${stats.bestScore}/${QUESTIONS_PER_GAME} | Games Played: ${stats.gamesPlayed}`;
+}
+
+updateStatsDisplay();
 
 let currentIndex = 0;
 let currentScore = 0;
@@ -403,6 +443,16 @@ function startNewGame() {
     currentScore = 0;
     waitingForNext = false;
     readyToRestart = false;
+    answersLog = [];
+    if (summarySection) {
+        summarySection.hidden = true;
+    }
+    if (summaryList) {
+        summaryList.innerHTML = "";
+    }
+    if (summaryNote) {
+        summaryNote.textContent = "";
+    }
     unlockQuiz();
     renderQuestion();
 }
@@ -423,11 +473,31 @@ function renderQuestion() {
     });
     factBox.textContent = "";
     feedback.textContent = "";
+    feedback.classList.remove("correct", "incorrect");
     score.textContent = `Score: ${currentScore} / ${questions.length}`;
     answerInput.value = "";
     answerInput.focus();
     waitingForNext = false;
     nextButton.hidden = true;
+}
+
+function recordAnswer(question, selectedIndex) {
+    const chosen = selectedIndex >= 0 ? question.options[selectedIndex] : null;
+    answersLog.push({
+        prompt: question.prompt,
+        correct: question.options[question.correctIndex],
+        chosen,
+        isCorrect: selectedIndex === question.correctIndex,
+    });
+}
+
+function setFeedbackState(isCorrect) {
+    feedback.classList.remove("correct", "incorrect");
+    if (isCorrect === true) {
+        feedback.classList.add("correct");
+    } else if (isCorrect === false) {
+        feedback.classList.add("incorrect");
+    }
 }
 
 form.addEventListener("submit", (event) => {
@@ -440,14 +510,18 @@ form.addEventListener("submit", (event) => {
 
     if (Number.isNaN(value) || value < 0 || value >= current.options.length) {
         feedback.textContent = "Enter a valid option number.";
+        setFeedbackState();
         return;
     }
 
+    recordAnswer(current, value);
     if (value === current.correctIndex) {
         feedback.textContent = "Correct!";
         currentScore += 1;
+        setFeedbackState(true);
     } else {
         feedback.textContent = `Answer: ${current.options[current.correctIndex]}`;
+        setFeedbackState(false);
     }
 
     factBox.textContent = current.fact || "";
@@ -466,6 +540,43 @@ function showCompletionState() {
     readyToRestart = true;
     nextButton.hidden = false;
     nextButton.textContent = "Play Again";
+    finalizeRound();
+}
+
+function finalizeRound() {
+    stats.gamesPlayed += 1;
+    if (currentScore > stats.bestScore) {
+        stats.bestScore = currentScore;
+    }
+    saveStats();
+    updateStatsDisplay();
+    renderSummary();
+}
+
+function renderSummary() {
+    if (!summarySection || !summaryList || !summaryNote) {
+        return;
+    }
+
+    const misses = answersLog.filter((entry) => !entry.isCorrect);
+    summaryList.innerHTML = "";
+
+    if (misses.length === 0) {
+        summaryNote.textContent = "Perfect round! Every question was correct.";
+    } else {
+        summaryNote.textContent = "Review these topics and try again:";
+        misses.forEach((miss, index) => {
+            const item = document.createElement("li");
+            item.innerHTML = `<strong>Q${index + 1}:</strong> ${miss.prompt}<br />Correct answer: ${miss.correct}`;
+            if (miss.chosen && miss.chosen !== miss.correct) {
+                item.innerHTML += `<br />You answered: ${miss.chosen}`;
+            }
+            summaryList.appendChild(item);
+        });
+    }
+
+    summarySection.hidden = false;
+    summarySection.focus();
 }
 
 nextButton.addEventListener("click", () => {
