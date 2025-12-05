@@ -113,6 +113,54 @@ const questions: RabbitQuestion[] = [
         ["Even feed intake and manure output", "How loudly they thump", "How much they chew cage bars"],
         0,
         "Consistent appetite and droppings reveal gut health long before a rabbit shows sickness."
+    ),
+    new RabbitQuestion(
+        "On a 1–5 body condition scale, what score do breeders target for a show-ready rabbit?",
+        ["2 (too lean)", "3 (ideal)", "5 (overweight)",],
+        1,
+        "A score of 3 means the loin feels smooth with a slight layer of flesh—perfect for posing on the table."
+    ),
+    new RabbitQuestion(
+        "What is the single most critical nutrient to keep available at all times?",
+        ["Pellets", "Fresh water", "Salt wheels"],
+        1,
+        "Rabbits can skip a meal briefly, but lack of water stops digestion and milk production almost immediately."
+    ),
+    new RabbitQuestion(
+        "At how many days post-breeding can you gently palpate to confirm pregnancy?",
+        ["5–7 days", "10–14 days", "25–30 days"],
+        1,
+        "Around day 12 the embryos feel like grapes or walnuts, giving breeders an early read on conception."
+    ),
+    new RabbitQuestion(
+        "When should medium-breed kits typically be weaned?",
+        ["3 weeks", "6–7 weeks", "10 weeks"],
+        1,
+        "Weaning at six weeks lets kits eat pellets well while still benefiting from the doe's immunity."
+    ),
+    new RabbitQuestion(
+        "Which ventilation practice best limits ammonia buildup in a rabbitry?",
+        ["Keep every window shut", "Use fans to pull in fresh air and exhaust stale air", "Spray cages with water daily"],
+        1,
+        "Constant airflow whisks away moisture and ammonia so respiratory systems stay clear."
+    ),
+    new RabbitQuestion(
+        "How many generations must appear on a pedigree for ARBA registration?",
+        ["Two", "Three", "Five"],
+        1,
+        "Registration requires a three-generation pedigree showing parents, grandparents, and great-grandparents."
+    ),
+    new RabbitQuestion(
+        "Why does ARBA require a permanent tattoo in the rabbit's left ear?",
+        ["It is decorative", "It is the official identification that matches show paperwork", "It shows the rabbit's variety"],
+        1,
+        "The tattoo number ties the rabbit to its entry card and pedigree during shows and registrations."
+    ),
+    new RabbitQuestion(
+        "A homozygous agouti buck (AA) bred to a self-colored doe (aa) will produce kits with which genotype?",
+        ["All Aa, showing agouti", "All aa, showing self", "Half Aa and half aa"],
+        0,
+        "Agouti (A) is dominant, so every kit from AA × aa turns out agouti while carrying the recessive self gene."
     )
 ];
 
