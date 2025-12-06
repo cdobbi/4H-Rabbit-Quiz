@@ -159,7 +159,10 @@ button:disabled {
 
 #celebration {
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 30%;
     pointer-events: none;
     display: block;
     opacity: 0;
@@ -171,57 +174,9 @@ button:disabled {
     opacity: 1;
 }
 
-.firework,
 .bunny {
     position: absolute;
     animation-play-state: paused;
-}
-
-.firework {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: radial-gradient(circle, #ffe066 0%, #ff8fa3 70%);
-    box-shadow: 0 0 20px rgba(255, 199, 94, 0.6);
-    animation: burst 1s ease-out infinite;
-}
-
-.firework::after,
-.firework::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 2px;
-    height: 24px;
-    background: #fffbec;
-    transform-origin: center;
-}
-
-.firework::before {
-    transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.firework::after {
-    transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-.firework-a {
-    top: 28%;
-    left: 32%;
-    animation-delay: 0s;
-}
-
-.firework-b {
-    top: 22%;
-    right: 26%;
-    animation-delay: 0.15s;
-}
-
-.firework-c {
-    top: 40%;
-    left: 58%;
-    animation-delay: 0.3s;
 }
 
 .bunny {
@@ -262,44 +217,44 @@ button:disabled {
 }
 
 .bunny-a {
-    bottom: 22%;
+    bottom: 48%;
     left: 25%;
 }
 
 .bunny-b {
-    bottom: 18%;
+    bottom: 44%;
     left: 48%;
     animation-delay: 0.2s;
 }
 
 .bunny-c {
-    bottom: 24%;
+    bottom: 50%;
     right: 20%;
     animation-delay: 0.4s;
 }
 
 .bunny-d {
-    bottom: 28%;
+    bottom: 55%;
     left: 12%;
     animation-delay: 0.55s;
     --hop-scale: 0.9;
 }
 
 .bunny-e {
-    bottom: 30%;
+    bottom: 58%;
     right: 8%;
     animation-delay: 0.7s;
     --hop-scale: 1.1;
 }
 
 .bunny-f {
-    bottom: 16%;
+    bottom: 42%;
     left: 70%;
     animation-delay: 0.85s;
 }
 
 .bunny-g {
-    bottom: 34%;
+    bottom: 60%;
     left: 36%;
     animation-delay: 0.95s;
     --hop-scale: 0.88;
@@ -308,7 +263,7 @@ button:disabled {
 }
 
 .bunny-h {
-    bottom: 12%;
+    bottom: 46%;
     right: 35%;
     animation-delay: 1.1s;
     --hop-scale: 1.15;
@@ -317,7 +272,7 @@ button:disabled {
 }
 
 .bunny-i {
-    bottom: 20%;
+    bottom: 52%;
     left: 5%;
     animation-delay: 1.25s;
     --hop-scale: 0.92;
@@ -326,7 +281,7 @@ button:disabled {
 }
 
 .bunny-j {
-    bottom: 27%;
+    bottom: 57%;
     right: 5%;
     animation-delay: 1.35s;
     --hop-scale: 1.05;
@@ -335,7 +290,7 @@ button:disabled {
 }
 
 .bunny-k {
-    bottom: 14%;
+    bottom: 45%;
     left: 58%;
     animation-delay: 1.45s;
     --hop-scale: 0.86;
@@ -344,7 +299,7 @@ button:disabled {
 }
 
 .bunny-l {
-    bottom: 32%;
+    bottom: 63%;
     left: 82%;
     animation-delay: 1.55s;
     --hop-scale: 1.12;
@@ -352,7 +307,6 @@ button:disabled {
     --accent-color: #ffcd82;
 }
 
-#celebration.show .firework,
 #celebration.show .bunny {
     animation-play-state: running;
 }
@@ -412,23 +366,6 @@ button:disabled {
 .toast.show {
     opacity: 1;
     transform: translateY(0);
-}
-
-@keyframes burst {
-    0% {
-        transform: scale(0.3);
-        opacity: 0.2;
-    }
-
-    60% {
-        transform: scale(1);
-        opacity: 1;
-    }
-
-    100% {
-        transform: scale(0.1);
-        opacity: 0;
-    }
 }
 
 @keyframes hop {
