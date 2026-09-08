@@ -9,7 +9,17 @@
 }
 
 body {
-    background: linear-gradient(135deg, #eef6fa, #d8ebf4);
+    background-color: #d8ebf4;
+    background-image:
+        radial-gradient(ellipse 7px 17px at 16px 12px, rgba(40, 120, 157, 0.15) 96%, transparent 100%),
+        radial-gradient(ellipse 7px 17px at 31px 12px, rgba(40, 120, 157, 0.15) 96%, transparent 100%),
+        radial-gradient(ellipse 22px 16px at 24px 36px, rgba(40, 120, 157, 0.12) 96%, transparent 100%),
+        radial-gradient(circle 10px at 47px 29px, rgba(40, 120, 157, 0.12) 96%, transparent 100%),
+        radial-gradient(circle 3px at 49px 26px, #d8ebf4 96%, transparent 100%),
+        linear-gradient(135deg, rgba(238, 246, 250, 0.88), rgba(216, 235, 244, 0.88));
+    background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+    background-size: 84px 84px, 84px 84px, 84px 84px, 84px 84px, 84px 84px, cover;
+    background-attachment: fixed;
 }
 
 main {
