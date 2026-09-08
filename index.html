@@ -5,30 +5,90 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Rabbit Husbandry Quiz</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="study.css" />
 </head>
 
 <body>
     <main>
         <h1>Rabbit Husbandry Quiz</h1>
-        <p class="subtitle">Cuniculture</p>
+        <p class="subtitle">Cuniculture Study Lab</p>
+        <p class="study-notice">Independent 4-H practice questions, not official ARBA licensing-test items. Verify Registrar material
+            against the current ARBA Standard of Perfection and official resources.</p>
+        <section class="study-setup" aria-label="Round settings">
+            <div class="control-group">
+                <label for="study-mode">Study mode</label>
+                <select id="study-mode">
+                    <option value="learn">Learn</option>
+                    <option value="exam">Exam</option>
+                    <option value="review">Missed questions</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="round-size">Questions</label>
+                <select id="round-size">
+                    <option value="5">5</option>
+                    <option value="10" selected>10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="study-track">Study path</label>
+                <select id="study-track">
+                    <option value="mixed" selected>All study paths</option>
+                    <option value="cloverbud">Cloverbuds</option>
+                    <option value="junior">Juniors</option>
+                    <option value="intermediate">Intermediates</option>
+                    <option value="senior">Seniors</option>
+                    <option value="registrar">Registrar study guide</option>
+                </select>
+            </div>
+            <fieldset id="topic-filters">
+                <legend>Topics</legend>
+                <label data-topic="husbandry"><input type="checkbox" value="Husbandry" checked /> Husbandry</label>
+                <label data-topic="health-biosecurity"><input type="checkbox" value="Health & Biosecurity" checked /> Health</label>
+                <label data-topic="genetics"><input type="checkbox" value="Genetics" checked /> Genetics</label>
+                <label data-topic="arba-procedures"><input type="checkbox" value="ARBA Procedures" checked /> ARBA</label>
+                <label data-topic="breeds-judging"><input type="checkbox" value="Breeds & Judging" checked /> Judging</label>
+            </fieldset>
+            <button id="start-round" type="button">Start New Round</button>
+        </section>
         <p id="progress" aria-live="polite"></p>
         <p id="stats" aria-live="polite"></p>
-        <section aria-label="Question" class="question-card">
+        <section aria-label="Question" class="question-card" id="question-card">
+            <p id="question-meta" class="question-meta"></p>
             <p id="question" aria-live="polite"></p>
-            <ol id="options"></ol>
+            <div id="options" class="answer-options" role="group" aria-label="Answer choices"></div>
             <div class="fact" id="fact" aria-live="polite"></div>
         </section>
-        <form id="answer-form">
-            <input id="answer" type="number" min="1" placeholder="Type option number" aria-label="Answer option number" required />
-            <button type="submit">Submit</button>
-        </form>
+        <p class="shortcut-note">Tip: press 1, 2, or 3 to choose an answer.</p>
+        <fieldset id="confidence" class="confidence">
+            <legend>Confidence check <button id="confidence-help" class="help-button" type="button"
+                    aria-label="Why rate confidence?">?</button></legend>
+            <label><input type="radio" name="confidence" value="guessing" /> Guessing</label>
+            <label><input type="radio" name="confidence" value="somewhat" /> Somewhat sure</label>
+            <label><input type="radio" name="confidence" value="certain" /> Certain</label>
+        </fieldset>
         <p id="feedback" role="status" aria-live="assertive"></p>
         <p id="score"></p>
+        <div class="action-buttons">
+            <button id="next" type="button" hidden>Next Question</button>
+            <button id="finished" type="button" hidden>Finished</button>
+            <button id="exit" type="button" hidden>Exit</button>
+        </div>
         <section id="summary" hidden tabindex="-1" aria-live="polite">
             <h2>Round Recap</h2>
             <p id="summary-note"></p>
+            <p id="readiness"></p>
             <ol id="summary-list"></ol>
+        </section>
+        <section id="study-history" hidden aria-live="polite">
+            <h2>Study History</h2>
+            <p id="history-summary"></p>
+            <button id="print-report" type="button">Print Study Report</button>
         </section>
         <div id="celebration" aria-hidden="true">
             <span class="bunny bunny-a"></span>
@@ -44,11 +104,6 @@
             <span class="bunny bunny-k"></span>
             <span class="bunny bunny-l"></span>
         </div>
-        <div class="action-buttons">
-            <button id="next" type="button" hidden>Next Question</button>
-            <button id="finished" type="button" hidden>Finished</button>
-            <button id="exit" type="button" hidden>Exit</button>
-        </div>
         <div id="farewell-modal" class="modal" hidden aria-hidden="true">
             <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="farewell-title">
                 <h3 id="farewell-title">That was hopping fun!</h3>
@@ -58,6 +113,15 @@
         </div>
         <div id="reminder-toast" class="toast" hidden role="status" aria-live="polite">
             We missed you! Come play again soon.
+        </div>
+        <div id="confidence-modal" class="modal" hidden aria-hidden="true">
+            <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="confidence-title">
+                <h3 id="confidence-title">Why rate confidence?</h3>
+                <p>This is not part of your score. It helps separate a lucky guess from knowledge you can explain.</p>
+                <p>A missed answer marked “Certain” is especially useful to review because it may reveal a rule or term that needs a second
+                    look.</p>
+                <button id="close-confidence-modal" type="button">Got it</button>
+            </div>
         </div>
     </main>
     <script src="app.js" defer></script>

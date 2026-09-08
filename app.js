@@ -458,6 +458,8 @@ const allQuestions = [
     },
 ];
 
+/* Legacy controller retained below for reference while the study controller is initialized after it. */
+/*
 function pickRandomQuestions(pool, count) {
     const copy = [...pool];
     for (let i = copy.length - 1; i > 0; i -= 1) {
@@ -488,8 +490,6 @@ const questionText = document.getElementById("question");
 const optionsList = document.getElementById("options");
 const factBox = document.getElementById("fact");
 const progress = document.getElementById("progress");
-const form = document.getElementById("answer-form");
-const answerInput = document.getElementById("answer");
 const feedback = document.getElementById("feedback");
 const score = document.getElementById("score");
 const nextButton = document.getElementById("next");
@@ -886,4 +886,371 @@ document.addEventListener("visibilitychange", () => {
     }
 });
 
+startNewGame();
+*/
+
+const TOPICS = ["Husbandry", "Health & Biosecurity", "Genetics", "ARBA Procedures", "Breeds & Judging"];
+const DEFAULT_STATS = { bestScore: 0, gamesPlayed: 0, history: [], misses: [], topicResults: {} };
+const STORAGE_KEY = "rabbitHusbandryStudyStats";
+
+const scenarioQuestions = [
+    {
+        id: "scenario-returning-rabbit",
+        topic: "Health & Biosecurity",
+        source: "Practice scenario | Biosecurity guidance",
+        prompt: "A rabbit returns from a show and begins sneezing two days later. What should happen before it rejoins the herd?",
+        options: ["Return it to its usual cage and watch it", "Isolate it, use dedicated equipment, and contact a rabbit-savvy vet", "Give treats to improve its appetite"],
+        correctIndex: 1,
+        fact: "Returning rabbits should be quarantined, monitored, and handled with separate equipment to protect the herd.",
+    },
+    {
+        id: "scenario-registration-tattoo",
+        topic: "ARBA Procedures",
+        source: "Practice scenario | ARBA procedures",
+        prompt: "At a registration appointment, the rabbit's left-ear tattoo does not match its paperwork. What is the correct next step?",
+        options: ["Ask the registrar to use the paperwork anyway", "Pause the registration and resolve the identification discrepancy", "Tattoo a new number over the existing tattoo at the table"],
+        correctIndex: 1,
+        fact: "Permanent identification and paperwork must agree. Resolve discrepancies before proceeding with registration.",
+    },
+    {
+        id: "scenario-heat-stress",
+        topic: "Husbandry",
+        source: "Practice scenario | General husbandry guidance",
+        prompt: "The rabbitry is 88°F (31°C), and a rabbit is breathing rapidly with warm ears. What is the best immediate action?",
+        options: ["Move it to a cooler space, provide airflow, and use tepid water on the ears", "Submerge it in ice water", "Wait until evening to see whether it improves"],
+        correctIndex: 0,
+        fact: "Act promptly and cool gradually. Seek veterinary guidance if signs are severe or do not improve.",
+    },
+];
+
+function inferTopic(question) {
+    const text = `${question.prompt} ${question.fact || ""}`.toLowerCase();
+    if (/gene|genotype|allele|agouti|chinchilla|vienna|rufus|harlequin|brindling|broken pattern|charlie/.test(text)) return "Genetics";
+    if (/arba|registration|tattoo|pedigree|meat-pen|meat pen/.test(text)) return "ARBA Procedures";
+    if (/pasteurella|snuffles|rhdv|contagious|quarantine|biofilm/.test(text)) return "Health & Biosecurity";
+    if (/body type|fur type|moon eye|breed|pose|dutch rabbit|flemish/.test(text)) return "Breeds & Judging";
+    return "Husbandry";
+}
+
+function inferStudyTrack(question) {
+    const text = `${question.prompt} ${question.fact || ""}`.toLowerCase();
+    if (/arba|registration|tattoo|pedigree|meat-pen|meat pen|body type|moon eye|full-arch|fur type|dutch rabbit/.test(text)) {
+        return "registrar";
+    }
+    if (/pasteurella|snuffles|rhdv|contagious|quarantine|palpate|homozygous|heterozygous|genotype|allele|vienna|charlie/.test(text)) {
+        return "senior";
+    }
+    if (/gene|agouti|chinchilla|rufus|harlequin|brindling|kindling|gestation|breeding record/.test(text)) {
+        return "intermediate";
+    }
+    if (/daily diet|fresh water|lift a show rabbit|daily observation|wire floors|trim nails/.test(text)) {
+        return "cloverbud";
+    }
+    return "junior";
+}
+
+const questionBank = [...allQuestions, ...scenarioQuestions].map((question, index) => ({
+    ...question,
+    id: question.id || `question-${index + 1}`,
+    topic: question.topic || inferTopic(question),
+    studyTrack: question.studyTrack || inferStudyTrack(question),
+    source: question.source || (inferTopic(question) === "ARBA Procedures" ? "Practice question | ARBA procedures" : "Practice question | General husbandry guidance"),
+    reviewStatus: question.reviewStatus || "Practice content - verify current guidance",
+}));
+
+const questionText = document.getElementById("question");
+const questionMeta = document.getElementById("question-meta");
+const questionCard = document.getElementById("question-card");
+const optionsList = document.getElementById("options");
+const factBox = document.getElementById("fact");
+const progress = document.getElementById("progress");
+const celebration = document.getElementById("celebration");
+const form = document.getElementById("answer-form");
+const answerInput = document.getElementById("answer");
+const feedback = document.getElementById("feedback");
+const score = document.getElementById("score");
+const nextButton = document.getElementById("next");
+const finishedButton = document.getElementById("finished");
+const exitButton = document.getElementById("exit");
+const statsElement = document.getElementById("stats");
+const summarySection = document.getElementById("summary");
+const summaryNote = document.getElementById("summary-note");
+const summaryList = document.getElementById("summary-list");
+const readiness = document.getElementById("readiness");
+const historySection = document.getElementById("study-history");
+const historySummary = document.getElementById("history-summary");
+const studyMode = document.getElementById("study-mode");
+const roundSize = document.getElementById("round-size");
+const studyTrack = document.getElementById("study-track");
+const startRoundButton = document.getElementById("start-round");
+const topicFilters = document.getElementById("topic-filters");
+const printReportButton = document.getElementById("print-report");
+const confidenceFieldset = document.getElementById("confidence");
+const confidenceHelpButton = document.getElementById("confidence-help");
+const confidenceModal = document.getElementById("confidence-modal");
+const closeConfidenceModalButton = document.getElementById("close-confidence-modal");
+
+function loadStats() {
+    try {
+        const stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+        return { ...DEFAULT_STATS, ...stored, history: Array.isArray(stored.history) ? stored.history : [], misses: Array.isArray(stored.misses) ? stored.misses : [], topicResults: stored.topicResults || {} };
+    } catch {
+        return { ...DEFAULT_STATS };
+    }
+}
+
+let stats = loadStats();
+let questions = [];
+let answersLog = [];
+let currentIndex = 0;
+let currentScore = 0;
+let waitingForNext = false;
+let roundComplete = false;
+
+function saveStats() { localStorage.setItem(STORAGE_KEY, JSON.stringify(stats)); }
+function selectedTopics() { return [...topicFilters.querySelectorAll("input:checked")].map((input) => input.value); }
+function currentMode() { return studyMode.value; }
+function currentStudyTrack() { return studyTrack.value; }
+
+function topicKey(topic) {
+    return topic.toLowerCase().replace(/[ &]+/g, "-");
+}
+
+function stopCelebration() {
+    celebration.classList.remove("show");
+    celebration.querySelectorAll(".bonus-bunny").forEach((bunny) => bunny.remove());
+}
+
+function playCelebration() {
+    const colorSets = [
+        ["#ffeef7", "#f5c4d6"],
+        ["#f2ffdf", "#c9ec7f"],
+        ["#e5f2ff", "#7ac5ff"],
+        ["#ffe7d8", "#ffb07a"],
+        ["#f0e2ff", "#c09dff"],
+        ["#e3fff6", "#6fe3c7"],
+        ["#fff3e1", "#ffcd82"],
+    ];
+    for (let index = 0; index < 16; index += 1) {
+        const bunny = document.createElement("span");
+        const [bodyBase, accentColor] = colorSets[Math.floor(Math.random() * colorSets.length)];
+        bunny.className = "bunny bonus-bunny";
+        bunny.style.left = `${4 + Math.random() * 90}%`;
+        bunny.style.bottom = `${8 + Math.random() * 58}%`;
+        bunny.style.animationDelay = `${Math.random() * 1.6}s`;
+        bunny.style.setProperty("--hop-scale", `${0.75 + Math.random() * 0.5}`);
+        bunny.style.setProperty("--body-base", bodyBase);
+        bunny.style.setProperty("--accent-color", accentColor);
+        celebration.appendChild(bunny);
+    }
+    celebration.classList.add("show");
+}
+
+function pickRandomQuestions(pool, count) {
+    const copy = [...pool];
+    for (let index = copy.length - 1; index > 0; index -= 1) {
+        const randomIndex = Math.floor(Math.random() * (index + 1));
+        [copy[index], copy[randomIndex]] = [copy[randomIndex], copy[index]];
+    }
+    return copy.slice(0, Math.min(count, copy.length));
+}
+
+function shuffleOptions(question) {
+    const entries = question.options.map((text, index) => ({ text, index }));
+    for (let index = entries.length - 1; index > 0; index -= 1) {
+        const randomIndex = Math.floor(Math.random() * (index + 1));
+        [entries[index], entries[randomIndex]] = [entries[randomIndex], entries[index]];
+    }
+    return { ...question, options: entries.map((entry) => entry.text), correctIndex: entries.findIndex((entry) => entry.index === question.correctIndex) };
+}
+
+function updateStatsDisplay() {
+    statsElement.textContent = `Best: ${stats.bestScore} | Rounds: ${stats.gamesPlayed} | Questions to review: ${stats.misses.length}`;
+    historySection.hidden = false;
+    const recent = stats.history.slice(-5);
+    historySummary.textContent = recent.length ? `Recent scores: ${recent.map((round) => `${round.score}/${round.total}`).join(" | ")}` : "Complete a round to begin building your study history.";
+}
+
+function setAnswerLocked(locked) {
+    optionsList.querySelectorAll("button").forEach((button) => { button.disabled = locked; });
+}
+
+function resetConfidence() {
+    document.querySelectorAll('input[name="confidence"]').forEach((input) => { input.checked = false; });
+}
+
+function renderQuestion() {
+    const question = questions[currentIndex];
+    const activeTopic = topicKey(question.topic);
+    progress.textContent = `Question ${currentIndex + 1} of ${questions.length} | ${currentMode() === "exam" ? "Exam mode" : currentMode() === "review" ? "Review mode" : "Learn mode"}`;
+    questionMeta.textContent = `${question.topic} | ${question.source} | ${question.reviewStatus}`;
+    questionCard.dataset.topic = activeTopic;
+    topicFilters.dataset.activeTopic = activeTopic;
+    questionText.textContent = question.prompt;
+    optionsList.replaceChildren();
+    question.options.forEach((option, index) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "answer-option";
+        button.textContent = `${index + 1}. ${option}`;
+        button.addEventListener("click", () => submitAnswer(index));
+        optionsList.appendChild(button);
+    });
+    factBox.textContent = "";
+    feedback.textContent = "";
+    feedback.className = "";
+    resetConfidence();
+    score.textContent = `Score: ${currentScore} / ${questions.length}`;
+    waitingForNext = false;
+    setAnswerLocked(false);
+    updateActionButtons();
+    stopCelebration();
+}
+
+function selectedConfidence() {
+    return document.querySelector('input[name="confidence"]:checked')?.value || "not rated";
+}
+
+function addExplanation(question, selectedIndex, isCorrect) {
+    if (currentMode() === "exam") return;
+    const incorrectChoice = question.options[selectedIndex];
+    const correction = isCorrect
+        ? "Review the note below to reinforce the rule."
+        : `“${incorrectChoice}” does not match the key clue in this question. The best answer is “${question.options[question.correctIndex]}.”`;
+    factBox.textContent = `${correction} ${question.fact || ""}`;
+}
+
+function submitAnswer(selectedIndex) {
+    if (waitingForNext || roundComplete) return;
+    const question = questions[currentIndex];
+    if (selectedIndex < 0 || selectedIndex >= question.options.length) {
+        feedback.textContent = "Choose one of the available answers.";
+        return;
+    }
+    const isCorrect = selectedIndex === question.correctIndex;
+    answersLog.push({ ...question, selectedIndex, isCorrect, confidence: selectedConfidence() });
+    if (isCorrect) {
+        currentScore += 1;
+        playCelebration();
+    } else {
+        stopCelebration();
+    }
+    feedback.textContent = isCorrect ? "Correct." : `Correct answer: ${question.options[question.correctIndex]}`;
+    feedback.className = isCorrect ? "correct" : "incorrect";
+    addExplanation(question, selectedIndex, isCorrect);
+    score.textContent = `Score: ${currentScore} / ${questions.length}`;
+    waitingForNext = true;
+    setAnswerLocked(true);
+    updateActionButtons();
+}
+
+function updateActionButtons() {
+    nextButton.hidden = !waitingForNext && !roundComplete;
+    finishedButton.hidden = !waitingForNext && !roundComplete;
+    exitButton.hidden = !waitingForNext && !roundComplete;
+    nextButton.textContent = roundComplete ? "Start New Round" : currentIndex === questions.length - 1 ? "Finish Round" : "Next Question";
+    finishedButton.textContent = "Finish Round";
+    exitButton.textContent = "Exit";
+}
+
+function renderSummary() {
+    const misses = answersLog.filter((entry) => !entry.isCorrect);
+    summaryList.replaceChildren();
+    summaryNote.textContent = misses.length ? "Review these questions before your next round:" : "Perfect round. Every answer was correct.";
+    answersLog.filter((entry) => !entry.isCorrect).forEach((entry) => {
+        const item = document.createElement("li");
+        const certaintyNote = entry.confidence === "certain" ? " You marked this answer as certain, so it is a good one to revisit." : "";
+        item.textContent = `${entry.topic}: ${entry.prompt} Correct answer: ${entry.options[entry.correctIndex]}.${certaintyNote} ${entry.fact || ""}`;
+        summaryList.appendChild(item);
+    });
+    const totalAnswered = Object.values(stats.topicResults).reduce((total, result) => total + result.total, 0);
+    const totalCorrect = Object.values(stats.topicResults).reduce((total, result) => total + result.correct, 0);
+    readiness.textContent = totalAnswered ? `Overall readiness: ${Math.round((totalCorrect / totalAnswered) * 100)}%. Focus next on ${misses.length ? [...new Set(misses.map((entry) => entry.topic))].join(", ") : "keeping every topic sharp"}.` : "";
+    summarySection.hidden = false;
+    summarySection.focus();
+}
+
+function completeRound() {
+    if (roundComplete) return;
+    roundComplete = true;
+    waitingForNext = false;
+    answersLog.forEach((entry) => {
+        const topic = stats.topicResults[entry.topic] || { correct: 0, total: 0 };
+        topic.total += 1;
+        topic.correct += Number(entry.isCorrect);
+        stats.topicResults[entry.topic] = topic;
+    });
+    const newMisses = answersLog.filter((entry) => !entry.isCorrect).map((entry) => entry.id);
+    stats.misses = [...new Set([...stats.misses.filter((id) => !answersLog.some((entry) => entry.id === id && entry.isCorrect)), ...newMisses])];
+    stats.gamesPlayed += 1;
+    stats.bestScore = Math.max(stats.bestScore, currentScore);
+    stats.history = [...stats.history, { score: currentScore, total: questions.length, mode: currentMode(), date: new Date().toLocaleDateString() }].slice(-20);
+    saveStats();
+    updateStatsDisplay();
+    renderSummary();
+    feedback.textContent = "Round complete.";
+    setAnswerLocked(true);
+    updateActionButtons();
+}
+
+function startNewGame() {
+    const topics = selectedTopics();
+    const eligible = questionBank.filter((question) =>
+        topics.includes(question.topic)
+        && (currentStudyTrack() === "mixed" || question.studyTrack === currentStudyTrack())
+    );
+    const reviewEligible = eligible.filter((question) => stats.misses.includes(question.id));
+    const pool = currentMode() === "review" ? reviewEligible : eligible;
+    if (!pool.length) {
+        feedback.textContent = currentMode() === "review" ? "No missed questions match these filters yet. Try Learn or Exam mode." : "No questions match those filters. Try a different study path or topic.";
+        return;
+    }
+    questions = pickRandomQuestions(pool, Number(roundSize.value)).map(shuffleOptions);
+    currentIndex = 0;
+    currentScore = 0;
+    answersLog = [];
+    roundComplete = false;
+    summarySection.hidden = true;
+    renderQuestion();
+}
+
+nextButton.addEventListener("click", () => {
+    if (roundComplete) return startNewGame();
+    if (!waitingForNext) return;
+    if (currentIndex === questions.length - 1) return completeRound();
+    currentIndex += 1;
+    renderQuestion();
+});
+finishedButton.addEventListener("click", completeRound);
+exitButton.addEventListener("click", completeRound);
+startRoundButton.addEventListener("click", startNewGame);
+printReportButton.addEventListener("click", () => window.print());
+confidenceHelpButton.addEventListener("click", () => {
+    confidenceModal.hidden = false;
+    confidenceModal.setAttribute("aria-hidden", "false");
+    closeConfidenceModalButton.focus();
+});
+closeConfidenceModalButton.addEventListener("click", () => {
+    confidenceModal.hidden = true;
+    confidenceModal.setAttribute("aria-hidden", "true");
+    confidenceHelpButton.focus();
+});
+confidenceModal.addEventListener("click", (event) => {
+    if (event.target === confidenceModal) {
+        closeConfidenceModalButton.click();
+    }
+});
+confidenceFieldset.addEventListener("change", () => {
+    if (!waitingForNext || !answersLog.length) return;
+    answersLog[answersLog.length - 1].confidence = selectedConfidence();
+});
+document.addEventListener("keydown", (event) => {
+    if (waitingForNext || roundComplete || event.ctrlKey || event.metaKey || event.altKey) return;
+    if (!["1", "2", "3"].includes(event.key)) return;
+    const activeElement = document.activeElement;
+    if (activeElement?.matches("select, input, textarea")) return;
+    submitAnswer(Number(event.key) - 1);
+});
+
+updateStatsDisplay();
 startNewGame();
