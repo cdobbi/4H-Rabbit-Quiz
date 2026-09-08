@@ -14,6 +14,8 @@ for (const fileName of ["index.html", "app.js", "study.css"]) {
     cpSync(join(__dirname, fileName), join(webDirectory, fileName));
 }
 
+cpSync(join(__dirname, "assets", "rabbit-wallpaper.png"), join(webDirectory, "assets", "rabbit-wallpaper.png"));
+
 for (const weight of [400, 500, 600, 700]) {
     const fileName = `fredoka-latin-${weight}-normal.woff2`;
     cpSync(join(fontSourceDirectory, fileName), join(fontDirectory, fileName));
