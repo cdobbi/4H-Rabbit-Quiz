@@ -2,37 +2,212 @@ const QUESTIONS_PER_GAME = 10;
 
 const allQuestions = [
     {
-        prompt: "What should be the foundation of a meat or show rabbit's daily diet?",
-        options: [
-            "High-sugar treats",
-            "Unlimited grass hay with balanced pellets",
-            "Only fresh garden greens",
-        ],
-        correctIndex: 1,
-        fact:
-            "Hay plus measured pellets keeps teeth worn and growth steady for meat and show stock.",
+        studyTrack: "cloverbud",
+        prompt: "What should you do before touching a rabbit?",
+        options: ["Wash your hands", "Run and clap", "Give it candy"],
+        correctIndex: 0,
+        fact: "Clean hands help keep rabbits healthy.",
     },
     {
-        prompt: "How often should working breeders plan to trim nails on their herd?",
-        options: [
-            "Whenever a show judge mentions it",
-            "About every 4–6 weeks",
-            "Only before kindling",
-        ],
-        correctIndex: 1,
-        fact:
-            "Routine trims prevent broken toes in wire cages and keep poses square on the table.",
+        studyTrack: "cloverbud",
+        prompt: "What does a rabbit need to drink every day?",
+        options: ["Fresh water", "Soda", "Milk"],
+        correctIndex: 0,
+        fact: "Check that your rabbit has clean, fresh water every day.",
     },
     {
-        prompt: "What housing detail keeps rabbits comfortable on wire floors?",
+        studyTrack: "cloverbud",
+        prompt: "What is a good food for a rabbit to munch?",
+        options: ["Grass hay", "Potato chips", "Chocolate"],
+        correctIndex: 0,
+        fact: "Grass hay is an important everyday food for rabbits.",
+    },
+    {
+        studyTrack: "cloverbud",
+        prompt: "How should you talk near a rabbit?",
+        options: ["With a quiet voice", "By shouting", "By making loud noises"],
+        correctIndex: 0,
+        fact: "Rabbits can be startled by loud sounds, so calm voices help them feel safe.",
+    },
+    {
+        studyTrack: "cloverbud",
+        prompt: "Who should help you pick up a rabbit?",
+        options: ["A grown-up who knows how", "No one", "Another rabbit"],
+        correctIndex: 0,
+        fact: "Ask a grown-up for help so the rabbit's body and back feet are safely supported.",
+    },
+    {
+        studyTrack: "cloverbud",
+        prompt: "Where is a calm place to pet a rabbit with a helper?",
+        options: ["Sitting low on the floor", "On top of a tall chair", "While running outside"],
+        correctIndex: 0,
+        fact: "Being low to the ground helps keep both you and the rabbit safe.",
+    },
+    {
+        studyTrack: "cloverbud",
+        prompt: "What should you do if a rabbit is hiding and does not want to come out?",
+        options: ["Give it quiet space", "Pull it out", "Bang on its cage"],
+        correctIndex: 0,
+        fact: "Rabbits need a quiet place to rest and feel safe.",
+    },
+    {
+        studyTrack: "cloverbud",
+        prompt: "What should you do if your rabbit does not want to eat?",
+        options: ["Tell a grown-up right away", "Give it candy", "Ignore it for days"],
+        correctIndex: 0,
+        fact: "A rabbit that is not eating needs a grown-up to check on it right away.",
+    },
+    {
+        studyTrack: "cloverbud",
+        prompt: "What is a gentle way to pet a rabbit?",
+        options: ["Use a soft, slow hand", "Pull its ears", "Poke its tummy"],
+        correctIndex: 0,
+        fact: "Gentle pets help a rabbit feel calm and safe.",
+    },
+    {
+        studyTrack: "cloverbud",
+        prompt: "What should you do after helping care for a rabbit?",
+        options: ["Wash your hands", "Touch your face", "Leave a mess"],
+        correctIndex: 0,
+        fact: "Wash your hands after handling rabbits or their supplies.",
+    },
+    {
+        studyTrack: "cloverbud",
+        prompt: "What should a rabbit's home be like?",
+        options: ["Clean and dry", "Wet and messy", "Full of loud toys"],
+        correctIndex: 0,
+        fact: "A clean, dry home helps rabbits stay comfortable and healthy.",
+    },
+    {
+        studyTrack: "cloverbud",
+        prompt: "What should you do before opening a rabbit's cage?",
+        options: ["Ask a grown-up", "Open it quickly", "Shake the door"],
+        correctIndex: 0,
+        fact: "A grown-up can help you open and close the cage safely.",
+    },
+    {
+        studyTrack: "cloverbud",
+        prompt: "What helps a rabbit feel safe in its home?",
+        options: ["A quiet hiding spot", "Bright flashing lights", "Lots of shouting"],
+        correctIndex: 0,
+        fact: "Rabbits like a quiet place where they can rest.",
+    },
+    {
+        studyTrack: "cloverbud",
+        prompt: "What should you do if a rabbit thumps its foot?",
+        options: ["Be quiet and give it space", "Chase it", "Make more noise"],
+        correctIndex: 0,
+        fact: "A rabbit may thump when it feels worried or startled.",
+    },
+    {
+        studyTrack: "cloverbud",
+        prompt: "What can a rabbit chew for fun with a grown-up's help?",
+        options: ["A plain cardboard tube", "A plastic toy", "A pencil"],
+        correctIndex: 0,
+        fact: "Safe chew toys can help keep a rabbit busy.",
+    },
+    {
+        studyTrack: "cloverbud",
+        prompt: "Where should a rabbit stay on a hot day?",
+        options: ["In a cool, shaded place", "In hot sunshine", "Next to a heater"],
+        correctIndex: 0,
+        fact: "Rabbits can get too hot, so they need shade and fresh water.",
+    },
+    {
+        studyTrack: "cloverbud",
+        prompt: "How should a cage door be left after caring for a rabbit?",
+        options: ["Closed and latched", "Wide open", "Halfway open"],
+        correctIndex: 0,
+        fact: "A closed, latched door helps keep a rabbit safe at home.",
+    },
+    {
+        studyTrack: "cloverbud",
+        prompt: "What should you do when a rabbit is eating?",
+        options: ["Let it eat quietly", "Take its food away", "Tap on its bowl"],
+        correctIndex: 0,
+        fact: "Quiet eating time helps a rabbit feel safe.",
+    },
+    {
+        studyTrack: "cloverbud",
+        prompt: "What covers a rabbit's body?",
+        options: ["Fur", "Feathers", "Scales"],
+        correctIndex: 0,
+        fact: "A rabbit's fur helps keep it warm.",
+    },
+    {
+        studyTrack: "cloverbud",
+        prompt: "What should you do if you see a loose clump of rabbit fur?",
+        options: ["Tell a grown-up", "Pull more fur out", "Throw it at the rabbit"],
+        correctIndex: 0,
+        fact: "A grown-up can check whether the rabbit needs grooming or help.",
+    },
+    {
+        studyTrack: "cloverbud",
+        prompt: "What kind of hands are best for petting a rabbit?",
+        options: ["Clean, gentle hands", "Sticky hands", "Rough hands"],
+        correctIndex: 0,
+        fact: "Clean, gentle hands help rabbits feel safe.",
+    },
+    {
+        studyTrack: "cloverbud",
+        prompt: "What should you do if a rabbit runs away from you?",
+        options: ["Stay calm and get a grown-up", "Run after it", "Yell at it"],
+        correctIndex: 0,
+        fact: "Stay calm so a grown-up can help the rabbit get safely home.",
+    },
+    {
+        studyTrack: "cloverbud",
+        prompt: "What can you use to learn about your rabbit?",
+        options: ["A rabbit care book", "A video game only", "A loud alarm"],
+        correctIndex: 0,
+        fact: "Learning with a grown-up helps you become a kind rabbit helper.",
+    },
+    {
+        studyTrack: "cloverbud",
+        prompt: "What should you do after giving a rabbit fresh water?",
+        options: ["Make sure it can reach the water", "Pour it on the floor", "Hide the water"],
+        correctIndex: 0,
+        fact: "A rabbit needs water it can easily reach.",
+    },
+    {
+        studyTrack: "cloverbud",
+        prompt: "What is a kind way to watch a rabbit play?",
+        options: ["Sit quietly nearby", "Grab it suddenly", "Throw toys at it"],
+        correctIndex: 0,
+        fact: "Quiet watching lets a rabbit explore safely.",
+    },
+    {
+        studyTrack: "cloverbud",
+        prompt: "What food helps keep a rabbit's tummy healthy?",
         options: [
-            "Skip wire so they never clean cages",
-            "Provide resting mats or tiles on the wire",
-            "Use solid wood floors that stay damp",
+            "Grass hay and rabbit pellets",
+            "Candy",
+            "Only cookies",
         ],
-        correctIndex: 1,
-        fact:
-            "Wire keeps waste away, but resting boards let rabbits get off the mesh to protect hocks.",
+        correctIndex: 0,
+        fact: "Hay and rabbit pellets are good everyday foods for rabbits.",
+    },
+    {
+        studyTrack: "cloverbud",
+        prompt: "Who should help trim a rabbit's nails?",
+        options: [
+            "A grown-up who knows how",
+            "No one",
+            "Another rabbit",
+        ],
+        correctIndex: 0,
+        fact: "A grown-up can trim nails carefully to help keep a rabbit comfortable.",
+    },
+    {
+        studyTrack: "cloverbud",
+        prompt: "What can a rabbit rest on in its home?",
+        options: [
+            "A clean resting board or mat",
+            "A wet towel",
+            "A pile of toys",
+        ],
+        correctIndex: 0,
+        fact: "A resting board or mat gives a rabbit a comfortable place to relax.",
     },
     {
         prompt: "When should you place a nest box for a pregnant doe?",
@@ -73,26 +248,26 @@ const allQuestions = [
             "Half the kits receive the dominant A from the heterozygous parent, so about 50% present agouti.",
     },
     {
-        prompt: "What is the safest way to lift a show rabbit onto the table?",
+        studyTrack: "cloverbud",
+        prompt: "How should a grown-up hold a rabbit?",
         options: [
-            "Grab ears only",
-            "Support chest while cradling hindquarters",
-            "Scoop from the belly and swing",
-        ],
-        correctIndex: 1,
-        fact:
-            "Always support the back end to avoid powerful kicks that can injure the spine.",
-    },
-    {
-        prompt: "Which daily observation tells you the herd is thriving?",
-        options: [
-            "Even feed intake and manure output",
-            "How loudly they thump",
-            "How much they chew cage bars",
+            "Support its body and back feet",
+            "Hold its ears",
+            "Swing it around",
         ],
         correctIndex: 0,
-        fact:
-            "Consistent appetite and droppings reveal gut health long before a rabbit shows sickness.",
+        fact: "Supporting a rabbit's body and back feet helps keep it safe.",
+    },
+    {
+        studyTrack: "cloverbud",
+        prompt: "What can show that a rabbit is doing well?",
+        options: [
+            "It is eating and drinking normally",
+            "It is hiding all day",
+            "It has no water",
+        ],
+        correctIndex: 0,
+        fact: "A grown-up should check that a rabbit is eating and drinking each day.",
     },
     {
         prompt:
@@ -3166,7 +3341,6 @@ const studyMode = document.getElementById("study-mode");
 const roundSize = document.getElementById("round-size");
 const studyTrack = document.getElementById("study-track");
 const startRoundButton = document.getElementById("start-round");
-const roundAvailability = document.getElementById("round-availability");
 const topicFilters = document.getElementById("topic-filters");
 const printReportButton = document.getElementById("print-report");
 const confidenceFieldset = document.getElementById("confidence");
@@ -3221,19 +3395,11 @@ function eligibleQuestions() {
 
 function updateRoundAvailability() {
     const availableCount = eligibleQuestions().length;
-    const isAllQuestionsRound = roundSize.value === "all";
-    const requestedCount = selectedRoundSize(availableCount);
-    startRoundButton.textContent = isAllQuestionsRound ? "Start all questions" : `Start ${requestedCount}-question round`;
-    startRoundButton.disabled = availableCount === 0;
-    roundAvailability.textContent = isAllQuestionsRound
-        ? ""
-        : availableCount >= requestedCount
-            ? `${availableCount} questions are ready for this setup.`
-            : availableCount
-                ? `This setup has ${availableCount} questions. Pick a smaller round or choose more topics.`
-                : currentMode() === "review"
-                    ? "No missed questions match this setup yet."
-                    : "No questions match this setup. Choose more topics or another path.";
+    [...roundSize.options].forEach((option) => {
+        option.disabled = option.value !== "all" && Number(option.value) > availableCount;
+    });
+    startRoundButton.textContent = "Start Round";
+    startRoundButton.disabled = availableCount === 0 || roundSize.selectedOptions[0].disabled;
 }
 
 function showTutorial() {
@@ -3397,7 +3563,7 @@ function resetConfidence() {
 function renderQuestion() {
     const question = questions[currentIndex];
     const activeTopic = topicKey(question.topic);
-    progress.textContent = `Question ${currentIndex + 1} of ${questions.length} | ${currentMode() === "exam" ? "Exam mode" : currentMode() === "review" ? "Review mode" : "Learn mode"}`;
+    progress.textContent = `Question ${currentIndex + 1} | ${currentMode() === "exam" ? "Exam Mode" : currentMode() === "review" ? "Review Mode" : "Learn Mode"}`;
     questionMeta.textContent = `${question.topic} | ${question.source} | ${question.reviewStatus}`;
     questionCard.dataset.topic = activeTopic;
     topicFilters.dataset.activeTopic = activeTopic;
