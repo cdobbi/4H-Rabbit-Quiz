@@ -5,7 +5,10 @@
   "scripts": {
     "start": "ts-node src/index.ts",
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "web:build": "node build-web.js",
+    "android:sync": "npm run web:build && npx cap sync android",
+    "android:open": "npx cap open android"
   },
   "repository": {
     "type": "git",
