@@ -20,6 +20,7 @@
   "homepage": "https://github.com/cdobbi/4H-Rabbit-Quiz#readme",
   "description": "Command-line rabbit husbandry quiz built with TypeScript",
   "devDependencies": {
+    "@capacitor/cli": "^8.5.1",
     "@types/jest": "^30.0.0",
     "jest": "^30.2.0",
     "ts-jest": "^29.4.6",
