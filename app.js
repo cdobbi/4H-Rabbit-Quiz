@@ -3064,6 +3064,8 @@ startNewGame();
 const TOPICS = ["Husbandry", "Health & Biosecurity", "Genetics", "ARBA Procedures", "Breeds & Judging"];
 const DEFAULT_STATS = { bestScore: 0, gamesPlayed: 0, history: [], misses: [], topicResults: {} };
 const STORAGE_KEY = "rabbitHusbandryStudyStats";
+const FULL_ACCESS_STORAGE_KEY = "rabbitHusbandryFullAccess";
+const FULL_ACCESS_PRODUCT_ID = "full_question_bank";
 
 const scenarioQuestions = [
     {
@@ -3130,6 +3132,12 @@ const questionBank = [...allQuestions, ...scenarioQuestions].map((question, inde
     reviewStatus: question.reviewStatus || "Practice content - verify current guidance",
 }));
 
+const nonRegistrarQuestions = questionBank.filter((question) => question.studyTrack !== "registrar");
+const freeQuestionIds = new Set([
+    ...TOPICS.flatMap((topic) => nonRegistrarQuestions.filter((question) => question.topic === topic).slice(0, 15)),
+    ...nonRegistrarQuestions,
+].slice(0, 75).map((question) => question.id));
+
 const questionText = document.getElementById("question");
 const questionMeta = document.getElementById("question-meta");
 const questionCard = document.getElementById("question-card");
@@ -3161,6 +3169,11 @@ const confidenceFieldset = document.getElementById("confidence");
 const confidenceHelpButton = document.getElementById("confidence-help");
 const confidenceModal = document.getElementById("confidence-modal");
 const closeConfidenceModalButton = document.getElementById("close-confidence-modal");
+const upgradePanel = document.getElementById("upgrade-panel");
+const upgradeDetails = document.getElementById("upgrade-details");
+const upgradeButton = document.getElementById("upgrade-button");
+const restorePurchaseButton = document.getElementById("restore-purchase");
+const purchaseStatus = document.getElementById("purchase-status");
 
 function loadStats() {
     try {
@@ -3179,11 +3192,86 @@ let currentScore = 0;
 let waitingForNext = false;
 let roundComplete = false;
 let celebrationTimeoutId;
+let hasFullAccess = localStorage.getItem(FULL_ACCESS_STORAGE_KEY) === "true";
 
 function saveStats() { localStorage.setItem(STORAGE_KEY, JSON.stringify(stats)); }
 function selectedTopics() { return [...topicFilters.querySelectorAll("input:checked")].map((input) => input.value); }
 function currentMode() { return studyMode.value; }
 function currentStudyTrack() { return studyTrack.value; }
+
+function availableQuestions() {
+    return hasFullAccess ? questionBank : questionBank.filter((question) => freeQuestionIds.has(question.id));
+}
+
+function updateUpgradePanel() {
+    const lockedQuestionCount = questionBank.length - freeQuestionIds.size;
+    const registrarOption = studyTrack.querySelector('option[value="registrar"]');
+    registrarOption.disabled = !hasFullAccess;
+    upgradePanel.classList.toggle("unlocked", hasFullAccess);
+    upgradeDetails.textContent = hasFullAccess
+        ? `Full Question Bank unlocked: all ${questionBank.length} questions, including the Registrar study guide.`
+        : `Unlock ${lockedQuestionCount}+ more questions, including the complete Registrar study guide, for one payment of $4.99.`;
+    upgradeButton.hidden = hasFullAccess;
+    restorePurchaseButton.hidden = hasFullAccess;
+}
+
+function grantFullAccess() {
+    hasFullAccess = true;
+    localStorage.setItem(FULL_ACCESS_STORAGE_KEY, "true");
+    purchaseStatus.textContent = "Full Question Bank unlocked. Thank you for supporting HopNCode.";
+    updateUpgradePanel();
+}
+
+function playStore() {
+    return window.CdvPurchase?.store;
+}
+
+function initializeBilling() {
+    const purchase = window.CdvPurchase;
+    const store = playStore();
+    if (!purchase || !store) return;
+
+    store.register({
+        id: FULL_ACCESS_PRODUCT_ID,
+        type: purchase.ProductType.NON_CONSUMABLE,
+        platform: purchase.Platform.GOOGLE_PLAY,
+    });
+    store.when().approved((transaction) => transaction.verify());
+    store.when().verified((receipt) => {
+        grantFullAccess();
+        receipt.finish();
+    });
+    store.error((error) => {
+        purchaseStatus.textContent = error.message || "The purchase could not be completed. Please try again.";
+    });
+    store.initialize([purchase.Platform.GOOGLE_PLAY]);
+}
+
+function beginPurchase() {
+    const purchase = window.CdvPurchase;
+    const store = playStore();
+    if (!purchase || !store) {
+        purchaseStatus.textContent = "Purchases are available in the Google Play version of the app.";
+        return;
+    }
+    const product = store.get(FULL_ACCESS_PRODUCT_ID, purchase.Platform.GOOGLE_PLAY);
+    const offer = product?.getOffer();
+    if (!offer) {
+        purchaseStatus.textContent = "The Full Question Bank is not available yet. Please try again shortly.";
+        return;
+    }
+    offer.order();
+}
+
+function restorePurchase() {
+    const store = playStore();
+    if (!store) {
+        purchaseStatus.textContent = "Restore purchases from the Google Play version of the app.";
+        return;
+    }
+    store.restorePurchases();
+    purchaseStatus.textContent = "Checking your previous Google Play purchases...";
+}
 
 function topicKey(topic) {
     return topic.toLowerCase().replace(/[ &]+/g, "-");
@@ -3370,8 +3458,12 @@ function completeRound() {
 }
 
 function startNewGame() {
+    if (!hasFullAccess && currentStudyTrack() === "registrar") {
+        feedback.textContent = "The Registrar study guide is included with the Full Question Bank. Unlock it to continue.";
+        return;
+    }
     const topics = selectedTopics();
-    const eligible = questionBank.filter((question) =>
+    const eligible = availableQuestions().filter((question) =>
         topics.includes(question.topic)
         && (currentStudyTrack() === "mixed" || question.studyTrack === currentStudyTrack())
     );
@@ -3400,6 +3492,8 @@ nextButton.addEventListener("click", () => {
 finishedButton.addEventListener("click", completeRound);
 exitButton.addEventListener("click", completeRound);
 startRoundButton.addEventListener("click", startNewGame);
+upgradeButton.addEventListener("click", beginPurchase);
+restorePurchaseButton.addEventListener("click", restorePurchase);
 printReportButton.addEventListener("click", () => window.print());
 confidenceHelpButton.addEventListener("click", () => {
     confidenceModal.hidden = false;
@@ -3427,6 +3521,9 @@ document.addEventListener("keydown", (event) => {
     if (activeElement?.matches("select, input, textarea")) return;
     submitAnswer(Number(event.key) - 1);
 });
+
+document.addEventListener("deviceready", initializeBilling, { once: true });
+updateUpgradePanel();
 
 updateStatsDisplay();
 startNewGame();

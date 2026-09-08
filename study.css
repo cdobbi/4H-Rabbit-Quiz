@@ -83,6 +83,74 @@ h1 {
     line-height: 1.45;
 }
 
+.upgrade-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px 16px;
+    margin: 0 0 18px;
+    padding: 14px;
+    border: 1px solid #8fc5db;
+    border-radius: 8px;
+    background: #f7fcff;
+}
+
+.upgrade-panel.unlocked {
+    border-color: #93cdb5;
+    background: #f5fcf8;
+}
+
+.upgrade-kicker {
+    margin: 0 0 2px;
+    color: #28789d;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.upgrade-panel h2 {
+    margin: 0;
+    color: #16394f;
+    font-size: 1.12rem;
+}
+
+.upgrade-panel p:not(.upgrade-kicker) {
+    margin: 4px 0 0;
+    color: #486d85;
+    font-size: 0.85rem;
+    line-height: 1.35;
+}
+
+.upgrade-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-self: center;
+}
+
+.upgrade-actions button {
+    padding: 8px 12px;
+    white-space: nowrap;
+}
+
+.secondary-button {
+    border: 1px solid #9bc3d8;
+    background: #ffffff;
+    color: #28789d;
+}
+
+.secondary-button:hover:not(:disabled) {
+    background: #eaf6fb;
+}
+
+.purchase-status {
+    grid-column: 1 / -1;
+    min-height: 1.1rem;
+    margin: 0;
+    color: #205a48;
+    font-size: 0.82rem;
+}
+
 .study-setup {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -406,6 +474,14 @@ input[type="number"] {
 
     .study-setup {
         grid-template-columns: 1fr;
+    }
+
+    .upgrade-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .upgrade-actions {
+        align-items: stretch;
     }
 
     .control-group {
