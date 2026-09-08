@@ -238,6 +238,7 @@ select {
 }
 
 #topic-filters label {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -251,6 +252,35 @@ select {
     color: var(--topic-color);
     line-height: 1.1;
     text-align: center;
+}
+
+#topic-filters label::after {
+    position: absolute;
+    z-index: 5;
+    top: calc(100% + 8px);
+    left: 50%;
+    width: 210px;
+    padding: 8px 10px;
+    border: 1px solid #9bc3d8;
+    border-radius: 5px;
+    background: #ffffff;
+    box-shadow: 0 8px 18px rgba(16, 43, 63, 0.18);
+    color: #16394f;
+    content: attr(data-tooltip);
+    font-size: 0.82rem;
+    line-height: 1.25;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(-4px);
+    transition: opacity 140ms ease, transform 140ms ease;
+    visibility: hidden;
+}
+
+#topic-filters label:hover::after,
+#topic-filters label:focus-within::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    visibility: visible;
 }
 
 #topic-filters label input {

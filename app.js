@@ -3316,7 +3316,6 @@ const freeQuestionIds = new Set([
 ].slice(0, 75).map((question) => question.id));
 
 const questionText = document.getElementById("question");
-const questionMeta = document.getElementById("question-meta");
 const questionCard = document.getElementById("question-card");
 const optionsList = document.getElementById("options");
 const factBox = document.getElementById("fact");
@@ -3564,7 +3563,6 @@ function renderQuestion() {
     const question = questions[currentIndex];
     const activeTopic = topicKey(question.topic);
     progress.textContent = `Question ${currentIndex + 1} | ${currentMode() === "exam" ? "Exam Mode" : currentMode() === "review" ? "Review Mode" : "Learn Mode"}`;
-    questionMeta.textContent = `${question.topic} | ${question.source} | ${question.reviewStatus}`;
     questionCard.dataset.topic = activeTopic;
     topicFilters.dataset.activeTopic = activeTopic;
     questionText.textContent = question.prompt;

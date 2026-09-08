@@ -46,11 +46,21 @@
                 </div>
                 <fieldset id="topic-filters">
                     <legend>Topics</legend>
-                    <label data-topic="husbandry"><input type="checkbox" value="Husbandry" checked /> Husbandry</label>
-                    <label data-topic="health-biosecurity"><input type="checkbox" value="Health & Biosecurity" checked /> Health</label>
-                    <label data-topic="genetics"><input type="checkbox" value="Genetics" checked /> Genetics</label>
-                    <label data-topic="arba-procedures"><input type="checkbox" value="ARBA Procedures" checked /> ARBA</label>
-                    <label data-topic="breeds-judging"><input type="checkbox" value="Breeds & Judging" checked /> Judging</label>
+                    <label data-topic="husbandry"
+                        data-tooltip="Husbandry practice questions. Check current care guidance with a 4-H leader."><input type="checkbox"
+                            value="Husbandry" checked /> Husbandry</label>
+                    <label data-topic="health-biosecurity"
+                        data-tooltip="Health practice questions. Check current care guidance with a rabbit-savvy veterinarian."><input
+                            type="checkbox" value="Health & Biosecurity" checked /> Health</label>
+                    <label data-topic="genetics"
+                        data-tooltip="Genetics practice questions. Use current breed resources to keep learning."><input type="checkbox"
+                            value="Genetics" checked /> Genetics</label>
+                    <label data-topic="arba-procedures"
+                        data-tooltip="ARBA procedure practice questions. Verify rules using current official ARBA resources."><input
+                            type="checkbox" value="ARBA Procedures" checked /> ARBA</label>
+                    <label data-topic="breeds-judging"
+                        data-tooltip="Breed and judging practice questions. Check current breed standards with a 4-H leader."><input
+                            type="checkbox" value="Breeds & Judging" checked /> Judging</label>
                 </fieldset>
                 <button id="start-round" type="button">Start New Round</button>
             </section>
@@ -58,7 +68,6 @@
         <p id="progress" aria-live="polite"></p>
         <p id="stats" aria-live="polite"></p>
         <section aria-label="Question" class="question-card" id="question-card">
-            <p id="question-meta" class="question-meta"></p>
             <p id="question" aria-live="polite"></p>
             <div id="options" class="answer-options" role="group" aria-label="Answer choices"></div>
             <div class="fact" id="fact" aria-live="polite"></div>
