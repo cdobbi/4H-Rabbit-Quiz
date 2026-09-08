@@ -287,6 +287,11 @@ select {
     accent-color: var(--topic-color);
 }
 
+#topic-filters label:has(input:disabled) {
+    cursor: not-allowed;
+    opacity: 0.4;
+}
+
 #topic-filters label[data-topic="husbandry"] {
     --topic-color: #28789d;
 }

@@ -3381,6 +3381,22 @@ function currentMode() { return studyMode.value; }
 function currentStudyTrack() { return studyTrack.value; }
 function selectedRoundSize(availableCount) { return roundSize.value === "all" ? availableCount : Number(roundSize.value); }
 
+function updateTopicFilters() {
+    const activeTrack = currentStudyTrack();
+    const availableTopics = new Set(availableQuestions()
+        .filter((question) => activeTrack === "mixed" || question.studyTrack === activeTrack)
+        .map((question) => question.topic));
+    const topicInputs = [...topicFilters.querySelectorAll("input")];
+
+    topicInputs.forEach((input) => {
+        input.disabled = !availableTopics.has(input.value);
+        if (input.disabled) input.checked = false;
+    });
+    if (!topicInputs.some((input) => input.checked && !input.disabled)) {
+        topicInputs.filter((input) => !input.disabled).forEach((input) => { input.checked = true; });
+    }
+}
+
 function eligibleQuestions() {
     const topics = selectedTopics();
     const matchingQuestions = availableQuestions().filter((question) =>
@@ -3429,6 +3445,8 @@ function updateUpgradePanel() {
         : `Unlock ${lockedQuestionCount}+ more questions, including the complete Registrar study guide, for one payment of $19.99. Lifetime access, no subscription, and study offline anytime.`;
     upgradeButton.hidden = hasFullAccess;
     restorePurchaseButton.hidden = hasFullAccess;
+    updateTopicFilters();
+    updateRoundAvailability();
 }
 
 function grantFullAccess() {
@@ -3707,8 +3725,12 @@ nextButton.addEventListener("click", () => {
 finishedButton.addEventListener("click", completeRound);
 exitButton.addEventListener("click", completeRound);
 startRoundButton.addEventListener("click", startNewGame);
-[studyMode, roundSize, studyTrack, topicFilters].forEach((control) => {
+[studyMode, roundSize, topicFilters].forEach((control) => {
     control.addEventListener("change", updateRoundAvailability);
+});
+studyTrack.addEventListener("change", () => {
+    updateTopicFilters();
+    updateRoundAvailability();
 });
 upgradeButton.addEventListener("click", beginPurchase);
 restorePurchaseButton.addEventListener("click", restorePurchase);
@@ -3755,7 +3777,6 @@ document.addEventListener("keydown", (event) => {
 
 document.addEventListener("deviceready", initializeBilling, { once: true });
 updateUpgradePanel();
-updateRoundAvailability();
 
 updateStatsDisplay();
 startNewGame();
