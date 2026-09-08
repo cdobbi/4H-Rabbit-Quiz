@@ -142,8 +142,8 @@ h1 {
 
 .study-setup {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
     margin: 0;
     padding: 14px;
     border: 1px solid #bed7e5;
@@ -185,12 +185,13 @@ h1 {
     gap: 5px;
     color: #315a75;
     font-family: "Fredoka", sans-serif;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     font-weight: 600;
 }
 
 select {
-    padding: 8px;
+    width: 100%;
+    padding: 9px;
     border: 1px solid #9bc3d8;
     border-radius: 5px;
     background: #ffffff;
@@ -198,7 +199,18 @@ select {
     font: inherit;
 }
 
-#topic-filters,
+#topic-filters {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+    margin: 0;
+    padding: 10px 0 0;
+    border: 0;
+    font-family: "Fredoka", sans-serif;
+    font-size: 0.94rem;
+}
+
 .confidence {
     grid-column: 1 / -1;
     display: flex;
@@ -211,7 +223,13 @@ select {
     font-size: 0.84rem;
 }
 
-#topic-filters legend,
+#topic-filters legend {
+    grid-column: 1 / -1;
+    margin-bottom: 2px;
+    color: #315a75;
+    font-weight: 700;
+}
+
 .confidence legend {
     width: 100%;
     margin-bottom: 2px;
@@ -220,9 +238,19 @@ select {
 }
 
 #topic-filters label {
-    padding: 3px 6px;
-    border-left: 3px solid var(--topic-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-width: 0;
+    padding: 10px 8px;
+    border: 1px solid color-mix(in srgb, var(--topic-color) 40%, #ffffff);
+    border-left: 4px solid var(--topic-color);
+    border-radius: 5px;
+    background: color-mix(in srgb, var(--topic-color) 10%, #ffffff);
     color: var(--topic-color);
+    line-height: 1.1;
+    text-align: center;
 }
 
 #topic-filters label input {
@@ -559,6 +587,11 @@ input[type="number"] {
 
     .control-group {
         grid-column: 1;
+    }
+
+    #topic-filters {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
     }
 }
 
