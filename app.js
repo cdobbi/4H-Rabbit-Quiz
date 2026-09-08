@@ -3210,7 +3210,7 @@ function updateUpgradePanel() {
     upgradePanel.classList.toggle("unlocked", hasFullAccess);
     upgradeDetails.textContent = hasFullAccess
         ? `Full Question Bank unlocked: all ${questionBank.length} questions, including the Registrar study guide.`
-        : `Unlock ${lockedQuestionCount}+ more questions, including the complete Registrar study guide, for one payment of $19.99. Lifetime access, no subscription.`;
+        : `Unlock ${lockedQuestionCount}+ more questions, including the complete Registrar study guide, for one payment of $19.99. Lifetime access, no subscription, and study offline anytime.`;
     upgradeButton.hidden = hasFullAccess;
     restorePurchaseButton.hidden = hasFullAccess;
 }
