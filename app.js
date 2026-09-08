@@ -3659,7 +3659,13 @@ function pickRandomQuestions(pool, count) {
 }
 
 function setRandomBackground() {
-    const backgrounds = ["assets/rabbit-wallpaper.png", "assets/rabbitking.avif", "assets/rabbit-meadow.png", "assets/rabbit-portraits.png"];
+    const backgrounds = [
+        "assets/rabbit-wallpaper.png",
+        "assets/rabbitking.avif",
+        "assets/rabbit-meadow.png",
+        "assets/rabbit-portraits.png",
+        ...Array.from({ length: 20 }, (_, index) => `assets/rabbit-photo-${String(index + 1).padStart(2, "0")}.jpg`),
+    ];
     const background = backgrounds[Math.floor(Math.random() * backgrounds.length)];
     document.body.style.setProperty("--game-background", `url("${background}")`);
 }
