@@ -21,6 +21,7 @@ const indexContent = require("node:fs").readFileSync(bundledIndex, "utf8");
 writeFileSync(bundledIndex, indexContent.replace('<script src="app.js" defer></script>', '<script src="app-config.js"></script>\n    <script src="app.js" defer></script>'));
 
 cpSync(join(__dirname, "assets", "rabbit-wallpaper.png"), join(webDirectory, "assets", "rabbit-wallpaper.png"));
+cpSync(join(__dirname, "assets", "rabbitking.avif"), join(webDirectory, "assets", "rabbitking.avif"));
 
 for (const weight of [400, 500, 600, 700]) {
     const fileName = `fredoka-latin-${weight}-normal.woff2`;

@@ -3,6 +3,7 @@ const QUESTIONS_PER_GAME = 10;
 const allQuestions = [
     {
         studyTrack: "cloverbud",
+        topic: "Health & Biosecurity",
         prompt: "What should you do before touching a rabbit?",
         options: ["Wash your hands", "Run and clap", "Give it candy"],
         correctIndex: 0,
@@ -10,6 +11,7 @@ const allQuestions = [
     },
     {
         studyTrack: "cloverbud",
+        topic: "Health & Biosecurity",
         prompt: "What does a rabbit need to drink every day?",
         options: ["Fresh water", "Soda", "Milk"],
         correctIndex: 0,
@@ -52,6 +54,7 @@ const allQuestions = [
     },
     {
         studyTrack: "cloverbud",
+        topic: "Health & Biosecurity",
         prompt: "What should you do if your rabbit does not want to eat?",
         options: ["Tell a grown-up right away", "Give it candy", "Ignore it for days"],
         correctIndex: 0,
@@ -66,6 +69,7 @@ const allQuestions = [
     },
     {
         studyTrack: "cloverbud",
+        topic: "Health & Biosecurity",
         prompt: "What should you do after helping care for a rabbit?",
         options: ["Wash your hands", "Touch your face", "Leave a mess"],
         correctIndex: 0,
@@ -73,6 +77,7 @@ const allQuestions = [
     },
     {
         studyTrack: "cloverbud",
+        topic: "Health & Biosecurity",
         prompt: "What should a rabbit's home be like?",
         options: ["Clean and dry", "Wet and messy", "Full of loud toys"],
         correctIndex: 0,
@@ -108,6 +113,7 @@ const allQuestions = [
     },
     {
         studyTrack: "cloverbud",
+        topic: "Health & Biosecurity",
         prompt: "Where should a rabbit stay on a hot day?",
         options: ["In a cool, shaded place", "In hot sunshine", "Next to a heater"],
         correctIndex: 0,
@@ -136,6 +142,7 @@ const allQuestions = [
     },
     {
         studyTrack: "cloverbud",
+        topic: "Health & Biosecurity",
         prompt: "What should you do if you see a loose clump of rabbit fur?",
         options: ["Tell a grown-up", "Pull more fur out", "Throw it at the rabbit"],
         correctIndex: 0,
@@ -164,6 +171,7 @@ const allQuestions = [
     },
     {
         studyTrack: "cloverbud",
+        topic: "Health & Biosecurity",
         prompt: "What should you do after giving a rabbit fresh water?",
         options: ["Make sure it can reach the water", "Pour it on the floor", "Hide the water"],
         correctIndex: 0,
@@ -271,6 +279,7 @@ const allQuestions = [
     },
     {
         studyTrack: "cloverbud",
+        topic: "Health & Biosecurity",
         prompt: "What should you do with a rabbit's water bowl?",
         options: ["Keep it clean", "Fill it with dirt", "Hide it"],
         correctIndex: 0,
@@ -306,6 +315,7 @@ const allQuestions = [
     },
     {
         studyTrack: "cloverbud",
+        topic: "Health & Biosecurity",
         prompt: "What can you do to help clean a rabbit's home?",
         options: ["Work with a grown-up", "Make it messier", "Throw food around"],
         correctIndex: 0,
@@ -2886,6 +2896,12 @@ function pickRandomQuestions(pool, count) {
     return copy.slice(0, Math.min(count, copy.length));
 }
 
+function setRandomBackground() {
+    const backgrounds = ["assets/rabbit-wallpaper.png", "assets/rabbitking.avif"];
+    const background = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+    document.body.style.setProperty("--game-background", `url("${background}")`);
+}
+
 function shuffleOptions(question) {
     const optionEntries = question.options.map((text, index) => ({ text, index }));
     for (let i = optionEntries.length - 1; i > 0; i -= 1) {
@@ -3451,10 +3467,21 @@ function currentMode() { return studyMode.value; }
 function currentStudyTrack() { return studyTrack.value; }
 function selectedRoundSize(availableCount) { return roundSize.value === "all" ? availableCount : Number(roundSize.value); }
 
-function updateTopicFilters() {
-    const activeTrack = currentStudyTrack();
+const STUDY_PATH_ACCESS = {
+    mixed: { topics: TOPICS, tracks: ["cloverbud", "junior", "intermediate", "senior", "registrar"] },
+    cloverbud: { topics: ["Husbandry", "Health & Biosecurity"], tracks: ["cloverbud"] },
+    junior: { topics: ["Husbandry", "Health & Biosecurity", "Genetics"], tracks: ["cloverbud", "junior"] },
+    intermediate: { topics: TOPICS, tracks: ["cloverbud", "junior", "intermediate", "senior", "registrar"] },
+    senior: { topics: TOPICS, tracks: ["cloverbud", "junior", "intermediate", "senior", "registrar"] },
+    registrar: { topics: TOPICS, tracks: ["cloverbud", "junior", "intermediate", "senior", "registrar"] },
+};
+
+function currentPathAccess() { return STUDY_PATH_ACCESS[currentStudyTrack()]; }
+
+function updateTopicFilters(selectAllAvailable = false) {
+    const pathAccess = currentPathAccess();
     const availableTopics = new Set(availableQuestions()
-        .filter((question) => activeTrack === "mixed" || question.studyTrack === activeTrack)
+        .filter((question) => pathAccess.tracks.includes(question.studyTrack) && pathAccess.topics.includes(question.topic))
         .map((question) => question.topic));
     const topicInputs = [...topicFilters.querySelectorAll("input")];
 
@@ -3462,16 +3489,17 @@ function updateTopicFilters() {
         input.disabled = !availableTopics.has(input.value);
         if (input.disabled) input.checked = false;
     });
-    if (!topicInputs.some((input) => input.checked && !input.disabled)) {
+    if (selectAllAvailable || !topicInputs.some((input) => input.checked && !input.disabled)) {
         topicInputs.filter((input) => !input.disabled).forEach((input) => { input.checked = true; });
     }
 }
 
 function eligibleQuestions() {
     const topics = selectedTopics();
+    const pathAccess = currentPathAccess();
     const matchingQuestions = availableQuestions().filter((question) =>
         topics.includes(question.topic)
-        && (currentStudyTrack() === "mixed" || question.studyTrack === currentStudyTrack())
+        && pathAccess.tracks.includes(question.studyTrack)
     );
     return currentMode() === "review"
         ? matchingQuestions.filter((question) => stats.misses.includes(question.id))
@@ -3622,6 +3650,12 @@ function pickRandomQuestions(pool, count) {
         [copy[index], copy[randomIndex]] = [copy[randomIndex], copy[index]];
     }
     return copy.slice(0, Math.min(count, copy.length));
+}
+
+function setRandomBackground() {
+    const backgrounds = ["assets/rabbit-wallpaper.png", "assets/rabbitking.avif"];
+    const background = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+    document.body.style.setProperty("--game-background", `url("${background}")`);
 }
 
 function shuffleOptions(question) {
@@ -3777,6 +3811,7 @@ function startNewGame() {
         return;
     }
     questions = pickRandomQuestions(pool, requestedCount).map(shuffleOptions);
+    setRandomBackground();
     currentIndex = 0;
     currentScore = 0;
     answersLog = [];
@@ -3799,7 +3834,7 @@ startRoundButton.addEventListener("click", startNewGame);
     control.addEventListener("change", updateRoundAvailability);
 });
 studyTrack.addEventListener("change", () => {
-    updateTopicFilters();
+    updateTopicFilters(true);
     updateRoundAvailability();
 });
 upgradeButton.addEventListener("click", beginPurchase);
