@@ -24,6 +24,10 @@ cpSync(join(__dirname, "assets", "rabbit-wallpaper.png"), join(webDirectory, "as
 cpSync(join(__dirname, "assets", "rabbitking.avif"), join(webDirectory, "assets", "rabbitking.avif"));
 cpSync(join(__dirname, "assets", "rabbit-meadow.png"), join(webDirectory, "assets", "rabbit-meadow.png"));
 cpSync(join(__dirname, "assets", "rabbit-portraits.png"), join(webDirectory, "assets", "rabbit-portraits.png"));
+for (let index = 1; index <= 20; index += 1) {
+    const fileName = `rabbit-photo-${String(index).padStart(2, "0")}.jpg`;
+    cpSync(join(__dirname, "assets", fileName), join(webDirectory, "assets", fileName));
+}
 
 for (const weight of [400, 500, 600, 700]) {
     const fileName = `fredoka-latin-${weight}-normal.woff2`;
