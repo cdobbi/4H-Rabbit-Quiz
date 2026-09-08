@@ -12,8 +12,6 @@
     <main>
         <h1>Rabbit Husbandry Quiz</h1>
         <p class="subtitle">Cuniculture Study Lab</p>
-        <p class="study-notice">Independent 4-H practice questions, not official ARBA licensing-test items. Verify Registrar material
-            against the current ARBA Standard of Perfection and official resources.</p>
         <section class="study-setup" aria-label="Round settings">
             <div class="control-group">
                 <label for="study-mode">Study mode</label>
@@ -120,6 +118,20 @@
                 <button id="close-confidence-modal" type="button">Got it</button>
             </div>
         </div>
+        <div id="tutorial-modal" class="tutorial-modal" hidden aria-hidden="true">
+            <div class="tutorial-content" role="dialog" aria-modal="true" aria-labelledby="tutorial-title">
+                <h2 id="tutorial-title">Welcome to Rabbit Husbandry Quiz</h2>
+                <p>Choose a study mode, round size, study path, and topics, then start a round. Pick an answer to see feedback and an
+                    explanation in Learn mode.</p>
+                <p>Use Exam mode for a quieter score-focused round, or Missed Questions to practice questions you previously missed. Your
+                    study history stays on this device.</p>
+                <p>The free version includes 75 questions. The Full Question Bank adds the remaining questions and the Registrar study
+                    guide. Everything can be studied offline after installation.</p>
+                <p class="tutorial-disclaimer">Independent 4-H practice questions, not official ARBA licensing-test items. Verify Registrar
+                    material against the current ARBA Standard of Perfection and official resources.</p>
+                <button id="close-tutorial-modal" type="button">Start studying</button>
+            </div>
+        </div>
         <section class="upgrade-panel" id="upgrade-panel" aria-labelledby="upgrade-title">
             <div>
                 <p class="upgrade-kicker">Free to start</p>
@@ -136,6 +148,7 @@
         <footer class="app-trademark">
             <span>A HopNCode (TM) product by <a href="https://www.warren-ledger.com">Warren-Ledger</a></span>
             <span>Need help? <a href="mailto:hopncode@gmail.com">Contact support</a></span>
+            <button id="tutorial-help" class="tutorial-help" type="button" aria-label="How to use Rabbit Husbandry Quiz">?</button>
         </footer>
     </main>
     <script src="app.js" defer></script>

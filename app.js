@@ -3066,6 +3066,7 @@ const DEFAULT_STATS = { bestScore: 0, gamesPlayed: 0, history: [], misses: [], t
 const STORAGE_KEY = "rabbitHusbandryStudyStats";
 const FULL_ACCESS_STORAGE_KEY = "rabbitHusbandryFullAccess";
 const FULL_ACCESS_PRODUCT_ID = "full_question_bank";
+const TUTORIAL_SEEN_STORAGE_KEY = "rabbitHusbandryTutorialSeen";
 
 const scenarioQuestions = [
     {
@@ -3169,6 +3170,9 @@ const confidenceFieldset = document.getElementById("confidence");
 const confidenceHelpButton = document.getElementById("confidence-help");
 const confidenceModal = document.getElementById("confidence-modal");
 const closeConfidenceModalButton = document.getElementById("close-confidence-modal");
+const tutorialModal = document.getElementById("tutorial-modal");
+const closeTutorialModalButton = document.getElementById("close-tutorial-modal");
+const tutorialHelpButton = document.getElementById("tutorial-help");
 const upgradePanel = document.getElementById("upgrade-panel");
 const upgradeDetails = document.getElementById("upgrade-details");
 const upgradeButton = document.getElementById("upgrade-button");
@@ -3198,6 +3202,18 @@ function saveStats() { localStorage.setItem(STORAGE_KEY, JSON.stringify(stats));
 function selectedTopics() { return [...topicFilters.querySelectorAll("input:checked")].map((input) => input.value); }
 function currentMode() { return studyMode.value; }
 function currentStudyTrack() { return studyTrack.value; }
+
+function showTutorial() {
+    tutorialModal.hidden = false;
+    tutorialModal.setAttribute("aria-hidden", "false");
+    closeTutorialModalButton.focus();
+}
+
+function hideTutorial() {
+    tutorialModal.hidden = true;
+    tutorialModal.setAttribute("aria-hidden", "true");
+    localStorage.setItem(TUTORIAL_SEEN_STORAGE_KEY, "true");
+}
 
 function availableQuestions() {
     return hasFullAccess ? questionBank : questionBank.filter((question) => freeQuestionIds.has(question.id));
@@ -3514,7 +3530,20 @@ confidenceFieldset.addEventListener("change", () => {
     if (!waitingForNext || !answersLog.length) return;
     answersLog[answersLog.length - 1].confidence = selectedConfidence();
 });
+tutorialHelpButton.addEventListener("click", showTutorial);
+closeTutorialModalButton.addEventListener("click", () => {
+    hideTutorial();
+    tutorialHelpButton.focus();
+});
+tutorialModal.addEventListener("click", (event) => {
+    if (event.target === tutorialModal) hideTutorial();
+});
 document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !tutorialModal.hidden) {
+        hideTutorial();
+        tutorialHelpButton.focus();
+        return;
+    }
     if (waitingForNext || roundComplete || event.ctrlKey || event.metaKey || event.altKey) return;
     if (!["1", "2", "3"].includes(event.key)) return;
     const activeElement = document.activeElement;
@@ -3527,3 +3556,4 @@ updateUpgradePanel();
 
 updateStatsDisplay();
 startNewGame();
+if (localStorage.getItem(TUTORIAL_SEEN_STORAGE_KEY) !== "true") showTutorial();
