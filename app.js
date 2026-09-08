@@ -3198,7 +3198,8 @@ let currentScore = 0;
 let waitingForNext = false;
 let roundComplete = false;
 let celebrationTimeoutId;
-let hasFullAccess = localStorage.getItem(FULL_ACCESS_STORAGE_KEY) === "true";
+const betaFullAccess = globalThis.RABBIT_QUIZ_BETA === true;
+let hasFullAccess = betaFullAccess || localStorage.getItem(FULL_ACCESS_STORAGE_KEY) === "true";
 
 function saveStats() { localStorage.setItem(STORAGE_KEY, JSON.stringify(stats)); }
 function selectedTopics() { return [...topicFilters.querySelectorAll("input:checked")].map((input) => input.value); }
@@ -3227,7 +3228,9 @@ function updateUpgradePanel() {
     registrarOption.disabled = !hasFullAccess;
     upgradePanel.classList.toggle("unlocked", hasFullAccess);
     upgradeDetails.textContent = hasFullAccess
-        ? `Full Question Bank unlocked: all ${questionBank.length} questions, including the Registrar study guide.`
+        ? betaFullAccess
+            ? `Beta access is on: all ${questionBank.length} questions, including the Registrar study guide, are ready to test.`
+            : `Full Question Bank unlocked: all ${questionBank.length} questions, including the Registrar study guide.`
         : `Unlock ${lockedQuestionCount}+ more questions, including the complete Registrar study guide, for one payment of $19.99. Lifetime access, no subscription, and study offline anytime.`;
     upgradeButton.hidden = hasFullAccess;
     restorePurchaseButton.hidden = hasFullAccess;
@@ -3245,6 +3248,7 @@ function playStore() {
 }
 
 function initializeBilling() {
+    if (betaFullAccess) return;
     const purchase = window.CdvPurchase;
     const store = playStore();
     if (!purchase || !store) return;

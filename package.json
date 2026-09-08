@@ -7,7 +7,9 @@
     "build": "tsc",
     "test": "jest",
     "web:build": "node build-web.js",
+    "web:build:beta": "node build-web.js --beta",
     "android:sync": "npm run web:build && npx cap sync android",
+    "android:sync:beta": "npm run web:build:beta && npx cap sync android",
     "android:open": "npx cap open android"
   },
   "repository": {
