@@ -334,6 +334,23 @@ input[type="number"] {
     border-top: 1px solid #d5e7f0;
 }
 
+.app-trademark {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 12px;
+    margin-top: 24px;
+    color: #52778c;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-align: center;
+}
+
+.app-trademark a {
+    color: #28789d;
+}
+
 @media (max-width: 560px) {
     body {
         align-items: flex-start;
@@ -384,7 +401,8 @@ input[type="number"] {
     #print-report,
     #celebration,
     .modal,
-    .toast {
+    .toast,
+    .app-trademark {
         display: none !important;
     }
 }

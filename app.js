@@ -3178,6 +3178,7 @@ let currentIndex = 0;
 let currentScore = 0;
 let waitingForNext = false;
 let roundComplete = false;
+let celebrationTimeoutId;
 
 function saveStats() { localStorage.setItem(STORAGE_KEY, JSON.stringify(stats)); }
 function selectedTopics() { return [...topicFilters.querySelectorAll("input:checked")].map((input) => input.value); }
@@ -3189,6 +3190,7 @@ function topicKey(topic) {
 }
 
 function stopCelebration() {
+    clearTimeout(celebrationTimeoutId);
     celebration.classList.remove("show");
     celebration.querySelectorAll(".bonus-bunny").forEach((bunny) => bunny.remove());
 }
@@ -3216,6 +3218,8 @@ function playCelebration() {
         celebration.appendChild(bunny);
     }
     celebration.classList.add("show");
+    clearTimeout(celebrationTimeoutId);
+    celebrationTimeoutId = setTimeout(stopCelebration, 4000);
 }
 
 function pickRandomQuestions(pool, count) {
