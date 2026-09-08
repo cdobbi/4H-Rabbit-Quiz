@@ -369,6 +369,10 @@ select {
     border-top-color: var(--topic-color);
 }
 
+#question {
+    padding: 0 14px;
+}
+
 .question-meta {
     margin: 0 0 10px;
     color: var(--topic-color, #4b7895);
