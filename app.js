@@ -2669,6 +2669,7 @@ const finishedButton = document.getElementById("finished");
 const exitButton = document.getElementById("exit");
 const statsElement = document.getElementById("stats");
 const summarySection = document.getElementById("summary");
+const recapPanel = document.getElementById("recap-panel");
 const summaryNote = document.getElementById("summary-note");
 const summaryList = document.getElementById("summary-list");
 const celebration = document.getElementById("celebration");
@@ -3346,7 +3347,6 @@ function shuffleOptions(question) {
 
 function updateStatsDisplay() {
     statsElement.textContent = `Best: ${stats.bestScore} | Rounds: ${stats.gamesPlayed} | Questions to review: ${stats.misses.length}`;
-    historySection.hidden = false;
     const recent = stats.history.slice(-5);
     historySummary.textContent = recent.length ? `Recent scores: ${recent.map((round) => `${round.score}/${round.total}`).join(" | ")}` : "Complete a round to begin building your study history.";
 }
@@ -3446,7 +3446,8 @@ function renderSummary() {
     const totalAnswered = Object.values(stats.topicResults).reduce((total, result) => total + result.total, 0);
     const totalCorrect = Object.values(stats.topicResults).reduce((total, result) => total + result.correct, 0);
     readiness.textContent = totalAnswered ? `Overall readiness: ${Math.round((totalCorrect / totalAnswered) * 100)}%. Focus next on ${misses.length ? [...new Set(misses.map((entry) => entry.topic))].join(", ") : "keeping every topic sharp"}.` : "";
-    summarySection.hidden = false;
+    recapPanel.hidden = false;
+    recapPanel.open = true;
     summarySection.focus();
 }
 
@@ -3494,7 +3495,7 @@ function startNewGame() {
     currentScore = 0;
     answersLog = [];
     roundComplete = false;
-    summarySection.hidden = true;
+    recapPanel.hidden = true;
     renderQuestion();
 }
 

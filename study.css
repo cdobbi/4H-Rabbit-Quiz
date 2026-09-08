@@ -144,12 +144,40 @@ h1 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
-    margin: 18px 0;
+    margin: 0;
     padding: 14px;
     border: 1px solid #bed7e5;
     border-radius: 8px;
     background: #f7faff;
     box-shadow: inset 5px 0 0 var(--butter);
+}
+
+.collapsible-panel {
+    margin: 14px 0;
+    border: 1px solid #bed7e5;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.collapsible-panel summary {
+    padding: 11px 14px;
+    color: #16394f;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.collapsible-panel[open] summary {
+    border-bottom: 1px solid #d5e7f0;
+}
+
+.collapsible-panel>section {
+    margin: 0;
+    padding: 14px;
+}
+
+.collapsible-panel>.study-setup {
+    border: 0;
+    border-radius: 0;
 }
 
 .control-group {

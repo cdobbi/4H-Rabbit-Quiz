@@ -12,45 +12,48 @@
     <main>
         <h1>Rabbit Husbandry Quiz</h1>
         <p class="subtitle">Cuniculture Study Lab</p>
-        <section class="study-setup" aria-label="Round settings">
-            <div class="control-group">
-                <label for="study-mode">Study mode</label>
-                <select id="study-mode">
-                    <option value="learn">Learn</option>
-                    <option value="exam">Exam</option>
-                    <option value="review">Missed questions</option>
-                </select>
-            </div>
-            <div class="control-group">
-                <label for="round-size">Questions</label>
-                <select id="round-size">
-                    <option value="5">5</option>
-                    <option value="10" selected>10</option>
-                    <option value="20">20</option>
-                    <option value="50">50</option>
-                </select>
-            </div>
-            <div class="control-group">
-                <label for="study-track">Study path</label>
-                <select id="study-track">
-                    <option value="mixed" selected>All study paths</option>
-                    <option value="cloverbud">Cloverbuds</option>
-                    <option value="junior">Juniors</option>
-                    <option value="intermediate">Intermediates</option>
-                    <option value="senior">Seniors</option>
-                    <option value="registrar">Registrar study guide (Full Version)</option>
-                </select>
-            </div>
-            <fieldset id="topic-filters">
-                <legend>Topics</legend>
-                <label data-topic="husbandry"><input type="checkbox" value="Husbandry" checked /> Husbandry</label>
-                <label data-topic="health-biosecurity"><input type="checkbox" value="Health & Biosecurity" checked /> Health</label>
-                <label data-topic="genetics"><input type="checkbox" value="Genetics" checked /> Genetics</label>
-                <label data-topic="arba-procedures"><input type="checkbox" value="ARBA Procedures" checked /> ARBA</label>
-                <label data-topic="breeds-judging"><input type="checkbox" value="Breeds & Judging" checked /> Judging</label>
-            </fieldset>
-            <button id="start-round" type="button">Start New Round</button>
-        </section>
+        <details class="collapsible-panel" open>
+            <summary>Game setup</summary>
+            <section class="study-setup" aria-label="Round settings">
+                <div class="control-group">
+                    <label for="study-mode">Study mode</label>
+                    <select id="study-mode">
+                        <option value="learn">Learn</option>
+                        <option value="exam">Exam</option>
+                        <option value="review">Missed questions</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="round-size">Questions</label>
+                    <select id="round-size">
+                        <option value="5">5</option>
+                        <option value="10" selected>10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="study-track">Study path</label>
+                    <select id="study-track">
+                        <option value="mixed" selected>All study paths</option>
+                        <option value="cloverbud">Cloverbuds</option>
+                        <option value="junior">Juniors</option>
+                        <option value="intermediate">Intermediates</option>
+                        <option value="senior">Seniors</option>
+                        <option value="registrar">Registrar study guide (Full Version)</option>
+                    </select>
+                </div>
+                <fieldset id="topic-filters">
+                    <legend>Topics</legend>
+                    <label data-topic="husbandry"><input type="checkbox" value="Husbandry" checked /> Husbandry</label>
+                    <label data-topic="health-biosecurity"><input type="checkbox" value="Health & Biosecurity" checked /> Health</label>
+                    <label data-topic="genetics"><input type="checkbox" value="Genetics" checked /> Genetics</label>
+                    <label data-topic="arba-procedures"><input type="checkbox" value="ARBA Procedures" checked /> ARBA</label>
+                    <label data-topic="breeds-judging"><input type="checkbox" value="Breeds & Judging" checked /> Judging</label>
+                </fieldset>
+                <button id="start-round" type="button">Start New Round</button>
+            </section>
+        </details>
         <p id="progress" aria-live="polite"></p>
         <p id="stats" aria-live="polite"></p>
         <section aria-label="Question" class="question-card" id="question-card">
@@ -74,17 +77,21 @@
             <button id="finished" type="button" hidden>Finished</button>
             <button id="exit" type="button" hidden>Exit</button>
         </div>
-        <section id="summary" hidden tabindex="-1" aria-live="polite">
-            <h2>Round Recap</h2>
-            <p id="summary-note"></p>
-            <p id="readiness"></p>
-            <ol id="summary-list"></ol>
-        </section>
-        <section id="study-history" hidden aria-live="polite">
-            <h2>Study History</h2>
-            <p id="history-summary"></p>
-            <button id="print-report" type="button">Print Study Report</button>
-        </section>
+        <details class="collapsible-panel" id="recap-panel" hidden>
+            <summary>Round recap</summary>
+            <section id="summary" tabindex="-1" aria-live="polite">
+                <p id="summary-note"></p>
+                <p id="readiness"></p>
+                <ol id="summary-list"></ol>
+            </section>
+        </details>
+        <details class="collapsible-panel" id="history-panel">
+            <summary>Study history</summary>
+            <section id="study-history" aria-live="polite">
+                <p id="history-summary"></p>
+                <button id="print-report" type="button">Print Study Report</button>
+            </section>
+        </details>
         <div id="celebration" aria-hidden="true">
             <span class="bunny bunny-a"></span>
             <span class="bunny bunny-b"></span>
@@ -120,31 +127,37 @@
         </div>
         <div id="tutorial-modal" class="tutorial-modal" hidden aria-hidden="true">
             <div class="tutorial-content" role="dialog" aria-modal="true" aria-labelledby="tutorial-title">
-                <h2 id="tutorial-title">Welcome to Rabbit Husbandry Quiz</h2>
-                <p>Choose a study mode, round size, study path, and topics, then start a round. Pick an answer to see feedback and an
-                    explanation in Learn mode.</p>
-                <p>Use Exam mode for a quieter score-focused round, or Missed Questions to practice questions you previously missed. Your
-                    study history stays on this device.</p>
-                <p>The free version includes 75 questions. The Full Question Bank adds the remaining questions and the Registrar study
-                    guide. Everything can be studied offline after installation.</p>
+                <h2 id="tutorial-title">Let&apos;s hop in!</h2>
+                <p>Pick an answer. Learn mode tells you why it is right.</p>
+                <ul>
+                    <li>Open Game setup to choose your path, topic, and round size.</li>
+                    <li>Try Exam mode when you want a challenge.</li>
+                    <li>Use Missed Questions for extra practice.</li>
+                </ul>
+                <p>Start free with 75 questions. The Full Question Bank has every question and the Registrar guide. You can study offline.
+                </p>
                 <p class="tutorial-disclaimer">Independent 4-H practice questions, not official ARBA licensing-test items. Verify Registrar
                     material against the current ARBA Standard of Perfection and official resources.</p>
-                <button id="close-tutorial-modal" type="button">Start studying</button>
+                <button id="close-tutorial-modal" type="button">Let&apos;s go!</button>
             </div>
         </div>
-        <section class="upgrade-panel" id="upgrade-panel" aria-labelledby="upgrade-title">
-            <div>
-                <p class="upgrade-kicker">Free to start</p>
-                <h2 id="upgrade-title">75 questions are ready to study</h2>
-                <p id="upgrade-details">Unlock the Full Question Bank for all remaining questions, including the Registrar study guide. One
-                    purchase, no subscription, and study offline anytime.</p>
-            </div>
-            <div class="upgrade-actions">
-                <button id="upgrade-button" type="button">Unlock Full Bank - $19.99</button>
-                <button id="restore-purchase" class="secondary-button" type="button">Restore purchase</button>
-            </div>
-            <p id="purchase-status" class="purchase-status" role="status" aria-live="polite"></p>
-        </section>
+        <details class="collapsible-panel" id="upgrade-details-panel">
+            <summary>Full Question Bank</summary>
+            <section class="upgrade-panel" id="upgrade-panel" aria-labelledby="upgrade-title">
+                <div>
+                    <p class="upgrade-kicker">Free to start</p>
+                    <h2 id="upgrade-title">75 questions are ready to study</h2>
+                    <p id="upgrade-details">Unlock the Full Question Bank for all remaining questions, including the Registrar study guide.
+                        One
+                        purchase, no subscription, and study offline anytime.</p>
+                </div>
+                <div class="upgrade-actions">
+                    <button id="upgrade-button" type="button">Unlock Full Bank - $19.99</button>
+                    <button id="restore-purchase" class="secondary-button" type="button">Restore purchase</button>
+                </div>
+                <p id="purchase-status" class="purchase-status" role="status" aria-live="polite"></p>
+            </section>
+        </details>
         <footer class="app-trademark">
             <span>A HopNCode (TM) product by <a href="https://www.warren-ledger.com">Warren-Ledger</a></span>
             <span>Need help? <a href="mailto:hopncode@gmail.com">Contact support</a></span>
