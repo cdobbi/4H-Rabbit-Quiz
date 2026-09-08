@@ -3166,6 +3166,7 @@ const studyMode = document.getElementById("study-mode");
 const roundSize = document.getElementById("round-size");
 const studyTrack = document.getElementById("study-track");
 const startRoundButton = document.getElementById("start-round");
+const roundAvailability = document.getElementById("round-availability");
 const topicFilters = document.getElementById("topic-filters");
 const printReportButton = document.getElementById("print-report");
 const confidenceFieldset = document.getElementById("confidence");
@@ -3205,6 +3206,35 @@ function saveStats() { localStorage.setItem(STORAGE_KEY, JSON.stringify(stats));
 function selectedTopics() { return [...topicFilters.querySelectorAll("input:checked")].map((input) => input.value); }
 function currentMode() { return studyMode.value; }
 function currentStudyTrack() { return studyTrack.value; }
+function selectedRoundSize(availableCount) { return roundSize.value === "all" ? availableCount : Number(roundSize.value); }
+
+function eligibleQuestions() {
+    const topics = selectedTopics();
+    const matchingQuestions = availableQuestions().filter((question) =>
+        topics.includes(question.topic)
+        && (currentStudyTrack() === "mixed" || question.studyTrack === currentStudyTrack())
+    );
+    return currentMode() === "review"
+        ? matchingQuestions.filter((question) => stats.misses.includes(question.id))
+        : matchingQuestions;
+}
+
+function updateRoundAvailability() {
+    const availableCount = eligibleQuestions().length;
+    const isAllQuestionsRound = roundSize.value === "all";
+    const requestedCount = selectedRoundSize(availableCount);
+    startRoundButton.textContent = isAllQuestionsRound ? "Start all questions" : `Start ${requestedCount}-question round`;
+    startRoundButton.disabled = availableCount === 0;
+    roundAvailability.textContent = isAllQuestionsRound
+        ? ""
+        : availableCount >= requestedCount
+            ? `${availableCount} questions are ready for this setup.`
+            : availableCount
+                ? `This setup has ${availableCount} questions. Pick a smaller round or choose more topics.`
+                : currentMode() === "review"
+                    ? "No missed questions match this setup yet."
+                    : "No questions match this setup. Choose more topics or another path.";
+}
 
 function showTutorial() {
     tutorialModal.hidden = false;
@@ -3484,18 +3514,17 @@ function startNewGame() {
         feedback.textContent = "The Registrar study guide is included with the Full Question Bank. Unlock it to continue.";
         return;
     }
-    const topics = selectedTopics();
-    const eligible = availableQuestions().filter((question) =>
-        topics.includes(question.topic)
-        && (currentStudyTrack() === "mixed" || question.studyTrack === currentStudyTrack())
-    );
-    const reviewEligible = eligible.filter((question) => stats.misses.includes(question.id));
-    const pool = currentMode() === "review" ? reviewEligible : eligible;
+    const pool = eligibleQuestions();
     if (!pool.length) {
         feedback.textContent = currentMode() === "review" ? "No missed questions match these filters yet. Try Learn or Exam mode." : "No questions match those filters. Try a different study path or topic.";
         return;
     }
-    questions = pickRandomQuestions(pool, Number(roundSize.value)).map(shuffleOptions);
+    const requestedCount = selectedRoundSize(pool.length);
+    if (pool.length < requestedCount) {
+        feedback.textContent = `This setup has ${pool.length} questions. Pick a smaller round or choose more topics.`;
+        return;
+    }
+    questions = pickRandomQuestions(pool, requestedCount).map(shuffleOptions);
     currentIndex = 0;
     currentScore = 0;
     answersLog = [];
@@ -3514,6 +3543,9 @@ nextButton.addEventListener("click", () => {
 finishedButton.addEventListener("click", completeRound);
 exitButton.addEventListener("click", completeRound);
 startRoundButton.addEventListener("click", startNewGame);
+[studyMode, roundSize, studyTrack, topicFilters].forEach((control) => {
+    control.addEventListener("change", updateRoundAvailability);
+});
 upgradeButton.addEventListener("click", beginPurchase);
 restorePurchaseButton.addEventListener("click", restorePurchase);
 printReportButton.addEventListener("click", () => window.print());
@@ -3559,6 +3591,7 @@ document.addEventListener("keydown", (event) => {
 
 document.addEventListener("deviceready", initializeBilling, { once: true });
 updateUpgradePanel();
+updateRoundAvailability();
 
 updateStatsDisplay();
 startNewGame();

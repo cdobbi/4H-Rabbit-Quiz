@@ -26,10 +26,11 @@
                 <div class="control-group">
                     <label for="round-size">Questions</label>
                     <select id="round-size">
-                        <option value="5">5</option>
                         <option value="10" selected>10</option>
-                        <option value="20">20</option>
-                        <option value="50">50</option>
+                        <option value="40">40</option>
+                        <option value="60">60</option>
+                        <option value="120">120</option>
+                        <option value="all">All</option>
                     </select>
                 </div>
                 <div class="control-group">
@@ -51,6 +52,7 @@
                     <label data-topic="arba-procedures"><input type="checkbox" value="ARBA Procedures" checked /> ARBA</label>
                     <label data-topic="breeds-judging"><input type="checkbox" value="Breeds & Judging" checked /> Judging</label>
                 </fieldset>
+                <p id="round-availability" class="round-availability" aria-live="polite"></p>
                 <button id="start-round" type="button">Start New Round</button>
             </section>
         </details>
