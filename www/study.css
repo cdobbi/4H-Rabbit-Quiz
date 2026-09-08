@@ -1,0 +1,631 @@
+@font-face {
+    font-family: "Fredoka";
+    src: url("fonts/fredoka-latin-400-normal.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Fredoka";
+    src: url("fonts/fredoka-latin-500-normal.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Fredoka";
+    src: url("fonts/fredoka-latin-600-normal.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Fredoka";
+    src: url("fonts/fredoka-latin-700-normal.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+:root {
+    font-family: "Fredoka", "Comic Sans MS", cursive;
+    color: #102b3f;
+    background: #eef6fa;
+    --ocean: #28789d;
+    --coral: #e78263;
+    --butter: #fff0b8;
+    --mint: #dff4e8;
+}
+
+body {
+    background-color: #d8ebf4;
+    background-image:
+        radial-gradient(ellipse 7px 17px at 16px 12px, rgba(40, 120, 157, 0.15) 96%, transparent 100%),
+        radial-gradient(ellipse 7px 17px at 31px 12px, rgba(40, 120, 157, 0.15) 96%, transparent 100%),
+        radial-gradient(ellipse 22px 16px at 24px 36px, rgba(40, 120, 157, 0.12) 96%, transparent 100%),
+        radial-gradient(circle 10px at 47px 29px, rgba(40, 120, 157, 0.12) 96%, transparent 100%),
+        radial-gradient(circle 3px at 49px 26px, #d8ebf4 96%, transparent 100%),
+        linear-gradient(135deg, rgba(238, 246, 250, 0.88), rgba(216, 235, 244, 0.88));
+    background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+    background-size: 84px 84px, 84px 84px, 84px 84px, 84px 84px, 84px 84px, cover;
+    background-attachment: fixed;
+}
+
+main {
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 18px 45px rgba(20, 61, 89, 0.16);
+}
+
+h1 {
+    color: var(--ocean);
+    font-size: 2.7rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1;
+}
+
+.subtitle {
+    color: var(--coral);
+    font-family: "Fredoka", "Comic Sans MS", cursive;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.study-notice {
+    margin: 0 0 16px;
+    color: #486d85;
+    font-family: "Fredoka", "Comic Sans MS", cursive;
+    font-size: 0.82rem;
+    line-height: 1.45;
+}
+
+.study-setup {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 18px 0;
+    padding: 14px;
+    border: 1px solid #bed7e5;
+    border-radius: 8px;
+    background: #f7faff;
+    box-shadow: inset 5px 0 0 var(--butter);
+}
+
+.control-group {
+    display: grid;
+    gap: 5px;
+    color: #315a75;
+    font-family: "Fredoka", "Comic Sans MS", cursive;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+select {
+    padding: 8px;
+    border: 1px solid #9bc3d8;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #102b3f;
+    font: inherit;
+}
+
+#topic-filters,
+.confidence {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    margin: 0;
+    padding: 8px 0 0;
+    border: 0;
+    font-family: "Fredoka", "Comic Sans MS", cursive;
+    font-size: 0.84rem;
+}
+
+#topic-filters legend,
+.confidence legend {
+    width: 100%;
+    margin-bottom: 2px;
+    color: #315a75;
+    font-weight: 700;
+}
+
+#topic-filters label {
+    padding: 3px 6px;
+    border-left: 3px solid var(--topic-color);
+    color: var(--topic-color);
+}
+
+#topic-filters label input {
+    accent-color: var(--topic-color);
+}
+
+#topic-filters label[data-topic="husbandry"] {
+    --topic-color: #28789d;
+}
+
+#topic-filters label[data-topic="health-biosecurity"] {
+    --topic-color: #c55d56;
+}
+
+#topic-filters label[data-topic="genetics"] {
+    --topic-color: #7965a8;
+}
+
+#topic-filters label[data-topic="arba-procedures"] {
+    --topic-color: #9a7314;
+}
+
+#topic-filters label[data-topic="breeds-judging"] {
+    --topic-color: #398568;
+}
+
+#topic-filters[data-active-topic="husbandry"] label[data-topic="husbandry"],
+#topic-filters[data-active-topic="health-biosecurity"] label[data-topic="health-biosecurity"],
+#topic-filters[data-active-topic="genetics"] label[data-topic="genetics"],
+#topic-filters[data-active-topic="arba-procedures"] label[data-topic="arba-procedures"],
+#topic-filters[data-active-topic="breeds-judging"] label[data-topic="breeds-judging"] {
+    background: color-mix(in srgb, var(--topic-color) 15%, #ffffff);
+}
+
+#start-round {
+    grid-column: 1 / -1;
+}
+
+#stats {
+    color: #486d85;
+}
+
+.question-card {
+    border: 1px solid #d5e7f0;
+    border-top: 5px solid var(--mint);
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.question-card[data-topic="husbandry"] {
+    --topic-color: #28789d;
+    --topic-wash: #dff1f8;
+}
+
+.question-card[data-topic="health-biosecurity"] {
+    --topic-color: #c55d56;
+    --topic-wash: #fde5e1;
+}
+
+.question-card[data-topic="genetics"] {
+    --topic-color: #7965a8;
+    --topic-wash: #ede8f8;
+}
+
+.question-card[data-topic="arba-procedures"] {
+    --topic-color: #9a7314;
+    --topic-wash: #fff0c5;
+}
+
+.question-card[data-topic="breeds-judging"] {
+    --topic-color: #398568;
+    --topic-wash: #dff4e8;
+}
+
+.question-card[data-topic] {
+    border-top-color: var(--topic-color);
+}
+
+.question-meta {
+    margin: 0 0 10px;
+    color: var(--topic-color, #4b7895);
+    font-family: "Fredoka", "Comic Sans MS", cursive;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.answer-options {
+    display: grid;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+button {
+    padding: 10px 18px;
+    border: 0;
+    border-radius: 6px;
+    background: #276b91;
+    color: #ffffff;
+    font: 1rem "Fredoka", "Comic Sans MS", cursive;
+    cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+    background: #1d5778;
+}
+
+button:disabled {
+    background: #c5d9e3;
+    color: #617987;
+    cursor: not-allowed;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid #e8b54e;
+    outline-offset: 2px;
+}
+
+.answer-option {
+    width: 100%;
+    border: 1px solid #a9cddd;
+    background: #ffffff;
+    color: #16394f;
+    text-align: left;
+}
+
+.answer-option:hover:not(:disabled) {
+    border-color: #3d86ad;
+    background: #eaf6fb;
+}
+
+.keyboard-answer {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.keyboard-answer label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+input[type="number"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #9bc3d8;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.confidence {
+    margin-top: 12px;
+    padding: 10px 12px;
+    border: 1px solid #d5e7f0;
+    border-radius: 6px;
+    background: #fbfdff;
+}
+
+.confidence:disabled {
+    color: #6c8290;
+}
+
+#feedback {
+    min-height: 1.2rem;
+    margin-top: 12px;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+#feedback.correct {
+    background: var(--mint);
+    color: #205a48;
+}
+
+#feedback.incorrect {
+    background: #ffe5dc;
+    color: #7d1f1f;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.action-buttons button {
+    width: 100%;
+}
+
+#finished,
+#exit,
+#print-report {
+    border: 1px solid #bfd5e0;
+    background: #e2edf2;
+    color: #254a60;
+}
+
+#finished:hover:not(:disabled),
+#exit:hover:not(:disabled),
+#print-report:hover:not(:disabled) {
+    background: #d2e4ec;
+}
+
+.fact {
+    margin-top: 12px;
+    padding: 12px;
+    border-left: 4px solid #3d86ad;
+    background: #e7f4fa;
+}
+
+#summary {
+    border: 1px solid #d5e7f0;
+    border-radius: 8px;
+}
+
+#study-history {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid #d5e7f0;
+}
+
+.app-trademark {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 12px;
+    margin-top: 24px;
+    color: #52778c;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-align: center;
+}
+
+.app-trademark a {
+    color: #28789d;
+}
+
+@media (max-width: 560px) {
+    body {
+        align-items: flex-start;
+        -ms-overflow-style: none;
+    }
+
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    main {
+        width: 100%;
+        padding: 20px;
+        border-radius: 0;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .study-setup {
+        grid-template-columns: 1fr;
+    }
+
+    .control-group {
+        grid-column: 1;
+    }
+}
+
+@media print {
+    body {
+        display: block;
+        background: #ffffff;
+    }
+
+    main {
+        width: auto;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .study-setup,
+    .question-card,
+    .keyboard-answer,
+    .confidence,
+    .action-buttons,
+    #print-report,
+    #celebration,
+    .modal,
+    .toast,
+    .app-trademark {
+        display: none !important;
+    }
+}
+
+.help-button {
+    width: 1.35rem;
+    height: 1.35rem;
+    margin-left: 4px;
+    padding: 0;
+    border-radius: 50%;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* Original bunny celebration styling. */
+#celebration {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 30%;
+    pointer-events: none;
+    display: block;
+    opacity: 0;
+    transition: opacity 180ms ease;
+    z-index: 10;
+}
+
+#celebration.show {
+    opacity: 1;
+}
+
+.bunny {
+    position: absolute;
+    animation-play-state: paused;
+}
+
+.bunny {
+    --hop-scale: 1;
+    --body-highlight: #ffffff;
+    --body-base: #ffeef7;
+    --accent-color: #f5c4d6;
+    width: 48px;
+    height: 36px;
+    background: radial-gradient(circle at 30% 30%, var(--body-highlight) 20%, var(--body-base) 75%);
+    border: 2px solid var(--accent-color);
+    border-radius: 50% 50% 46% 46%;
+    box-shadow: 0 12px 30px rgba(28, 56, 47, 0.2);
+    animation: hop 1.25s ease-in-out infinite;
+    animation-play-state: paused;
+    transform-origin: center bottom;
+}
+
+.bunny::before,
+.bunny::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 32px;
+    background: linear-gradient(180deg, var(--body-highlight) 0%, var(--body-base) 90%);
+    border-radius: 50% 50% 0 0;
+    top: -26px;
+    box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.9);
+}
+
+.bunny::before {
+    left: 8px;
+    transform: rotate(10deg);
+}
+
+.bunny::after {
+    right: 8px;
+    transform: rotate(-10deg);
+}
+
+.bunny-a {
+    bottom: 48%;
+    left: 25%;
+}
+
+.bunny-b {
+    bottom: 44%;
+    left: 48%;
+    animation-delay: 0.2s;
+}
+
+.bunny-c {
+    bottom: 50%;
+    right: 20%;
+    animation-delay: 0.4s;
+}
+
+.bunny-d {
+    bottom: 55%;
+    left: 12%;
+    animation-delay: 0.55s;
+    --hop-scale: 0.9;
+}
+
+.bunny-e {
+    bottom: 58%;
+    right: 8%;
+    animation-delay: 0.7s;
+    --hop-scale: 1.1;
+}
+
+.bunny-f {
+    bottom: 42%;
+    left: 70%;
+    animation-delay: 0.85s;
+}
+
+.bunny-g {
+    bottom: 60%;
+    left: 36%;
+    animation-delay: 0.95s;
+    --hop-scale: 0.88;
+    --body-base: #f2ffdf;
+    --accent-color: #c9ec7f;
+}
+
+.bunny-h {
+    bottom: 46%;
+    right: 35%;
+    animation-delay: 1.1s;
+    --hop-scale: 1.15;
+    --body-base: #e5f2ff;
+    --accent-color: #7ac5ff;
+}
+
+.bunny-i {
+    bottom: 52%;
+    left: 5%;
+    animation-delay: 1.25s;
+    --hop-scale: 0.92;
+    --body-base: #ffe7d8;
+    --accent-color: #ffb07a;
+}
+
+.bunny-j {
+    bottom: 57%;
+    right: 5%;
+    animation-delay: 1.35s;
+    --hop-scale: 1.05;
+    --body-base: #f0e2ff;
+    --accent-color: #c09dff;
+}
+
+.bunny-k {
+    bottom: 45%;
+    left: 58%;
+    animation-delay: 1.45s;
+    --hop-scale: 0.86;
+    --body-base: #e3fff6;
+    --accent-color: #6fe3c7;
+}
+
+.bunny-l {
+    bottom: 63%;
+    left: 82%;
+    animation-delay: 1.55s;
+    --hop-scale: 1.12;
+    --body-base: #fff3e1;
+    --accent-color: #ffcd82;
+}
+
+#celebration.show .bunny {
+    animation-play-state: running;
+}
+
+@keyframes hop {
+    0% {
+        transform: translateY(0) scale(var(--hop-scale, 1));
+    }
+
+    30% {
+        transform: translateY(-32px) scale(calc(var(--hop-scale, 1) + 0.08));
+    }
+
+    60% {
+        transform: translateY(0) scale(calc(var(--hop-scale, 1) - 0.05));
+    }
+
+    100% {
+        transform: translateY(0) scale(var(--hop-scale, 1));
+    }
+}
+
+.shortcut-note {
+    margin: 10px 0 0;
+    color: #567b90;
+    font-family: "Fredoka", "Comic Sans MS", cursive;
+    font-size: 0.78rem;
+}
