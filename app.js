@@ -3156,6 +3156,7 @@ const finishedButton = document.getElementById("finished");
 const exitButton = document.getElementById("exit");
 const statsElement = document.getElementById("stats");
 const summarySection = document.getElementById("summary");
+const recapPanel = document.getElementById("recap-panel");
 const summaryNote = document.getElementById("summary-note");
 const summaryList = document.getElementById("summary-list");
 const readiness = document.getElementById("readiness");
