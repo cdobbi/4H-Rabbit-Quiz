@@ -21,3 +21,15 @@ The language is TypeScript, and the key libraries are `readline/promises` from N
 - Add unit tests that cover the scoring logic and error handling paths.
 - Persist quiz results to a JSON or CSV log for tracking improvement.
 - Expand the genetics section with pedigree-based follow-up questions.
+
+# Android and Google Play
+The browser quiz is packaged as an offline Android app through Capacitor. Install dependencies, then run:
+
+```powershell
+npm run android:sync
+.\android\gradlew.bat -p android assembleDebug
+```
+
+The debug APK is created under `android/app/build/outputs/apk/debug/`. For a release bundle, open the native project with `npm run android:open`, configure secure release signing in Android Studio, and generate a signed Android App Bundle (`.aab`). Do not commit signing keys or passwords.
+
+The draft privacy policy is in `privacy-policy.html`, and the Google Play listing copy/checklist is in `store-listing/GOOGLE-PLAY.md`. Host the privacy policy at a public HTTPS URL before entering it in Google Play Console.
