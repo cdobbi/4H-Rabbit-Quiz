@@ -72,7 +72,7 @@ body::before {
     background-image:
         linear-gradient(rgba(255, 255, 255, 0.54), rgba(255, 255, 255, 0.54)),
         var(--game-background, url("assets/rabbit-wallpaper.png"));
-    background-position: center 48%, center 48%;
+    background-position: center 32%, center 32%;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
