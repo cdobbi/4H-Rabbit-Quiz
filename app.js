@@ -3882,7 +3882,7 @@ function addExplanation(question, selectedIndex, isCorrect) {
     if (currentMode() === "exam") return;
     factBox.textContent = isCorrect
         ? question.fact || ""
-        : `Correct answer: ${question.options[question.correctIndex]}`;
+        : `The best answer is “${question.options[question.correctIndex]}.” ${question.fact || ""}`;
 }
 
 function submitAnswer(selectedIndex) {
@@ -3900,8 +3900,8 @@ function submitAnswer(selectedIndex) {
     } else {
         stopCelebration();
     }
-    feedback.textContent = isCorrect ? "" : `Correct answer: ${question.options[question.correctIndex]}`;
-    feedback.className = isCorrect ? "" : "incorrect";
+    feedback.textContent = "";
+    feedback.className = "";
     addExplanation(question, selectedIndex, isCorrect);
     score.textContent = `Score: ${currentScore} / ${questions.length}`;
     waitingForNext = true;
