@@ -391,10 +391,10 @@ const allQuestions = [
     },
     {
         prompt: "How many generations must appear on a pedigree for ARBA registration?",
-        options: ["Two", "Three", "Five"],
-        correctIndex: 1,
+        options: ["Two", "Three", "Four", "Five"],
+        correctIndex: 2,
         fact:
-            "Registration requires a three-generation pedigree showing parents, grandparents, and great-grandparents.",
+            "Registration requires a four-generation pedigree: the rabbit, its parents, grandparents, and great-grandparents.",
     },
     {
         prompt: "Why does ARBA require a permanent tattoo in the rabbit's left ear?",
@@ -1528,8 +1528,8 @@ const allQuestions = [
             "4 generations",
             "5 generations",
         ],
-        correctIndex: 1,
-        fact: "ARBA requires three generations: parents, grandparents, and great-grandparents.",
+        correctIndex: 2,
+        fact: "ARBA requires four generations: the rabbit, its parents, grandparents, and great-grandparents.",
     },
     {
         prompt: "Who is authorized to issue ARBA registration numbers?",
