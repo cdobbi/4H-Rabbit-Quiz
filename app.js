@@ -1095,7 +1095,7 @@ const allQuestions = [
             "Mini Rex",
             "American Fuzzy Lop",
             "American",
-            "Flemish Giant",
+            "Netherland Dwarf",
         ],
         correctIndex: 2,
         fact: "The American breed has a distinctive mandolin body shape recognized by ARBA.",
@@ -3584,8 +3584,8 @@ const STUDY_PATH_ACCESS = {
     mixed: { topics: TOPICS, tracks: ["cloverbud", "junior", "intermediate", "senior", "registrar"] },
     cloverbud: { topics: ["Husbandry", "Health & Biosecurity"], tracks: ["cloverbud"] },
     junior: { topics: ["Husbandry", "Health & Biosecurity", "Genetics"], tracks: ["cloverbud", "junior"] },
-    intermediate: { topics: TOPICS, tracks: ["cloverbud", "junior", "intermediate", "senior", "registrar"] },
-    senior: { topics: TOPICS, tracks: ["cloverbud", "junior", "intermediate", "senior", "registrar"] },
+    intermediate: { topics: TOPICS, tracks: ["cloverbud", "junior", "intermediate", "senior"] },
+    senior: { topics: TOPICS, tracks: ["cloverbud", "junior", "intermediate", "senior"] },
     registrar: { topics: TOPICS, tracks: ["cloverbud", "junior", "intermediate", "senior", "registrar"] },
 };
 
