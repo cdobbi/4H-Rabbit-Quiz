@@ -3625,6 +3625,9 @@ function updateRoundAvailability() {
     [...roundSize.options].forEach((option) => {
         option.disabled = option.value !== "all" && Number(option.value) > availableCount;
     });
+    if (currentMode() === "review" && availableCount > 0 && roundSize.selectedOptions[0].disabled) {
+        roundSize.value = "all";
+    }
     startRoundButton.textContent = "Start Round";
     startRoundButton.disabled = availableCount === 0 || roundSize.selectedOptions[0].disabled;
 }
@@ -3935,8 +3938,8 @@ function quitRound() {
 function renderSummary() {
     const misses = answersLog.filter((entry) => !entry.isCorrect);
     summaryList.replaceChildren();
-    summaryNote.textContent = misses.length ? "Review these questions before your next round:" : "Perfect round. Every answer was correct.";
-    answersLog.filter((entry) => !entry.isCorrect).forEach((entry) => {
+    summaryNote.textContent = misses.length ? "Review these questions before your next round:" : "Congratulations! You got 100%.";
+    misses.forEach((entry) => {
         const item = document.createElement("li");
         const certaintyNote = entry.confidence === "certain" ? " You marked this answer as certain, so it is a good one to revisit." : "";
         item.textContent = `${entry.topic}: ${entry.prompt} Correct answer: ${entry.options[entry.correctIndex]}.${certaintyNote} ${entry.fact || ""}`;
