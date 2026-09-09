@@ -3561,8 +3561,8 @@ let waitingForNext = false;
 let roundComplete = false;
 let roundPaused = false;
 let celebrationTimeoutId;
-const betaFullAccess = globalThis.RABBIT_QUIZ_BETA === true;
-let hasFullAccess = betaFullAccess || localStorage.getItem(FULL_ACCESS_STORAGE_KEY) === "true";
+const betaFullAccess = true;
+let hasFullAccess = true;
 
 function saveStats() { localStorage.setItem(STORAGE_KEY, JSON.stringify(stats)); }
 function selectedTopics() { return [...topicFilters.querySelectorAll("input:checked")].map((input) => input.value); }
