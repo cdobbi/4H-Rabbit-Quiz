@@ -5,6 +5,7 @@ const webDirectory = join(__dirname, "www");
 const fontDirectory = join(webDirectory, "fonts");
 const localFontDirectory = join(__dirname, "fonts");
 const fontSourceDirectory = join(__dirname, "node_modules", "@fontsource", "fredoka", "files");
+const poppinsFontSourceDirectory = join(__dirname, "node_modules", "@fontsource", "poppins", "files");
 const assetDirectory = join(__dirname, "assets");
 const isBetaBuild = process.argv.includes("--beta");
 
@@ -34,6 +35,11 @@ for (const weight of [400, 500, 600, 700]) {
     const fileName = `fredoka-latin-${weight}-normal.woff2`;
     cpSync(join(fontSourceDirectory, fileName), join(fontDirectory, fileName));
     cpSync(join(fontSourceDirectory, fileName), join(localFontDirectory, fileName));
+}
+
+for (const weight of [600, 700]) {
+    const fileName = `poppins-latin-${weight}-normal.woff2`;
+    cpSync(join(poppinsFontSourceDirectory, fileName), join(fontDirectory, fileName));
 }
 
 console.log(`Offline ${isBetaBuild ? "beta " : ""}web bundle created in www.`);
