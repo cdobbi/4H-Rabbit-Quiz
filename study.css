@@ -43,7 +43,7 @@
 body {
     background-color: #d8ebf4;
     background-image:
-        linear-gradient(rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0.64)),
+        linear-gradient(rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.58)),
         var(--game-background, url("assets/rabbit-wallpaper.png"));
     background-position: center, center;
     background-repeat: no-repeat;
