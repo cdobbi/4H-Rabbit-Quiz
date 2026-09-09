@@ -3880,10 +3880,9 @@ function selectedConfidence() {
 
 function addExplanation(question, selectedIndex, isCorrect) {
     if (currentMode() === "exam") return;
-    const incorrectChoice = question.options[selectedIndex];
     const correction = isCorrect
         ? "Review the note below to reinforce the rule."
-        : `“${incorrectChoice}” does not match the key clue in this question. The best answer is “${question.options[question.correctIndex]}.”`;
+        : `Correct answer: ${question.options[question.correctIndex]}.`;
     factBox.textContent = `${correction} ${question.fact || ""}`;
 }
 
