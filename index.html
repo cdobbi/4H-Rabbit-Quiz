@@ -48,15 +48,8 @@
                         <option value="senior">Seniors</option>
                         <option value="registrar">Registrar study guide (Full Version)</option>
                     </select>
+                    <button id="choose-study-levels" type="button" hidden>Choose levels</button>
                 </div>
-                <fieldset id="study-track-filters" class="study-track-filters">
-                    <legend>Include levels</legend>
-                    <label><input type="checkbox" value="cloverbud" checked /> Cloverbuds</label>
-                    <label><input type="checkbox" value="junior" checked /> Juniors</label>
-                    <label><input type="checkbox" value="intermediate" checked /> Intermediates</label>
-                    <label><input type="checkbox" value="senior" checked /> Seniors</label>
-                    <label><input type="checkbox" value="registrar" checked /> Registrar</label>
-                </fieldset>
                 <fieldset id="topic-filters">
                     <legend>Topics</legend>
                     <label data-topic="husbandry" data-tooltip="Daily rabbit care, food, housing, and handling."><input type="checkbox"
@@ -142,6 +135,20 @@
                 <p>A missed answer marked “Certain” is especially useful to review because it may reveal a rule or term that needs a second
                     look.</p>
                 <button id="close-confidence-modal" type="button">Got it</button>
+            </div>
+        </div>
+        <div id="study-levels-modal" class="tutorial-modal" hidden aria-hidden="true">
+            <div class="tutorial-content" role="dialog" aria-modal="true" aria-labelledby="study-levels-title">
+                <h2 id="study-levels-title">Choose study levels</h2>
+                <fieldset id="study-track-filters" class="study-track-filters">
+                    <legend>Include in this round</legend>
+                    <label><input type="checkbox" value="cloverbud" checked /> Cloverbuds</label>
+                    <label><input type="checkbox" value="junior" checked /> Juniors</label>
+                    <label><input type="checkbox" value="intermediate" checked /> Intermediates</label>
+                    <label><input type="checkbox" value="senior" checked /> Seniors</label>
+                    <label><input type="checkbox" value="registrar" checked /> Registrar</label>
+                </fieldset>
+                <button id="close-study-levels-modal" type="button">Done</button>
             </div>
         </div>
         <div id="tutorial-modal" class="tutorial-modal" hidden aria-hidden="true">

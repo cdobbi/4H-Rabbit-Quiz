@@ -3528,7 +3528,10 @@ const historySummary = document.getElementById("history-summary");
 const studyMode = document.getElementById("study-mode");
 const roundSize = document.getElementById("round-size");
 const studyTrack = document.getElementById("study-track");
+const chooseStudyLevelsButton = document.getElementById("choose-study-levels");
 const studyTrackFilters = document.getElementById("study-track-filters");
+const studyLevelsModal = document.getElementById("study-levels-modal");
+const closeStudyLevelsModalButton = document.getElementById("close-study-levels-modal");
 const startRoundButton = document.getElementById("start-round");
 const topicFilters = document.getElementById("topic-filters");
 const printReportButton = document.getElementById("print-report");
@@ -3589,7 +3592,18 @@ const STUDY_PATH_ACCESS = {
 function currentPathAccess() { return STUDY_PATH_ACCESS[currentStudyTrack()]; }
 
 function updateStudyTrackFilters() {
-    studyTrackFilters.disabled = currentStudyTrack() !== "mixed";
+    chooseStudyLevelsButton.hidden = currentStudyTrack() !== "mixed";
+}
+
+function showStudyLevelsModal() {
+    studyLevelsModal.hidden = false;
+    studyLevelsModal.setAttribute("aria-hidden", "false");
+    closeStudyLevelsModalButton.focus();
+}
+
+function hideStudyLevelsModal() {
+    studyLevelsModal.hidden = true;
+    studyLevelsModal.setAttribute("aria-hidden", "true");
 }
 
 function updateTopicFilters(selectAllAvailable = false) {
@@ -4029,6 +4043,15 @@ studyTrack.addEventListener("change", () => {
     updateStudyTrackFilters();
     updateTopicFilters(true);
     updateRoundAvailability();
+    if (currentStudyTrack() === "mixed") showStudyLevelsModal();
+});
+chooseStudyLevelsButton.addEventListener("click", showStudyLevelsModal);
+closeStudyLevelsModalButton.addEventListener("click", () => {
+    hideStudyLevelsModal();
+    chooseStudyLevelsButton.focus();
+});
+studyLevelsModal.addEventListener("click", (event) => {
+    if (event.target === studyLevelsModal) hideStudyLevelsModal();
 });
 upgradeButton.addEventListener("click", beginPurchase);
 restorePurchaseButton.addEventListener("click", restorePurchase);
@@ -4061,6 +4084,11 @@ tutorialModal.addEventListener("click", (event) => {
     if (event.target === tutorialModal) hideTutorial();
 });
 document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !studyLevelsModal.hidden) {
+        hideStudyLevelsModal();
+        chooseStudyLevelsButton.focus();
+        return;
+    }
     if (event.key === "Escape" && !tutorialModal.hidden) {
         hideTutorial();
         tutorialHelpButton.focus();
@@ -4075,6 +4103,7 @@ document.addEventListener("keydown", (event) => {
 
 document.addEventListener("deviceready", initializeBilling, { once: true });
 updateUpgradePanel();
+updateStudyTrackFilters();
 
 updateStatsDisplay();
 startNewGame();

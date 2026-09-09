@@ -347,11 +347,10 @@ select {
 }
 
 .study-track-filters {
-    grid-column: 1 / -1;
     display: flex;
     flex-wrap: wrap;
     gap: 8px 14px;
-    margin: 0;
+    margin: 0 0 16px;
     padding: 10px 0 0;
     border: 0;
     color: #315a75;
@@ -367,10 +366,6 @@ select {
 
 .study-track-filters input {
     accent-color: var(--ocean);
-}
-
-.study-track-filters:disabled {
-    opacity: 0.5;
 }
 
 #topic-filters label[data-topic="husbandry"] {
