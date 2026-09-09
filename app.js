@@ -2897,15 +2897,7 @@ function pickRandomQuestions(pool, count) {
 }
 
 function setRandomBackground() {
-    const backgrounds = [
-        "assets/rabbit-wallpaper.png",
-        "assets/rabbitking.avif",
-        "assets/rabbit-meadow.png",
-        "assets/rabbit-portraits.png",
-        ...Array.from({ length: 20 }, (_, index) => index + 1)
-            .filter((index) => index !== 5)
-            .map((index) => `assets/rabbit-photo-${String(index).padStart(2, "0")}.jpg`),
-    ];
+    const backgrounds = globalThis.RABBIT_WALLPAPERS;
     const background = backgrounds[Math.floor(Math.random() * backgrounds.length)];
     document.body.style.setProperty("--game-background", `url("${background}")`);
 }
@@ -3661,15 +3653,7 @@ function pickRandomQuestions(pool, count) {
 }
 
 function setRandomBackground() {
-    const backgrounds = [
-        "assets/rabbit-wallpaper.png",
-        "assets/rabbitking.avif",
-        "assets/rabbit-meadow.png",
-        "assets/rabbit-portraits.png",
-        ...Array.from({ length: 20 }, (_, index) => index + 1)
-            .filter((index) => index !== 5)
-            .map((index) => `assets/rabbit-photo-${String(index).padStart(2, "0")}.jpg`),
-    ];
+    const backgrounds = globalThis.RABBIT_WALLPAPERS;
     const background = backgrounds[Math.floor(Math.random() * backgrounds.length)];
     document.body.style.setProperty("--game-background", `url("${background}")`);
 }
