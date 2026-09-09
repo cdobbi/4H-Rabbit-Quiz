@@ -3663,6 +3663,7 @@ function availableQuestions() {
 }
 
 function updateUpgradePanel() {
+    if (!upgradePanel || !upgradeDetails || !upgradeButton || !restorePurchaseButton) return;
     const lockedQuestionCount = questionBank.length - freeQuestionIds.size;
     const registrarOption = studyTrack.querySelector('option[value="registrar"]');
     registrarOption.disabled = !hasFullAccess;
@@ -3681,7 +3682,7 @@ function updateUpgradePanel() {
 function grantFullAccess() {
     hasFullAccess = true;
     localStorage.setItem(FULL_ACCESS_STORAGE_KEY, "true");
-    purchaseStatus.textContent = "Full Question Bank unlocked. Thank you for supporting HopNCode.";
+    if (purchaseStatus) purchaseStatus.textContent = "Full Question Bank unlocked. Thank you for supporting HopNCode.";
     updateUpgradePanel();
 }
 
@@ -3706,7 +3707,7 @@ function initializeBilling() {
         receipt.finish();
     });
     store.error((error) => {
-        purchaseStatus.textContent = error.message || "The purchase could not be completed. Please try again.";
+        if (purchaseStatus) purchaseStatus.textContent = error.message || "The purchase could not be completed. Please try again.";
     });
     store.initialize([purchase.Platform.GOOGLE_PLAY]);
 }
@@ -3715,13 +3716,13 @@ function beginPurchase() {
     const purchase = window.CdvPurchase;
     const store = playStore();
     if (!purchase || !store) {
-        purchaseStatus.textContent = "Purchases are available in the Google Play version of the app.";
+        if (purchaseStatus) purchaseStatus.textContent = "Purchases are available in the Google Play version of the app.";
         return;
     }
     const product = store.get(FULL_ACCESS_PRODUCT_ID, purchase.Platform.GOOGLE_PLAY);
     const offer = product?.getOffer();
     if (!offer) {
-        purchaseStatus.textContent = "The Full Question Bank is not available yet. Please try again shortly.";
+        if (purchaseStatus) purchaseStatus.textContent = "The Full Question Bank is not available yet. Please try again shortly.";
         return;
     }
     offer.order();
@@ -3730,11 +3731,11 @@ function beginPurchase() {
 function restorePurchase() {
     const store = playStore();
     if (!store) {
-        purchaseStatus.textContent = "Restore purchases from the Google Play version of the app.";
+        if (purchaseStatus) purchaseStatus.textContent = "Restore purchases from the Google Play version of the app.";
         return;
     }
     store.restorePurchases();
-    purchaseStatus.textContent = "Checking your previous Google Play purchases...";
+    if (purchaseStatus) purchaseStatus.textContent = "Checking your previous Google Play purchases...";
 }
 
 function topicKey(topic) {
@@ -4053,8 +4054,8 @@ closeStudyLevelsModalButton.addEventListener("click", () => {
 studyLevelsModal.addEventListener("click", (event) => {
     if (event.target === studyLevelsModal) hideStudyLevelsModal();
 });
-upgradeButton.addEventListener("click", beginPurchase);
-restorePurchaseButton.addEventListener("click", restorePurchase);
+upgradeButton?.addEventListener("click", beginPurchase);
+restorePurchaseButton?.addEventListener("click", restorePurchase);
 printReportButton.addEventListener("click", () => window.print());
 confidenceHelpButton.addEventListener("click", () => {
     confidenceModal.hidden = false;
