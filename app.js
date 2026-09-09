@@ -2351,8 +2351,8 @@ const allQuestions = [
             "Wool breed",
             "Not recognized",
         ],
-        correctIndex: 1,
-        fact: "Rhinelanders are large patterned breeds, classified as 6-class.",
+        correctIndex: 0,
+        fact: "Rhinelanders are full-arch breeds classified as 4-class.",
     },
     {
         prompt: "The Silver Fox is classified as which type of ARBA class?",
