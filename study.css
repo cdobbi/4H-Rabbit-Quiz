@@ -85,7 +85,7 @@ main {
 
 main::before {
     position: fixed;
-    inset: 16px auto 16px 50%;
+    inset: 36px auto 16px 50%;
     z-index: -1;
     width: min(960px, calc(100vw - 32px));
     content: "";
