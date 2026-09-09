@@ -912,7 +912,7 @@ const allQuestions = [
         fact: "Remove the nest box at 3-4 weeks when kits are weaned and eating pellets independently.",
     },
     {
-        prompt: "What is a disqualification and name three examples.",
+        prompt: "Which option lists three grounds for disqualification?",
         options: [
             "Wrong color, missing toenail, malocclusion",
             "Tattoo, pedigree, weight",
@@ -1717,13 +1717,13 @@ const allQuestions = [
     {
         prompt: "What is the primary purpose of the ARBA Standard of Perfection?",
         options: [
-            "To provide judging criteria for rabbit shows",
+            "To provide judging criteria that promote breed improvement",
             "To record pedigrees",
             "To track feed programs",
             "To regulate tattooing methods",
         ],
         correctIndex: 0,
-        fact: "The Standard of Perfection is ARBA's official guide for judging rabbits at shows.",
+        fact: "The Standard of Perfection gives judges uniform criteria and guides breeders toward improving each breed.",
     },
     // Registrar Limit
     {
@@ -2307,8 +2307,8 @@ const allQuestions = [
             "Wool breed",
             "Not recognized",
         ],
-        correctIndex: 1,
-        fact: "English Spots are large spotted breeds, classified as 6-class.",
+        correctIndex: 0,
+        fact: "English Spots are full-arch breeds classified as 4-class.",
     },
     {
         prompt: "The Belgian Hare is classified as which type of ARBA class?",
@@ -3880,10 +3880,8 @@ function selectedConfidence() {
 
 function addExplanation(question, selectedIndex, isCorrect) {
     if (currentMode() === "exam") return;
-    const correction = isCorrect
-        ? "Review the note below to reinforce the rule."
-        : `Correct answer: ${question.options[question.correctIndex]}.`;
-    factBox.textContent = `${correction} ${question.fact || ""}`;
+    const correction = isCorrect ? "" : `Correct answer: ${question.options[question.correctIndex]}. `;
+    factBox.textContent = `${correction}${question.fact || ""}`;
 }
 
 function submitAnswer(selectedIndex) {
