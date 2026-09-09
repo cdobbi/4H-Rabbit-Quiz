@@ -3324,13 +3324,14 @@ startNewGame();
 */
 
 const TOPICS = ["Husbandry", "Health & Biosecurity", "Genetics", "ARBA Procedures", "Breeds & Judging"];
-const DEFAULT_STATS = { bestScore: 0, gamesPlayed: 0, history: [], misses: [], topicResults: {} };
+const DEFAULT_STATS = { bestScore: 0, gamesPlayed: 0, history: [], misses: [], recentQuestionIds: [], topicResults: {} };
 const STORAGE_KEY = "rabbitHusbandryStudyStats";
 const WALLPAPER_DECK_STORAGE_KEY = "rabbitHusbandryWallpaperDeck";
 const LAST_WALLPAPER_STORAGE_KEY = "rabbitHusbandryLastWallpaper";
 const FULL_ACCESS_STORAGE_KEY = "rabbitHusbandryFullAccess";
 const FULL_ACCESS_PRODUCT_ID = "full_question_bank";
 const TUTORIAL_SEEN_STORAGE_KEY = "rabbitHusbandryTutorialSeen";
+const RECENT_QUESTION_LIMIT = 120;
 
 const scenarioQuestions = [
     {
@@ -3527,6 +3528,7 @@ const historySummary = document.getElementById("history-summary");
 const studyMode = document.getElementById("study-mode");
 const roundSize = document.getElementById("round-size");
 const studyTrack = document.getElementById("study-track");
+const studyTrackFilters = document.getElementById("study-track-filters");
 const startRoundButton = document.getElementById("start-round");
 const topicFilters = document.getElementById("topic-filters");
 const printReportButton = document.getElementById("print-report");
@@ -3546,7 +3548,7 @@ const purchaseStatus = document.getElementById("purchase-status");
 function loadStats() {
     try {
         const stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
-        return { ...DEFAULT_STATS, ...stored, history: Array.isArray(stored.history) ? stored.history : [], misses: Array.isArray(stored.misses) ? stored.misses : [], topicResults: stored.topicResults || {} };
+        return { ...DEFAULT_STATS, ...stored, history: Array.isArray(stored.history) ? stored.history : [], misses: Array.isArray(stored.misses) ? stored.misses : [], recentQuestionIds: Array.isArray(stored.recentQuestionIds) ? stored.recentQuestionIds : [], topicResults: stored.topicResults || {} };
     } catch {
         return { ...DEFAULT_STATS };
     }
@@ -3568,6 +3570,11 @@ function saveStats() { localStorage.setItem(STORAGE_KEY, JSON.stringify(stats));
 function selectedTopics() { return [...topicFilters.querySelectorAll("input:checked")].map((input) => input.value); }
 function currentMode() { return studyMode.value; }
 function currentStudyTrack() { return studyTrack.value; }
+function selectedStudyTracks() {
+    return currentStudyTrack() === "mixed"
+        ? [...studyTrackFilters.querySelectorAll("input:checked")].map((input) => input.value)
+        : currentPathAccess().tracks;
+}
 function selectedRoundSize(availableCount) { return roundSize.value === "all" ? availableCount : Number(roundSize.value); }
 
 const STUDY_PATH_ACCESS = {
@@ -3581,10 +3588,14 @@ const STUDY_PATH_ACCESS = {
 
 function currentPathAccess() { return STUDY_PATH_ACCESS[currentStudyTrack()]; }
 
+function updateStudyTrackFilters() {
+    studyTrackFilters.disabled = currentStudyTrack() !== "mixed";
+}
+
 function updateTopicFilters(selectAllAvailable = false) {
     const pathAccess = currentPathAccess();
     const availableTopics = new Set(availableQuestions()
-        .filter((question) => pathAccess.tracks.includes(question.studyTrack) && pathAccess.topics.includes(question.topic))
+        .filter((question) => selectedStudyTracks().includes(question.studyTrack) && pathAccess.topics.includes(question.topic))
         .map((question) => question.topic));
     const topicInputs = [...topicFilters.querySelectorAll("input")];
 
@@ -3602,7 +3613,7 @@ function eligibleQuestions() {
     const pathAccess = currentPathAccess();
     const matchingQuestions = availableQuestions().filter((question) =>
         topics.includes(question.topic)
-        && pathAccess.tracks.includes(question.studyTrack)
+        && selectedStudyTracks().includes(question.studyTrack)
     );
     return currentMode() === "review"
         ? matchingQuestions.filter((question) => stats.misses.includes(question.id))
@@ -3746,13 +3757,27 @@ function playCelebration() {
     celebrationTimeoutId = setTimeout(stopCelebration, 4000);
 }
 
-function pickRandomQuestions(pool, count) {
-    const copy = [...pool];
-    for (let index = copy.length - 1; index > 0; index -= 1) {
+function shuffleQuestions(pool) {
+    const shuffled = [...pool];
+    for (let index = shuffled.length - 1; index > 0; index -= 1) {
         const randomIndex = Math.floor(Math.random() * (index + 1));
-        [copy[index], copy[randomIndex]] = [copy[randomIndex], copy[index]];
+        [shuffled[index], shuffled[randomIndex]] = [shuffled[randomIndex], shuffled[index]];
     }
-    return copy.slice(0, Math.min(count, copy.length));
+    return shuffled;
+}
+
+function pickRandomQuestions(pool, count) {
+    const recentIds = new Set(stats.recentQuestionIds);
+    const freshQuestions = shuffleQuestions(pool.filter((question) => !recentIds.has(question.id)));
+    const repeatedQuestions = shuffleQuestions(pool.filter((question) => recentIds.has(question.id)));
+    return [...freshQuestions, ...repeatedQuestions].slice(0, Math.min(count, pool.length));
+}
+
+function rememberSelectedQuestions(selectedQuestions) {
+    const selectedIds = selectedQuestions.map((question) => question.id);
+    stats.recentQuestionIds = [...selectedIds, ...stats.recentQuestionIds.filter((id) => !selectedIds.includes(id))]
+        .slice(0, RECENT_QUESTION_LIMIT);
+    saveStats();
 }
 
 function setRandomBackground() {
@@ -3963,7 +3988,9 @@ function startNewGame() {
         feedback.textContent = `This setup has ${pool.length} questions. Pick a smaller round or choose more topics.`;
         return;
     }
-    questions = pickRandomQuestions(pool, requestedCount).map(shuffleOptions);
+    questions = pickRandomQuestions(pool, requestedCount);
+    rememberSelectedQuestions(questions);
+    questions = questions.map(shuffleOptions);
     setRandomBackground();
     currentIndex = 0;
     currentScore = 0;
@@ -3991,7 +4018,12 @@ startRoundButton.addEventListener("click", startNewGame);
 [studyMode, roundSize, topicFilters].forEach((control) => {
     control.addEventListener("change", updateRoundAvailability);
 });
+studyTrackFilters.addEventListener("change", () => {
+    updateTopicFilters();
+    updateRoundAvailability();
+});
 studyTrack.addEventListener("change", () => {
+    updateStudyTrackFilters();
     updateTopicFilters(true);
     updateRoundAvailability();
 });

@@ -346,6 +346,33 @@ select {
     opacity: 0.4;
 }
 
+.study-track-filters {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    margin: 0;
+    padding: 10px 0 0;
+    border: 0;
+    color: #315a75;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.study-track-filters legend {
+    width: 100%;
+    margin-bottom: 2px;
+    font-weight: 700;
+}
+
+.study-track-filters input {
+    accent-color: var(--ocean);
+}
+
+.study-track-filters:disabled {
+    opacity: 0.5;
+}
+
 #topic-filters label[data-topic="husbandry"] {
     --topic-color: #28789d;
 }
@@ -696,6 +723,10 @@ input[type="number"] {
     #topic-filters {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 8px;
+    }
+
+    .study-track-filters {
+        gap: 8px 12px;
     }
 }
 
