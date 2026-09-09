@@ -3512,7 +3512,7 @@ const answerInput = document.getElementById("answer");
 const feedback = document.getElementById("feedback");
 const score = document.getElementById("score");
 const nextButton = document.getElementById("next");
-const finishedButton = document.getElementById("finished");
+const pauseButton = document.getElementById("pause");
 const exitButton = document.getElementById("exit");
 const statsElement = document.getElementById("stats");
 const summarySection = document.getElementById("summary");
@@ -3557,6 +3557,7 @@ let currentIndex = 0;
 let currentScore = 0;
 let waitingForNext = false;
 let roundComplete = false;
+let roundPaused = false;
 let celebrationTimeoutId;
 const betaFullAccess = globalThis.RABBIT_QUIZ_BETA === true;
 let hasFullAccess = betaFullAccess || localStorage.getItem(FULL_ACCESS_STORAGE_KEY) === "true";
@@ -3822,7 +3823,7 @@ function addExplanation(question, selectedIndex, isCorrect) {
 }
 
 function submitAnswer(selectedIndex) {
-    if (waitingForNext || roundComplete) return;
+    if (waitingForNext || roundComplete || roundPaused) return;
     const question = questions[currentIndex];
     if (selectedIndex < 0 || selectedIndex >= question.options.length) {
         feedback.textContent = "Choose one of the available answers.";
@@ -3846,12 +3847,42 @@ function submitAnswer(selectedIndex) {
 }
 
 function updateActionButtons() {
-    nextButton.hidden = !waitingForNext && !roundComplete;
-    finishedButton.hidden = !waitingForNext && !roundComplete;
-    exitButton.hidden = !waitingForNext && !roundComplete;
+    nextButton.hidden = roundPaused || (!waitingForNext && !roundComplete);
+    pauseButton.hidden = !questions.length || roundComplete;
+    exitButton.hidden = !questions.length || roundComplete;
     nextButton.textContent = roundComplete ? "Start New Round" : currentIndex === questions.length - 1 ? "Finish Round" : "Next Question";
-    finishedButton.textContent = "Finish Round";
-    exitButton.textContent = "Exit";
+    pauseButton.textContent = roundPaused ? "Resume Round" : "Pause Round";
+    exitButton.textContent = "Quit Round";
+}
+
+function pauseRound() {
+    roundPaused = true;
+    feedback.textContent = "Round paused. Resume when you are ready.";
+    setAnswerLocked(true);
+    updateActionButtons();
+}
+
+function resumeRound() {
+    roundPaused = false;
+    feedback.textContent = "";
+    setAnswerLocked(waitingForNext);
+    updateActionButtons();
+}
+
+function quitRound() {
+    questions = [];
+    answersLog = [];
+    currentIndex = 0;
+    currentScore = 0;
+    waitingForNext = false;
+    roundPaused = false;
+    questionText.textContent = "Choose your settings and start a new round.";
+    optionsList.replaceChildren();
+    factBox.textContent = "";
+    score.textContent = "";
+    feedback.textContent = "Round quit. Your study history was not changed.";
+    document.querySelector("details.collapsible-panel")?.setAttribute("open", "");
+    updateActionButtons();
 }
 
 function renderSummary() {
@@ -3916,19 +3947,24 @@ function startNewGame() {
     currentScore = 0;
     answersLog = [];
     roundComplete = false;
+    roundPaused = false;
     recapPanel.hidden = true;
     renderQuestion();
 }
 
 nextButton.addEventListener("click", () => {
     if (roundComplete) return startNewGame();
-    if (!waitingForNext) return;
+    if (!waitingForNext || roundPaused) return;
     if (currentIndex === questions.length - 1) return completeRound();
     currentIndex += 1;
+    waitingForNext = false;
     renderQuestion();
 });
-finishedButton.addEventListener("click", completeRound);
-exitButton.addEventListener("click", completeRound);
+pauseButton.addEventListener("click", () => {
+    if (roundPaused) resumeRound();
+    else pauseRound();
+});
+exitButton.addEventListener("click", quitRound);
 startRoundButton.addEventListener("click", startNewGame);
 [studyMode, roundSize, topicFilters].forEach((control) => {
     control.addEventListener("change", updateRoundAvailability);
@@ -3973,7 +4009,7 @@ document.addEventListener("keydown", (event) => {
         tutorialHelpButton.focus();
         return;
     }
-    if (waitingForNext || roundComplete || event.ctrlKey || event.metaKey || event.altKey) return;
+    if (waitingForNext || roundComplete || roundPaused || event.ctrlKey || event.metaKey || event.altKey) return;
     if (!["1", "2", "3"].includes(event.key)) return;
     const activeElement = document.activeElement;
     if (activeElement?.matches("select, input, textarea")) return;

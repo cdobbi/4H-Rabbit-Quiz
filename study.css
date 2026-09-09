@@ -493,7 +493,7 @@ input[type="number"] {
     width: 100%;
 }
 
-#finished,
+#pause,
 #exit,
 #print-report {
     border: 1px solid #bfd5e0;
@@ -501,7 +501,7 @@ input[type="number"] {
     color: #254a60;
 }
 
-#finished:hover:not(:disabled),
+#pause:hover:not(:disabled),
 #exit:hover:not(:disabled),
 #print-report:hover:not(:disabled) {
     background: #d2e4ec;
