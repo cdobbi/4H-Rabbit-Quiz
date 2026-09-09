@@ -516,7 +516,7 @@ const allQuestions = [
     },
     {
         prompt:
-            "How should you properly pose a full-arch breed like a Tan or Checkered Giant?",
+            "How should a full-arch breed like a Tan or Checkered Giant be shown on the table?",
         options: [
             "Press the belly to the table",
             "Let it stand naturally showing daylight under the body",
@@ -524,7 +524,7 @@ const allQuestions = [
         ],
         correctIndex: 1,
         fact:
-            "Full-arch breeds are posed on their feet with minimal handling so the arch is visible from shoulders to hips.",
+            "Full-arch breeds are not posed. Let them run the table so they can show their natural arch from shoulders to hips.",
     },
     {
         prompt: "What is a 'charlie' in broken patterned rabbits?",
@@ -2809,13 +2809,13 @@ const allQuestions = [
     {
         prompt: "Which colors are allowed in Dutch?",
         options: [
-            "Black, Blue, Chocolate, Gray, Steel with white markings",
+            "Black, Blue, Chocolate, Gray, Steel, Golden Yellow",
             "Only Agouti",
             "Only White",
             "Only Red",
         ],
         correctIndex: 0,
-        fact: "Dutch come in five base colors with required white markings.",
+        fact: "Dutch recognize Black, Blue, Chocolate, Gray (Chestnut Agouti), Steel, and Golden Yellow. Steel is a recognized color, not Steel with white markings.",
     },
     {
         prompt: "Which coat varieties are recognized in Himalayan?",
@@ -3880,8 +3880,7 @@ function selectedConfidence() {
 
 function addExplanation(question, selectedIndex, isCorrect) {
     if (currentMode() === "exam") return;
-    const correction = isCorrect ? "" : `Correct answer: ${question.options[question.correctIndex]}. `;
-    factBox.textContent = `${correction}${question.fact || ""}`;
+    factBox.textContent = question.fact || "";
 }
 
 function submitAnswer(selectedIndex) {
