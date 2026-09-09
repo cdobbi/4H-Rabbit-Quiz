@@ -56,6 +56,12 @@
     --mint: #dff4e8;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     position: relative;
     isolation: isolate;
@@ -64,9 +70,8 @@ body {
 
 body::before {
     position: fixed;
-    inset: 0 auto;
+    inset: 0;
     z-index: 0;
-    width: min(1300px, 100%);
     content: "";
     pointer-events: none;
     background-image:
