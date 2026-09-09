@@ -56,6 +56,11 @@
     --mint: #dff4e8;
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 *,
 *::before,
 *::after {
@@ -63,6 +68,7 @@
 }
 
 body {
+    margin: 0;
     position: relative;
     isolation: isolate;
     background-color: #d8ebf4;
@@ -87,7 +93,7 @@ main {
     box-sizing: border-box;
     position: relative;
     z-index: 1;
-    width: min(1200px, calc(100% - 32px));
+    width: min(960px, calc(100% - 32px));
     margin: 16px auto;
     padding: 0 20px 20px;
     border-radius: 8px;
@@ -99,7 +105,7 @@ h1 {
     padding-top: 30px;
     color: #000000;
     font-family: "Poppins", sans-serif;
-    font-size: 2.85rem;
+    font-size: 3.1rem;
     font-weight: 700;
     letter-spacing: 0;
     line-height: 1;
@@ -107,12 +113,15 @@ h1 {
 }
 
 .subtitle {
+    display: block;
+    width: 100%;
     margin: 0;
-    color: var(--coral);
+    color: #b84c34;
     font-family: "Poppins", sans-serif;
-    font-size: 1.18rem;
-    font-weight: 600;
+    font-size: 0.9rem;
+    font-weight: 700;
     text-align: center;
+    white-space: nowrap;
 }
 
 .upgrade-panel {
@@ -651,11 +660,13 @@ input[type="number"] {
 
     main {
         width: 100%;
-        padding: 20px;
+        margin: 0 auto 16px;
+        padding: 6px 20px 20px;
         border-radius: 0;
     }
 
     h1 {
+        padding-top: 0;
         font-size: 2.2rem;
     }
 
