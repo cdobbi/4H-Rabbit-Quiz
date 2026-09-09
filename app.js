@@ -3,7 +3,6 @@ const QUESTIONS_PER_GAME = 10;
 const allQuestions = [
     {
         studyTrack: "cloverbud",
-        topic: "Health & Biosecurity",
         prompt: "What should you do before touching a rabbit?",
         options: ["Wash your hands", "Run and clap", "Give it candy"],
         correctIndex: 0,
@@ -11,7 +10,6 @@ const allQuestions = [
     },
     {
         studyTrack: "cloverbud",
-        topic: "Health & Biosecurity",
         prompt: "What does a rabbit need to drink every day?",
         options: ["Fresh water", "Soda", "Milk"],
         correctIndex: 0,
@@ -33,14 +31,14 @@ const allQuestions = [
     },
     {
         studyTrack: "cloverbud",
-        prompt: "Who should help you pick up a rabbit?",
-        options: ["A grown-up who knows how", "No one", "Another rabbit"],
+        prompt: "Is it ok to pick up a rabbit by the scruff of the neck?",
+        options: ["No, never", "Yes, anytime", "Only if it is small"],
         correctIndex: 0,
-        fact: "Ask a grown-up for help so the rabbit's body and back feet are safely supported.",
+        fact: "Picking up a rabbit by the scruff of the neck can hurt it.",
     },
     {
         studyTrack: "cloverbud",
-        prompt: "Where is a calm place to pet a rabbit with a helper?",
+        prompt: "Where is the best place to pet or play with your rabbit?",
         options: ["Sitting low on the floor", "On top of a tall chair", "While running outside"],
         correctIndex: 0,
         fact: "Being low to the ground helps keep both you and the rabbit safe.",
@@ -48,13 +46,12 @@ const allQuestions = [
     {
         studyTrack: "cloverbud",
         prompt: "What should you do if a rabbit is hiding and does not want to come out?",
-        options: ["Give it quiet space", "Pull it out", "Bang on its cage"],
+        options: ["Give it quiet space", "Pull it by the leg or ears", "Bang on its cage"],
         correctIndex: 0,
-        fact: "Rabbits need a quiet place to rest and feel safe.",
+        fact: "Rabbits need a quiet place to feel safe. Give them time to come out on their own.",
     },
     {
         studyTrack: "cloverbud",
-        topic: "Health & Biosecurity",
         prompt: "What should you do if your rabbit does not want to eat?",
         options: ["Tell a grown-up right away", "Give it candy", "Ignore it for days"],
         correctIndex: 0,
@@ -69,7 +66,6 @@ const allQuestions = [
     },
     {
         studyTrack: "cloverbud",
-        topic: "Health & Biosecurity",
         prompt: "What should you do after helping care for a rabbit?",
         options: ["Wash your hands", "Touch your face", "Leave a mess"],
         correctIndex: 0,
@@ -77,47 +73,38 @@ const allQuestions = [
     },
     {
         studyTrack: "cloverbud",
-        topic: "Health & Biosecurity",
         prompt: "What should a rabbit's home be like?",
-        options: ["Clean and dry", "Wet and messy", "Full of loud toys"],
+        options: ["Clean and dry", "Wet and messy", "Full of toys"],
         correctIndex: 0,
         fact: "A clean, dry home helps rabbits stay comfortable and healthy.",
     },
     {
         studyTrack: "cloverbud",
         prompt: "What should you do before opening a rabbit's cage?",
-        options: ["Ask a grown-up", "Open it quickly", "Shake the door"],
+        options: ["Ask a grown-up if it's okay", "Open it quickly", "Shake the door"],
         correctIndex: 0,
         fact: "A grown-up can help you open and close the cage safely.",
     },
     {
         studyTrack: "cloverbud",
-        prompt: "What helps a rabbit feel safe in its home?",
-        options: ["A quiet hiding spot", "Bright flashing lights", "Lots of shouting"],
-        correctIndex: 0,
-        fact: "Rabbits like a quiet place where they can rest.",
-    },
-    {
-        studyTrack: "cloverbud",
-        prompt: "What should you do if a rabbit thumps its foot?",
-        options: ["Be quiet and give it space", "Chase it", "Make more noise"],
+        prompt: "What does it mean when a rabbit thumps its foot?",
+        options: ["It is worried or startled", "It is happy", "It is hungry"],
         correctIndex: 0,
         fact: "A rabbit may thump when it feels worried or startled.",
     },
     {
         studyTrack: "cloverbud",
-        prompt: "What can a rabbit chew for fun with a grown-up's help?",
+        prompt: "What can a rabbit chew for fun?",
         options: ["A plain cardboard tube", "A plastic toy", "A pencil"],
         correctIndex: 0,
         fact: "Safe chew toys can help keep a rabbit busy.",
     },
     {
         studyTrack: "cloverbud",
-        topic: "Health & Biosecurity",
         prompt: "Where should a rabbit stay on a hot day?",
         options: ["In a cool, shaded place", "In hot sunshine", "Next to a heater"],
         correctIndex: 0,
-        fact: "Rabbits can get too hot, so they need shade and fresh water.",
+        fact: "On hot days rabbits need access to fresh water and sometimes a few frozen water bottles to help them cool down.",
     },
     {
         studyTrack: "cloverbud",
@@ -142,25 +129,10 @@ const allQuestions = [
     },
     {
         studyTrack: "cloverbud",
-        topic: "Health & Biosecurity",
-        prompt: "What should you do if you see a loose clump of rabbit fur?",
-        options: ["Tell a grown-up", "Pull more fur out", "Throw it at the rabbit"],
+        prompt: "When a rabbit runs super fast and hops in the air, what is this called?",
+        options: ["Binky and Zoomies", "Jumps and sprints", "Playtime"],
         correctIndex: 0,
-        fact: "A grown-up can check whether the rabbit needs grooming or help.",
-    },
-    {
-        studyTrack: "cloverbud",
-        prompt: "What kind of hands are best for petting a rabbit?",
-        options: ["Clean, gentle hands", "Sticky hands", "Rough hands"],
-        correctIndex: 0,
-        fact: "Clean, gentle hands help rabbits feel safe.",
-    },
-    {
-        studyTrack: "cloverbud",
-        prompt: "What should you do if a rabbit runs away from you?",
-        options: ["Stay calm and get a grown-up", "Run after it", "Yell at it"],
-        correctIndex: 0,
-        fact: "Stay calm so a grown-up can help the rabbit get safely home.",
+        fact: "A binky is a happy jump that rabbits do when they are excited."
     },
     {
         studyTrack: "cloverbud",
@@ -171,18 +143,10 @@ const allQuestions = [
     },
     {
         studyTrack: "cloverbud",
-        topic: "Health & Biosecurity",
         prompt: "What should you do after giving a rabbit fresh water?",
         options: ["Make sure it can reach the water", "Pour it on the floor", "Hide the water"],
         correctIndex: 0,
         fact: "A rabbit needs water it can easily reach.",
-    },
-    {
-        studyTrack: "cloverbud",
-        prompt: "What is a kind way to watch a rabbit play?",
-        options: ["Sit quietly nearby", "Grab it suddenly", "Throw toys at it"],
-        correctIndex: 0,
-        fact: "Quiet watching lets a rabbit explore safely.",
     },
     {
         studyTrack: "cloverbud",
@@ -218,15 +182,16 @@ const allQuestions = [
         fact: "A resting board or mat gives a rabbit a comfortable place to relax.",
     },
     {
+        studyTrack: "cloverbud",
         prompt: "When should you place a nest box for a pregnant doe?",
         options: [
             "The day breeding happens",
-            "About 3–4 days before the due date",
+            "About 7 days before the due date",
             "After you see kits born",
         ],
         correctIndex: 1,
         fact:
-            "A box lined with hay right before kindling keeps kits warm and prevents scattered litters.",
+            "Provide a box and straw or hay and allow the doe to line it herself.",
     },
     {
         prompt:
@@ -315,18 +280,10 @@ const allQuestions = [
     },
     {
         studyTrack: "cloverbud",
-        topic: "Health & Biosecurity",
         prompt: "What can you do to help clean a rabbit's home?",
         options: ["Work with a grown-up", "Make it messier", "Throw food around"],
         correctIndex: 0,
         fact: "Helping keep a rabbit's home clean is kind care.",
-    },
-    {
-        studyTrack: "cloverbud",
-        prompt: "What should you do before giving a rabbit a new treat?",
-        options: ["Ask a grown-up", "Give it lots", "Use candy"],
-        correctIndex: 0,
-        fact: "A grown-up can help choose safe rabbit treats.",
     },
     {
         studyTrack: "cloverbud",
@@ -2721,35 +2678,35 @@ const allQuestions = [
     {
         prompt: "Which colors are allowed in Beveren?",
         options: [
-            "Black, Blue, Brown, White",
+            "Black, Blue, White",
             "Only Agouti",
             "Only Red",
             "Only Chocolate",
         ],
         correctIndex: 0,
-        fact: "Beverens come in four recognized colors.",
+        fact: "Beverens come in three recognized colors.",
     },
-    {
-        prompt: "Which coat varieties are recognized in Champagne d'Argent?",
-        options: [
-            "Self",
-            "Agouti",
-            "Shaded",
-            "Broken",
-        ],
-        correctIndex: 0,
-        fact: "Champagne d'Argents recognize only the Self variety.",
-    },
+    // {
+    //     prompt: "Which coat varieties are recognized in Champagne d'Argent?",
+    //     options: [
+    //         "Self",
+    //         "Agouti",
+    //         "Shaded",
+    //         "Broken",
+    //     ],
+    //     correctIndex: 0,
+    //     fact: "Champagne d'Argents recognize only the Self variety.",
+    // },
     {
         prompt: "Which colors are allowed in Champagne d'Argent?",
         options: [
-            "Silver with dark body",
+            "Bluish white with jet black hairs",
             "Only Black and White",
             "Only Red",
             "Only Blue",
         ],
         correctIndex: 0,
-        fact: "Champagne d'Argents have a distinctive silvered coat.",
+        fact: "Champagne d'Argents only have one variety and that is a bluish white with jet black hairs set evenly throughout the coat, giving it a silver effect when viewed from a distance.",
     },
     {
         prompt: "Which coat varieties are recognized in English Spot?",
@@ -2765,7 +2722,7 @@ const allQuestions = [
     {
         prompt: "Which colors are allowed in English Spot?",
         options: [
-            "Black, Blue, Chocolate, Gold, Gray, Lilac, Tortoise with spots",
+            "Black, Blue, Chocolate, Gold, Gray, Lilac and Tortoise spotting",
             "Only Agouti",
             "Only White",
             "Only Red",
@@ -2773,38 +2730,27 @@ const allQuestions = [
         correctIndex: 0,
         fact: "English Spots come in seven recognized colors with spotting.",
     },
+    // {
+    //     prompt: "Which coat varieties are recognized in Belgian Hare?",
+    //     options: [
+    //         "Agouti",
+    //         "Self",
+    //         "Shaded",
+    //         "Broken",
+    //     ],
+    //     correctIndex: 0,
+    //     fact: "Belgian Hares recognize only the Agouti variety.",
+    // },
     {
-        prompt: "Which coat varieties are recognized in Belgian Hare?",
+        prompt: "Which color varieties are allowed in Belgian Hare?",
         options: [
-            "Agouti",
-            "Self",
-            "Shaded",
-            "Broken",
-        ],
-        correctIndex: 0,
-        fact: "Belgian Hares recognize only the Agouti variety.",
-    },
-    {
-        prompt: "Which colors are allowed in Belgian Hare?",
-        options: [
-            "Chestnut Agouti with dark lacing",
+            "Rufus and Tan",
             "Only Black and White",
             "Only Red",
             "Only Blue",
         ],
         correctIndex: 0,
-        fact: "Belgian Hares have rich chestnut agouti coloring.",
-    },
-    {
-        prompt: "Which coat varieties are recognized in Dutch?",
-        options: [
-            "Marked",
-            "Agouti",
-            "Self",
-            "Broken",
-        ],
-        correctIndex: 0,
-        fact: "Dutch rabbits are distinctly marked with specific patterns.",
+        fact: "Coat color is brilliant, rich, deep red, or a tan or chestnut shade with a slate blue undercoat.",
     },
     {
         prompt: "Which colors are allowed in Dutch?",
@@ -2815,7 +2761,7 @@ const allQuestions = [
             "Only Red",
         ],
         correctIndex: 0,
-        fact: "Dutch recognize Black, Blue, Chocolate, Gray (Chestnut Agouti), Steel, and Golden Yellow. Steel is a recognized color, not Steel with white markings.",
+        fact: "Dutch recognize Black, Blue, Chocolate, Gray (Chestnut Agouti), Steel, and Golden Yellow.",
     },
     {
         prompt: "Which coat varieties are recognized in Himalayan?",
