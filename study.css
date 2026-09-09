@@ -70,9 +70,9 @@ body::before {
     content: "";
     pointer-events: none;
     background-image:
-        linear-gradient(rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.58)),
+        linear-gradient(rgba(255, 255, 255, 0.54), rgba(255, 255, 255, 0.54)),
         var(--game-background, url("assets/rabbit-wallpaper.png"));
-    background-position: center, center;
+    background-position: center 48%, center 48%;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;

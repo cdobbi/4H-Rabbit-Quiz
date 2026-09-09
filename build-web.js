@@ -8,6 +8,7 @@ const fontSourceDirectory = join(__dirname, "node_modules", "@fontsource", "fred
 const poppinsFontSourceDirectory = join(__dirname, "node_modules", "@fontsource", "poppins", "files");
 const assetDirectory = join(__dirname, "assets");
 const isBetaBuild = process.argv.includes("--beta");
+const buildVersion = Date.now();
 
 const wallpaperFiles = readdirSync(assetDirectory)
     .filter((fileName) => /\.(avif|jpe?g|png|webp)$/i.test(fileName) && fileName !== "notification-icon.png")
@@ -25,7 +26,10 @@ for (const fileName of ["index.html", "app.js", "study.css", "wallpapers.js"]) {
 writeFileSync(join(webDirectory, "app-config.js"), `globalThis.RABBIT_QUIZ_BETA = ${isBetaBuild};\n`);
 const bundledIndex = join(webDirectory, "index.html");
 const indexContent = require("node:fs").readFileSync(bundledIndex, "utf8");
-writeFileSync(bundledIndex, indexContent.replace('<script src="app.js" defer></script>', '<script src="app-config.js"></script>\n    <script src="app.js" defer></script>'));
+writeFileSync(bundledIndex, indexContent.replace(
+    '<script src="wallpapers.js"></script>\n    <script src="app.js" defer></script>',
+    `<script src="app-config.js"></script>\n    <script src="wallpapers.js?v=${buildVersion}"></script>\n    <script src="app.js?v=${buildVersion}" defer></script>`,
+));
 
 for (const fileName of wallpaperFiles) {
     cpSync(join(__dirname, "assets", fileName), join(webDirectory, "assets", fileName));

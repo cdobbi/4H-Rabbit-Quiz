@@ -3326,6 +3326,8 @@ startNewGame();
 const TOPICS = ["Husbandry", "Health & Biosecurity", "Genetics", "ARBA Procedures", "Breeds & Judging"];
 const DEFAULT_STATS = { bestScore: 0, gamesPlayed: 0, history: [], misses: [], topicResults: {} };
 const STORAGE_KEY = "rabbitHusbandryStudyStats";
+const WALLPAPER_DECK_STORAGE_KEY = "rabbitHusbandryWallpaperDeck";
+const LAST_WALLPAPER_STORAGE_KEY = "rabbitHusbandryLastWallpaper";
 const FULL_ACCESS_STORAGE_KEY = "rabbitHusbandryFullAccess";
 const FULL_ACCESS_PRODUCT_ID = "full_question_bank";
 const TUTORIAL_SEEN_STORAGE_KEY = "rabbitHusbandryTutorialSeen";
@@ -3755,7 +3757,27 @@ function pickRandomQuestions(pool, count) {
 
 function setRandomBackground() {
     const backgrounds = globalThis.RABBIT_WALLPAPERS;
-    const background = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+    let deck;
+    try {
+        deck = JSON.parse(localStorage.getItem(WALLPAPER_DECK_STORAGE_KEY) || "[]");
+    } catch {
+        deck = [];
+    }
+    deck = Array.isArray(deck) ? deck.filter((background) => backgrounds.includes(background)) : [];
+    if (!deck.length) {
+        deck = [...backgrounds];
+        for (let index = deck.length - 1; index > 0; index -= 1) {
+            const randomIndex = Math.floor(Math.random() * (index + 1));
+            [deck[index], deck[randomIndex]] = [deck[randomIndex], deck[index]];
+        }
+        const previousBackground = localStorage.getItem(LAST_WALLPAPER_STORAGE_KEY);
+        if (deck.length > 1 && deck[deck.length - 1] === previousBackground) {
+            [deck[deck.length - 1], deck[deck.length - 2]] = [deck[deck.length - 2], deck[deck.length - 1]];
+        }
+    }
+    const background = deck.pop();
+    localStorage.setItem(WALLPAPER_DECK_STORAGE_KEY, JSON.stringify(deck));
+    localStorage.setItem(LAST_WALLPAPER_STORAGE_KEY, background);
     document.body.style.setProperty("--game-background", `url("${background}")`);
 }
 
