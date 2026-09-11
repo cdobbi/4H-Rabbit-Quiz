@@ -366,7 +366,7 @@ const allQuestions = [
             "Dedicated equipment and strict quarantine help keep rabbit hemorrhagic disease outside your herd.",
     },
 
-        {
+    {
         prompt: "What is the recommended response when you suspect a contagious disease in your herd?",
         options: [
             "Sell the rabbits quickly",
@@ -397,7 +397,7 @@ const allQuestions = [
         options: ["Semi-arch", "Full-arch", "Compact"],
         correctIndex: 0,
         fact:
-            "Semi-arch breeds rise slowly behind the shoulders and peak over the hips, just like the Flemish.",
+            "The semi-arch type, also called mandolin, rises slowly behind the shoulders and peaks over the hips, just like the Flemish.",
     },
     {
         prompt:
@@ -496,7 +496,7 @@ const allQuestions = [
             "Brindling is when two colors streak together, often seen in Harlequins and sometimes faulted if too heavy.",
     },
 
-       {
+    {
         prompt: "Which marking error will fault a Dutch rabbit?",
         options: [
             "Straight saddle",
@@ -705,7 +705,7 @@ const allQuestions = [
         fact: "A pedigree documents the ancestry of a rabbit, showing parents, grandparents, and great-grandparents.",
     },
 
-       {
+    {
         prompt: "What is a male rabbit called? What is a female rabbit called? What is a newborn called?",
         options: [
             "Buck, Doe, Kit",
@@ -766,10 +766,10 @@ const allQuestions = [
             "Mini Rex (4-class), New Zealand (6-class)",
             "Flemish Giant (4-class), Netherland Dwarf (6-class)",
             "Lop (4-class), Angora (6-class)",
-            "Rex (4-class), Californian (6-class)",
+            "Netherland Dwarf (4-class), Holland Lop (6-class)",
         ],
         correctIndex: 0,
-        fact: "Rabbit classes are determined by weight; Mini Rex are lighter (4-class) and New Zealands are larger (6-class).",
+        fact: "Class is a weight category: 4-class breeds split into junior and senior for each sex, while heavier 6-class breeds add an intermediate class. Mini Rex are 4-class; New Zealands are 6-class.",
     },
     {
         prompt: "What is a disqualification?",
@@ -905,7 +905,7 @@ const allQuestions = [
         fact: "Finish refers to how well-groomed and conditioned a rabbit appears, affecting show scores.",
     },
 
-       {
+    {
         prompt: "What is the treatment for Vent Disease?",
         options: [
             "Penicillin",
@@ -1026,7 +1026,7 @@ const allQuestions = [
             "Netherland Dwarf",
         ],
         correctIndex: 2,
-        fact: "The American breed has a distinctive mandolin body shape recognized by ARBA.",
+        fact: "Mandolin is another name for the semi-arch type. The American breed is a classic mandolin/semi-arch breed.",
     },
     {
         prompt: "Which breed was most recently added to the ARBA Standard of Perfection?",
@@ -1106,7 +1106,7 @@ const allQuestions = [
         fact: "ARBA registration requires a rabbit to be at least 6 months old. Show entry requires a rabbit to be at least 3 months old.",
     },
 
-       {
+    {
         prompt: "What does the 'E' locus control in rabbit genetics?",
         options: [
             "Fur texture",
@@ -1899,7 +1899,7 @@ const allQuestions = [
         fact: "The Satin breed features a distinctive lustrous, satiny coat texture.",
     },
 
-       {
+    {
         prompt: "Which breed is known for rex fur?",
         options: [
             "Rex",
@@ -2447,7 +2447,7 @@ const allQuestions = [
             "Not recognized",
         ],
         correctIndex: 0,
-        fact: "Britannia Petites are tiny fancy breeds, classified as 4-class.",
+        fact: "Britannia Petites are a full-arch breed with flyback fur, 4-class, with a maximum weight of 2.5 lb.",
     },
     {
         prompt: "The Dwarf Hotot is classified as which type of ARBA class?",
@@ -2535,7 +2535,7 @@ const allQuestions = [
             "Not recognized",
         ],
         correctIndex: 0,
-        fact: "Tan rabbits are small full-arch breeds, classified as 4-class.",
+        fact: "Tans are a full-arch breed with flyback fur, 4-class, mature weight 4.5-5 lb, shown in Black, Blue, Chocolate, and Lilac.",
     },
     {
         prompt: "The Himalayan is classified as which type of ARBA class?",
@@ -2547,6 +2547,73 @@ const allQuestions = [
         ],
         correctIndex: 0,
         fact: "Himalayans are small cylindrical breeds, classified as 4-class.",
+    },
+    // Cylindrical body type — the three recognized cylindrical breeds
+    {
+        prompt: "Which three breeds have the cylindrical body type?",
+        options: [
+            "Himalayan, Czech Frosty, Blue Hollister",
+            "Himalayan, Dutch, Polish",
+            "Rex, Satin, New Zealand",
+            "Flemish Giant, American, Beveren",
+        ],
+        correctIndex: 0,
+        fact: "The cylindrical body type is defined by a long, narrow, tube-like body: Himalayan, Czech Frosty, and Blue Hollister.",
+    },
+    {
+        prompt: "Which fur type does the Himalayan have?",
+        options: [
+            "Flyback",
+            "Slow rollback",
+            "Wool",
+            "Satin",
+        ],
+        correctIndex: 0,
+        fact: "The Himalayan is a cylindrical, 4-class breed with short, fine, silky flyback fur and a mature weight of 2.5–4.5 lb.",
+    },
+    {
+        prompt: "Which varieties are recognized in the Himalayan?",
+        options: [
+            "Black, Blue, Chocolate, Lilac",
+            "Only Black",
+            "Golden and Lynx",
+            "White, Red, Black",
+        ],
+        correctIndex: 0,
+        fact: "Himalayans are genetically albino with colored points (ears, nose, tail, feet) and come in Black, Blue, Chocolate, and Lilac.",
+    },
+    {
+        prompt: "The Czech Frosty is classified as which type of ARBA class?",
+        options: [
+            "4-class",
+            "6-class",
+            "Wool breed",
+            "Not recognized",
+        ],
+        correctIndex: 0,
+        fact: "The Czech Frosty is a cylindrical breed with slow-rollback fur, a mature weight of 6.25–8.25 lb, and is 4-class. Its single variety is Frosty.",
+    },
+    {
+        prompt: "What is the surface appearance of the Czech Frosty's coat?",
+        options: [
+            "Dark sepia-tipped guard hairs giving a dark haze or veil",
+            "A lustrous satin sheen",
+            "Long woolly fur",
+            "Solid jet black with silver ticking",
+        ],
+        correctIndex: 0,
+        fact: "The Czech Frosty shows dark sepia-tipped guard hairs over the coat, creating a dark haze or veil.",
+    },
+    {
+        prompt: "The Blue Hollister is classified as which type of ARBA class?",
+        options: [
+            "4-class",
+            "6-class",
+            "Wool breed",
+            "Not recognized",
+        ],
+        correctIndex: 0,
+        fact: "The Blue Hollister is a cylindrical breed with slow-rollback fur, a mature weight of 5.5–7.25 lb, and is 4-class. It is only shown in blue.",
     },
     {
         prompt: "The Dutch is classified as which type of ARBA class?",
@@ -2604,7 +2671,7 @@ const allQuestions = [
         fact: "Satin Angoras are satiny wool breeds, classified as 4-class.",
     },
 
-    
+
     {
         prompt: "The French Angora is classified as which type of ARBA class?",
         options: [
@@ -2659,7 +2726,7 @@ const allQuestions = [
             "Not recognized",
         ],
         correctIndex: 1,
-        fact: "Flemish Giants are the largest rabbit breed, classified as 6-class.",
+        fact: "Flemish Giants are a semi-arch (mandolin) breed with rollback fur, 6-class, with bucks 13 lb and over and does 14 lb and over.",
     },
     {
         prompt: "The American is classified as which type of ARBA class?",
@@ -2670,7 +2737,85 @@ const allQuestions = [
             "Not recognized",
         ],
         correctIndex: 1,
-        fact: "American rabbits are large breeds with mandolin body, classified as 6-class.",
+        fact: "American rabbits have a mandolin (semi-arch) body type and are classified as 6-class.",
+    },
+    // Semi-arch (mandolin) body type — breed details
+    {
+        prompt: "Which fur type does the Flemish Giant have?",
+        options: [
+            "Rollback",
+            "Flyback",
+            "Wool",
+            "Satin",
+        ],
+        correctIndex: 0,
+        fact: "The Flemish Giant is a semi-arch (mandolin) breed with rollback fur.",
+    },
+    {
+        prompt: "Which colors are recognized in the Flemish Giant?",
+        options: [
+            "Black, Blue, Fawn, Light Gray, Sandy, Steel Gray, White",
+            "Only Black and White",
+            "White, Red, Black",
+            "Golden and Lynx",
+        ],
+        correctIndex: 0,
+        fact: "Flemish Giants are recognized in seven colors: Black, Blue, Fawn, Light Gray, Sandy, Steel Gray, and White.",
+    },
+    {
+        prompt: "How should the Giant Chinchilla's coat be banded?",
+        options: [
+            "Dark slate blue base, light pearl middle, narrow black band at the top",
+            "Solid jet black throughout",
+            "White with black points",
+            "Golden with darker shading",
+        ],
+        correctIndex: 0,
+        fact: "The Giant Chinchilla's coat resembles a real chinchilla: dark slate blue at the base, light pearl in the middle, and a narrow black band at the top edge.",
+    },
+    {
+        prompt: "Which variety and fur type define the American breed?",
+        options: [
+            "Blue and White varieties with flyback fur",
+            "Chinchilla only with wool fur",
+            "Pointed White with satin fur",
+            "Golden and Lynx with rollback fur",
+        ],
+        correctIndex: 0,
+        fact: "The American is a semi-arch (mandolin) breed with flyback fur, shown in Blue and White, mature weight 9-12 lb.",
+    },
+    {
+        prompt: "What is a defining feature of the English Lop's ears?",
+        options: [
+            "At least 21 inches from tip to tip",
+            "Carried erect in a V shape",
+            "Short and rounded",
+            "Folded flat against the cheeks",
+        ],
+        correctIndex: 0,
+        fact: "English Lop ears are carried low with no noticeable crown and measure at least 21 inches from tip to tip.",
+    },
+    {
+        prompt: "Which color groups are recognized in the English Lop?",
+        options: [
+            "Agouti, Broken, Self, Shaded, Ticked, Wide Band",
+            "Only Self",
+            "Pointed White only",
+            "Golden and Lynx",
+        ],
+        correctIndex: 0,
+        fact: "English Lops are shown across six color groups: Agouti, Broken, Self, Shaded, Ticked, and Wide Band.",
+    },
+    {
+        prompt: "How are the Beveren's ears carried?",
+        options: [
+            "In a V shape",
+            "Folded and lopped",
+            "Erect and pointed forward",
+            "Flat along the back",
+        ],
+        correctIndex: 0,
+        fact: "The Beveren is a semi-arch breed with a distinctively curved head and well-furred ears carried in a V shape.",
     },
     {
         prompt: "The Giant Angora is classified as which type of ARBA class?",
@@ -2692,7 +2837,7 @@ const allQuestions = [
             "Not recognized",
         ],
         correctIndex: 1,
-        fact: "Giant Chinchillas are large fancy breeds, classified as 6-class.",
+        fact: "Giant Chinchillas are a semi-arch (mandolin) breed with flyback fur, 6-class, with bucks 12-15 lb and does 13-16 lb.",
     },
     {
         prompt: "The Checkered Giant is classified as which type of ARBA class?",
@@ -2703,7 +2848,7 @@ const allQuestions = [
             "Not recognized",
         ],
         correctIndex: 1,
-        fact: "Checkered Giants are large patterned breeds, classified as 6-class.",
+        fact: "Checkered Giants are a full-arch breed with flyback fur, 6-class (buck min 11 lb, doe min 12 lb), shown in Black and Blue.",
     },
     {
         prompt: "The English Lop is classified as which type of ARBA class?",
@@ -2714,7 +2859,7 @@ const allQuestions = [
             "Not recognized",
         ],
         correctIndex: 1,
-        fact: "English Lops are large lop-eared breeds, classified as 6-class.",
+        fact: "English Lops are a semi-arch breed with flyback fur, 6-class, with ears at least 21 inches tip to tip; bucks 10 lb and over, does 10.5 lb and over.",
     },
     {
         prompt: "The French Lop is classified as which type of ARBA class?",
@@ -2783,6 +2928,7 @@ const allQuestions = [
         fact: "Satin rabbits are large satin-furred breeds, classified as 6-class.",
     },
     {
+        // AUTHORITATIVE per owner (breeder): Rex is a 4-CLASS breed. Do NOT change to 6-class.
         prompt: "The Rex is classified as which type of ARBA class?",
         options: [
             "4-class",
@@ -2791,7 +2937,7 @@ const allQuestions = [
             "Not recognized",
         ],
         correctIndex: 0,
-        fact: "Rex rabbits are plush-furred breeds, classified as 4-class commercial.",
+        fact: "Class is a weight category. The Rex is a commercial-type breed classified as 4-class (junior and senior for each sex).",
     },
     {
         prompt: "The Argente Brun is classified as which type of ARBA class?",
@@ -2824,7 +2970,7 @@ const allQuestions = [
             "Not recognized",
         ],
         correctIndex: 0,
-        fact: "English Spots are full-arch breeds classified as 4-class.",
+        fact: "English Spots are a full-arch breed with flyback fur, 4-class, mature weight 5-8 lb.",
     },
     {
         prompt: "The Belgian Hare is classified as which type of ARBA class?",
@@ -2835,7 +2981,7 @@ const allQuestions = [
             "Not recognized",
         ],
         correctIndex: 0,
-        fact: "Belgian Hares are large full-arch breeds, classified as 4-class Full-Arch.",
+        fact: "Belgian Hares are a full-arch breed with flyback fur, 4-class, mature weight 6-9.5 lb, carrying the body high off the ground.",
     },
     {
         prompt: "The Blanc de Hotot is classified as which type of ARBA class?",
@@ -2857,7 +3003,7 @@ const allQuestions = [
             "Not recognized",
         ],
         correctIndex: 1,
-        fact: "Beverens are large blue or white -furred breeds, classified as 6-class commercial.",
+        fact: "Beverens are a semi-arch breed with rollback fur, 6-class, recognized in Black, Blue, and White.",
     },
     {
         prompt: "The Rhinelander is classified as which type of ARBA class?",
@@ -2868,7 +3014,96 @@ const allQuestions = [
             "Not recognized",
         ],
         correctIndex: 0,
-        fact: "Rhinelanders are full-arch breeds classified as 4-class.",
+        fact: "Rhinelanders are a full-arch breed with flyback fur, 4-class, shown in Black (black and orange) and Blue (blue and fawn) with both colors equally represented.",
+    },
+    // Full-arch (running) body type — breed details
+    {
+        prompt: "Which fur type is shared by the full-arch running breeds?",
+        options: [
+            "Flyback",
+            "Rollback",
+            "Wool",
+            "Satin",
+        ],
+        correctIndex: 0,
+        fact: "The full-arch breeds (Checkered Giant, Belgian Hare, English Spot, Rhinelander, Tan, Britannia Petite) all carry flyback fur.",
+    },
+    {
+        prompt: "Which colors are recognized in the Checkered Giant?",
+        options: [
+            "Black and Blue",
+            "Only Black",
+            "White, Red, Black",
+            "Golden and Lynx",
+        ],
+        correctIndex: 0,
+        fact: "Checkered Giants are shown in Black and Blue, with a dorsal stripe from the ears to the tail, butterfly nose marking, cheek spots, and eye circles.",
+    },
+    {
+        prompt: "What color is the Belgian Hare's coat?",
+        options: [
+            "Rich deep red or tan/chestnut with a slate blue undercoat",
+            "White with black points",
+            "Bluish white with black ticking",
+            "Golden with darker shading",
+        ],
+        correctIndex: 0,
+        fact: "The Belgian Hare has a brilliant rich deep red or tan/chestnut coat with a slate blue undercoat, and carries its long body high off the ground.",
+    },
+    {
+        prompt: "Which colors are recognized in the English Spot?",
+        options: [
+            "Black, Blue, Chocolate, Gold, Gray, Lilac, Tortoise",
+            "Only Black and White",
+            "White, Red, Black",
+            "Golden and Lynx",
+        ],
+        correctIndex: 0,
+        fact: "English Spots are shown in seven colors and marked with nose spots, eye circles, flank spots, and a dorsal stripe from the ears to the tail.",
+    },
+    {
+        prompt: "How many hip spots are preferred on each side of a Rhinelander?",
+        options: [
+            "8 to 10 spots",
+            "1 to 2 spots",
+            "No spots",
+            "20 or more spots",
+        ],
+        correctIndex: 0,
+        fact: "Rhinelanders prefer 8 to 10 equally colored spots on each hip, not extending above the waistline; extra body spots are a disqualification.",
+    },
+    {
+        prompt: "What eye color pairs with the Rhinelander's black (black and orange) variety?",
+        options: [
+            "Brown",
+            "Blue",
+            "Purple",
+            "Pink",
+        ],
+        correctIndex: 0,
+        fact: "Brown eyes go with the black-and-orange variety, while blue or purple eyes go with the blue-and-fawn variety.",
+    },
+    {
+        prompt: "Which colors are recognized in the Tan?",
+        options: [
+            "Black, Blue, Chocolate, Lilac",
+            "Only Black",
+            "White, Red, Black",
+            "Golden and Lynx",
+        ],
+        correctIndex: 0,
+        fact: "Tans are shown in Black, Blue, Chocolate, and Lilac, with eyes encircled in even tan and ears laced inside with rich tan.",
+    },
+    {
+        prompt: "What is the maximum weight for a Britannia Petite?",
+        options: [
+            "2.5 pounds",
+            "4.5 pounds",
+            "6 pounds",
+            "9 pounds",
+        ],
+        correctIndex: 0,
+        fact: "The Britannia Petite is a full-arch breed with a wedge-shaped head and a maximum weight of 2.5 lb.",
     },
     {
         prompt: "The Silver Fox is classified as which type of ARBA class?",
@@ -2883,7 +3118,7 @@ const allQuestions = [
     },
     // Breed Varieties and Colors
     {
-        prompt: "Which coat varieties are recognized in Mini Rex?",
+        prompt: "Which color groups are recognized in Mini Rex?",
         options: [
             "Agouti, Self, Shaded, Tan Pattern, Wide Band",
             "Only Agouti",
@@ -2891,7 +3126,7 @@ const allQuestions = [
             "None",
         ],
         correctIndex: 0,
-        fact: "Mini Rex recognize five color varieties per the ARBA Standard.",
+        fact: "A group is a color-pattern grouping. Mini Rex are shown in five color groups per the ARBA Standard.",
     },
     {
         prompt: "Which colors are allowed in Mini Rex?",
@@ -2905,7 +3140,7 @@ const allQuestions = [
         fact: "Mini Rex come in 13 recognized colors including standard and broken varieties.",
     },
     {
-        prompt: "Which coat varieties are recognized in New Zealand?",
+        prompt: "Which color group are New Zealand varieties shown in?",
         options: [
             "Self",
             "Agouti",
@@ -2913,21 +3148,21 @@ const allQuestions = [
             "Tan Pattern",
         ],
         correctIndex: 0,
-        fact: "New Zealand rabbits only recognize the Self color variety.",
+        fact: "New Zealand varieties fall in the Self group.",
     },
     {
-        prompt: "Which colors are allowed in New Zealand?",
+        prompt: "Which colors are recognized in New Zealand?",
         options: [
-            "White, Red, Black",
-            "Blue, Chocolate, Lilac",
-            "Broken, Harlequin, Magpie",
+            "White, Red, Black, Blue, Broken",
+            "White and Red only",
+            "Only White",
             "Chinchilla, Silver Marten",
         ],
         correctIndex: 0,
-        fact: "New Zealand come in three colors: White, Red, and Black.",
+        fact: "New Zealand are recognized in White, Red, Black, Blue, and Broken.",
     },
     {
-        prompt: "Which coat varieties are recognized in Holland Lop?",
+        prompt: "Which color groups are recognized in Holland Lop?",
         options: [
             "Agouti, Self, Shaded, Tan Pattern, Wide Band",
             "Only Agouti",
@@ -2935,7 +3170,7 @@ const allQuestions = [
             "Only Broken",
         ],
         correctIndex: 0,
-        fact: "Holland Lops recognize five color varieties.",
+        fact: "Holland Lops are shown across five color groups.",
     },
     {
         prompt: "Which colors are allowed in Holland Lop?",
@@ -2949,7 +3184,7 @@ const allQuestions = [
         fact: "Holland Lops come in 12 recognized colors.",
     },
     {
-        prompt: "Which coat varieties are recognized in Californian?",
+        prompt: "Which color group are Californians shown in?",
         options: [
             "Pointed White",
             "Agouti",
@@ -2957,7 +3192,7 @@ const allQuestions = [
             "Tan Pattern",
         ],
         correctIndex: 0,
-        fact: "Californians are strictly a pointed white variety.",
+        fact: "Californians belong to the Pointed White group.",
     },
     {
         prompt: "Which colors are allowed in Californian?",
@@ -2971,7 +3206,7 @@ const allQuestions = [
         fact: "Californians are white with black nose, ears, and feet.",
     },
     {
-        prompt: "Which coat varieties are recognized in Flemish Giant?",
+        prompt: "Which color group are Flemish Giant varieties shown in?",
         options: [
             "Self",
             "Agouti",
@@ -2979,7 +3214,7 @@ const allQuestions = [
             "Broken",
         ],
         correctIndex: 0,
-        fact: "Flemish Giants recognize the Self variety only.",
+        fact: "Flemish Giant varieties fall in the Self group.",
     },
     {
         prompt: "Which colors are allowed in Flemish Giant?",
@@ -2993,7 +3228,7 @@ const allQuestions = [
         fact: "Flemish Giants come in seven recognized colors.",
     },
     {
-        prompt: "Which coat varieties are recognized in Rex?",
+        prompt: "Which color groups are recognized in Rex?",
         options: [
             "Self, Agouti, Shaded, Tan, Wideband",
             "Only Agouti",
@@ -3001,7 +3236,7 @@ const allQuestions = [
             "None",
         ],
         correctIndex: 0,
-        fact: "Rex rabbits recognize five color varieties.",
+        fact: "Rex are shown across five color groups.",
     },
     {
         prompt: "Which colors are allowed in Rex?",
@@ -3015,7 +3250,7 @@ const allQuestions = [
         fact: "Rex come in 12 recognized colors including broken patterns.",
     },
     {
-        prompt: "Which coat varieties are recognized in Satin?",
+        prompt: "Which color groups are recognized in Satin?",
         options: [
             "Self, Agouti, Shaded, Tan, Wideband",
             "Only Agouti",
@@ -3023,7 +3258,7 @@ const allQuestions = [
             "Only Broken",
         ],
         correctIndex: 0,
-        fact: "Satin rabbits recognize five color varieties.",
+        fact: "Satins are shown across five color groups.",
     },
     {
         prompt: "Which colors are allowed in Satin?",
@@ -3037,7 +3272,7 @@ const allQuestions = [
         fact: "Satins come in 10 recognized colors.",
     },
     {
-        prompt: "Which coat varieties are recognized in English Angora?",
+        prompt: "Which color groups are recognized in English Angora?",
         options: [
             "Self, Agouti, Shaded, Tan, Wideband",
             "Only Agouti",
@@ -3045,7 +3280,7 @@ const allQuestions = [
             "Only White",
         ],
         correctIndex: 0,
-        fact: "English Angoras recognize five color varieties.",
+        fact: "English Angoras are shown across five color groups.",
     },
     {
         prompt: "Which colors are allowed in English Angora?",
@@ -3059,7 +3294,7 @@ const allQuestions = [
         fact: "English Angoras come in 12 recognized colors.",
     },
     {
-        prompt: "Which coat varieties are recognized in Lionhead?",
+        prompt: "Which color groups are recognized in Lionhead?",
         options: [
             "Self, Agouti, Shaded, Tan, Wideband",
             "Only Agouti",
@@ -3067,7 +3302,7 @@ const allQuestions = [
             "Only Broken",
         ],
         correctIndex: 0,
-        fact: "Lionhead rabbits recognize five color varieties.",
+        fact: "Lionheads are shown across five color groups.",
     },
     {
         prompt: "Which colors are allowed in Lionhead?",
@@ -3081,7 +3316,7 @@ const allQuestions = [
         fact: "Lionheads come in 13 recognized colors.",
     },
     {
-        prompt: "Which coat varieties are recognized in French Lop?",
+        prompt: "Which color groups are recognized in French Lop?",
         options: [
             "Self, Agouti, Shaded, Tan, Wideband",
             "Only Agouti",
@@ -3089,7 +3324,7 @@ const allQuestions = [
             "Only Broken",
         ],
         correctIndex: 0,
-        fact: "French Lops recognize five color varieties.",
+        fact: "French Lops are shown across five color groups.",
     },
     {
         prompt: "Which colors are allowed in French Lop?",
@@ -3103,7 +3338,7 @@ const allQuestions = [
         fact: "French Lops come in numerous recognized colors and patterns.",
     },
     {
-        prompt: "Which coat varieties are recognized in Angora?",
+        prompt: "Which color groups are recognized in Angora?",
         options: [
             "Self, Agouti, Shaded, Tan, Wideband",
             "Only Agouti",
@@ -3111,18 +3346,18 @@ const allQuestions = [
             "Only White",
         ],
         correctIndex: 0,
-        fact: "Angoras recognize five color varieties per ARBA standards.",
+        fact: "Angoras are shown across five color groups per ARBA standards.",
     },
     {
-        prompt: "Which coat varieties are recognized in Chinchilla?",
+        prompt: "Which color group are Standard Chinchilla varieties shown in?",
         options: [
-            "Self",
             "Agouti",
+            "Self",
             "Shaded",
             "Tan Pattern",
         ],
         correctIndex: 0,
-        fact: "Chinchilla rabbits recognize only the Self variety.",
+        fact: "The chinchilla coloration is an agouti-group pattern.",
     },
     {
         prompt: "Which colors are allowed in Standard Chinchilla?",
@@ -3136,15 +3371,15 @@ const allQuestions = [
         fact: "Standard Chinchillas have the distinctive chinchilla coloration.",
     },
     {
-        prompt: "Which coat varieties are recognized in Silver Marten?",
+        prompt: "Which color group are Silver Marten varieties shown in?",
         options: [
-            "Self",
+            "Tan Pattern",
             "Agouti",
             "Shaded",
-            "Tan Pattern",
+            "Self",
         ],
         correctIndex: 0,
-        fact: "Silver Martens recognize only the Self variety.",
+        fact: "Silver Martens are a tan-pattern (marten) group.",
     },
     {
         prompt: "Which colors are allowed in Silver Marten?",
@@ -3158,7 +3393,7 @@ const allQuestions = [
         fact: "Silver Martens come in four base colors all with silvering.",
     },
     {
-        prompt: "Which coat varieties are recognized in Tan?",
+        prompt: "Which color group are Tan varieties shown in?",
         options: [
             "Tan Pattern",
             "Agouti",
@@ -3166,7 +3401,7 @@ const allQuestions = [
             "Shaded",
         ],
         correctIndex: 0,
-        fact: "Tan rabbits recognize only the Tan Pattern variety.",
+        fact: "Tans belong to the Tan Pattern group.",
     },
     {
         prompt: "Which colors are allowed in Tan?",
@@ -3180,7 +3415,7 @@ const allQuestions = [
         fact: "Tans come in four base colors with distinctive tan markings.",
     },
     {
-        prompt: "Which coat varieties are recognized in Harlequin?",
+        prompt: "Which color group are Harlequin varieties shown in?",
         options: [
             "Harlequin",
             "Agouti",
@@ -3188,7 +3423,7 @@ const allQuestions = [
             "Broken",
         ],
         correctIndex: 0,
-        fact: "Harlequins are specifically a patterned variety with Japanese or Magpie accepted colors.",
+        fact: "Harlequin is its own pattern group, with Japanese and Magpie varieties.",
     },
     // {
     //     prompt: "Which colors are allowed in Harlequin?",
@@ -3224,7 +3459,7 @@ const allQuestions = [
         fact: "Silver Foxes come in four base colors with distinctive silvering.",
     },
     {
-        prompt: "Which coat varieties are recognized in Beveren?",
+        prompt: "Which color group are Beveren varieties shown in?",
         options: [
             "Self",
             "Agouti",
@@ -3232,7 +3467,7 @@ const allQuestions = [
             "Tan Pattern",
         ],
         correctIndex: 0,
-        fact: "Beverens recognize only the Self variety.",
+        fact: "Beveren varieties fall in the Self group.",
     },
     {
         prompt: "Which colors are allowed in Beveren?",
@@ -3268,15 +3503,15 @@ const allQuestions = [
         fact: "Champagne d'Argents only have one variety and that is a bluish white with jet black hairs set evenly throughout the coat, giving it a silver effect when viewed from a distance.",
     },
     {
-        prompt: "Which coat varieties are recognized in English Spot?",
+        prompt: "Which color group are English Spot varieties shown in?",
         options: [
-            "Spotted",
+            "Marked (spotted pattern)",
             "Agouti",
             "Self",
             "Broken",
         ],
         correctIndex: 0,
-        fact: "English Spots are specifically spotted patterned.",
+        fact: "English Spots are a marked/spotted pattern group.",
     },
     {
         prompt: "Which colors are allowed in English Spot?",
@@ -3323,15 +3558,15 @@ const allQuestions = [
         fact: "Dutch recognize Black, Blue, Chocolate, Gray (Chestnut Agouti), Steel, and Golden Yellow.",
     },
     {
-        prompt: "Which coat varieties are recognized in Himalayan?",
+        prompt: "Which color group are Himalayan varieties shown in?",
         options: [
-            "Self",
+            "Pointed White",
             "Agouti",
             "Shaded",
             "Tan Pattern",
         ],
         correctIndex: 0,
-        fact: "Himalayans recognize only the Self variety.",
+        fact: "Himalayans are a Pointed White pattern group.",
     },
     {
         prompt: "Which colors are allowed in Himalayan?",
@@ -3345,15 +3580,15 @@ const allQuestions = [
         fact: "Himalayans come in six recognized colors.",
     },
     {
-        prompt: "Which coat varieties are recognized in Checkered Giant?",
+        prompt: "Which color group are Checkered Giant varieties shown in?",
         options: [
-            "Checkered",
+            "Marked (checkered pattern)",
             "Agouti",
             "Self",
             "Broken",
         ],
         correctIndex: 0,
-        fact: "Checkered Giants are specifically a checkerboard patterned variety.",
+        fact: "Checkered Giants are a marked/checkerboard pattern group.",
     },
     {
         prompt: "Which colors are allowed in Checkered Giant?",
@@ -3367,26 +3602,26 @@ const allQuestions = [
         fact: "Checkered Giants feature alternating squares of color and white.",
     },
     {
-        prompt: "Which coat varieties are recognized in Palomino?",
+        prompt: "Which color group are Palomino varieties shown in?",
         options: [
-            "Self",
+            "Golden and Lynx",
             "Agouti",
             "Shaded",
             "Broken",
         ],
         correctIndex: 0,
-        fact: "Palominos recognize only the Self variety.",
+        fact: "Palominos are shown in two varieties, Golden and Lynx.",
     },
     {
-        prompt: "Which colors are allowed in Palomino?",
+        prompt: "Which varieties are recognized in Palomino?",
         options: [
-            "Golden or Red with darker shading",
-            "Only Agouti",
+            "Golden and Lynx",
+            "Only Golden",
             "Only White",
             "Only Black",
         ],
         correctIndex: 0,
-        fact: "Palominos have a distinctive warm golden or red coloration.",
+        fact: "Palominos are recognized in two varieties: Golden and Lynx.",
     },
 ];
 
