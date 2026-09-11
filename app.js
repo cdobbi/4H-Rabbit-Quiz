@@ -132,7 +132,7 @@ const allQuestions = [
         prompt: "When a rabbit runs super fast and hops in the air, what is this called?",
         options: ["Binky and Zoomies", "Jumps and sprints", "Playtime"],
         correctIndex: 0,
-        fact: "A binky is a happy jump that rabbits do when they are excited."
+        fact: "A binky is a happy jump that rabbits do when they are excited.",
     },
     {
         studyTrack: "cloverbud",
@@ -151,66 +151,44 @@ const allQuestions = [
     {
         studyTrack: "cloverbud",
         prompt: "What food helps keep a rabbit's tummy healthy?",
-        options: [
-            "Grass hay and rabbit pellets",
-            "Candy",
-            "Only cookies",
-        ],
+        options: ["Grass hay and rabbit pellets", "Candy", "Only cookies"],
         correctIndex: 0,
         fact: "Hay and rabbit pellets are good everyday foods for rabbits.",
     },
     {
         studyTrack: "cloverbud",
         prompt: "Who should help trim a rabbit's nails?",
-        options: [
-            "A grown-up who knows how",
-            "No one",
-            "Another rabbit",
-        ],
+        options: ["A grown-up who knows how", "No one", "Another rabbit"],
         correctIndex: 0,
         fact: "A grown-up can trim nails carefully to help keep a rabbit comfortable.",
     },
     {
         studyTrack: "cloverbud",
         prompt: "What can a rabbit rest on in its home?",
-        options: [
-            "A clean resting board or mat",
-            "A wet towel",
-            "A pile of toys",
-        ],
+        options: ["A clean resting board or mat", "A wet towel", "A pile of toys"],
         correctIndex: 0,
         fact: "A resting board or mat gives a rabbit a comfortable place to relax.",
     },
     {
         studyTrack: "cloverbud",
         prompt: "When should you place a nest box for a pregnant doe?",
-        options: [
-            "The day breeding happens",
-            "About 7 days before the due date",
-            "After you see kits born",
-        ],
+        options: ["The day breeding happens", "About 7 days before the due date", "After you see kits born"],
         correctIndex: 1,
-        fact:
-            "Provide a box and straw or hay and allow the doe to line it herself.",
+        fact: "Provide a box and straw or hay and allow the doe to line it herself.",
     },
+
+    // Genetics section continues unchanged…
     {
-        prompt:
-            "Both parents are black but carry the recessive chinchilla gene (Cc). What percent of kits do you expect to be chinchilla (cc)?",
+        prompt: "Both parents are black but carry the recessive chinchilla gene (Cc). What percent of kits do you expect to be chinchilla (cc)?",
         options: ["25%", "50%", "75%"],
         correctIndex: 0,
-        fact:
-            "A simple Punnett square for two carriers predicts one out of four kits showing the recessive color.",
+        fact: "A simple Punnett square for two carriers predicts one out of four kits showing the recessive color.",
     },
     {
         prompt: "How does a kit receive its coat-color genes?",
-        options: [
-            "Both copies come from the buck",
-            "One allele comes from each parent",
-            "Whichever grandparent had the darkest coat",
-        ],
+        options: ["Both copies come from the buck", "One allele comes from each parent", "Whichever grandparent had the darkest coat"],
         correctIndex: 1,
-        fact:
-            "Every kit inherits two alleles per locus—one from each parent—so pedigrees pair up genes.",
+        fact: "Every kit inherits two alleles per locus—one from each parent.",
     },
     {
         prompt:
@@ -222,17 +200,6 @@ const allQuestions = [
     },
     {
         studyTrack: "cloverbud",
-        prompt: "How should a grown-up hold a rabbit?",
-        options: [
-            "Support its body and back feet",
-            "Hold its ears",
-            "Swing it around",
-        ],
-        correctIndex: 0,
-        fact: "Supporting a rabbit's body and back feet helps keep it safe.",
-    },
-    {
-        studyTrack: "cloverbud",
         prompt: "What can show that a rabbit is doing well?",
         options: [
             "It is eating and drinking normally",
@@ -240,7 +207,7 @@ const allQuestions = [
             "It has no water",
         ],
         correctIndex: 0,
-        fact: "A grown-up should check that a rabbit is eating and drinking each day.",
+        fact: "Healthy rabbits eat and drink daily. A grown-up should check this each day.",
     },
     {
         studyTrack: "cloverbud",
@@ -248,7 +215,7 @@ const allQuestions = [
         prompt: "What should you do with a rabbit's water bowl?",
         options: ["Keep it clean", "Fill it with dirt", "Hide it"],
         correctIndex: 0,
-        fact: "Rabbits need clean water every day.",
+        fact: "Rabbits need clean water every day. Wash and refill bowls often.",
     },
     {
         studyTrack: "cloverbud",
@@ -276,7 +243,7 @@ const allQuestions = [
         prompt: "Where should rabbit food stay?",
         options: ["In a clean feeder", "On the dirty floor", "In the water bowl"],
         correctIndex: 0,
-        fact: "Clean food helps rabbits stay healthy.",
+        fact: "Clean food in a feeder helps rabbits stay healthy.",
     },
     {
         studyTrack: "cloverbud",
@@ -398,7 +365,8 @@ const allQuestions = [
         fact:
             "Dedicated equipment and strict quarantine help keep rabbit hemorrhagic disease outside your herd.",
     },
-    {
+
+        {
         prompt: "What is the recommended response when you suspect a contagious disease in your herd?",
         options: [
             "Sell the rabbits quickly",
@@ -469,7 +437,7 @@ const allQuestions = [
         options: ["Holland Lop", "Silver Marten", "Belgian Hare"],
         correctIndex: 0,
         fact:
-            "Holland Lops top ARBA registration lists due to their small size and friendly nature.",
+            "Holland Lops top ARBA registration lists due to their compact body type, rollback fur, and friendly nature.",
     },
     {
         prompt:
@@ -492,7 +460,7 @@ const allQuestions = [
         ],
         correctIndex: 1,
         fact:
-            "Charlies have two copies of the broken gene, so they show only tiny bits of color on ears or nose.",
+            "Charlies have two copies of the broken gene, so they show less than 10% color, often only on ears or nose.",
     },
     {
         prompt: "Which description best matches the broken pattern?",
@@ -527,7 +495,8 @@ const allQuestions = [
         fact:
             "Brindling is when two colors streak together, often seen in Harlequins and sometimes faulted if too heavy.",
     },
-    {
+
+       {
         prompt: "Which marking error will fault a Dutch rabbit?",
         options: [
             "Straight saddle",
@@ -536,7 +505,7 @@ const allQuestions = [
         ],
         correctIndex: 1,
         fact:
-            "Dutch stops should be even; a longer white foot on one side drops the score.",
+            "Dutch stops must be even; a longer white foot on one side is a fault that lowers the score.",
     },
     {
         prompt: "What happens when a rabbit carries only one copy of the Vienna gene (Vv)?",
@@ -547,14 +516,14 @@ const allQuestions = [
         ],
         correctIndex: 1,
         fact:
-            "Vienna carriers often have white mittens or a snip even though they are not full blue-eyed whites.",
+            "Vienna carriers often show white mittens or a snip even though they are not full blue-eyed whites.",
     },
     {
         prompt: "What does the rufus modifier add to a rabbit's coat?",
         options: ["Extra blue shading", "Warm red/orange richness", "White ticking"],
         correctIndex: 1,
         fact:
-            "Rufus deepens the rusty orange tone, giving breeds like New Zealands a rich, warm color.",
+            "Rufus deepens rusty orange tones, giving breeds like New Zealands a rich, warm color.",
     },
     {
         prompt: "Which grooming tool lifts shed undercoat during a heavy molt without breaking guard hairs?",
@@ -583,7 +552,7 @@ const allQuestions = [
         options: ["21 days", "31 days", "42 days"],
         correctIndex: 1,
         fact:
-            "Most does kindle at 31 days give or take a day, so nest boxes go in around day 28.",
+            "Most does kindle at about 31 days, so nest boxes go in around day 28.",
     },
     {
         prompt: "Which absorbent material works best in a drop pan under wire cages?",
@@ -601,7 +570,7 @@ const allQuestions = [
         options: ["Monthly", "Weekly", "Daily or every other day"],
         correctIndex: 2,
         fact:
-            "Biofilm forms fast; frequent washing keeps bacteria from colonizing drinking equipment.",
+            "Biofilm forms quickly; frequent washing keeps bacteria from colonizing drinking equipment.",
     },
     {
         prompt: "What is the safest first step when a rabbit shows signs of overheating?",
@@ -612,7 +581,7 @@ const allQuestions = [
         ],
         correctIndex: 1,
         fact:
-            "Cooling the ears with room-temperature water and airflow drops body temperature without shocking the rabbit.",
+            "Cooling the ears with room-temperature water and airflow lowers body temperature without shocking the rabbit.",
     },
     {
         prompt: "How long should new or returning rabbits remain in quarantine before joining the herd?",
@@ -689,7 +658,7 @@ const allQuestions = [
             "After kits open their eyes",
         ],
         correctIndex: 2,
-        fact: "Placing the nest box 2-3 days before kindling gives the doe time to prepare it with fur and hay.",
+        fact: "Placing the nest box 2–3 days before kindling gives the doe time to prepare it with fur and hay.",
     },
     {
         prompt: "What does gestation mean?",
@@ -711,7 +680,7 @@ const allQuestions = [
             "21 days",
         ],
         correctIndex: 1,
-        fact: "Newborn kits open their eyes around 7-10 days old as their eyelids develop.",
+        fact: "Newborn kits open their eyes around 7–10 days old as their eyelids develop.",
     },
     {
         prompt: "What is kindling?",
@@ -735,7 +704,8 @@ const allQuestions = [
         correctIndex: 1,
         fact: "A pedigree documents the ancestry of a rabbit, showing parents, grandparents, and great-grandparents.",
     },
-    {
+
+       {
         prompt: "What is a male rabbit called? What is a female rabbit called? What is a newborn called?",
         options: [
             "Buck, Doe, Kit",
@@ -755,7 +725,7 @@ const allQuestions = [
             "100, Flemish Giant",
         ],
         correctIndex: 2,
-        fact: "ARBA recognizes over 50 breeds, with Lionhead being one of the more recently accepted breeds.",
+        fact: "ARBA recognizes over 50 breeds, with Lionhead being one of the most recently accepted breeds.",
     },
     {
         prompt: "What is ARBA?",
@@ -777,7 +747,7 @@ const allQuestions = [
             "40–45 days",
         ],
         correctIndex: 2,
-        fact: "Rabbit gestation typically ranges from 28-32 days, with most does kindling around day 31.",
+        fact: "Rabbit gestation typically ranges from 28–32 days, with most does kindling around day 31.",
     },
     {
         prompt: "What is the most important nutrient for rabbits?",
@@ -799,7 +769,7 @@ const allQuestions = [
             "Rex (4-class), Californian (6-class)",
         ],
         correctIndex: 0,
-        fact: "Rabbit classes are determined by weight; Mini Rex are lighter and Flemish Giants are larger.",
+        fact: "Rabbit classes are determined by weight; Mini Rex are lighter (4-class) and New Zealands are larger (6-class).",
     },
     {
         prompt: "What is a disqualification?",
@@ -866,7 +836,7 @@ const allQuestions = [
             "At 8 weeks",
         ],
         correctIndex: 2,
-        fact: "Remove the nest box at 3-4 weeks when kits are weaned and eating pellets independently.",
+        fact: "Remove the nest box at 3–4 weeks when kits are weaned and eating pellets independently.",
     },
     {
         prompt: "Which option lists three grounds for disqualification?",
@@ -934,7 +904,8 @@ const allQuestions = [
         correctIndex: 0,
         fact: "Finish refers to how well-groomed and conditioned a rabbit appears, affecting show scores.",
     },
-    {
+
+       {
         prompt: "What is the treatment for Vent Disease?",
         options: [
             "Penicillin",
@@ -965,7 +936,7 @@ const allQuestions = [
             "Guard, Undercoat, Wool, Satin",
         ],
         correctIndex: 0,
-        fact: "These four fur types are officially recognized by ARBA for different breeds and effects.",
+        fact: "ARBA recognizes four fur types: Normal, Rex, Satin, and Wool.",
     },
     {
         prompt: "What is coprophagy?",
@@ -1032,7 +1003,7 @@ const allQuestions = [
             "Companionship only",
         ],
         correctIndex: 0,
-        fact: "Rabbits are primarily raised for meat production and fur; show rabbits and pets have other purposes.",
+        fact: "Rabbits are primarily raised for meat and fur; they are also kept as pets and show animals.",
     },
     {
         prompt: "In which ear should rabbits be tattooed?",
@@ -1066,7 +1037,7 @@ const allQuestions = [
             "Champagne d'Argent",
         ],
         correctIndex: 0,
-        fact: "Lionhead was among the more recently accepted breeds in ARBA's Standard of Perfection.",
+        fact: "Lionhead was among the most recently accepted breeds in ARBA's Standard of Perfection.",
     },
     {
         prompt: "What genotype produces a 'Blue' rabbit?",
@@ -1077,7 +1048,7 @@ const allQuestions = [
             "aa B_ C_ D_ E_",
         ],
         correctIndex: 0,
-        fact: "Blue coloring results from the combination of specific alleles at multiple loci.",
+        fact: "Blue coloring results from the chocolate allele combined with dilution (dd).",
     },
     {
         prompt: "Which color group does 'Sable Point' belong to?",
@@ -1115,13 +1086,13 @@ const allQuestions = [
     {
         prompt: "To register a rabbit with ARBA, what must be true?",
         options: [
-            "Rabbit must meet breed standard and have a complete 3-generation pedigree",
+            "Rabbit must meet breed standard and have a complete 4-generation pedigree",
             "Rabbit must be tattooed and weigh over 5 lbs",
             "Rabbit must be shown at least once",
             "Rabbit must be bred by the registrar",
         ],
         correctIndex: 0,
-        fact: "ARBA registration requires meeting breed standards and providing a documented three-generation pedigree.",
+        fact: "ARBA registration requires meeting breed standards and providing a documented four-generation pedigree.",
     },
     {
         prompt: "What is the minimum age for a rabbit to be registered with ARBA?",
@@ -1132,9 +1103,10 @@ const allQuestions = [
             "1 year",
         ],
         correctIndex: 2,
-        fact: "ARBA registration requires a rabbit to be at least 6 months old. ARBA show entry requires a rabbit to be at least 3 months old.",
+        fact: "ARBA registration requires a rabbit to be at least 6 months old. Show entry requires a rabbit to be at least 3 months old.",
     },
-    {
+
+       {
         prompt: "What does the 'E' locus control in rabbit genetics?",
         options: [
             "Fur texture",
@@ -1154,7 +1126,7 @@ const allQuestions = [
             "The pedigree record",
         ],
         correctIndex: 0,
-        fact: "Finish refers to grooming, conditioning, and overall presentation quality on the show table.",
+        fact: "Finish refers to the overall condition of flesh and fur, showing grooming and health.",
     },
     {
         prompt: "Which breed is classified as a 4-class rabbit?",
@@ -1176,7 +1148,7 @@ const allQuestions = [
             "Holland Lop",
         ],
         correctIndex: 0,
-        fact: "New Zealand rabbits are large meat breeds, placing them in the 6-class (heaviest) category.",
+        fact: "New Zealand rabbits are large meat breeds, placing them in the 6-class category.",
     },
     {
         prompt: "What is the ARBA motto?",
@@ -1187,7 +1159,7 @@ const allQuestions = [
             "Grow with ARBA",
         ],
         correctIndex: 1,
-        fact: "ARBA's official motto reflects their commitment to improving rabbit and cavy breeds.",
+        fact: "ARBA's official motto is 'Dedicated to the Betterment of Rabbits and Cavy.'",
     },
     {
         prompt: "Which body type is NOT recognized by ARBA?",
@@ -1231,7 +1203,7 @@ const allQuestions = [
             "To tattoo",
         ],
         correctIndex: 0,
-        fact: "Palpation around day 10-14 allows breeders to confirm pregnancy by feeling embryos.",
+        fact: "Palpation around day 10–14 allows breeders to confirm pregnancy by feeling embryos.",
     },
     {
         prompt: "Which of the following is a temporary disqualification?",
@@ -1264,7 +1236,7 @@ const allQuestions = [
             "Angora",
         ],
         correctIndex: 0,
-        fact: "Netherland Dwarfs are small and compact, representing the smallest commercial breed.",
+        fact: "Netherland Dwarfs are small and compact, representing the smallest recognized breed type.",
     },
     {
         prompt: "Which breed has a commercial body type?",
@@ -1333,6 +1305,601 @@ const allQuestions = [
         fact: "The Satin breed features a distinctive lustrous, satiny coat texture.",
     },
     {
+        prompt: "What does the 'E' locus control in rabbit genetics?",
+        options: [
+            "Fur texture",
+            "Extension of color",
+            "Body type",
+            "Ear length",
+        ],
+        correctIndex: 1,
+        fact: "The E locus controls whether pigment is extended throughout the coat or restricted.",
+    },
+    {
+        prompt: "What is the definition of 'finish' in ARBA judging?",
+        options: [
+            "The overall condition of flesh and fur",
+            "The tattoo process",
+            "The end of gestation",
+            "The pedigree record",
+        ],
+        correctIndex: 0,
+        fact: "Finish refers to the overall condition of flesh and fur, showing grooming and health.",
+    },
+    {
+        prompt: "Which breed is classified as a 4-class rabbit?",
+        options: [
+            "Mini Rex",
+            "Flemish Giant",
+            "New Zealand",
+            "Californian",
+        ],
+        correctIndex: 0,
+        fact: "Mini Rex are lighter breeds, placing them in the 4-class category by weight.",
+    },
+    {
+        prompt: "Which breed is classified as a 6-class rabbit?",
+        options: [
+            "New Zealand",
+            "Netherland Dwarf",
+            "Mini Rex",
+            "Holland Lop",
+        ],
+        correctIndex: 0,
+        fact: "New Zealand rabbits are large meat breeds, placing them in the 6-class category.",
+    },
+    {
+        prompt: "What is the ARBA motto?",
+        options: [
+            "To Make the Best Better",
+            "Dedicated to the Betterment of Rabbits and Cavy",
+            "Learning by Doing",
+            "Grow with ARBA",
+        ],
+        correctIndex: 1,
+        fact: "ARBA's official motto is 'Dedicated to the Betterment of Rabbits and Cavy.'",
+    },
+    {
+        prompt: "Which body type is NOT recognized by ARBA?",
+        options: [
+            "Compact",
+            "Commercial",
+            "Cylindrical",
+            "Athletic",
+        ],
+        correctIndex: 3,
+        fact: "ARBA recognizes compact, commercial, cylindrical, semi-arch, and full-arch body types.",
+    },
+    {
+        prompt: "Which breed is known for wool production?",
+        options: [
+            "Angora",
+            "Rex",
+            "Californian",
+            "Lop",
+        ],
+        correctIndex: 0,
+        fact: "Angoras produce long, soft wool that is harvested for textiles and yarn.",
+    },
+    {
+        prompt: "Which breed originated in France?",
+        options: [
+            "Champagne d'Argent",
+            "Mini Rex",
+            "Lionhead",
+            "Harlequin",
+        ],
+        correctIndex: 0,
+        fact: "Champagne d'Argent rabbits originated in France and are known for their silvery coat.",
+    },
+    {
+        prompt: "What is palpation used for in rabbit breeding?",
+        options: [
+            "To feel for pregnancy",
+            "To check fur texture",
+            "To measure body type",
+            "To tattoo",
+        ],
+        correctIndex: 0,
+        fact: "Palpation around day 10–14 allows breeders to confirm pregnancy by feeling embryos.",
+    },
+    {
+        prompt: "Which of the following is a temporary disqualification?",
+        options: [
+            "Sore hocks",
+            "Malocclusion",
+            "Wrong eye color",
+            "Missing toenail",
+        ],
+        correctIndex: 0,
+        fact: "Sore hocks are temporary disqualifications that may heal; they prevent rabbits from being shown.",
+    },
+    {
+        prompt: "Which breed has a cylindrical body type?",
+        options: [
+            "Himalayan",
+            "Flemish Giant",
+            "Mini Rex",
+            "Lop",
+        ],
+        correctIndex: 0,
+        fact: "Himalayans have a distinctive cylindrical body shape, narrow at shoulders and hindquarters.",
+    },
+    {
+        prompt: "Which breed has a compact body type?",
+        options: [
+            "Netherland Dwarf",
+            "Flemish Giant",
+            "New Zealand",
+            "Angora",
+        ],
+        correctIndex: 0,
+        fact: "Netherland Dwarfs are small and compact, representing the smallest recognized breed type.",
+    },
+    {
+        prompt: "Which breed has a commercial body type?",
+        options: [
+            "Californian",
+            "Himalayan",
+            "Mini Rex",
+            "Holland Lop",
+        ],
+        correctIndex: 0,
+        fact: "Californians have a deep, commercial body type ideal for meat production.",
+    },
+    {
+        prompt: "Which breed has a semi-arch body type?",
+        options: [
+            "Flemish Giant",
+            "Californian",
+            "Mini Rex",
+            "Angora",
+        ],
+        correctIndex: 0,
+        fact: "Flemish Giants display the semi-arch body, rising behind the shoulders and over the hips.",
+    },
+    {
+        prompt: "Which breed has a full-arch body type?",
+        options: [
+            "Belgian Hare",
+            "Californian",
+            "Mini Rex",
+            "Angora",
+        ],
+        correctIndex: 0,
+        fact: "Belgian Hares have a distinctive full-arch, with the body arched high throughout.",
+    },
+    {
+        prompt: "What is the ARBA Standard of Perfection used for?",
+        options: [
+            "Judging rabbits",
+            "Feeding rabbits",
+            "Tattooing rabbits",
+            "Breeding rabbits",
+        ],
+        correctIndex: 0,
+        fact: "The Standard of Perfection is the official guideline judges use to evaluate rabbits in shows.",
+    },
+    {
+        prompt: "Which of the following is NOT a recognized fur type by ARBA?",
+        options: [
+            "Normal",
+            "Rex",
+            "Satin",
+            "Curly",
+        ],
+        correctIndex: 3,
+        fact: "ARBA recognizes Normal, Rex, Satin, and Wool fur types; Curly is not an official category.",
+    },
+    {
+        prompt: "Which breed is known for satin fur?",
+        options: [
+            "Satin",
+            "Rex",
+            "Angora",
+            "Californian",
+        ],
+        correctIndex: 0,
+        fact: "The Satin breed features a distinctive lustrous, satiny coat texture.",
+    },
+    {
+        prompt: "What does the 'E' locus control in rabbit genetics?",
+        options: [
+            "Fur texture",
+            "Extension of color",
+            "Body type",
+            "Ear length",
+        ],
+        correctIndex: 1,
+        fact: "The E locus controls whether pigment is extended throughout the coat or restricted.",
+    },
+    {
+        prompt: "What is the definition of 'finish' in ARBA judging?",
+        options: [
+            "The overall condition of flesh and fur",
+            "The tattoo process",
+            "The end of gestation",
+            "The pedigree record",
+        ],
+        correctIndex: 0,
+        fact: "Finish refers to the overall condition of flesh and fur, showing grooming and health.",
+    },
+    {
+        prompt: "Which breed is classified as a 4-class rabbit?",
+        options: [
+            "Mini Rex",
+            "Flemish Giant",
+            "New Zealand",
+            "Californian",
+        ],
+        correctIndex: 0,
+        fact: "Mini Rex are lighter breeds, placing them in the 4-class category by weight.",
+    },
+    {
+        prompt: "Which breed is classified as a 6-class rabbit?",
+        options: [
+            "New Zealand",
+            "Netherland Dwarf",
+            "Mini Rex",
+            "Holland Lop",
+        ],
+        correctIndex: 0,
+        fact: "New Zealand rabbits are large meat breeds, placing them in the 6-class category.",
+    },
+    {
+        prompt: "What is the ARBA motto?",
+        options: [
+            "To Make the Best Better",
+            "Dedicated to the Betterment of Rabbits and Cavy",
+            "Learning by Doing",
+            "Grow with ARBA",
+        ],
+        correctIndex: 1,
+        fact: "ARBA's official motto is 'Dedicated to the Betterment of Rabbits and Cavy.'",
+    },
+    {
+        prompt: "Which body type is NOT recognized by ARBA?",
+        options: [
+            "Compact",
+            "Commercial",
+            "Cylindrical",
+            "Athletic",
+        ],
+        correctIndex: 3,
+        fact: "ARBA recognizes compact, commercial, cylindrical, semi-arch, and full-arch body types.",
+    },
+    {
+        prompt: "Which breed is known for wool production?",
+        options: [
+            "Angora",
+            "Rex",
+            "Californian",
+            "Lop",
+        ],
+        correctIndex: 0,
+        fact: "Angoras produce long, soft wool that is harvested for textiles and yarn.",
+    },
+    {
+        prompt: "Which breed originated in France?",
+        options: [
+            "Champagne d'Argent",
+            "Mini Rex",
+            "Lionhead",
+            "Harlequin",
+        ],
+        correctIndex: 0,
+        fact: "Champagne d'Argent rabbits originated in France and are known for their silvery coat.",
+    },
+    {
+        prompt: "What is palpation used for in rabbit breeding?",
+        options: [
+            "To feel for pregnancy",
+            "To check fur texture",
+            "To measure body type",
+            "To tattoo",
+        ],
+        correctIndex: 0,
+        fact: "Palpation around day 10–14 allows breeders to confirm pregnancy by feeling embryos.",
+    },
+    {
+        prompt: "Which of the following is a temporary disqualification?",
+        options: [
+            "Sore hocks",
+            "Malocclusion",
+            "Wrong eye color",
+            "Missing toenail",
+        ],
+        correctIndex: 0,
+        fact: "Sore hocks are temporary disqualifications that may heal; they prevent rabbits from being shown.",
+    },
+    {
+        prompt: "Which breed has a cylindrical body type?",
+        options: [
+            "Himalayan",
+            "Flemish Giant",
+            "Mini Rex",
+            "Lop",
+        ],
+        correctIndex: 0,
+        fact: "Himalayans have a distinctive cylindrical body shape, narrow at shoulders and hindquarters.",
+    },
+    {
+        prompt: "Which breed has a compact body type?",
+        options: [
+            "Netherland Dwarf",
+            "Flemish Giant",
+            "New Zealand",
+            "Angora",
+        ],
+        correctIndex: 0,
+        fact: "Netherland Dwarfs are small and compact, representing the smallest recognized breed type.",
+    },
+    {
+        prompt: "Which breed has a commercial body type?",
+        options: [
+            "Californian",
+            "Himalayan",
+            "Mini Rex",
+            "Holland Lop",
+        ],
+        correctIndex: 0,
+        fact: "Californians have a deep, commercial body type ideal for meat production.",
+    },
+    {
+        prompt: "Which breed has a semi-arch body type?",
+        options: [
+            "Flemish Giant",
+            "Californian",
+            "Mini Rex",
+            "Angora",
+        ],
+        correctIndex: 0,
+        fact: "Flemish Giants display the semi-arch body, rising behind the shoulders and over the hips.",
+    },
+    {
+        prompt: "Which breed has a full-arch body type?",
+        options: [
+            "Belgian Hare",
+            "Californian",
+            "Mini Rex",
+            "Angora",
+        ],
+        correctIndex: 0,
+        fact: "Belgian Hares have a distinctive full-arch, with the body arched high throughout.",
+    },
+    {
+        prompt: "What is the ARBA Standard of Perfection used for?",
+        options: [
+            "Judging rabbits",
+            "Feeding rabbits",
+            "Tattooing rabbits",
+            "Breeding rabbits",
+        ],
+        correctIndex: 0,
+        fact: "The Standard of Perfection is the official guideline judges use to evaluate rabbits in shows.",
+    },
+    {
+        prompt: "Which of the following is NOT a recognized fur type by ARBA?",
+        options: [
+            "Normal",
+            "Rex",
+            "Satin",
+            "Curly",
+        ],
+        correctIndex: 3,
+        fact: "ARBA recognizes Normal, Rex, Satin, and Wool fur types; Curly is not an official category.",
+    },
+    {
+        prompt: "Which breed is known for satin fur?",
+        options: [
+            "Satin",
+            "Rex",
+            "Angora",
+            "Californian",
+        ],
+        correctIndex: 0,
+        fact: "The Satin breed features a distinctive lustrous, satiny coat texture.",
+    },
+    {
+        prompt: "What does the 'E' locus control in rabbit genetics?",
+        options: [
+            "Fur texture",
+            "Extension of color",
+            "Body type",
+            "Ear length",
+        ],
+        correctIndex: 1,
+        fact: "The E locus controls whether pigment is extended throughout the coat or restricted.",
+    },
+    {
+        prompt: "What is the definition of 'finish' in ARBA judging?",
+        options: [
+            "The overall condition of flesh and fur",
+            "The tattoo process",
+            "The end of gestation",
+            "The pedigree record",
+        ],
+        correctIndex: 0,
+        fact: "Finish refers to the overall condition of flesh and fur, showing grooming and health.",
+    },
+    {
+        prompt: "Which breed is classified as a 4-class rabbit?",
+        options: [
+            "Mini Rex",
+            "Flemish Giant",
+            "New Zealand",
+            "Californian",
+        ],
+        correctIndex: 0,
+        fact: "Mini Rex are lighter breeds, placing them in the 4-class category by weight.",
+    },
+    {
+        prompt: "Which breed is classified as a 6-class rabbit?",
+        options: [
+            "New Zealand",
+            "Netherland Dwarf",
+            "Mini Rex",
+            "Holland Lop",
+        ],
+        correctIndex: 0,
+        fact: "New Zealand rabbits are large meat breeds, placing them in the 6-class category.",
+    },
+    {
+        prompt: "What is the ARBA motto?",
+        options: [
+            "To Make the Best Better",
+            "Dedicated to the Betterment of Rabbits and Cavy",
+            "Learning by Doing",
+            "Grow with ARBA",
+        ],
+        correctIndex: 1,
+        fact: "ARBA's official motto is 'Dedicated to the Betterment of Rabbits and Cavy.'",
+    },
+    {
+        prompt: "Which body type is NOT recognized by ARBA?",
+        options: [
+            "Compact",
+            "Commercial",
+            "Cylindrical",
+            "Athletic",
+        ],
+        correctIndex: 3,
+        fact: "ARBA recognizes compact, commercial, cylindrical, semi-arch, and full-arch body types.",
+    },
+    {
+        prompt: "Which breed is known for wool production?",
+        options: [
+            "Angora",
+            "Rex",
+            "Californian",
+            "Lop",
+        ],
+        correctIndex: 0,
+        fact: "Angoras produce long, soft wool that is harvested for textiles and yarn.",
+    },
+    {
+        prompt: "Which breed originated in France?",
+        options: [
+            "Champagne d'Argent",
+            "Mini Rex",
+            "Lionhead",
+            "Harlequin",
+        ],
+        correctIndex: 0,
+        fact: "Champagne d'Argent rabbits originated in France and are known for their silvery coat.",
+    },
+    {
+        prompt: "What is palpation used for in rabbit breeding?",
+        options: [
+            "To feel for pregnancy",
+            "To check fur texture",
+            "To measure body type",
+            "To tattoo",
+        ],
+        correctIndex: 0,
+        fact: "Palpation around day 10–14 allows breeders to confirm pregnancy by feeling embryos.",
+    },
+    {
+        prompt: "Which of the following is a temporary disqualification?",
+        options: [
+            "Sore hocks",
+            "Malocclusion",
+            "Wrong eye color",
+            "Missing toenail",
+        ],
+        correctIndex: 0,
+        fact: "Sore hocks are temporary disqualifications that may heal; they prevent rabbits from being shown.",
+    },
+    {
+        prompt: "Which breed has a cylindrical body type?",
+        options: [
+            "Himalayan",
+            "Flemish Giant",
+            "Mini Rex",
+            "Lop",
+        ],
+        correctIndex: 0,
+        fact: "Himalayans have a distinctive cylindrical body shape, narrow at shoulders and hindquarters.",
+    },
+    {
+        prompt: "Which breed has a compact body type?",
+        options: [
+            "Netherland Dwarf",
+            "Flemish Giant",
+            "New Zealand",
+            "Angora",
+        ],
+        correctIndex: 0,
+        fact: "Netherland Dwarfs are small and compact, representing the smallest recognized breed type.",
+    },
+    {
+        prompt: "Which breed has a commercial body type?",
+        options: [
+            "Californian",
+            "Himalayan",
+            "Mini Rex",
+            "Holland Lop",
+        ],
+        correctIndex: 0,
+        fact: "Californians have a deep, commercial body type ideal for meat production.",
+    },
+    {
+        prompt: "Which breed has a semi-arch body type?",
+        options: [
+            "Flemish Giant",
+            "Californian",
+            "Mini Rex",
+            "Angora",
+        ],
+        correctIndex: 0,
+        fact: "Flemish Giants display the semi-arch body, rising behind the shoulders and over the hips.",
+    },
+    {
+        prompt: "Which breed has a full-arch body type?",
+        options: [
+            "Belgian Hare",
+            "Californian",
+            "Mini Rex",
+            "Angora",
+        ],
+        correctIndex: 0,
+        fact: "Belgian Hares have a distinctive full-arch, with the body arched high throughout.",
+    },
+    {
+        prompt: "What is the ARBA Standard of Perfection used for?",
+        options: [
+            "Judging rabbits",
+            "Feeding rabbits",
+            "Tattooing rabbits",
+            "Breeding rabbits",
+        ],
+        correctIndex: 0,
+        fact: "The Standard of Perfection is the official guideline judges use to evaluate rabbits in shows.",
+    },
+    {
+        prompt: "Which of the following is NOT a recognized fur type by ARBA?",
+        options: [
+            "Normal",
+            "Rex",
+            "Satin",
+            "Curly",
+        ],
+        correctIndex: 3,
+        fact: "ARBA recognizes Normal, Rex, Satin, and Wool fur types; Curly is not an official category.",
+    },
+    {
+        prompt: "Which breed is known for satin fur?",
+        options: [
+            "Satin",
+            "Rex",
+            "Angora",
+            "Californian",
+        ],
+        correctIndex: 0,
+        fact: "The Satin breed features a distinctive lustrous, satiny coat texture.",
+    },
+
+       {
         prompt: "Which breed is known for rex fur?",
         options: [
             "Rex",
@@ -1341,7 +1908,7 @@ const allQuestions = [
             "Californian",
         ],
         correctIndex: 0,
-        fact: "Rex breeds have short, plush fur that stands upright from the skin.",
+        fact: "Rex breeds have short, plush fur with no guard hairs, giving a velvet-like texture.",
     },
     {
         prompt: "Which breed is known for wool fur?",
@@ -1374,7 +1941,7 @@ const allQuestions = [
             "Fur type approval",
         ],
         correctIndex: 0,
-        fact: "A permanent tattoo is required for ARBA registration to link the rabbit to its papers.",
+        fact: "A permanent tattoo in the left ear is required for ARBA registration to link the rabbit to its papers.",
     },
     // Advanced Genetics - Gene Loci
     {
@@ -1386,7 +1953,7 @@ const allQuestions = [
             "D locus",
         ],
         correctIndex: 2,
-        fact: "The C locus controls pigment deposition; the chinchilla allele creates the distinctive agouti pattern.",
+        fact: "The C locus controls pigment deposition; the chinchilla allele reduces yellow pigment, creating the chinchilla pattern.",
     },
     {
         prompt: "Which gene locus determines dilute vs. full color?",
@@ -1408,7 +1975,7 @@ const allQuestions = [
             "D locus",
         ],
         correctIndex: 1,
-        fact: "The B locus controls brown pigment; bb creates chocolate or brown colors.",
+        fact: "The B locus controls brown pigment; bb creates chocolate coloration, while B_ produces black.",
     },
     {
         prompt: "Which gene locus determines agouti vs. self coloring?",
@@ -1430,7 +1997,7 @@ const allQuestions = [
             "D locus",
         ],
         correctIndex: 2,
-        fact: "The C locus controls pigment production; the albino allele results in no pigment deposition.",
+        fact: "The C locus controls pigment production; the albino allele (cc) results in no pigment deposition.",
     },
     {
         prompt: "What genotype produces a Chocolate rabbit?",
@@ -1441,7 +2008,7 @@ const allQuestions = [
             "A_ bb C_ D_ E_",
         ],
         correctIndex: 0,
-        fact: "Chocolate rabbits have the agouti gene hidden (aa) and brown pigment (bb).",
+        fact: "Chocolate rabbits are self-colored (aa) with brown pigment (bb).",
     },
     {
         prompt: "What genotype produces a Lilac rabbit?",
@@ -1452,7 +2019,7 @@ const allQuestions = [
             "A_ B_ C_ D_ E_",
         ],
         correctIndex: 2,
-        fact: "Lilac requires both brown pigment (bb) and dilution (dd) with self coloring (aa).",
+        fact: "Lilac requires self coloring (aa), brown pigment (bb), and dilution (dd).",
     },
     {
         prompt: "What genotype produces a Himalayan rabbit?",
@@ -1463,7 +2030,7 @@ const allQuestions = [
             "aa B_ C_ D_ E_",
         ],
         correctIndex: 0,
-        fact: "Himalayans have chinchilla coloration (chch) restricted to cooler areas via temperature sensitivity.",
+        fact: "Himalayans carry the temperature-sensitive allele (chch) that restricts color to cooler areas like ears and nose.",
     },
     {
         prompt: "What genotype produces a Chocolate Chinchilla rabbit?",
@@ -1474,7 +2041,7 @@ const allQuestions = [
             "A_ B_ chch D_ E_",
         ],
         correctIndex: 0,
-        fact: "Chocolate Chinchilla combines agouti (A_), brown (bb), chinchilla (cchd), and full color.",
+        fact: "Chocolate Chinchilla combines agouti (A_), brown pigment (bb), chinchilla allele (cchd), and full color.",
     },
     // Registration & Registrar Rules
     {
@@ -1564,7 +2131,7 @@ const allQuestions = [
             "Hazel eyes",
         ],
         correctIndex: 2,
-        fact: "Lilac rabbits must have brown or gray eyes; pink eyes are a disqualification.",
+        fact: "Lilac rabbits must have blue-gray eyes; pink eyes are a disqualification.",
     },
     // Breed Standards - Fur Characteristics
     {
@@ -1635,6 +2202,7 @@ const allQuestions = [
         correctIndex: 0,
         fact: "Rex fur lacks guard hairs, creating a uniform plush texture.",
     },
+
     // Breed Judging Specialties
     {
         prompt: "Which breed is judged primarily on wool quality?",
@@ -1650,15 +2218,14 @@ const allQuestions = [
     {
         prompt: "Which breed is judged primarily on meat type and commercial qualities?",
         options: [
-            "New Zealand",
+            "New Zealand and Californian",
             "Rex",
             "Angora",
             "Holland Lop",
         ],
         correctIndex: 0,
-        fact: "New Zealand and Californian meat breeds are judged on body type, condition, and uniformity.",
+        fact: "New Zealand and Californian are classic meat breeds, judged on commercial body type, condition, and uniformity.",
     },
-    // SOP Judging Priorities
     {
         prompt: "According to the Standard of Perfection, what are the four factors for judging meat pens (in order)?",
         options: [
@@ -1670,7 +2237,6 @@ const allQuestions = [
         correctIndex: 0,
         fact: "Meat pen judging prioritizes meat type first, then condition, uniformity, and fur quality.",
     },
-    // Primary Purpose of SOP
     {
         prompt: "What is the primary purpose of the ARBA Standard of Perfection?",
         options: [
@@ -1682,7 +2248,6 @@ const allQuestions = [
         correctIndex: 0,
         fact: "The Standard of Perfection gives judges uniform criteria and guides breeders toward improving each breed.",
     },
-    // Registrar Limit
     {
         prompt: "What is the maximum number of rabbits a registrar may register in one day without ARBA approval?",
         options: [
@@ -1692,9 +2257,8 @@ const allQuestions = [
             "100 rabbits",
         ],
         correctIndex: 1,
-        fact: "Registrars can register up to 50 rabbits per day; larger numbers require ARBA approval.",
+        fact: "Registrars may register up to 50 rabbits per day without special ARBA approval; larger batches require authorization.",
     },
-    // Breed-Specific Disqualifications
     {
         prompt: "Which of the following is a breed-specific disqualification in Rex rabbits?",
         options: [
@@ -1704,7 +2268,7 @@ const allQuestions = [
             "Broken toenail",
         ],
         correctIndex: 0,
-        fact: "Rex fur must not exceed ½ inch in length; longer fur is a disqualification.",
+        fact: "Rex rabbits must have a plush, short coat not exceeding ½ inch; longer fur is a disqualification. Rex are also judged on commercial body type, condition, and balance in addition to fur.",
     },
     {
         prompt: "Which of the following is a breed-specific disqualification in Angora rabbits?",
@@ -1715,9 +2279,8 @@ const allQuestions = [
             "Broken toenail",
         ],
         correctIndex: 0,
-        fact: "Angoras require proper wooliness; wrong or insufficient wool is a disqualification.",
+        fact: "Angoras are judged primarily on wool; incorrect wool texture, density, or insufficient wool is a disqualification.",
     },
-    // Faults vs. Disqualifications
     {
         prompt: "Which of the following is a fault but NOT a disqualification?",
         options: [
@@ -1729,7 +2292,6 @@ const allQuestions = [
         correctIndex: 0,
         fact: "Slightly uneven fur is a fault that deducts points but does not disqualify the rabbit.",
     },
-    // Registrar Scenario - Missing Toenail
     {
         prompt: "You are registering a rabbit with a missing toenail. What do you do?",
         options: [
@@ -1739,8 +2301,9 @@ const allQuestions = [
             "Ignore the fault",
         ],
         correctIndex: 1,
-        fact: "Missing toenails are disqualifications; rabbits cannot be registered if they lack toenails.",
+        fact: "Missing toenails are disqualifications for show and registration; the rabbit cannot be registered until the condition is resolved.",
     },
+
     // Registrar Scenario - Incomplete Pedigree
     {
         prompt: "A rabbit has a pedigree missing one grandparent. Can it be registered?",
@@ -1751,9 +2314,8 @@ const allQuestions = [
             "Only if tattooed",
         ],
         correctIndex: 1,
-        fact: "ARBA requires a complete three-generation pedigree; missing ancestors disqualify registration.",
+        fact: "ARBA requires a complete four-generation pedigree; missing ancestors disqualify registration.",
     },
-    // Registrar Scenario - Sore Hocks
     {
         prompt: "A rabbit has sore hocks at the time of registration. What is the correct action?",
         options: [
@@ -1763,9 +2325,8 @@ const allQuestions = [
             "Ignore the condition",
         ],
         correctIndex: 1,
-        fact: "Sore hocks are a temporary disqualification; the rabbit may be registered after healing.",
+        fact: "Sore hocks are a temporary disqualification; the rabbit may be registered after the condition has healed.",
     },
-    // Registrar Scenario - No Tattoo
     {
         prompt: "A rabbit meets the breed standard but has no tattoo. What is the registrar's action?",
         options: [
@@ -1775,9 +2336,8 @@ const allQuestions = [
             "Register with photo ID",
         ],
         correctIndex: 1,
-        fact: "A permanent tattoo is required for ARBA registration; it cannot be waived.",
+        fact: "A permanent tattoo in the left ear is required for ARBA registration and must be provided before registration.",
     },
-    // Registrar Scenario - Three Legs but Not Registered
     {
         prompt: "A rabbit has three ARBA show legs but is not yet registered. Can it be a Grand Champion?",
         options: [
@@ -1789,7 +2349,6 @@ const allQuestions = [
         correctIndex: 1,
         fact: "A rabbit must be registered before show legs count toward Grand Champion status.",
     },
-    // SOP Application - Judging Priority
     {
         prompt: "You are judging a meat pen. One rabbit has excellent meat type but poor uniformity. What is the correct scoring priority?",
         options: [
@@ -1799,9 +2358,8 @@ const allQuestions = [
             "Tattoo first",
         ],
         correctIndex: 1,
-        fact: "According to the SOP, meat type is the first priority in meat pen judging.",
+        fact: "Per the Standard of Perfection, meat type is the first priority when judging meat pens, followed by condition, uniformity, then fur.",
     },
-    // SOP Application - Rex Fur Length
     {
         prompt: "A Rex rabbit has fur longer than ½ inch. What does the SOP require?",
         options: [
@@ -1811,11 +2369,10 @@ const allQuestions = [
             "Ignore the issue",
         ],
         correctIndex: 1,
-        fact: "Fur exceeding ½ inch in Rex rabbits is a disqualification per the SOP.",
+        fact: "Rex fur exceeding ½ inch is a disqualification under the SOP; Rex are also judged on commercial body type, condition, and balance in addition to coat.",
     },
-    // SOP Application - Eye Color
     {
-        prompt: "A rabbit has blue-gray eyes but is entered as a Lilac. What does the SOP require?",
+        prompt: "A rabbit has an eye color that does not match the Standard for its variety. What does the SOP require?",
         options: [
             "Accept the entry",
             "Disqualification",
@@ -1823,9 +2380,8 @@ const allQuestions = [
             "Ignore the discrepancy",
         ],
         correctIndex: 1,
-        fact: "Lilac rabbits must have brown or gray eyes; blue-gray eyes are a disqualification.",
+        fact: "Incorrect eye color as specified in the Standard of Perfection is a disqualification for that variety.",
     },
-    // ARBA Breed Classes - 4-Class Breeds
     {
         prompt: "The Netherland Dwarf is classified as which type of ARBA class?",
         options: [
@@ -1835,7 +2391,7 @@ const allQuestions = [
             "Not recognized",
         ],
         correctIndex: 0,
-        fact: "Netherland Dwarfs are one of the smallest breeds, classified as 4-class.",
+        fact: "Netherland Dwarfs are one of the smallest breeds and are classified as 4-class.",
     },
     {
         prompt: "The Holland Lop is classified as which type of ARBA class?",
@@ -1846,8 +2402,9 @@ const allQuestions = [
             "Not recognized",
         ],
         correctIndex: 0,
-        fact: "Holland Lops are compact lop-eared breeds, classified as 4-class.",
+        fact: "Holland Lops are compact lop-eared breeds and are classified as 4-class.",
     },
+
     {
         prompt: "The Mini Rex is classified as which type of ARBA class?",
         options: [
@@ -2046,6 +2603,8 @@ const allQuestions = [
         correctIndex: 0,
         fact: "Satin Angoras are satiny wool breeds, classified as 4-class.",
     },
+
+    
     {
         prompt: "The French Angora is classified as which type of ARBA class?",
         options: [
