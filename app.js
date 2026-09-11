@@ -2231,8 +2231,8 @@ const allQuestions = [
             "Wool breed",
             "Not recognized",
         ],
-        correctIndex: 1,
-        fact: "Rex rabbits are large rex-furred breeds, classified as 6-class.",
+        correctIndex: 0,
+        fact: "Rex rabbits are plush-furred breeds, classified as 4-class commercial.",
     },
     {
         prompt: "The Argente Brun is classified as which type of ARBA class?",
@@ -2243,7 +2243,7 @@ const allQuestions = [
             "Not recognized",
         ],
         correctIndex: 1,
-        fact: "Argente Bruns are large silvered breeds, classified as 6-class.",
+        fact: "Argente Bruns are large silvered breeds, classified as 6-class commercial.",
     },
     {
         prompt: "The Cinnamon is classified as which type of ARBA class?",
@@ -2254,7 +2254,7 @@ const allQuestions = [
             "Not recognized",
         ],
         correctIndex: 1,
-        fact: "Cinnamons are large warm-colored breeds, classified as 6-class.",
+        fact: "Cinnamons are large warm-colored breeds, reminicent of burnt cinnamon toast and classified as 6-class commercial.",
     },
     {
         prompt: "The English Spot is classified as which type of ARBA class?",
@@ -2275,8 +2275,8 @@ const allQuestions = [
             "Wool breed",
             "Not recognized",
         ],
-        correctIndex: 1,
-        fact: "Belgian Hares are large full-arch breeds, classified as 6-class.",
+        correctIndex: 0,
+        fact: "Belgian Hares are large full-arch breeds, classified as 4-class Full-Arch.",
     },
     {
         prompt: "The Blanc de Hotot is classified as which type of ARBA class?",
@@ -2287,7 +2287,7 @@ const allQuestions = [
             "Not recognized",
         ],
         correctIndex: 1,
-        fact: "Blanc de Hotots are large white eye-banded breeds, classified as 6-class.",
+        fact: "Blanc de Hotots are large white, black-eye-banded breeds, classified as 6-class, commercial.",
     },
     {
         prompt: "The Beveren is classified as which type of ARBA class?",
@@ -2298,7 +2298,7 @@ const allQuestions = [
             "Not recognized",
         ],
         correctIndex: 1,
-        fact: "Beverens are large blue-furred breeds, classified as 6-class.",
+        fact: "Beverens are large blue or white -furred breeds, classified as 6-class commercial.",
     },
     {
         prompt: "The Rhinelander is classified as which type of ARBA class?",
