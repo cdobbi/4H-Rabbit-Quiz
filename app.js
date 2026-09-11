@@ -4238,6 +4238,38 @@ const questionBank = [...allQuestions, ...scenarioQuestions].map((question, inde
     reviewStatus: question.reviewStatus || "Practice content - verify current guidance",
 }));
 
+const STUDY_TRACKS = ["cloverbud", "junior", "intermediate", "senior", "registrar"];
+
+const STUDY_PATH_ACCESS = {
+    mixed: { topics: TOPICS, tracks: STUDY_TRACKS },
+    cloverbud: { topics: ["Husbandry", "Health & Biosecurity"], tracks: ["cloverbud"] },
+    junior: { topics: ["Husbandry", "Health & Biosecurity", "Genetics"], tracks: ["cloverbud", "junior"] },
+    intermediate: { topics: TOPICS, tracks: ["cloverbud", "junior", "intermediate"] },
+    senior: { topics: TOPICS, tracks: ["cloverbud", "junior", "intermediate", "senior"] },
+    registrar: { topics: TOPICS, tracks: STUDY_TRACKS },
+};
+
+function validateQuestionBank() {
+    const ids = new Set();
+    const problems = [];
+    questionBank.forEach((question) => {
+        if (!question.id || ids.has(question.id)) problems.push(`duplicate or missing id: ${question.id || question.prompt}`);
+        ids.add(question.id);
+        const hasValidOptions = Array.isArray(question.options) && question.options.length >= 2;
+        if (!question.prompt || !hasValidOptions) problems.push(`incomplete question: ${question.id}`);
+        if (!hasValidOptions || !Number.isInteger(question.correctIndex) || question.correctIndex < 0 || question.correctIndex >= question.options.length) problems.push(`invalid correct answer: ${question.id}`);
+        if (!TOPICS.includes(question.topic)) problems.push(`invalid topic: ${question.id}`);
+        if (!STUDY_TRACKS.includes(question.studyTrack)) problems.push(`invalid study track: ${question.id}`);
+        const isReachable = Object.entries(STUDY_PATH_ACCESS)
+            .filter(([path]) => path !== "mixed")
+            .some(([, access]) => access.topics.includes(question.topic) && access.tracks.includes(question.studyTrack));
+        if (!isReachable) problems.push(`unreachable question: ${question.id}`);
+    });
+    if (problems.length) throw new Error(`Question bank validation failed:\n${problems.join("\n")}`);
+}
+
+validateQuestionBank();
+
 const nonRegistrarQuestions = questionBank.filter((question) => question.studyTrack !== "registrar");
 const freeQuestionIds = new Set([
     ...TOPICS.flatMap((topic) => nonRegistrarQuestions.filter((question) => question.topic === topic).slice(0, 15)),
@@ -4321,15 +4353,6 @@ function selectedStudyTracks() {
 }
 function selectedRoundSize(availableCount) { return roundSize.value === "all" ? availableCount : Number(roundSize.value); }
 
-const STUDY_PATH_ACCESS = {
-    mixed: { topics: TOPICS, tracks: ["cloverbud", "junior", "intermediate", "senior", "registrar"] },
-    cloverbud: { topics: ["Husbandry", "Health & Biosecurity"], tracks: ["cloverbud"] },
-    junior: { topics: ["Husbandry", "Health & Biosecurity", "Genetics"], tracks: ["cloverbud", "junior"] },
-    intermediate: { topics: TOPICS, tracks: ["cloverbud", "junior", "intermediate"] },
-    senior: { topics: TOPICS, tracks: ["cloverbud", "junior", "intermediate", "senior"] },
-    registrar: { topics: TOPICS, tracks: ["cloverbud", "junior", "intermediate", "senior", "registrar"] },
-};
-
 function currentPathAccess() { return STUDY_PATH_ACCESS[currentStudyTrack()]; }
 
 function updateStudyTrackFilters() {
@@ -4368,6 +4391,7 @@ function eligibleQuestions() {
     const pathAccess = currentPathAccess();
     const matchingQuestions = availableQuestions().filter((question) =>
         topics.includes(question.topic)
+        && pathAccess.topics.includes(question.topic)
         && selectedStudyTracks().includes(question.studyTrack)
     );
     return currentMode() === "review"
