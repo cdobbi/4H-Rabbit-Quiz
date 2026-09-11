@@ -1,5 +1,5 @@
 {
-  "name": "4h-rabbit-quiz",
+  "name": "rabbit-savvy",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -14,15 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cdobbi/4H-Rabbit-Quiz.git"
+    "url": "git+https://github.com/cdobbi/Rabbit-Savvy.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cdobbi/4H-Rabbit-Quiz/issues"
+    "url": "https://github.com/cdobbi/Rabbit-Savvy/issues"
   },
-  "homepage": "https://github.com/cdobbi/4H-Rabbit-Quiz#readme",
+  "homepage": "https://github.com/cdobbi/Rabbit-Savvy#readme",
   "description": "Command-line rabbit husbandry quiz built with TypeScript",
   "devDependencies": {
     "@capacitor/assets": "^3.0.5",
