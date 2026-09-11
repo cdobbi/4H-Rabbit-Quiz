@@ -4214,13 +4214,13 @@ function inferTopic(question) {
 
 function inferStudyTrack(question) {
     const text = `${question.prompt} ${question.fact || ""}`.toLowerCase();
-    if (/arba|registration|tattoo|pedigree|meat-pen|meat pen|body type|moon eye|full-arch|fur type|dutch rabbit/.test(text)) {
+    if (/arba|registration|tattoo|pedigree|meat-pen|meat pen/.test(text)) {
         return "registrar";
     }
     if (/pasteurella|snuffles|rhdv|contagious|quarantine|palpate|homozygous|heterozygous|genotype|allele|vienna|charlie/.test(text)) {
         return "senior";
     }
-    if (/gene|agouti|chinchilla|rufus|harlequin|brindling|kindling|gestation|breeding record/.test(text)) {
+    if (/gene|agouti|chinchilla|rufus|harlequin|brindling|kindling|gestation|breeding record|body type|moon eye|full-arch|fur type|dutch rabbit/.test(text)) {
         return "intermediate";
     }
     if (/daily diet|fresh water|lift a show rabbit|daily observation|wire floors|trim nails/.test(text)) {
@@ -4287,6 +4287,7 @@ const upgradeDetails = document.getElementById("upgrade-details");
 const upgradeButton = document.getElementById("upgrade-button");
 const restorePurchaseButton = document.getElementById("restore-purchase");
 const purchaseStatus = document.getElementById("purchase-status");
+const questionBankCount = document.getElementById("question-bank-count");
 
 function loadStats() {
     try {
@@ -4324,7 +4325,7 @@ const STUDY_PATH_ACCESS = {
     mixed: { topics: TOPICS, tracks: ["cloverbud", "junior", "intermediate", "senior", "registrar"] },
     cloverbud: { topics: ["Husbandry", "Health & Biosecurity"], tracks: ["cloverbud"] },
     junior: { topics: ["Husbandry", "Health & Biosecurity", "Genetics"], tracks: ["cloverbud", "junior"] },
-    intermediate: { topics: TOPICS, tracks: ["cloverbud", "junior", "intermediate", "senior"] },
+    intermediate: { topics: TOPICS, tracks: ["cloverbud", "junior", "intermediate"] },
     senior: { topics: TOPICS, tracks: ["cloverbud", "junior", "intermediate", "senior"] },
     registrar: { topics: TOPICS, tracks: ["cloverbud", "junior", "intermediate", "senior", "registrar"] },
 };
@@ -4374,6 +4375,19 @@ function eligibleQuestions() {
         : matchingQuestions;
 }
 
+function updateQuestionBankCount() {
+    if (!questionBankCount) return;
+    const pathAccess = currentPathAccess();
+    const accessibleCount = availableQuestions().filter((question) =>
+        pathAccess.topics.includes(question.topic)
+        && selectedStudyTracks().includes(question.studyTrack)
+    ).length;
+    const pathLabel = studyTrack.selectedOptions[0]?.textContent.trim() || "selected study path";
+    questionBankCount.textContent = currentStudyTrack() === "mixed"
+        ? `${accessibleCount} questions available in the selected study levels. ${questionBank.length} questions in Rabbit Savvy.`
+        : `${accessibleCount} questions available for ${pathLabel}. ${questionBank.length} questions in Rabbit Savvy.`;
+}
+
 function updateRoundAvailability() {
     const availableCount = eligibleQuestions().length;
     [...roundSize.options].forEach((option) => {
@@ -4384,6 +4398,7 @@ function updateRoundAvailability() {
     }
     startRoundButton.textContent = "Start Round";
     startRoundButton.disabled = availableCount === 0 || roundSize.selectedOptions[0].disabled;
+    updateQuestionBankCount();
 }
 
 function showTutorial() {
