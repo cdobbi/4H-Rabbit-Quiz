@@ -230,6 +230,10 @@ h1 {
     background: rgba(255, 255, 255, 0.9);
 }
 
+.game-setup-panel {
+    margin-bottom: 32px;
+}
+
 .collapsible-panel summary {
     padding: 11px 14px;
     color: #16394f;
@@ -431,6 +435,18 @@ select {
 
 .question-workspace .confidence {
     grid-column: auto;
+}
+
+.question-area #progress {
+    margin: 0 0 8px;
+}
+
+.confidence-area #stats {
+    margin: 10px 0 0;
+}
+
+.confidence-area #score {
+    margin: 4px 0 0;
 }
 
 .question-card {

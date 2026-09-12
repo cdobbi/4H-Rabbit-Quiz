@@ -18,7 +18,7 @@
         <h1><img class="title-icon" src="assets/rabbitking.avif" alt="" /> <span>Rabbit Savvy</span></h1>
         <p class="subtitle">Who knew learning could be this fun!</p>
         <p id="question-bank-count" aria-live="polite"></p>
-        <details class="collapsible-panel" open>
+        <details class="collapsible-panel game-setup-panel" open>
             <summary>Game setup</summary>
             <section class="study-setup" aria-label="Round settings">
                 <div class="control-group">
@@ -68,10 +68,9 @@
                 <button id="start-round" type="button">Start New Round</button>
             </section>
         </details>
-        <p id="progress" aria-live="polite"></p>
-        <p id="stats" aria-live="polite"></p>
         <div class="question-workspace">
             <div class="question-area">
+                <p id="progress" aria-live="polite"></p>
                 <section aria-label="Question" class="question-card" id="question-card">
                     <p id="question" aria-live="polite"></p>
                     <div id="options" class="answer-options" role="group" aria-label="Answer choices"></div>
@@ -79,17 +78,20 @@
                 </section>
                 <p class="shortcut-note">Tip: press 1, 2, or 3 to choose an answer.</p>
             </div>
-            <fieldset id="confidence" class="confidence" aria-labelledby="confidence-label">
-                <div id="confidence-label" class="confidence-title">Confidence check <button id="confidence-help" class="help-button"
-                        type="button" aria-label="Why rate confidence?">?</button></div>
-                <label><input type="radio" name="confidence" value="no-clue" /> No Clue</label>
-                <label><input type="radio" name="confidence" value="guessing" /> Guessing</label>
-                <label><input type="radio" name="confidence" value="somewhat" /> Somewhat sure</label>
-                <label><input type="radio" name="confidence" value="certain" /> Certain</label>
-            </fieldset>
+            <div class="confidence-area">
+                <fieldset id="confidence" class="confidence" aria-labelledby="confidence-label">
+                    <div id="confidence-label" class="confidence-title">Confidence check <button id="confidence-help" class="help-button"
+                            type="button" aria-label="Why rate confidence?">?</button></div>
+                    <label><input type="radio" name="confidence" value="no-clue" /> No Clue</label>
+                    <label><input type="radio" name="confidence" value="guessing" /> Guessing</label>
+                    <label><input type="radio" name="confidence" value="somewhat" /> Somewhat sure</label>
+                    <label><input type="radio" name="confidence" value="certain" /> Certain</label>
+                </fieldset>
+                <p id="stats" aria-live="polite"></p>
+                <p id="score"></p>
+            </div>
         </div>
         <p id="feedback" role="status" aria-live="assertive"></p>
-        <p id="score"></p>
         <div class="action-buttons">
             <button id="next" type="button" hidden>Next Question</button>
             <button id="pause" type="button" hidden>Pause Round</button>
