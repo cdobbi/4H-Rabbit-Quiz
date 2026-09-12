@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rabbit Savvy Feature Graphic</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 1024px;
+            height: 500px;
+            margin: 0;
+            overflow: hidden;
+            background: #d8ebf4;
+            color: #102b3f;
+            font-family: Georgia, serif;
+        }
+
+        main {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 58px 62px;
+            overflow: hidden;
+            background: #d8ebf4 url("../../assets/rabbitking.avif") no-repeat 83% 40% / 430px auto;
+        }
+
+        main::before {
+            position: absolute;
+            inset: 0;
+            width: 61%;
+            content: "";
+            background: #d8ebf4;
+        }
+
+        main::after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 52%;
+            width: 80px;
+            content: "";
+            background: #d8ebf4;
+            transform: skewX(-10deg);
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            width: 490px;
+        }
+
+        .eyebrow {
+            margin: 0 0 20px;
+            color: #28789d;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 1.7px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0;
+            color: #102b3f;
+            font-size: 72px;
+            line-height: 0.95;
+        }
+
+        p {
+            width: 425px;
+            margin: 24px 0 30px;
+            color: #315a75;
+            font-family: Arial, sans-serif;
+            font-size: 25px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .topics {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .topics span {
+            padding: 7px 10px;
+            border: 1px solid #8fc5db;
+            border-radius: 4px;
+            background: #f7fcff;
+            color: #28789d;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="content">
+            <div class="eyebrow">Offline Rabbit Study</div>
+            <h1>Rabbit Savvy</h1>
+            <p>Build practical knowledge for better care, better shows, and better breeding decisions.</p>
+            <div class="topics">
+                <span>Care</span>
+                <span>Health</span>
+                <span>Genetics</span>
+                <span>Show Skills</span>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

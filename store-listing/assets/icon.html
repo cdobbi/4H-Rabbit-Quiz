@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Rabbit Savvy Icon</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 512px;
+            height: 512px;
+            margin: 0;
+            overflow: hidden;
+            background: #d8ebf4;
+        }
+
+        main {
+            position: relative;
+            width: 512px;
+            height: 512px;
+            overflow: hidden;
+            border-radius: 92px;
+            background: #28789d url("../../assets/rabbitking.avif") no-repeat 65% 32% / 530px auto;
+        }
+
+        main::before {
+            position: absolute;
+            inset: 0;
+            content: "";
+            background: rgba(16, 43, 63, 0.18);
+        }
+
+        .mark {
+            position: absolute;
+            right: 32px;
+            bottom: 28px;
+            padding: 11px 18px;
+            border-radius: 18px;
+            background: #f7fcff;
+            color: #16394f;
+            font: 700 46px Georgia, serif;
+            line-height: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <main aria-label="Rabbit Savvy">
+        <div class="mark">RS</div>
+    </main>
+</body>
+
+</html>
