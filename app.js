@@ -1,5 +1,14 @@
 const { QUESTIONS_PER_GAME, allQuestions, scenarioQuestions } = globalThis.RABBIT_SAVVY_QUESTION_DATA;
-;
+
+const TOPICS = ["Husbandry", "Health & Biosecurity", "Genetics", "ARBA Procedures", "Breeds & Judging"];
+const DEFAULT_STATS = { bestScore: 0, gamesPlayed: 0, history: [], misses: [], recentQuestionIds: [], topicResults: {} };
+const STORAGE_KEY = "rabbitHusbandryStudyStats";
+const WALLPAPER_DECK_STORAGE_KEY = "rabbitHusbandryWallpaperDeck";
+const LAST_WALLPAPER_STORAGE_KEY = "rabbitHusbandryLastWallpaper";
+const FULL_ACCESS_STORAGE_KEY = "rabbitHusbandryFullAccess";
+const FULL_ACCESS_PRODUCT_ID = "full_question_bank";
+const TUTORIAL_SEEN_STORAGE_KEY = "rabbitHusbandryTutorialSeen";
+const RECENT_QUESTION_LIMIT = 120;
 
 function inferTopic(question) {
     const text = `${question.prompt} ${question.fact || ""}`.toLowerCase();

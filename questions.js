@@ -359,14 +359,6 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 44
         {
-            prompt: "How many generations must appear on a pedigree for show registration?",
-            options: ["Two", "Three", "Four", "Five"],
-            correctIndex: 2,
-            fact:
-                "Registration requires a four-generation pedigree: the rabbit, its parents, grandparents, and great-grandparents.",
-        },
-        // Question 45
-        {
             prompt: "Why does the association require a permanent tattoo in the rabbit's left ear?",
             options: [
                 "It is decorative",
@@ -377,7 +369,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "The tattoo number ties the rabbit to its entry card and pedigree during shows and registrations.",
         },
-        // Question 46
+        // Question 45
         {
             prompt:
                 "A homozygous agouti buck (AA) bred to a self-colored doe (aa) will produce kits with which genotype?",
@@ -386,7 +378,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "Agouti (A) is dominant, so every kit from AA × aa turns out agouti while carrying the recessive self gene.",
         },
-        // Question 47
+        // Question 46
         {
             prompt:
                 "What phenotype results from pairing two homozygous recessive self rabbits (aa × aa)?",
@@ -395,7 +387,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "With only recessive alleles available, every kit receives aa and expresses the self color.",
         },
-        // Question 48
+        // Question 47
         {
             prompt: "What is a common early sign of rabbit pasteurella (snuffles)?",
             options: ["Bright clear eyes", "Sneezing with white nasal discharge", "Blue tongue"],
@@ -403,7 +395,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "Snuffles often leaves thick white mucus on the forepaws where the rabbit wipes its nose.",
         },
-        // Question 49
+        // Question 48
         {
             prompt: "How can breeders reduce the risk of RHDV2 entering their rabbitry?",
             options: [
@@ -416,7 +408,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
                 "Dedicated equipment and strict quarantine help keep rabbit hemorrhagic disease outside your herd.",
         },
 
-        // Question 50
+        // Question 49
         {
             prompt: "What is the recommended response when you suspect a contagious disease in your herd?",
             options: [
@@ -428,7 +420,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "Immediate isolation, sanitation, and veterinary guidance slow outbreaks and protect the colony.",
         },
-        // Question 51
+        // Question 50
         {
             prompt:
                 "Which fur type features short guard hairs about half the length of normal coats, creating a plush texture?",
@@ -437,7 +429,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "Rex fur stands upright with very short guard hairs, so it feels like velvet when brushed backward.",
         },
-        // Question 52
+        // Question 51
         {
             prompt: "What body type describes meat breeds like the New Zealand or Californian?",
             options: ["Semi-arch", "Commercial", "Compact"],
@@ -445,7 +437,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "Commercial body types are deep and rounded for efficient muscling and meat production.",
         },
-        // Question 53
+        // Question 52
         {
             prompt: "Flemish Giants are placed in which body type category?",
             options: ["Semi-arch", "Full-arch", "Compact"],
@@ -453,7 +445,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "The semi-arch type, also called mandolin, rises slowly behind the shoulders and peaks over the hips, just like the Flemish.",
         },
-        // Question 54
+        // Question 53
         {
             prompt:
                 "Which show grouping highlights primarily pet or fancy breeds such as Dutch or Holland Lops?",
@@ -462,7 +454,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "Fancy breeds are prized for their markings and personality rather than production traits.",
         },
-        // Question 55
+        // Question 54
         {
             prompt: "What does the term 'moon eye' describe in rabbit judging?",
             options: [
@@ -474,7 +466,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "Moon eye is a fault or disqualification caused by scarring, leaving a white opaque corneal patch.",
         },
-        // Question 56
+        // Question 55
         {
             prompt: "Which gene is required to produce blue-eyed white (BEW) rabbits?",
             options: ["Vienna gene", "Agouti gene", "Steel gene"],
@@ -482,7 +474,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "BEW color expresses the Vienna (V) gene, while REW rabbits result from the recessive c series.",
         },
-        // Question 57
+        // Question 56
         {
             prompt: "Which of the following is recognized as a giant breed in the Standard?",
             options: ["Netherland Dwarf", "Flemish Giant", "Dutch"],
@@ -490,7 +482,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "Flemish Giants regularly exceed 14 pounds, placing them squarely in the giant breed class.",
         },
-        // Question 58
+        // Question 57
         {
             prompt: "Which breed consistently ranks among the most popular show entries in the U.S.?",
             options: ["Holland Lop", "Silver Marten", "Belgian Hare"],
@@ -498,7 +490,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "Holland Lops top show registration lists due to their compact body type, rollback fur, and friendly nature.",
         },
-        // Question 59
+        // Question 58
         {
             prompt:
                 "How should a full-arch breed like a Tan or Checkered Giant be shown on the table?",
@@ -511,7 +503,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "Full-arch breeds are not posed. Let them run the table so they can show their natural arch from shoulders to hips.",
         },
-        // Question 60
+        // Question 59
         {
             prompt: "What is a 'charlie' in broken patterned rabbits?",
             options: [
@@ -523,7 +515,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "Charlies have two copies of the broken gene, so they show less than 10% color, often only on ears or nose.",
         },
-        // Question 61
+        // Question 60
         {
             prompt: "Which description best matches the broken pattern?",
             options: [
@@ -535,7 +527,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "Broken rabbits display white fur and colored patches, ideally with a butterfly marking on the muzzle.",
         },
-        // Question 62
+        // Question 61
         {
             prompt: "How should a Harlequin rabbit's color be arranged?",
             options: [
@@ -547,7 +539,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "Harlequins look best with alternating orange and black (or blue/chocolate/lilac) sections like a checkerboard.",
         },
-        // Question 63
+        // Question 62
         {
             prompt: "What does 'brindling' mean when judging coat color?",
             options: [
@@ -560,7 +552,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
                 "Brindling is when two colors streak together, often seen in Harlequins and sometimes faulted if too heavy.",
         },
 
-        // Question 64
+        // Question 63
         {
             prompt: "Which marking error will fault a Dutch rabbit?",
             options: [
@@ -572,7 +564,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "Dutch stops must be even; a longer white foot on one side is a fault that lowers the score.",
         },
-        // Question 65
+        // Question 64
         {
             prompt: "What happens when a rabbit carries only one copy of the Vienna gene (Vv)?",
             options: [
@@ -584,7 +576,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "Vienna carriers often show white mittens or a snip even though they are not full blue-eyed whites.",
         },
-        // Question 66
+        // Question 65
         {
             prompt: "What does the rufus modifier add to a rabbit's coat?",
             options: ["Extra blue shading", "Warm red/orange richness", "White ticking"],
@@ -592,7 +584,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "Rufus deepens rusty orange tones, giving breeds like New Zealands a rich, warm color.",
         },
-        // Question 67
+        // Question 66
         {
             prompt: "Which grooming tool lifts shed undercoat during a heavy molt without breaking guard hairs?",
             options: [
@@ -604,7 +596,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "A wide-tooth rake reaches through the topcoat and teases out loose wool while leaving guard hairs intact.",
         },
-        // Question 68
+        // Question 67
         {
             prompt: "At what temperature should breeders begin emergency cooling steps such as frozen bottles or fans?",
             options: [
@@ -616,7 +608,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "Once air temps climb into the mid-80s, rabbits struggle to dump heat, so active cooling prevents heat stress.",
         },
-        // Question 69
+        // Question 68
         {
             prompt: "What is the average gestation length for domestic rabbits?",
             options: ["21 days", "31 days", "42 days"],
@@ -624,7 +616,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "Most does kindle at about 31 days, so nest boxes go in around day 28.",
         },
-        // Question 70
+        // Question 69
         {
             prompt: "Which absorbent material works best in a drop pan under wire cages?",
             options: [
@@ -636,7 +628,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "Pine pellets or shavings soak urine and control odor while remaining safe if chewed.",
         },
-        // Question 71
+        // Question 70
         {
             prompt: "How often should you scrub crocks or water bottles to prevent biofilm build-up?",
             options: ["Monthly", "Weekly", "Daily or every other day"],
@@ -644,7 +636,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "Biofilm forms quickly; frequent washing keeps bacteria from colonizing drinking equipment.",
         },
-        // Question 72
+        // Question 71
         {
             prompt: "What is the safest first step when a rabbit shows signs of overheating?",
             options: [
@@ -656,7 +648,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "Cooling the ears with room-temperature water and airflow lowers body temperature without shocking the rabbit.",
         },
-        // Question 73
+        // Question 72
         {
             prompt: "How long should new or returning rabbits remain in quarantine before joining the herd?",
             options: ["7 days", "14 days", "30 days"],
@@ -664,7 +656,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "A full 30-day quarantine lets hidden respiratory or GI issues appear before exposing the barn.",
         },
-        // Question 74
+        // Question 73
         {
             prompt: "What crude protein percentage do quality grower pellets supply for fryers and juniors?",
             options: ["12%", "16%", "22%"],
@@ -672,7 +664,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "Most breeders feed a balanced 16% pellet to support muscle growth without making rabbits overly fat.",
         },
-        // Question 75
+        // Question 74
         {
             prompt: "Meat-pen fryers are typically shown at what individual weight range?",
             options: [
@@ -684,7 +676,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "Uniform fryers around five pounds show prime muscling and dress out efficiently.",
         },
-        // Question 76
+        // Question 75
         {
             prompt: "How should you store bagged pellets to keep nutrients intact?",
             options: [
@@ -696,7 +688,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "A sealed metal bin in a cool, dry spot keeps pellets from absorbing moisture or odors.",
         },
-        // Question 77
+        // Question 76
         {
             prompt: "How often should you check nest boxes during the first few days after kindling?",
             options: ["Once a week", "Once each day", "Only if you hear noise"],
@@ -704,7 +696,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact:
                 "Daily checks let you remove dead kits, add hay, and ensure everyone is warm and fed.",
         },
-        // Question 78
+        // Question 77
         {
             prompt: "What information belongs on a breeding record card to plan future pairings?",
             options: [
@@ -717,7 +709,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
                 "Recording dates, mates, and litter notes helps you spot productive crosses and schedule rebreeds.",
         },
         // Breeding Rabbit Project - Juniors
-        // Question 79
+        // Question 78
         {
             prompt: "Rabbits are known as 'prey animals.' What does that mean?",
             options: [
@@ -729,7 +721,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Prey animals are hunted by predators, making rabbits naturally cautious and easily stressed.",
         },
-        // Question 80
+        // Question 79
         {
             prompt: "When should the nest box be placed in the hutch?",
             options: [
@@ -741,7 +733,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 2,
             fact: "Placing the nest box 2–3 days before kindling gives the doe time to prepare it with fur and hay.",
         },
-        // Question 81
+        // Question 80
         {
             prompt: "What does gestation mean?",
             options: [
@@ -753,7 +745,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Gestation is the period from conception to birth, averaging 31 days in rabbits.",
         },
-        // Question 82
+        // Question 81
         {
             prompt: "How old are rabbits when they first open their eyes?",
             options: [
@@ -765,7 +757,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Newborn kits open their eyes around 7–10 days old as their eyelids develop.",
         },
-        // Question 83
+        // Question 82
         {
             prompt: "What is kindling?",
             options: [
@@ -777,7 +769,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Kindling is the term used when a doe gives birth to a litter of kits.",
         },
-        // Question 84
+        // Question 83
         {
             prompt: "What is a pedigree?",
             options: [
@@ -790,7 +782,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact: "A pedigree documents the ancestry of a rabbit, showing parents, grandparents, and great-grandparents.",
         },
 
-        // Question 85
+        // Question 84
         {
             prompt: "What is a male rabbit called? What is a female rabbit called? What is a newborn called?",
             options: [
@@ -802,7 +794,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Buck is the male, doe is the female, and kit is the newborn rabbit.",
         },
-        // Question 86
+        // Question 85
         {
             prompt: "According to the Standard, how many breeds of rabbits are there? Name the most recent breed.",
             options: [
@@ -814,7 +806,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 2,
             fact: "The standard recognizes over 50 breeds, with Lionhead being one of the most recently accepted breeds.",
         },
-        // Question 87
+        // Question 86
         {
             prompt: "What does a national rabbit-breeders association provide?",
             options: [
@@ -826,7 +818,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A national rabbit-breeders association provides breed standards, registration, education, and show programs.",
         },
-        // Question 88
+        // Question 87
         {
             prompt: "What is the range of gestation for rabbits?",
             options: [
@@ -838,7 +830,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 2,
             fact: "Rabbit gestation typically ranges from 28–32 days, with most does kindling around day 31.",
         },
-        // Question 89
+        // Question 88
         {
             prompt: "What is the most important nutrient for rabbits?",
             options: [
@@ -850,7 +842,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 2,
             fact: "Water is critical for all body functions; rabbits can survive longer without food than without water.",
         },
-        // Question 90
+        // Question 89
         {
             prompt: "Name a breed that is a 4-class rabbit and a breed that is a 6-class rabbit.",
             options: [
@@ -862,7 +854,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Class is a weight category: 4-class breeds split into junior and senior for each sex, while heavier 6-class breeds add an intermediate class. Mini Rex are 4-class; New Zealands are 6-class.",
         },
-        // Question 91
+        // Question 90
         {
             prompt: "What is a disqualification?",
             options: [
@@ -874,7 +866,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A disqualification removes a rabbit from competition for serious deviations from breed standards.",
         },
-        // Question 92
+        // Question 91
         {
             prompt: "What is the 4-H Motto?",
             options: [
@@ -886,7 +878,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The 4-H motto 'To Make the Best Better' reflects the organization's commitment to improvement.",
         },
-        // Question 93
+        // Question 92
         {
             prompt: "Name one reason you would quarantine a rabbit.",
             options: [
@@ -898,7 +890,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Quarantine isolates sick or new rabbits for 30+ days to prevent contagious diseases from spreading.",
         },
-        // Question 94
+        // Question 93
         {
             prompt: "Rabbits are naturally nervous and subject to stress. Name one thing people can do to avoid frightening them.",
             options: [
@@ -910,7 +902,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 2,
             fact: "Gentle, calm handling reduces stress and prevents injuries from frightened rabbits kicking or jumping.",
         },
-        // Question 95
+        // Question 94
         {
             prompt: "What does lactate mean?",
             options: [
@@ -923,7 +915,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact: "Lactate means to produce milk; lactation in does is essential for kit survival.",
         },
         // Breeding Rabbit Project - Intermediates
-        // Question 96
+        // Question 95
         {
             prompt: "When should the nesting box be removed from the cage?",
             options: [
@@ -935,7 +927,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 2,
             fact: "Remove the nest box at 3–4 weeks when kits are weaned and eating pellets independently.",
         },
-        // Question 97
+        // Question 96
         {
             prompt: "Which option lists three grounds for disqualification?",
             options: [
@@ -947,7 +939,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Disqualifications include serious faults like wrong body color, malocclusion (buck teeth), and missing claws.",
         },
-        // Question 98
+        // Question 97
         {
             prompt: "What causes mastitis?",
             options: [
@@ -959,7 +951,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Mastitis is a painful bacterial infection of the udder, often caused by dirty conditions or injury.",
         },
-        // Question 99
+        // Question 98
         {
             prompt: "What is a sire?",
             options: [
@@ -971,7 +963,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "A sire is a male rabbit selected for breeding; the term is also used for a pedigree ancestor.",
         },
-        // Question 100
+        // Question 99
         {
             prompt: "Name a rabbit breed used for wool production.",
             options: [
@@ -983,7 +975,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Angoras are famous for their soft, long wool, which is harvested for yarn and textiles.",
         },
-        // Question 101
+        // Question 100
         {
             prompt: "What are the four breeding programs?",
             options: [
@@ -995,7 +987,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "These four programs control how genetics are managed to improve breed qualities and health.",
         },
-        // Question 102
+        // Question 101
         {
             prompt: "What is 'finish' in rabbit judging?",
             options: [
@@ -1008,7 +1000,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact: "Finish refers to how well-groomed and conditioned a rabbit appears, affecting show scores.",
         },
 
-        // Question 103
+        // Question 102
         {
             prompt: "What is the treatment for Vent Disease?",
             options: [
@@ -1020,7 +1012,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Vent Disease (spirochetosis) is treated with penicillin injections; affected rabbits may be culled.",
         },
-        // Question 104
+        // Question 103
         {
             prompt: "Why should you tattoo a rabbit?",
             options: [
@@ -1032,7 +1024,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Tattoos permanently identify rabbits and link them to registration papers and show entries.",
         },
-        // Question 105
+        // Question 104
         {
             prompt: "What are the four types of fur found in recognized rabbit breeds?",
             options: [
@@ -1044,7 +1036,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The standard recognizes four fur types: Normal, Rex, Satin, and Wool.",
         },
-        // Question 106
+        // Question 105
         {
             prompt: "What is coprophagy?",
             options: [
@@ -1056,7 +1048,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Coprophagy is the rabbit's natural behavior of eating cecotropes to extract nutrients.",
         },
-        // Question 107
+        // Question 106
         {
             prompt: "What is VCPR?",
             options: [
@@ -1068,7 +1060,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "VCPR is required before using prescription medications; it establishes a legal vet-owner relationship.",
         },
-        // Question 108
+        // Question 107
         {
             prompt: "Name two causes of losses in newborn litters.",
             options: [
@@ -1080,7 +1072,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Chilling and starvation are common causes of kit mortality; proper nest boxes prevent these.",
         },
-        // Question 109
+        // Question 108
         {
             prompt: "What is the Standard of Perfection?",
             options: [
@@ -1093,7 +1085,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact: "The Standard of Perfection is The standard's official guide describing ideal characteristics for each breed.",
         },
         // Market Rabbit Project - Juniors
-        // Question 110
+        // Question 109
         {
             prompt: "In the United States, are rabbits classified as livestock?",
             options: [
@@ -1105,7 +1097,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Rabbits are officially classified as livestock in the U.S., making them eligible for market projects.",
         },
-        // Question 111
+        // Question 110
         {
             prompt: "Name two purposes a rabbit is used for.",
             options: [
@@ -1117,7 +1109,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Rabbits are primarily raised for meat and fur; they are also kept as pets and show animals.",
         },
-        // Question 112
+        // Question 111
         {
             prompt: "In which ear should rabbits be tattooed?",
             options: [
@@ -1130,7 +1122,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact: "Official rabbit identification requires tattooing in the left ear only.",
         },
         // ARBA Standard & Genetics - Advanced
-        // Question 113
+        // Question 112
         {
             prompt: "Which breed is recognized in the Standard as having a 'mandolin' body type?",
             options: [
@@ -1142,7 +1134,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 2,
             fact: "Mandolin is another name for the semi-arch type. The American breed is a classic mandolin/semi-arch breed.",
         },
-        // Question 114
+        // Question 113
         {
             prompt: "Which breed was most recently added to the Standard of Perfection?",
             options: [
@@ -1154,7 +1146,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Lionhead was among the most recently accepted breeds in The standard's Standard of Perfection.",
         },
-        // Question 115
+        // Question 114
         {
             prompt: "What genotype produces a 'Blue' rabbit?",
             options: [
@@ -1166,7 +1158,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Blue coloring results from the chocolate allele combined with dilution (dd).",
         },
-        // Question 116
+        // Question 115
         {
             prompt: "Which color group does 'Sable Point' belong to?",
             options: [
@@ -1178,7 +1170,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Sable Point is a shaded color pattern with darker coloring on points like ears and face.",
         },
-        // Question 117
+        // Question 116
         {
             prompt: "Which of the following is a disqualification in rabbit shows?",
             options: [
@@ -1190,7 +1182,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Missing toenails are considered disqualifications as they affect the rabbit's structure and movement.",
         },
-        // Question 118
+        // Question 117
         {
             prompt: "Which condition is a permanent disqualification?",
             options: [
@@ -1202,7 +1194,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Malocclusion (buck teeth or misaligned jaw) is a permanent disqualification that affects eating.",
         },
-        // Question 119
+        // Question 118
         {
             prompt: "To register a rabbit for a show, what must be true?",
             options: [
@@ -1214,7 +1206,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "show registration requires meeting breed standards and providing a documented four-generation pedigree.",
         },
-        // Question 120
+        // Question 119
         {
             prompt: "What is the minimum age for a rabbit to be registered for a show?",
             options: [
@@ -1227,7 +1219,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact: "show registration requires a rabbit to be at least 6 months old. Show entry requires a rabbit to be at least 3 months old.",
         },
 
-        // Question 121
+        // Question 120
         {
             prompt: "What does the 'E' locus control in rabbit genetics?",
             options: [
@@ -1238,848 +1230,200 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             ],
             correctIndex: 1,
             fact: "The E locus controls whether pigment is extended throughout the coat or restricted.",
+        },
+        // Question 121
+        {
+            prompt: "What is the definition of 'finish' in the association judging?",
+            options: [
+                "The overall condition of flesh and fur",
+                "The tattoo process",
+                "The end of gestation",
+                "The pedigree record",
+            ],
+            correctIndex: 0,
+            fact: "Finish refers to the overall condition of flesh and fur, showing grooming and health.",
         },
         // Question 122
         {
-            prompt: "What is the definition of 'finish' in the association judging?",
+            prompt: "Which breed is classified as a 4-class rabbit?",
             options: [
-                "The overall condition of flesh and fur",
-                "The tattoo process",
-                "The end of gestation",
-                "The pedigree record",
+                "Mini Rex",
+                "Flemish Giant",
+                "New Zealand",
+                "Californian",
             ],
             correctIndex: 0,
-            fact: "Finish refers to the overall condition of flesh and fur, showing grooming and health.",
+            fact: "Mini Rex are lighter breeds, placing them in the 4-class category by weight.",
         },
         // Question 123
         {
-            prompt: "Which breed is classified as a 4-class rabbit?",
+            prompt: "Which breed is classified as a 6-class rabbit?",
             options: [
-                "Mini Rex",
-                "Flemish Giant",
                 "New Zealand",
-                "Californian",
+                "Netherland Dwarf",
+                "Mini Rex",
+                "Holland Lop",
             ],
             correctIndex: 0,
-            fact: "Mini Rex are lighter breeds, placing them in the 4-class category by weight.",
+            fact: "New Zealand rabbits are large meat breeds, placing them in the 6-class category.",
         },
         // Question 124
         {
-            prompt: "Which breed is classified as a 6-class rabbit?",
+            prompt: "What is the the association motto?",
             options: [
-                "New Zealand",
-                "Netherland Dwarf",
-                "Mini Rex",
-                "Holland Lop",
+                "To Make the Best Better",
+                "Dedicated to the Betterment of Rabbits and Cavy",
+                "Learning by Doing",
+                "Grow with the association",
             ],
-            correctIndex: 0,
-            fact: "New Zealand rabbits are large meat breeds, placing them in the 6-class category.",
+            correctIndex: 1,
+            fact: "The association's official motto is 'Dedicated to the Betterment of Rabbits and Cavy.'",
         },
         // Question 125
         {
-            prompt: "What is the the association motto?",
+            prompt: "Which body type is NOT recognized in the Standard?",
             options: [
-                "To Make the Best Better",
-                "Dedicated to the Betterment of Rabbits and Cavy",
-                "Learning by Doing",
-                "Grow with the association",
+                "Compact",
+                "Commercial",
+                "Cylindrical",
+                "Athletic",
             ],
-            correctIndex: 1,
-            fact: "The association's official motto is 'Dedicated to the Betterment of Rabbits and Cavy.'",
+            correctIndex: 3,
+            fact: "The standard recognizes compact, commercial, cylindrical, semi-arch, and full-arch body types.",
         },
         // Question 126
         {
-            prompt: "Which body type is NOT recognized in the Standard?",
+            prompt: "Which breed is known for wool production?",
             options: [
-                "Compact",
-                "Commercial",
-                "Cylindrical",
-                "Athletic",
+                "Angora",
+                "Rex",
+                "Californian",
+                "Lop",
             ],
-            correctIndex: 3,
-            fact: "The standard recognizes compact, commercial, cylindrical, semi-arch, and full-arch body types.",
+            correctIndex: 0,
+            fact: "Angoras produce long, soft wool that is harvested for textiles and yarn.",
         },
         // Question 127
         {
-            prompt: "Which breed is known for wool production?",
+            prompt: "Which breed originated in France?",
             options: [
-                "Angora",
-                "Rex",
-                "Californian",
-                "Lop",
+                "Champagne d'Argent",
+                "Mini Rex",
+                "Lionhead",
+                "Harlequin",
             ],
             correctIndex: 0,
-            fact: "Angoras produce long, soft wool that is harvested for textiles and yarn.",
+            fact: "Champagne d'Argent rabbits originated in France and are known for their silvery coat.",
         },
         // Question 128
         {
-            prompt: "Which breed originated in France?",
+            prompt: "What is palpation used for in rabbit breeding?",
             options: [
-                "Champagne d'Argent",
-                "Mini Rex",
-                "Lionhead",
-                "Harlequin",
+                "To feel for pregnancy",
+                "To check fur texture",
+                "To measure body type",
+                "To tattoo",
             ],
             correctIndex: 0,
-            fact: "Champagne d'Argent rabbits originated in France and are known for their silvery coat.",
+            fact: "Palpation around day 10–14 allows breeders to confirm pregnancy by feeling embryos.",
         },
         // Question 129
         {
-            prompt: "What is palpation used for in rabbit breeding?",
+            prompt: "Which of the following is a temporary disqualification?",
             options: [
-                "To feel for pregnancy",
-                "To check fur texture",
-                "To measure body type",
-                "To tattoo",
+                "Sore hocks",
+                "Malocclusion",
+                "Wrong eye color",
+                "Missing toenail",
             ],
             correctIndex: 0,
-            fact: "Palpation around day 10–14 allows breeders to confirm pregnancy by feeling embryos.",
+            fact: "Sore hocks are temporary disqualifications that may heal; they prevent rabbits from being shown.",
         },
         // Question 130
         {
-            prompt: "Which of the following is a temporary disqualification?",
+            prompt: "Which breed has a cylindrical body type?",
             options: [
-                "Sore hocks",
-                "Malocclusion",
-                "Wrong eye color",
-                "Missing toenail",
+                "Himalayan",
+                "Flemish Giant",
+                "Mini Rex",
+                "Lop",
             ],
             correctIndex: 0,
-            fact: "Sore hocks are temporary disqualifications that may heal; they prevent rabbits from being shown.",
+            fact: "Himalayans have a distinctive cylindrical body shape, narrow at shoulders and hindquarters.",
         },
         // Question 131
         {
-            prompt: "Which breed has a cylindrical body type?",
+            prompt: "Which breed has a compact body type?",
             options: [
-                "Himalayan",
+                "Netherland Dwarf",
                 "Flemish Giant",
-                "Mini Rex",
-                "Lop",
+                "New Zealand",
+                "Angora",
             ],
             correctIndex: 0,
-            fact: "Himalayans have a distinctive cylindrical body shape, narrow at shoulders and hindquarters.",
+            fact: "Netherland Dwarfs are small and compact, representing the smallest recognized breed type.",
         },
         // Question 132
         {
-            prompt: "Which breed has a compact body type?",
+            prompt: "Which breed has a commercial body type?",
             options: [
-                "Netherland Dwarf",
-                "Flemish Giant",
-                "New Zealand",
-                "Angora",
+                "Californian",
+                "Himalayan",
+                "Mini Rex",
+                "Holland Lop",
             ],
             correctIndex: 0,
-            fact: "Netherland Dwarfs are small and compact, representing the smallest recognized breed type.",
+            fact: "Californians have a deep, commercial body type ideal for meat production.",
         },
         // Question 133
         {
-            prompt: "Which breed has a commercial body type?",
+            prompt: "Which breed has a semi-arch body type?",
             options: [
+                "Flemish Giant",
                 "Californian",
-                "Himalayan",
                 "Mini Rex",
-                "Holland Lop",
+                "Angora",
             ],
             correctIndex: 0,
-            fact: "Californians have a deep, commercial body type ideal for meat production.",
+            fact: "Flemish Giants display the semi-arch body, rising behind the shoulders and over the hips.",
         },
         // Question 134
         {
-            prompt: "Which breed has a semi-arch body type?",
+            prompt: "Which breed has a full-arch body type?",
             options: [
-                "Flemish Giant",
+                "Belgian Hare",
                 "Californian",
                 "Mini Rex",
                 "Angora",
             ],
             correctIndex: 0,
-            fact: "Flemish Giants display the semi-arch body, rising behind the shoulders and over the hips.",
+            fact: "Belgian Hares have a distinctive full-arch, with the body arched high throughout.",
         },
         // Question 135
         {
-            prompt: "Which breed has a full-arch body type?",
+            prompt: "What is the Standard of Perfection used for?",
             options: [
-                "Belgian Hare",
-                "Californian",
-                "Mini Rex",
-                "Angora",
+                "Judging rabbits",
+                "Feeding rabbits",
+                "Tattooing rabbits",
+                "Breeding rabbits",
             ],
             correctIndex: 0,
-            fact: "Belgian Hares have a distinctive full-arch, with the body arched high throughout.",
+            fact: "The Standard of Perfection is the official guideline judges use to evaluate rabbits in shows.",
         },
         // Question 136
         {
-            prompt: "What is the Standard of Perfection used for?",
+            prompt: "Which of the following is NOT a recognized fur type in the Standard?",
             options: [
-                "Judging rabbits",
-                "Feeding rabbits",
-                "Tattooing rabbits",
-                "Breeding rabbits",
+                "Normal",
+                "Rex",
+                "Satin",
+                "Curly",
             ],
-            correctIndex: 0,
-            fact: "The Standard of Perfection is the official guideline judges use to evaluate rabbits in shows.",
+            correctIndex: 3,
+            fact: "The standard recognizes Normal, Rex, Satin, and Wool fur types; Curly is not an official category.",
         },
         // Question 137
-        {
-            prompt: "Which of the following is NOT a recognized fur type in the Standard?",
-            options: [
-                "Normal",
-                "Rex",
-                "Satin",
-                "Curly",
-            ],
-            correctIndex: 3,
-            fact: "The standard recognizes Normal, Rex, Satin, and Wool fur types; Curly is not an official category.",
-        },
-        // Question 138
-        {
-            prompt: "Which breed is known for satin fur?",
-            options: [
-                "Satin",
-                "Rex",
-                "Angora",
-                "Californian",
-            ],
-            correctIndex: 0,
-            fact: "The Satin breed features a distinctive lustrous, satiny coat texture.",
-        },
-        // Question 139
-        {
-            prompt: "What does the 'E' locus control in rabbit genetics?",
-            options: [
-                "Fur texture",
-                "Extension of color",
-                "Body type",
-                "Ear length",
-            ],
-            correctIndex: 1,
-            fact: "The E locus controls whether pigment is extended throughout the coat or restricted.",
-        },
-        // Question 140
-        {
-            prompt: "What is the definition of 'finish' in the association judging?",
-            options: [
-                "The overall condition of flesh and fur",
-                "The tattoo process",
-                "The end of gestation",
-                "The pedigree record",
-            ],
-            correctIndex: 0,
-            fact: "Finish refers to the overall condition of flesh and fur, showing grooming and health.",
-        },
-        // Question 141
-        {
-            prompt: "Which breed is classified as a 4-class rabbit?",
-            options: [
-                "Mini Rex",
-                "Flemish Giant",
-                "New Zealand",
-                "Californian",
-            ],
-            correctIndex: 0,
-            fact: "Mini Rex are lighter breeds, placing them in the 4-class category by weight.",
-        },
-        // Question 142
-        {
-            prompt: "Which breed is classified as a 6-class rabbit?",
-            options: [
-                "New Zealand",
-                "Netherland Dwarf",
-                "Mini Rex",
-                "Holland Lop",
-            ],
-            correctIndex: 0,
-            fact: "New Zealand rabbits are large meat breeds, placing them in the 6-class category.",
-        },
-        // Question 143
-        {
-            prompt: "What is the the association motto?",
-            options: [
-                "To Make the Best Better",
-                "Dedicated to the Betterment of Rabbits and Cavy",
-                "Learning by Doing",
-                "Grow with the association",
-            ],
-            correctIndex: 1,
-            fact: "The association's official motto is 'Dedicated to the Betterment of Rabbits and Cavy.'",
-        },
-        // Question 144
-        {
-            prompt: "Which body type is NOT recognized in the Standard?",
-            options: [
-                "Compact",
-                "Commercial",
-                "Cylindrical",
-                "Athletic",
-            ],
-            correctIndex: 3,
-            fact: "The standard recognizes compact, commercial, cylindrical, semi-arch, and full-arch body types.",
-        },
-        // Question 145
-        {
-            prompt: "Which breed is known for wool production?",
-            options: [
-                "Angora",
-                "Rex",
-                "Californian",
-                "Lop",
-            ],
-            correctIndex: 0,
-            fact: "Angoras produce long, soft wool that is harvested for textiles and yarn.",
-        },
-        // Question 146
-        {
-            prompt: "Which breed originated in France?",
-            options: [
-                "Champagne d'Argent",
-                "Mini Rex",
-                "Lionhead",
-                "Harlequin",
-            ],
-            correctIndex: 0,
-            fact: "Champagne d'Argent rabbits originated in France and are known for their silvery coat.",
-        },
-        // Question 147
-        {
-            prompt: "What is palpation used for in rabbit breeding?",
-            options: [
-                "To feel for pregnancy",
-                "To check fur texture",
-                "To measure body type",
-                "To tattoo",
-            ],
-            correctIndex: 0,
-            fact: "Palpation around day 10–14 allows breeders to confirm pregnancy by feeling embryos.",
-        },
-        // Question 148
-        {
-            prompt: "Which of the following is a temporary disqualification?",
-            options: [
-                "Sore hocks",
-                "Malocclusion",
-                "Wrong eye color",
-                "Missing toenail",
-            ],
-            correctIndex: 0,
-            fact: "Sore hocks are temporary disqualifications that may heal; they prevent rabbits from being shown.",
-        },
-        // Question 149
-        {
-            prompt: "Which breed has a cylindrical body type?",
-            options: [
-                "Himalayan",
-                "Flemish Giant",
-                "Mini Rex",
-                "Lop",
-            ],
-            correctIndex: 0,
-            fact: "Himalayans have a distinctive cylindrical body shape, narrow at shoulders and hindquarters.",
-        },
-        // Question 150
-        {
-            prompt: "Which breed has a compact body type?",
-            options: [
-                "Netherland Dwarf",
-                "Flemish Giant",
-                "New Zealand",
-                "Angora",
-            ],
-            correctIndex: 0,
-            fact: "Netherland Dwarfs are small and compact, representing the smallest recognized breed type.",
-        },
-        // Question 151
-        {
-            prompt: "Which breed has a commercial body type?",
-            options: [
-                "Californian",
-                "Himalayan",
-                "Mini Rex",
-                "Holland Lop",
-            ],
-            correctIndex: 0,
-            fact: "Californians have a deep, commercial body type ideal for meat production.",
-        },
-        // Question 152
-        {
-            prompt: "Which breed has a semi-arch body type?",
-            options: [
-                "Flemish Giant",
-                "Californian",
-                "Mini Rex",
-                "Angora",
-            ],
-            correctIndex: 0,
-            fact: "Flemish Giants display the semi-arch body, rising behind the shoulders and over the hips.",
-        },
-        // Question 153
-        {
-            prompt: "Which breed has a full-arch body type?",
-            options: [
-                "Belgian Hare",
-                "Californian",
-                "Mini Rex",
-                "Angora",
-            ],
-            correctIndex: 0,
-            fact: "Belgian Hares have a distinctive full-arch, with the body arched high throughout.",
-        },
-        // Question 154
-        {
-            prompt: "What is the Standard of Perfection used for?",
-            options: [
-                "Judging rabbits",
-                "Feeding rabbits",
-                "Tattooing rabbits",
-                "Breeding rabbits",
-            ],
-            correctIndex: 0,
-            fact: "The Standard of Perfection is the official guideline judges use to evaluate rabbits in shows.",
-        },
-        // Question 155
-        {
-            prompt: "Which of the following is NOT a recognized fur type in the Standard?",
-            options: [
-                "Normal",
-                "Rex",
-                "Satin",
-                "Curly",
-            ],
-            correctIndex: 3,
-            fact: "The standard recognizes Normal, Rex, Satin, and Wool fur types; Curly is not an official category.",
-        },
-        // Question 156
-        {
-            prompt: "Which breed is known for satin fur?",
-            options: [
-                "Satin",
-                "Rex",
-                "Angora",
-                "Californian",
-            ],
-            correctIndex: 0,
-            fact: "The Satin breed features a distinctive lustrous, satiny coat texture.",
-        },
-        // Question 157
-        {
-            prompt: "What does the 'E' locus control in rabbit genetics?",
-            options: [
-                "Fur texture",
-                "Extension of color",
-                "Body type",
-                "Ear length",
-            ],
-            correctIndex: 1,
-            fact: "The E locus controls whether pigment is extended throughout the coat or restricted.",
-        },
-        // Question 158
-        {
-            prompt: "What is the definition of 'finish' in the association judging?",
-            options: [
-                "The overall condition of flesh and fur",
-                "The tattoo process",
-                "The end of gestation",
-                "The pedigree record",
-            ],
-            correctIndex: 0,
-            fact: "Finish refers to the overall condition of flesh and fur, showing grooming and health.",
-        },
-        // Question 159
-        {
-            prompt: "Which breed is classified as a 4-class rabbit?",
-            options: [
-                "Mini Rex",
-                "Flemish Giant",
-                "New Zealand",
-                "Californian",
-            ],
-            correctIndex: 0,
-            fact: "Mini Rex are lighter breeds, placing them in the 4-class category by weight.",
-        },
-        // Question 160
-        {
-            prompt: "Which breed is classified as a 6-class rabbit?",
-            options: [
-                "New Zealand",
-                "Netherland Dwarf",
-                "Mini Rex",
-                "Holland Lop",
-            ],
-            correctIndex: 0,
-            fact: "New Zealand rabbits are large meat breeds, placing them in the 6-class category.",
-        },
-        // Question 161
-        {
-            prompt: "What is the the association motto?",
-            options: [
-                "To Make the Best Better",
-                "Dedicated to the Betterment of Rabbits and Cavy",
-                "Learning by Doing",
-                "Grow with the association",
-            ],
-            correctIndex: 1,
-            fact: "The association's official motto is 'Dedicated to the Betterment of Rabbits and Cavy.'",
-        },
-        // Question 162
-        {
-            prompt: "Which body type is NOT recognized in the Standard?",
-            options: [
-                "Compact",
-                "Commercial",
-                "Cylindrical",
-                "Athletic",
-            ],
-            correctIndex: 3,
-            fact: "The standard recognizes compact, commercial, cylindrical, semi-arch, and full-arch body types.",
-        },
-        // Question 163
-        {
-            prompt: "Which breed is known for wool production?",
-            options: [
-                "Angora",
-                "Rex",
-                "Californian",
-                "Lop",
-            ],
-            correctIndex: 0,
-            fact: "Angoras produce long, soft wool that is harvested for textiles and yarn.",
-        },
-        // Question 164
-        {
-            prompt: "Which breed originated in France?",
-            options: [
-                "Champagne d'Argent",
-                "Mini Rex",
-                "Lionhead",
-                "Harlequin",
-            ],
-            correctIndex: 0,
-            fact: "Champagne d'Argent rabbits originated in France and are known for their silvery coat.",
-        },
-        // Question 165
-        {
-            prompt: "What is palpation used for in rabbit breeding?",
-            options: [
-                "To feel for pregnancy",
-                "To check fur texture",
-                "To measure body type",
-                "To tattoo",
-            ],
-            correctIndex: 0,
-            fact: "Palpation around day 10–14 allows breeders to confirm pregnancy by feeling embryos.",
-        },
-        // Question 166
-        {
-            prompt: "Which of the following is a temporary disqualification?",
-            options: [
-                "Sore hocks",
-                "Malocclusion",
-                "Wrong eye color",
-                "Missing toenail",
-            ],
-            correctIndex: 0,
-            fact: "Sore hocks are temporary disqualifications that may heal; they prevent rabbits from being shown.",
-        },
-        // Question 167
-        {
-            prompt: "Which breed has a cylindrical body type?",
-            options: [
-                "Himalayan",
-                "Flemish Giant",
-                "Mini Rex",
-                "Lop",
-            ],
-            correctIndex: 0,
-            fact: "Himalayans have a distinctive cylindrical body shape, narrow at shoulders and hindquarters.",
-        },
-        // Question 168
-        {
-            prompt: "Which breed has a compact body type?",
-            options: [
-                "Netherland Dwarf",
-                "Flemish Giant",
-                "New Zealand",
-                "Angora",
-            ],
-            correctIndex: 0,
-            fact: "Netherland Dwarfs are small and compact, representing the smallest recognized breed type.",
-        },
-        // Question 169
-        {
-            prompt: "Which breed has a commercial body type?",
-            options: [
-                "Californian",
-                "Himalayan",
-                "Mini Rex",
-                "Holland Lop",
-            ],
-            correctIndex: 0,
-            fact: "Californians have a deep, commercial body type ideal for meat production.",
-        },
-        // Question 170
-        {
-            prompt: "Which breed has a semi-arch body type?",
-            options: [
-                "Flemish Giant",
-                "Californian",
-                "Mini Rex",
-                "Angora",
-            ],
-            correctIndex: 0,
-            fact: "Flemish Giants display the semi-arch body, rising behind the shoulders and over the hips.",
-        },
-        // Question 171
-        {
-            prompt: "Which breed has a full-arch body type?",
-            options: [
-                "Belgian Hare",
-                "Californian",
-                "Mini Rex",
-                "Angora",
-            ],
-            correctIndex: 0,
-            fact: "Belgian Hares have a distinctive full-arch, with the body arched high throughout.",
-        },
-        // Question 172
-        {
-            prompt: "What is the Standard of Perfection used for?",
-            options: [
-                "Judging rabbits",
-                "Feeding rabbits",
-                "Tattooing rabbits",
-                "Breeding rabbits",
-            ],
-            correctIndex: 0,
-            fact: "The Standard of Perfection is the official guideline judges use to evaluate rabbits in shows.",
-        },
-        // Question 173
-        {
-            prompt: "Which of the following is NOT a recognized fur type in the Standard?",
-            options: [
-                "Normal",
-                "Rex",
-                "Satin",
-                "Curly",
-            ],
-            correctIndex: 3,
-            fact: "The standard recognizes Normal, Rex, Satin, and Wool fur types; Curly is not an official category.",
-        },
-        // Question 174
-        {
-            prompt: "Which breed is known for satin fur?",
-            options: [
-                "Satin",
-                "Rex",
-                "Angora",
-                "Californian",
-            ],
-            correctIndex: 0,
-            fact: "The Satin breed features a distinctive lustrous, satiny coat texture.",
-        },
-        // Question 175
-        {
-            prompt: "What does the 'E' locus control in rabbit genetics?",
-            options: [
-                "Fur texture",
-                "Extension of color",
-                "Body type",
-                "Ear length",
-            ],
-            correctIndex: 1,
-            fact: "The E locus controls whether pigment is extended throughout the coat or restricted.",
-        },
-        // Question 176
-        {
-            prompt: "What is the definition of 'finish' in the association judging?",
-            options: [
-                "The overall condition of flesh and fur",
-                "The tattoo process",
-                "The end of gestation",
-                "The pedigree record",
-            ],
-            correctIndex: 0,
-            fact: "Finish refers to the overall condition of flesh and fur, showing grooming and health.",
-        },
-        // Question 177
-        {
-            prompt: "Which breed is classified as a 4-class rabbit?",
-            options: [
-                "Mini Rex",
-                "Flemish Giant",
-                "New Zealand",
-                "Californian",
-            ],
-            correctIndex: 0,
-            fact: "Mini Rex are lighter breeds, placing them in the 4-class category by weight.",
-        },
-        // Question 178
-        {
-            prompt: "Which breed is classified as a 6-class rabbit?",
-            options: [
-                "New Zealand",
-                "Netherland Dwarf",
-                "Mini Rex",
-                "Holland Lop",
-            ],
-            correctIndex: 0,
-            fact: "New Zealand rabbits are large meat breeds, placing them in the 6-class category.",
-        },
-        // Question 179
-        {
-            prompt: "What is the the association motto?",
-            options: [
-                "To Make the Best Better",
-                "Dedicated to the Betterment of Rabbits and Cavy",
-                "Learning by Doing",
-                "Grow with the association",
-            ],
-            correctIndex: 1,
-            fact: "The association's official motto is 'Dedicated to the Betterment of Rabbits and Cavy.'",
-        },
-        // Question 180
-        {
-            prompt: "Which body type is NOT recognized in the Standard?",
-            options: [
-                "Compact",
-                "Commercial",
-                "Cylindrical",
-                "Athletic",
-            ],
-            correctIndex: 3,
-            fact: "The standard recognizes compact, commercial, cylindrical, semi-arch, and full-arch body types.",
-        },
-        // Question 181
-        {
-            prompt: "Which breed is known for wool production?",
-            options: [
-                "Angora",
-                "Rex",
-                "Californian",
-                "Lop",
-            ],
-            correctIndex: 0,
-            fact: "Angoras produce long, soft wool that is harvested for textiles and yarn.",
-        },
-        // Question 182
-        {
-            prompt: "Which breed originated in France?",
-            options: [
-                "Champagne d'Argent",
-                "Mini Rex",
-                "Lionhead",
-                "Harlequin",
-            ],
-            correctIndex: 0,
-            fact: "Champagne d'Argent rabbits originated in France and are known for their silvery coat.",
-        },
-        // Question 183
-        {
-            prompt: "What is palpation used for in rabbit breeding?",
-            options: [
-                "To feel for pregnancy",
-                "To check fur texture",
-                "To measure body type",
-                "To tattoo",
-            ],
-            correctIndex: 0,
-            fact: "Palpation around day 10–14 allows breeders to confirm pregnancy by feeling embryos.",
-        },
-        // Question 184
-        {
-            prompt: "Which of the following is a temporary disqualification?",
-            options: [
-                "Sore hocks",
-                "Malocclusion",
-                "Wrong eye color",
-                "Missing toenail",
-            ],
-            correctIndex: 0,
-            fact: "Sore hocks are temporary disqualifications that may heal; they prevent rabbits from being shown.",
-        },
-        // Question 185
-        {
-            prompt: "Which breed has a cylindrical body type?",
-            options: [
-                "Himalayan",
-                "Flemish Giant",
-                "Mini Rex",
-                "Lop",
-            ],
-            correctIndex: 0,
-            fact: "Himalayans have a distinctive cylindrical body shape, narrow at shoulders and hindquarters.",
-        },
-        // Question 186
-        {
-            prompt: "Which breed has a compact body type?",
-            options: [
-                "Netherland Dwarf",
-                "Flemish Giant",
-                "New Zealand",
-                "Angora",
-            ],
-            correctIndex: 0,
-            fact: "Netherland Dwarfs are small and compact, representing the smallest recognized breed type.",
-        },
-        // Question 187
-        {
-            prompt: "Which breed has a commercial body type?",
-            options: [
-                "Californian",
-                "Himalayan",
-                "Mini Rex",
-                "Holland Lop",
-            ],
-            correctIndex: 0,
-            fact: "Californians have a deep, commercial body type ideal for meat production.",
-        },
-        // Question 188
-        {
-            prompt: "Which breed has a semi-arch body type?",
-            options: [
-                "Flemish Giant",
-                "Californian",
-                "Mini Rex",
-                "Angora",
-            ],
-            correctIndex: 0,
-            fact: "Flemish Giants display the semi-arch body, rising behind the shoulders and over the hips.",
-        },
-        // Question 189
-        {
-            prompt: "Which breed has a full-arch body type?",
-            options: [
-                "Belgian Hare",
-                "Californian",
-                "Mini Rex",
-                "Angora",
-            ],
-            correctIndex: 0,
-            fact: "Belgian Hares have a distinctive full-arch, with the body arched high throughout.",
-        },
-        // Question 190
-        {
-            prompt: "What is the Standard of Perfection used for?",
-            options: [
-                "Judging rabbits",
-                "Feeding rabbits",
-                "Tattooing rabbits",
-                "Breeding rabbits",
-            ],
-            correctIndex: 0,
-            fact: "The Standard of Perfection is the official guideline judges use to evaluate rabbits in shows.",
-        },
-        // Question 191
-        {
-            prompt: "Which of the following is NOT a recognized fur type in the Standard?",
-            options: [
-                "Normal",
-                "Rex",
-                "Satin",
-                "Curly",
-            ],
-            correctIndex: 3,
-            fact: "The standard recognizes Normal, Rex, Satin, and Wool fur types; Curly is not an official category.",
-        },
-        // Question 192
         {
             prompt: "Which breed is known for satin fur?",
             options: [
@@ -2092,7 +1436,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact: "The Satin breed features a distinctive lustrous, satiny coat texture.",
         },
 
-        // Question 193
+        // Question 138
         {
             prompt: "Which breed is known for rex fur?",
             options: [
@@ -2104,7 +1448,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Rex breeds have short, plush fur with no guard hairs, giving a velvet-like texture.",
         },
-        // Question 194
+        // Question 139
         {
             prompt: "Which breed is known for wool fur?",
             options: [
@@ -2116,7 +1460,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Angoras produce long, woolly coats that require regular grooming and harvesting.",
         },
-        // Question 195
+        // Question 140
         {
             prompt: "Which breed is known for normal fur?",
             options: [
@@ -2128,7 +1472,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "New Zealand rabbits have normal fur, the standard coat type for most rabbit breeds.",
         },
-        // Question 196
+        // Question 141
         {
             prompt: "Which of the following is required for rabbit show registration?",
             options: [
@@ -2141,7 +1485,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact: "A permanent tattoo in the left ear is required for show registration to link the rabbit to its papers.",
         },
         // Advanced Genetics - Gene Loci
-        // Question 197
+        // Question 142
         {
             prompt: "Which gene locus controls chinchilla coloration?",
             options: [
@@ -2153,7 +1497,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 2,
             fact: "The C locus controls pigment deposition; the chinchilla allele reduces yellow pigment, creating the chinchilla pattern.",
         },
-        // Question 198
+        // Question 143
         {
             prompt: "Which gene locus determines dilute vs. full color?",
             options: [
@@ -2165,7 +1509,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 3,
             fact: "The D locus controls pigment granule size; dd creates dilute colors like blue and lilac.",
         },
-        // Question 199
+        // Question 144
         {
             prompt: "Which gene locus determines chocolate vs. black?",
             options: [
@@ -2177,7 +1521,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "The B locus controls brown pigment; bb creates chocolate coloration, while B_ produces black.",
         },
-        // Question 200
+        // Question 145
         {
             prompt: "Which gene locus determines agouti vs. self coloring?",
             options: [
@@ -2189,7 +1533,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The A locus controls agouti banding in the hair; aa produces self-colored rabbits.",
         },
-        // Question 201
+        // Question 146
         {
             prompt: "Which gene locus determines full color vs. albino?",
             options: [
@@ -2201,7 +1545,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 2,
             fact: "The C locus controls pigment production; the albino allele (cc) results in no pigment deposition.",
         },
-        // Question 202
+        // Question 147
         {
             prompt: "What genotype produces a Chocolate rabbit?",
             options: [
@@ -2213,7 +1557,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Chocolate rabbits are self-colored (aa) with brown pigment (bb).",
         },
-        // Question 203
+        // Question 148
         {
             prompt: "What genotype produces a Lilac rabbit?",
             options: [
@@ -2225,7 +1569,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 2,
             fact: "Lilac requires self coloring (aa), brown pigment (bb), and dilution (dd).",
         },
-        // Question 204
+        // Question 149
         {
             prompt: "What genotype produces a Himalayan rabbit?",
             options: [
@@ -2237,7 +1581,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Himalayans carry the temperature-sensitive allele (chch) that restricts color to cooler areas like ears and nose.",
         },
-        // Question 205
+        // Question 150
         {
             prompt: "What genotype produces a Chocolate Chinchilla rabbit?",
             options: [
@@ -2250,7 +1594,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact: "Chocolate Chinchilla combines agouti (A_), brown pigment (bb), chinchilla allele (cchd), and full color.",
         },
         // Registration & Registrar Rules
-        // Question 206
+        // Question 151
         {
             prompt: "How many generations must appear on a pedigree for show registration?",
             options: [
@@ -2262,7 +1606,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 2,
             fact: "Show registration requires four generations: the rabbit, its parents, grandparents, and great-grandparents.",
         },
-        // Question 207
+        // Question 152
         {
             prompt: "Who is authorized to issue registration numbers?",
             options: [
@@ -2274,7 +1618,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Only authorized registrars can issue official registration certificates.",
         },
-        // Question 208
+        // Question 153
         {
             prompt: "What must a registrar verify before signing a registration certificate?",
             options: [
@@ -2286,7 +1630,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Registrars must ensure the rabbit meets its breed standard and has proper identification.",
         },
-        // Question 209
+        // Question 154
         {
             prompt: "How long is an show registration valid?",
             options: [
@@ -2298,7 +1642,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 3,
             fact: "show registration is permanent and remains valid throughout the rabbit's lifetime.",
         },
-        // Question 210
+        // Question 155
         {
             prompt: "How many qualifying show legs are required for a rabbit to earn a Grand Champion certificate?",
             options: [
@@ -2310,7 +1654,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "A rabbit must be registered and earn 3 qualifying show legs to become a Grand Champion.",
         },
-        // Question 211
+        // Question 156
         {
             prompt: "Who can issue a Grand Champion certificate?",
             options: [
@@ -2323,7 +1667,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact: "Only registrars are authorized to issue Grand Champion certificates.",
         },
         // Disqualifications - Eye Color
-        // Question 212
+        // Question 157
         {
             prompt: "Which eye color is a disqualification in a Blue rabbit?",
             options: [
@@ -2335,7 +1679,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 3,
             fact: "Blue rabbits must have blue-gray eyes; any other eye color is a disqualification.",
         },
-        // Question 213
+        // Question 158
         {
             prompt: "Which eye color is a disqualification in a Lilac rabbit?",
             options: [
@@ -2348,7 +1692,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact: "Lilac rabbits must have blue-gray eyes; pink eyes are a disqualification.",
         },
         // Breed Standards - Fur Characteristics
-        // Question 214
+        // Question 159
         {
             prompt: "Which breed is recognized for having 'flyback' fur?",
             options: [
@@ -2360,7 +1704,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "New Zealand rabbits have flyback fur that springs back quickly when brushed backward.",
         },
-        // Question 215
+        // Question 160
         {
             prompt: "Which breed is recognized for having 'rollback' fur?",
             options: [
@@ -2372,7 +1716,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Holland Lops have rollback fur that slowly returns when brushed backward.",
         },
-        // Question 216
+        // Question 161
         {
             prompt: "Which breed is recognized for having 'standing' fur?",
             options: [
@@ -2385,7 +1729,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact: "Silver Fox rabbits have standing fur that remains upright and does not lie flat.",
         },
         // Show & SOP Knowledge - Body Types
-        // Question 217
+        // Question 162
         {
             prompt: "How many body types are recognized in the Standard?",
             options: [
@@ -2398,7 +1742,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact: "The standard recognizes five body types: Compact, Commercial, Cylindrical, Semi-Arch, and Full-Arch.",
         },
         // Show & SOP Knowledge - Fur Types
-        // Question 218
+        // Question 163
         {
             prompt: "Which fur type is unique for its sheen caused by transparent hair shafts?",
             options: [
@@ -2410,7 +1754,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Satin fur has hollow hair shafts that refract light, creating a lustrous sheen.",
         },
-        // Question 219
+        // Question 164
         {
             prompt: "Which fur type is unique for having no guard hairs?",
             options: [
@@ -2424,7 +1768,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
 
         // Breed Judging Specialties
-        // Question 220
+        // Question 165
         {
             prompt: "Which breed is judged primarily on wool quality?",
             options: [
@@ -2436,7 +1780,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Angoras are evaluated primarily on wool length, density, texture, and condition.",
         },
-        // Question 221
+        // Question 166
         {
             prompt: "Which breed is judged primarily on meat type and commercial qualities?",
             options: [
@@ -2448,7 +1792,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "New Zealand and Californian are classic meat breeds, judged on commercial body type, condition, and uniformity.",
         },
-        // Question 222
+        // Question 167
         {
             prompt: "According to the Standard of Perfection, what are the four factors for judging meat pens (in order)?",
             options: [
@@ -2460,7 +1804,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Meat pen judging prioritizes meat type first, then condition, uniformity, and fur quality.",
         },
-        // Question 223
+        // Question 168
         {
             prompt: "What is the primary purpose of the Standard of Perfection?",
             options: [
@@ -2472,7 +1816,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The Standard of Perfection gives judges uniform criteria and guides breeders toward improving each breed.",
         },
-        // Question 224
+        // Question 169
         {
             prompt: "What is the maximum number of rabbits a registrar may register in one day without registrar approval?",
             options: [
@@ -2484,7 +1828,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Registrars may register up to 50 rabbits per day without special registrar approval; larger batches require authorization.",
         },
-        // Question 225
+        // Question 170
         {
             prompt: "Which of the following is a breed-specific disqualification in Rex rabbits?",
             options: [
@@ -2496,7 +1840,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Rex rabbits must have a plush, short coat not exceeding ½ inch; longer fur is a disqualification. Rex are also judged on commercial body type, condition, and balance in addition to fur.",
         },
-        // Question 226
+        // Question 171
         {
             prompt: "Which of the following is a breed-specific disqualification in Angora rabbits?",
             options: [
@@ -2508,7 +1852,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Angoras are judged primarily on wool; incorrect wool texture, density, or insufficient wool is a disqualification.",
         },
-        // Question 227
+        // Question 172
         {
             prompt: "Which of the following is a fault but NOT a disqualification?",
             options: [
@@ -2520,7 +1864,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Slightly uneven fur is a fault that deducts points but does not disqualify the rabbit.",
         },
-        // Question 228
+        // Question 173
         {
             prompt: "You are registering a rabbit with a missing toenail. What do you do?",
             options: [
@@ -2534,7 +1878,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
 
         // Registrar Scenario - Incomplete Pedigree
-        // Question 229
+        // Question 174
         {
             prompt: "A rabbit has a pedigree missing one grandparent. Can it be registered?",
             options: [
@@ -2546,7 +1890,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Show registration requires a complete four-generation pedigree; missing ancestors disqualify registration.",
         },
-        // Question 230
+        // Question 175
         {
             prompt: "A rabbit has sore hocks at the time of registration. What is the correct action?",
             options: [
@@ -2558,7 +1902,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Sore hocks are a temporary disqualification; the rabbit may be registered after the condition has healed.",
         },
-        // Question 231
+        // Question 176
         {
             prompt: "A rabbit meets the breed standard but has no tattoo. What is the registrar's action?",
             options: [
@@ -2570,7 +1914,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "A permanent tattoo in the left ear is required for show registration and must be provided before registration.",
         },
-        // Question 232
+        // Question 177
         {
             prompt: "A rabbit has three qualifying show legs but is not yet registered. Can it be a Grand Champion?",
             options: [
@@ -2582,7 +1926,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "A rabbit must be registered before show legs count toward Grand Champion status.",
         },
-        // Question 233
+        // Question 178
         {
             prompt: "You are judging a meat pen. One rabbit has excellent meat type but poor uniformity. What is the correct scoring priority?",
             options: [
@@ -2594,7 +1938,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Per the Standard of Perfection, meat type is the first priority when judging meat pens, followed by condition, uniformity, then fur.",
         },
-        // Question 234
+        // Question 179
         {
             prompt: "A Rex rabbit has fur longer than ½ inch. What does the SOP require?",
             options: [
@@ -2606,7 +1950,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Rex fur exceeding ½ inch is a disqualification under the SOP; Rex are also judged on commercial body type, condition, and balance in addition to coat.",
         },
-        // Question 235
+        // Question 180
         {
             prompt: "A rabbit has an eye color that does not match the Standard for its variety. What does the SOP require?",
             options: [
@@ -2618,7 +1962,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Incorrect eye color as specified in the Standard of Perfection is a disqualification for that variety.",
         },
-        // Question 236
+        // Question 181
         {
             prompt: "The Netherland Dwarf is classified as which type of the association class?",
             options: [
@@ -2630,7 +1974,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Netherland Dwarfs are one of the smallest breeds and are classified as 4-class.",
         },
-        // Question 237
+        // Question 182
         {
             prompt: "The Holland Lop is classified as which type of the association class?",
             options: [
@@ -2643,7 +1987,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact: "Holland Lops are compact lop-eared breeds and are classified as 4-class.",
         },
 
-        // Question 238
+        // Question 183
         {
             prompt: "The Mini Rex is classified as which type of the association class?",
             options: [
@@ -2655,7 +1999,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Mini Rex are small rex-furred breeds, classified as 4-class.",
         },
-        // Question 239
+        // Question 184
         {
             prompt: "The Mini Satin is classified as which type of the association class?",
             options: [
@@ -2667,7 +2011,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Mini Satins are smaller versions of the Satin breed, classified as 4-class.",
         },
-        // Question 240
+        // Question 185
         {
             prompt: "The Polish is classified as which type of the association class?",
             options: [
@@ -2679,7 +2023,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Polish rabbits are small fancy breeds, classified as 4-class.",
         },
-        // Question 241
+        // Question 186
         {
             prompt: "The Britannia Petite is classified as which type of the association class?",
             options: [
@@ -2691,7 +2035,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Britannia Petites are a full-arch breed with flyback fur, 4-class, with a maximum weight of 2.5 lb.",
         },
-        // Question 242
+        // Question 187
         {
             prompt: "The Dwarf Hotot is classified as which type of the association class?",
             options: [
@@ -2703,7 +2047,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Dwarf Hotots are small eye-banded breeds, classified as 4-class.",
         },
-        // Question 243
+        // Question 188
         {
             prompt: "The Lionhead is classified as which type of the association class?",
             options: [
@@ -2715,7 +2059,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Lionheads are distinctive maned breeds, classified as 4-class.",
         },
-        // Question 244
+        // Question 189
         {
             prompt: "The American Fuzzy Lop is classified as which type of the association class?",
             options: [
@@ -2727,7 +2071,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "American Fuzzy Lops are woolly lop-eared breeds, classified as 4-class.",
         },
-        // Question 245
+        // Question 190
         {
             prompt: "The Jersey Wooly is classified as which type of the association class?",
             options: [
@@ -2739,7 +2083,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Jersey Woolys are small wool breeds, classified as 4-class.",
         },
-        // Question 246
+        // Question 191
         {
             prompt: "The Standard Chinchilla is classified as which type of the association class?",
             options: [
@@ -2751,7 +2095,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Standard Chinchillas are medium fancy breeds, classified as 4-class.",
         },
-        // Question 247
+        // Question 192
         {
             prompt: "The Silver is classified as which type of the association class?",
             options: [
@@ -2763,7 +2107,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Silver rabbits are small silvered breeds, classified as 4-class.",
         },
-        // Question 248
+        // Question 193
         {
             prompt: "The Silver Marten is classified as which type of the association class?",
             options: [
@@ -2775,7 +2119,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Silver Martens are small fancy breeds, classified as 4-class.",
         },
-        // Question 249
+        // Question 194
         {
             prompt: "The Tan is classified as which type of the association class?",
             options: [
@@ -2787,7 +2131,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Tans are a full-arch breed with flyback fur, 4-class, mature weight 4.5-5 lb, shown in Black, Blue, Chocolate, and Lilac.",
         },
-        // Question 250
+        // Question 195
         {
             prompt: "The Himalayan is classified as which type of the association class?",
             options: [
@@ -2800,7 +2144,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact: "Himalayans are small cylindrical breeds, classified as 4-class.",
         },
         // Cylindrical body type — the three recognized cylindrical breeds
-        // Question 251
+        // Question 196
         {
             prompt: "Which three breeds have the cylindrical body type?",
             options: [
@@ -2812,7 +2156,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The cylindrical body type is defined by a long, narrow, tube-like body: Himalayan, Czech Frosty, and Blue Hollister.",
         },
-        // Question 252
+        // Question 197
         {
             prompt: "Which fur type does the Himalayan have?",
             options: [
@@ -2824,7 +2168,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The Himalayan is a cylindrical, 4-class breed with short, fine, silky flyback fur and a mature weight of 2.5–4.5 lb.",
         },
-        // Question 253
+        // Question 198
         {
             prompt: "Which varieties are recognized in the Himalayan?",
             options: [
@@ -2836,7 +2180,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Himalayans are genetically albino with colored points (ears, nose, tail, feet) and come in Black, Blue, Chocolate, and Lilac.",
         },
-        // Question 254
+        // Question 199
         {
             prompt: "The Czech Frosty is classified as which type of the association class?",
             options: [
@@ -2848,7 +2192,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The Czech Frosty is a cylindrical breed with slow-rollback fur, a mature weight of 6.25–8.25 lb, and is 4-class. Its single variety is Frosty.",
         },
-        // Question 255
+        // Question 200
         {
             prompt: "What is the surface appearance of the Czech Frosty's coat?",
             options: [
@@ -2860,7 +2204,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The Czech Frosty shows dark sepia-tipped guard hairs over the coat, creating a dark haze or veil.",
         },
-        // Question 256
+        // Question 201
         {
             prompt: "The Blue Hollister is classified as which type of the association class?",
             options: [
@@ -2872,7 +2216,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The Blue Hollister is a cylindrical breed with slow-rollback fur, a mature weight of 5.5–7.25 lb, and is 4-class. It is only shown in blue.",
         },
-        // Question 257
+        // Question 202
         {
             prompt: "The Dutch is classified as which type of the association class?",
             options: [
@@ -2884,7 +2228,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Dutch rabbits are distinctive marked fancy breeds, classified as 4-class.",
         },
-        // Question 258
+        // Question 203
         {
             prompt: "The Havana is classified as which type of the association class?",
             options: [
@@ -2896,7 +2240,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Havana rabbits are small self-colored breeds, classified as 4-class.",
         },
-        // Question 259
+        // Question 204
         {
             prompt: "The Harlequin is classified as which type of the association class?",
             options: [
@@ -2908,7 +2252,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Harlequins are colorfully patterned fancy breeds, classified as 4-class.",
         },
-        // Question 260
+        // Question 205
         {
             prompt: "The English Angora is classified as which type of the association class?",
             options: [
@@ -2920,7 +2264,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "English Angoras are wool breeds, classified as 4-class.",
         },
-        // Question 261
+        // Question 206
         {
             prompt: "The Satin Angora is classified as which type of the association class?",
             options: [
@@ -2934,7 +2278,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
 
 
-        // Question 262
+        // Question 207
         {
             prompt: "The French Angora is classified as which type of the association class?",
             options: [
@@ -2946,7 +2290,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "French Angoras are 4-class commercial wool rabbits weighing 7.5-10.5 lb. They have an oval head, erect ears that may have wool only on the tips, and a medium-length, deep, well-rounded body with a curved topline.",
         },
-        // Question 263
+        // Question 208
         {
             prompt: "The American Sable is classified as which type of the association class?",
             options: [
@@ -2959,7 +2303,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact: "American Sables are small shaded breeds, classified as 4-class.",
         },
         // Compact body type - owner-supplied breed specifications
-        // Question 264
+        // Question 209
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -2968,7 +2312,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Lionheads are compact, 4-class rabbits with wool and rollback fur, weighing no more than 3.75 lb.",
         },
-        // Question 265
+        // Question 210
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -2977,7 +2321,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The Lionhead has a short, compact, well-rounded body with broad, well-filled shoulders and chest. Its bold head and erect ears are well set, though the ears need not touch.",
         },
-        // Question 266
+        // Question 211
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -2986,7 +2330,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Mini Rex are compact, rex-furred, 4-class rabbits. Bucks weigh 3-4.25 lb and does 3.25-4.5 lb; they have a full head close to the shoulders, short close-set erect ears, and a smooth, short, well-developed body.",
         },
-        // Question 267
+        // Question 212
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -2995,7 +2339,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Mini Lops are compact, rollback-furred, 4-class rabbits weighing 4.5-6.5 lb. Their head is strong and sturdy; rounded, well-furred ears rise from a strong basal ridge and lop vertically with the opening toward the head.",
         },
-        // Question 268
+        // Question 213
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3004,7 +2348,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Mini Lops are compact rabbits with thick, short, straight legs. Their body should look rounded and symmetrical from the top, side, and back, like a basketball with a small head.",
         },
-        // Question 269
+        // Question 214
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3013,7 +2357,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Holland Lops are compact, rollback-furred, 4-class rabbits weighing no more than 4 lb. The head is massive, wide, rounded, and high and close to the shoulders; the short body is massive, well-muscled, compact, and thick set.",
         },
-        // Question 270
+        // Question 215
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3022,7 +2366,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Dwarf Papillons are 4-class, compact, flyback-furred rabbits weighing 2.5-4.25 lb. They have a bold head close to the body, a relatively stocky body with shoulders and hindquarters of equal width, and erect, rounded, well-furred ears.",
         },
-        // Question 271
+        // Question 216
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3031,7 +2375,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Standard Chinchillas are compact, 4-class rabbits with a medium-full head on a short neck, distinctive black ear lacing, and a compact body with well-developed shoulders and hindquarters.",
         },
-        // Question 272
+        // Question 217
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3040,7 +2384,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Mini Satins are compact, satin-furred, 4-class rabbits with a maximum mature weight of 4.75 lb. They are short and close coupled, with a gradual curve from the base of the ears to the hips and down to the tail.",
         },
-        // Question 273
+        // Question 218
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3049,7 +2393,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Thriantas are compact, rollback-furred, 4-class rabbits with a mature weight of 4-6 lb.",
         },
-        // Question 274
+        // Question 219
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3058,7 +2402,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Lilacs are compact, rollback-furred, 4-class rabbits. Bucks weigh 5.5-7.5 lb and does 6-8 lb; they have a short, well-filled head and moderately short, well-rounded ears.",
         },
-        // Question 275
+        // Question 220
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3067,7 +2411,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Florida Whites are compact, flyback-furred, 4-class rabbits weighing 4-6 lb. They have a round full head, stocky erect ears, and a rather short, close-coupled body with a gradual curve to the topline.",
         },
-        // Question 276
+        // Question 221
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3076,7 +2420,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Netherland Dwarfs are compact, rollback-furred, 4-class rabbits weighing no more than 2.5 lb. They have a round head set high and close to the shoulders, short pointed erect ears, and a compact short body.",
         },
-        // Question 277
+        // Question 222
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3085,7 +2429,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "English Angoras are compact, wool-furred, 4-class rabbits weighing 5-7.5 lb. Their short, broad head and short ears are abundantly fringed and tasseled with wool; the body is short coupled and compact.",
         },
-        // Question 278
+        // Question 223
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3094,7 +2438,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Jersey Woolys are compact, wool-furred, 4-class rabbits weighing no more than 3.5 lb. Their bold, rounded head has a short dense wool cap, and their short compact body has a gradually curving topline.",
         },
-        // Question 279
+        // Question 224
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3103,7 +2447,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Silver rabbits are compact, flyback-furred, 4-class rabbits weighing 4-7 lb. Their body is medium length with a slight taper from hindquarters to shoulders, and the ears are upright with a strong base.",
         },
-        // Question 280
+        // Question 225
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3112,7 +2456,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Polish are compact, 4-class rabbits. Their medium-full short head has full cheeks and muzzle; small ears sit close together and touch all the way up, and their feet and legs are fine boned and short.",
         },
-        // Question 281
+        // Question 226
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3121,7 +2465,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Havanas are compact, flyback-furred, 4-class rabbits weighing up to 6.5 lb. They have a short broad head, erect close-set ears, and a compact body with a smooth, continuously curved topline.",
         },
-        // Question 282
+        // Question 227
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3130,7 +2474,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Dutch are compact, flyback-furred, 4-class rabbits weighing 3.5-5.5 lb. Their colored head and ears have a white blaze from nose to ears, while the rear half of the body is colored.",
         },
-        // Question 283
+        // Question 228
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3139,7 +2483,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "American Fuzzy Lops are compact, wool-furred, 4-class rabbits weighing no more than 4 lb. They have a massive rounded head, vertically lopped ears, and a short, close-coupled, heavily muscled body.",
         },
-        // Question 284
+        // Question 229
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3149,7 +2493,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact: "Dwarf Hotots are compact, rollback-furred, 4-class rabbits weighing no more than 3 lb. They have a bold head without a visible neck, dark brown eyes, and a short, compact, well-rounded body.",
         },
         // ARBA Breed Classes - 6-Class Breeds
-        // Question 285
+        // Question 230
         {
             prompt: "The New Zealand is classified as which type of the association class?",
             options: [
@@ -3161,7 +2505,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "New Zealand rabbits are large meat breeds, classified as 6-class.",
         },
-        // Question 286
+        // Question 231
         {
             prompt: "The Californian is classified as which type of the association class?",
             options: [
@@ -3173,7 +2517,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Californians are large commercial meat breeds, classified as 6-class.",
         },
-        // Question 287
+        // Question 232
         {
             prompt: "The Flemish Giant is classified as which type of the association class?",
             options: [
@@ -3185,7 +2529,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Flemish Giants are a semi-arch (mandolin) breed with rollback fur, 6-class, with bucks 13 lb and over and does 14 lb and over.",
         },
-        // Question 288
+        // Question 233
         {
             prompt: "The American is classified as which type of the association class?",
             options: [
@@ -3198,7 +2542,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact: "American rabbits have a mandolin (semi-arch) body type and are classified as 6-class.",
         },
         // Semi-arch (mandolin) body type — breed details
-        // Question 289
+        // Question 234
         {
             prompt: "Which fur type does the Flemish Giant have?",
             options: [
@@ -3210,7 +2554,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The Flemish Giant is a semi-arch (mandolin) breed with rollback fur.",
         },
-        // Question 290
+        // Question 235
         {
             prompt: "Which colors are recognized in the Flemish Giant?",
             options: [
@@ -3222,7 +2566,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Flemish Giants are recognized in seven colors: Black, Blue, Fawn, Light Gray, Sandy, Steel Gray, and White.",
         },
-        // Question 291
+        // Question 236
         {
             prompt: "How should the Giant Chinchilla's coat be banded?",
             options: [
@@ -3234,7 +2578,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The Giant Chinchilla's coat resembles a real chinchilla: dark slate blue at the base, light pearl in the middle, and a narrow black band at the top edge.",
         },
-        // Question 292
+        // Question 237
         {
             prompt: "Which variety and fur type define the American breed?",
             options: [
@@ -3246,7 +2590,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The American is a semi-arch (mandolin) breed with flyback fur, shown in Blue and White, mature weight 9-12 lb.",
         },
-        // Question 293
+        // Question 238
         {
             prompt: "What is a defining feature of the English Lop's ears?",
             options: [
@@ -3258,7 +2602,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "English Lop ears are carried low with no noticeable crown and measure at least 21 inches from tip to tip.",
         },
-        // Question 294
+        // Question 239
         {
             prompt: "Which color groups are recognized in the English Lop?",
             options: [
@@ -3270,7 +2614,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "English Lops are shown across six color groups: Agouti, Broken, Self, Shaded, Ticked, and Wide Band.",
         },
-        // Question 295
+        // Question 240
         {
             prompt: "How are the Beveren's ears carried?",
             options: [
@@ -3282,7 +2626,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The Beveren is a semi-arch breed with a distinctively curved head and well-furred ears carried in a V shape.",
         },
-        // Question 296
+        // Question 241
         {
             prompt: "The Giant Angora is classified as which type of the association class?",
             options: [
@@ -3294,7 +2638,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Giant Angoras are large wool breeds, classified as 6-class.",
         },
-        // Question 297
+        // Question 242
         {
             prompt: "The Giant Chinchilla is classified as which type of the association class?",
             options: [
@@ -3306,7 +2650,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Giant Chinchillas are a semi-arch (mandolin) breed with flyback fur, 6-class, with bucks 12-15 lb and does 13-16 lb.",
         },
-        // Question 298
+        // Question 243
         {
             prompt: "The Checkered Giant is classified as which type of the association class?",
             options: [
@@ -3318,7 +2662,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Checkered Giants are a full-arch breed with flyback fur, 6-class (buck min 11 lb, doe min 12 lb), shown in Black and Blue.",
         },
-        // Question 299
+        // Question 244
         {
             prompt: "The English Lop is classified as which type of the association class?",
             options: [
@@ -3330,7 +2674,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "English Lops are a semi-arch breed with flyback fur, 6-class, with ears at least 21 inches tip to tip; bucks 10 lb and over, does 10.5 lb and over.",
         },
-        // Question 300
+        // Question 245
         {
             prompt: "The French Lop is classified as which type of the association class?",
             options: [
@@ -3342,7 +2686,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "French Lops are 6-class commercial rabbits with rollback fur. Bucks weigh 11 lb and over, does 11.5 lb and over; they have a massive, thick-set, well-muscled body with a gradually curving topline.",
         },
-        // Question 301
+        // Question 246
         {
             prompt: "The American Chinchilla is classified as which type of the association class?",
             options: [
@@ -3354,7 +2698,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "American Chinchillas are large fancy breeds, classified as 6-class.",
         },
-        // Question 302
+        // Question 247
         {
             prompt: "The Champagne d'Argent is classified as which type of the association class?",
             options: [
@@ -3366,7 +2710,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Champagne d'Argents are large silvered breeds, classified as 6-class.",
         },
-        // Question 303
+        // Question 248
         {
             prompt: "The Crème d'Argent is classified as which type of the association class?",
             options: [
@@ -3378,7 +2722,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Crème d'Argents are large silvered breeds, classified as 6-class.",
         },
-        // Question 304
+        // Question 249
         {
             prompt: "The Palomino is classified as which type of the association class?",
             options: [
@@ -3390,7 +2734,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Palominos are large colored breeds, classified as 6-class.",
         },
-        // Question 305
+        // Question 250
         {
             prompt: "The Satin is classified as which type of the association class?",
             options: [
@@ -3402,7 +2746,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Satins are 6-class commercial rabbits with satin fur. Bucks weigh 8.5-10.5 lb and does 9-11 lb; their finer hair shaft and more transparent hair shell create the characteristic sheen.",
         },
-        // Question 306
+        // Question 251
         {
             // AUTHORITATIVE per owner (breeder): Rex is a 4-CLASS breed. Do NOT change to 6-class.
             prompt: "The Rex is classified as which type of the association class?",
@@ -3415,7 +2759,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Class is a weight category. The Rex is a commercial-type breed classified as 4-class (junior and senior for each sex).",
         },
-        // Question 307
+        // Question 252
         {
             prompt: "The Argente Brun is classified as which type of the association class?",
             options: [
@@ -3427,7 +2771,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Argente Bruns are large silvered breeds, classified as 6-class commercial.",
         },
-        // Question 308
+        // Question 253
         {
             prompt: "The Cinnamon is classified as which type of the association class?",
             options: [
@@ -3439,7 +2783,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Cinnamons are large warm-colored breeds, reminicent of burnt cinnamon toast and classified as 6-class commercial.",
         },
-        // Question 309
+        // Question 254
         {
             prompt: "The English Spot is classified as which type of the association class?",
             options: [
@@ -3451,7 +2795,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "English Spots are a full-arch breed with flyback fur, 4-class, mature weight 5-8 lb.",
         },
-        // Question 310
+        // Question 255
         {
             prompt: "The Belgian Hare is classified as which type of the association class?",
             options: [
@@ -3463,7 +2807,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Belgian Hares are a full-arch breed with flyback fur, 4-class, mature weight 6-9.5 lb, carrying the body high off the ground.",
         },
-        // Question 311
+        // Question 256
         {
             prompt: "The Blanc de Hotot is classified as which type of the association class?",
             options: [
@@ -3475,7 +2819,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Blanc de Hotots are large white, black-eye-banded breeds, classified as 6-class, commercial.",
         },
-        // Question 312
+        // Question 257
         {
             prompt: "The Beveren is classified as which type of the association class?",
             options: [
@@ -3487,7 +2831,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Beverens are a semi-arch breed with rollback fur, 6-class, recognized in Black, Blue, and White.",
         },
-        // Question 313
+        // Question 258
         {
             prompt: "The Rhinelander is classified as which type of the association class?",
             options: [
@@ -3500,7 +2844,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact: "Rhinelanders are a full-arch breed with flyback fur, 4-class, shown in Black (black and orange) and Blue (blue and fawn) with both colors equally represented.",
         },
         // Full-arch (running) body type — breed details
-        // Question 314
+        // Question 259
         {
             prompt: "Which fur type is shared by the full-arch running breeds?",
             options: [
@@ -3512,7 +2856,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The full-arch breeds (Checkered Giant, Belgian Hare, English Spot, Rhinelander, Tan, Britannia Petite) all carry flyback fur.",
         },
-        // Question 315
+        // Question 260
         {
             prompt: "Which colors are recognized in the Checkered Giant?",
             options: [
@@ -3524,7 +2868,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Checkered Giants are shown in Black and Blue, with a dorsal stripe from the ears to the tail, butterfly nose marking, cheek spots, and eye circles.",
         },
-        // Question 316
+        // Question 261
         {
             prompt: "What color is the Belgian Hare's coat?",
             options: [
@@ -3536,7 +2880,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The Belgian Hare has a brilliant rich deep red or tan/chestnut coat with a slate blue undercoat, and carries its long body high off the ground.",
         },
-        // Question 317
+        // Question 262
         {
             prompt: "Which colors are recognized in the English Spot?",
             options: [
@@ -3548,7 +2892,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "English Spots are shown in seven colors and marked with nose spots, eye circles, flank spots, and a dorsal stripe from the ears to the tail.",
         },
-        // Question 318
+        // Question 263
         {
             prompt: "How many hip spots are preferred on each side of a Rhinelander?",
             options: [
@@ -3560,7 +2904,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Rhinelanders prefer 8 to 10 equally colored spots on each hip, not extending above the waistline; extra body spots are a disqualification.",
         },
-        // Question 319
+        // Question 264
         {
             prompt: "What eye color pairs with the Rhinelander's black (black and orange) variety?",
             options: [
@@ -3572,7 +2916,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Brown eyes go with the black-and-orange variety, while blue or purple eyes go with the blue-and-fawn variety.",
         },
-        // Question 320
+        // Question 265
         {
             prompt: "Which colors are recognized in the Tan?",
             options: [
@@ -3584,7 +2928,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Tans are shown in Black, Blue, Chocolate, and Lilac, with eyes encircled in even tan and ears laced inside with rich tan.",
         },
-        // Question 321
+        // Question 266
         {
             prompt: "What is the maximum weight for a Britannia Petite?",
             options: [
@@ -3596,7 +2940,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The Britannia Petite is a full-arch breed with a wedge-shaped head and a maximum weight of 2.5 lb.",
         },
-        // Question 322
+        // Question 267
         {
             prompt: "The Silver Fox is classified as which type of the association class?",
             options: [
@@ -3609,7 +2953,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact: "Silver Foxes are large silvered standing-coat breeds, classified as 6-class.",
         },
         // Commercial body type - owner-supplied breed specifications read from 4H breed flashcards.
-        // Question 323
+        // Question 268
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3623,7 +2967,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Satin Angoras are commercial-type, wool-furred, 4-class rabbits weighing 6.5-9.5 lb. Their oval head sits close to the body, with erect ears that may have plain or slightly tufted tips.",
         },
-        // Question 324
+        // Question 269
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3632,7 +2976,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Silver Martens are commercial-type, flyback-furred, 4-class rabbits. Bucks weigh 6.5-9 lb and does 7-9.5 lb; their markings include eye circles, silver-tipped side hairs, a nape triangle and collar, silver-white inner ears and nostrils, and a silver-white X.",
         },
-        // Question 325
+        // Question 270
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3641,7 +2985,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Rex are 4-class commercial rabbits with rex fur and a mature weight of 7.5-9.5 lb. They have a broad head, erect moderately thick ears, and a medium-length body with well-rounded hips and a well-filled loin, rib, and shoulders.",
         },
-        // Question 326
+        // Question 271
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3650,7 +2994,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The 4-class American Sable is commercial-type with rollback fur. Its rich sepia-brown saddle fades to a paler shade; the body is medium length, deep, and wide with a smooth, continuously curving topline.",
         },
-        // Question 327
+        // Question 272
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3659,7 +3003,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Harlequins are 4-class commercial rabbits with flyback fur. Their Japanese and Magpie groups have brindled stripes; black and orange or black and fawn are common color pairings.",
         },
-        // Question 328
+        // Question 273
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3668,7 +3012,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Champagne d'Argents are 6-class commercial rabbits with flyback fur, weighing 9-12 lb. Their dark slate blue undercolor and evenly distributed jet-black hairs create a silver effect from a distance.",
         },
-        // Question 329
+        // Question 274
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3677,7 +3021,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "American Chinchillas are 6-class commercial rabbits weighing 9-12 lb. Their erect ears are close together with narrow jet-black lacing, and their medium-length body has a curved topline.",
         },
-        // Question 330
+        // Question 275
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3686,7 +3030,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Giant Angoras are 6-class commercial wool rabbits. Bucks weigh 9.5 lb and over, does 10 lb and over; their ears are carried in a close V shape and the tail is straight and well covered with wool.",
         },
-        // Question 331
+        // Question 276
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3695,7 +3039,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "New Zealands are 6-class commercial rabbits with flyback fur. They have a full head close to the shoulders, medium-thick erect ears, and a well-rounded, medium-length body with a gradually curving topline.",
         },
-        // Question 332
+        // Question 277
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3704,7 +3048,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Cinnamons are 6-class commercial rabbits weighing 8.5-11 lb. They have rust lap spots inside the hind legs, a butterfly on the nose and muzzle, and distinctive dark eye circles.",
         },
-        // Question 333
+        // Question 278
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3713,7 +3057,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The Crème d'Argent is a commercial breed with a cream-colored, silver-ticked coat. It has a medium-length body, well-developed shoulders and hindquarters, a rounded back, and strong, straight legs.",
         },
-        // Question 334
+        // Question 279
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3722,7 +3066,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Argente Bruns are 6-class commercial rabbits with flyback fur, weighing 8-9.5 lb. They have a broad, bold head on a short neck, erect medium-length ears, and a body whose depth approximately equals its width.",
         },
-        // Question 335
+        // Question 280
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3731,7 +3075,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Palominos are 6-class commercial rabbits with flyback fur. Bucks weigh 8-10 lb and does 9-11 lb; their medium-sized, well-rounded body has a smooth, gradual arc to the topline.",
         },
-        // Question 336
+        // Question 281
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3740,7 +3084,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Blanc de Hotots are 6-class commercial rabbits with rollback fur, weighing 8-11 lb. They have dark brown eyes, V-shaped ears, a thick-set well-rounded body, and strong hind legs.",
         },
-        // Question 337
+        // Question 282
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -3750,7 +3094,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact: "Silver Foxes are 6-class commercial rabbits with standing fur. Bucks weigh 9-11 lb and does 10-12 lb; they have a medium-length body with a curved topline and well-filled shoulders, rib section, and hindquarters.",
         },
         // Breed Varieties and Colors
-        // Question 338
+        // Question 283
         {
             prompt: "Which color groups are recognized in Mini Rex?",
             options: [
@@ -3762,7 +3106,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Mini Rex are shown in the Self, Shaded, Agouti, Tan, AOV, and Broken groups.",
         },
-        // Question 339
+        // Question 284
         {
             prompt: "Which colors are allowed in Mini Rex?",
             options: [
@@ -3774,7 +3118,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Mini Rex come in 13 recognized colors including standard and broken varieties.",
         },
-        // Question 340
+        // Question 285
         {
             prompt: "Which group includes the broken New Zealand variety?",
             options: [
@@ -3786,7 +3130,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "New Zealand has Black, Blue, Red, and White self varieties, plus a Broken variety in the Broken group.",
         },
-        // Question 341
+        // Question 286
         {
             prompt: "Which colors are recognized in New Zealand?",
             options: [
@@ -3798,7 +3142,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "New Zealand are recognized in White, Red, Black, Blue, and Broken.",
         },
-        // Question 342
+        // Question 287
         {
             prompt: "Which color groups are recognized in Holland Lop?",
             options: [
@@ -3810,7 +3154,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Holland Lops are shown in the Agouti, Broken, Pointed White, Self, Shaded, Tan Pattern, Ticked, and Wide Band groups.",
         },
-        // Question 343
+        // Question 288
         {
             prompt: "Which colors are allowed in Holland Lop?",
             options: [
@@ -3822,7 +3166,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Holland Lops come in 12 recognized colors.",
         },
-        // Question 344
+        // Question 289
         {
             prompt: "Which color group are Californians shown in?",
             options: [
@@ -3834,7 +3178,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Californians belong to the Pointed White group.",
         },
-        // Question 345
+        // Question 290
         {
             prompt: "Which point colors are recognized in Californian rabbits?",
             options: [
@@ -3846,7 +3190,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Californians have a white body with black or chocolate points on the ears, nose, feet, and tail.",
         },
-        // Question 346
+        // Question 291
         {
             prompt: "Which color group are Flemish Giant varieties shown in?",
             options: [
@@ -3858,7 +3202,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Flemish Giant varieties fall in the Self group.",
         },
-        // Question 347
+        // Question 292
         {
             prompt: "Which colors are allowed in Flemish Giant?",
             options: [
@@ -3870,7 +3214,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Flemish Giants come in seven recognized colors.",
         },
-        // Question 348
+        // Question 293
         {
             prompt: "Which color groups are recognized in Rex?",
             options: [
@@ -3882,7 +3226,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Rex are shown across five color groups.",
         },
-        // Question 349
+        // Question 294
         {
             prompt: "Which colors are allowed in Rex?",
             options: [
@@ -3894,7 +3238,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Rex come in 12 recognized colors including broken patterns.",
         },
-        // Question 350
+        // Question 295
         {
             prompt: "Which Satin varieties are recognized?",
             options: [
@@ -3906,7 +3250,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "In Satins, Californian, Chinchilla, Siamese, and White are accepted color varieties. Broken is a group that includes broken-pattern varieties.",
         },
-        // Question 351
+        // Question 296
         {
             prompt: "What is unusual about Satin fur?",
             options: [
@@ -3918,7 +3262,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The Satin's fine hair shaft and transparent hair shell give the coat its lustrous satin appearance. The commercial body is medium length, with depth approximately equal to width throughout.",
         },
-        // Question 352
+        // Question 297
         {
             prompt: "Which color groups are recognized in English Angora?",
             options: [
@@ -3930,7 +3274,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "English Angoras are shown across five color groups.",
         },
-        // Question 353
+        // Question 298
         {
             prompt: "Which colors are allowed in English Angora?",
             options: [
@@ -3942,7 +3286,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "English Angoras come in 12 recognized colors.",
         },
-        // Question 354
+        // Question 299
         {
             prompt: "Which color groups are recognized in Lionhead?",
             options: [
@@ -3954,7 +3298,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Lionheads are shown across five color groups.",
         },
-        // Question 355
+        // Question 300
         {
             prompt: "Which colors are allowed in Lionhead?",
             options: [
@@ -3966,7 +3310,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Lionheads come in 13 recognized colors.",
         },
-        // Question 356
+        // Question 301
         {
             prompt: "Which color groups are recognized in French Lop?",
             options: [
@@ -3978,7 +3322,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "French Lops are shown in the Agouti, Broken, Self, Shaded, Ticked, and Wide Band groups. Silvering and Harlequin/Rhinelander patterns are not accepted.",
         },
-        // Question 357
+        // Question 302
         {
             prompt: "How are French Lop ears carried?",
             options: [
@@ -3990,7 +3334,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "French Lop ears are well furred, rounded, set high on the head, and rise from the crown before lopping vertically. Their legs are thick, short, straight, and parallel to the body.",
         },
-        // Question 358
+        // Question 303
         {
             prompt: "Which color groups are recognized in French Angora?",
             options: [
@@ -4002,7 +3346,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "French Angoras are shown in the Agouti, Broken, Pointed White, Self, Shaded, Ticked, and Wide Band groups. They do not have silvered varieties, but Broken varieties are accepted.",
         },
-        // Question 359
+        // Question 304
         {
             prompt: "Which color group are Standard Chinchilla varieties shown in?",
             options: [
@@ -4014,7 +3358,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The chinchilla coloration is an agouti-group pattern.",
         },
-        // Question 360
+        // Question 305
         {
             prompt: "Which colors are allowed in Standard Chinchilla?",
             options: [
@@ -4026,7 +3370,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Standard Chinchillas have the distinctive chinchilla coloration.",
         },
-        // Question 361
+        // Question 306
         {
             prompt: "Which color group are Silver Marten varieties shown in?",
             options: [
@@ -4038,7 +3382,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Silver Martens are a tan-pattern (marten) group.",
         },
-        // Question 362
+        // Question 307
         {
             prompt: "Which colors are allowed in Silver Marten?",
             options: [
@@ -4050,7 +3394,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Silver Martens come in four base colors all with silvering.",
         },
-        // Question 363
+        // Question 308
         {
             prompt: "Which color group are Tan varieties shown in?",
             options: [
@@ -4062,7 +3406,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Tans belong to the Tan Pattern group.",
         },
-        // Question 364
+        // Question 309
         {
             prompt: "Which colors are allowed in Tan?",
             options: [
@@ -4074,7 +3418,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Tans come in four base colors with distinctive tan markings.",
         },
-        // Question 365
+        // Question 310
         {
             prompt: "Which color group are Harlequin varieties shown in?",
             options: [
@@ -4108,7 +3452,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         //     correctIndex: 0,
         //     fact: "Silver Foxes recognize only the Silver variety.",
         // },
-        // Question 366
+        // Question 311
         {
             prompt: "Which colors are allowed in Silver Fox?",
             options: [
@@ -4120,7 +3464,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Silver Foxes come in four base colors with distinctive silvering.",
         },
-        // Question 367
+        // Question 312
         {
             prompt: "Which color group are Beveren varieties shown in?",
             options: [
@@ -4132,7 +3476,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Beveren varieties fall in the Self group.",
         },
-        // Question 368
+        // Question 313
         {
             prompt: "Which colors are allowed in Beveren?",
             options: [
@@ -4155,7 +3499,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         //     correctIndex: 0,
         //     fact: "Champagne d'Argents recognize only the Self variety.",
         // },
-        // Question 369
+        // Question 314
         {
             prompt: "Which colors are allowed in Champagne d'Argent?",
             options: [
@@ -4167,7 +3511,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Champagne d'Argents only have one variety and that is a bluish white with jet black hairs set evenly throughout the coat, giving it a silver effect when viewed from a distance.",
         },
-        // Question 370
+        // Question 315
         {
             prompt: "Which color group are English Spot varieties shown in?",
             options: [
@@ -4179,7 +3523,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "English Spots are a marked/spotted pattern group.",
         },
-        // Question 371
+        // Question 316
         {
             prompt: "Which colors are allowed in English Spot?",
             options: [
@@ -4202,7 +3546,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         //     correctIndex: 0,
         //     fact: "Belgian Hares recognize only the Agouti variety.",
         // },
-        // Question 372
+        // Question 317
         {
             prompt: "Which color varieties are allowed in Belgian Hare?",
             options: [
@@ -4214,7 +3558,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Coat color is brilliant, rich, deep red, or a tan or chestnut shade with a slate blue undercoat.",
         },
-        // Question 373
+        // Question 318
         {
             prompt: "Which colors are allowed in Dutch?",
             options: [
@@ -4226,7 +3570,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Dutch recognize Black, Blue, Chocolate, Gray (Chestnut Agouti), Steel, and Golden Yellow.",
         },
-        // Question 374
+        // Question 319
         {
             prompt: "Which color group are Himalayan varieties shown in?",
             options: [
@@ -4238,7 +3582,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Himalayans are a Pointed White pattern group.",
         },
-        // Question 375
+        // Question 320
         {
             prompt: "Which colors are allowed in Himalayan?",
             options: [
@@ -4250,7 +3594,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Himalayans come in six recognized colors.",
         },
-        // Question 376
+        // Question 321
         {
             prompt: "Which color group are Checkered Giant varieties shown in?",
             options: [
@@ -4262,7 +3606,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Checkered Giants are a marked/checkerboard pattern group.",
         },
-        // Question 377
+        // Question 322
         {
             prompt: "Which colors are allowed in Checkered Giant?",
             options: [
@@ -4274,7 +3618,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Checkered Giants feature alternating squares of color and white.",
         },
-        // Question 378
+        // Question 323
         {
             prompt: "Which color group are Palomino varieties shown in?",
             options: [
@@ -4286,7 +3630,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Palominos are shown in two varieties, Golden and Lynx.",
         },
-        // Question 379
+        // Question 324
         {
             prompt: "Which varieties are recognized in Palomino?",
             options: [
@@ -4299,7 +3643,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact: "Palominos are recognized in two varieties: Golden and Lynx.",
         },
         // Rabbit anatomy and judging terminology - owner-supplied glossary
-        // Question 380
+        // Question 325
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4308,7 +3652,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Carriage is the manner in which a rabbit carries itself: its style or characteristic pose, including the style in which it carries its ears.",
         },
-        // Question 381
+        // Question 326
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4317,7 +3661,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A dewlap is a pendulous fold of loose skin hanging from the throat. It is common in does, should be proportional to body size, and is a disqualification in some breeds.",
         },
-        // Question 382
+        // Question 327
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4326,7 +3670,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Tassels are the longer wool on top of the ears of some wool breeds.",
         },
-        // Question 383
+        // Question 328
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4335,7 +3679,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Cheeks are the face below the eyes. In Dutch markings, the rounded colored head markings form the blaze and carry down along the jawline.",
         },
-        // Question 384
+        // Question 329
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4344,7 +3688,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The saddle is the upper portion of the back. For a Dutch, it is the marking where white fur ceases and colored fur begins on the upper part of the body.",
         },
-        // Question 385
+        // Question 330
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4353,7 +3697,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Bell ears have large, heavy tips with a distinctive fold.",
         },
-        // Question 386
+        // Question 331
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4362,7 +3706,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The flank is the side of the rabbit between the rib and the hip, above the belly.",
         },
-        // Question 387
+        // Question 332
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4371,7 +3715,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The hind leg consists of the foot, hock, stifle (knee), and hip joint. The hip is the joint attaching the hind leg to the trunk.",
         },
-        // Question 388
+        // Question 333
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4380,7 +3724,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "An arch is the gentle curvature of the spine extending from the neck or shoulders to the rear in some breeds. It is best seen from the side profile.",
         },
-        // Question 389
+        // Question 334
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4389,7 +3733,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Topline is the side profile of the shoulders, back, and hindquarters.",
         },
-        // Question 390
+        // Question 335
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4398,7 +3742,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The rump is the upper rounded portion of the hindquarters. The ribs are the curved portions of the sides immediately behind and under the shoulders.",
         },
-        // Question 391
+        // Question 336
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4407,7 +3751,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The shoulder is the portion of the body from the neck back through the sixth rib and includes the upper joint of the foreleg.",
         },
-        // Question 392
+        // Question 337
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4416,7 +3760,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The loin is the portion of the back on each side of the vertebrae, from the last rib to the hip joint.",
         },
-        // Question 393
+        // Question 338
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4425,7 +3769,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The forequarter runs from the neck through the last rib. The midsection runs from the sixth rib to the rear legs. The hindquarter begins at the last rib and includes the loin, hips, hind legs, and rump.",
         },
-        // Question 394
+        // Question 339
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4434,7 +3778,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The back is the top portion of the shoulders, loins, and hindquarters. The neck connects the head to the body; on a Dutch, it also names a wedge-shaped collar marking behind the ears. The muzzle is the lower part of the face and nose.",
         },
-        // Question 395
+        // Question 340
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4443,7 +3787,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The hock is the area of the foot that carries the rabbit's weight. The pastern is the ankle and the portion below it; on the rear leg, this is below the hock. The stifle is the knee joint.",
         },
-        // Question 396
+        // Question 341
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4452,7 +3796,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The crown is a strong basal ridge of cartilage at the top of the head, forming the ear base on some lop-eared breeds.",
         },
-        // Question 397
+        // Question 342
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4462,7 +3806,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact: "Dewclaws are on the inside of the front legs and can help with digging, burrowing, and scratching. Rabbits do not have dewclaws on their hind legs.",
         },
         // Rabbit terms - owner-supplied glossary
-        // Question 398
+        // Question 343
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4471,7 +3815,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A fault is a deviation from perfection or a physical imperfection. A fault may reduce a score without necessarily being a disqualification.",
         },
-        // Question 399
+        // Question 344
         {
             topic: "Husbandry",
             studyTrack: "junior",
@@ -4480,7 +3824,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A buck is an intact male rabbit. A doe is an intact female rabbit.",
         },
-        // Question 400
+        // Question 345
         {
             topic: "ARBA Procedures",
             studyTrack: "registrar",
@@ -4489,7 +3833,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A tattoo is a permanent identification mark placed in the left ear or both ears. A tattoo in the right ear indicates an officially registered rabbit.",
         },
-        // Question 401
+        // Question 346
         {
             topic: "Husbandry",
             studyTrack: "junior",
@@ -4498,7 +3842,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Lactate means to produce milk. Kindle means the act of giving birth by rabbits.",
         },
-        // Question 402
+        // Question 347
         {
             topic: "ARBA Procedures",
             studyTrack: "registrar",
@@ -4507,7 +3851,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A pedigree is a genealogy of male and female ancestors, showing the rabbit's parents, grandparents, great-grandparents, dates of birth, and often color, weight, and registration information.",
         },
-        // Question 403
+        // Question 348
         {
             topic: "Husbandry",
             studyTrack: "intermediate",
@@ -4516,7 +3860,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A fryer, also called a single fryer, is a market rabbit under 10 weeks of age weighing at least 3.5 lb and no more than 5.5 lb.",
         },
-        // Question 404
+        // Question 349
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4525,7 +3869,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A white toenail has no pigmentation and shows only the pink cast of the blood vessel.",
         },
-        // Question 405
+        // Question 350
         {
             topic: "Husbandry",
             studyTrack: "junior",
@@ -4534,7 +3878,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A breeder can be a person who raises a breed or variety meeting the Standard of Perfection, or a rabbit used primarily to produce offspring.",
         },
-        // Question 406
+        // Question 351
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4543,7 +3887,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A breed is a class of domestic rabbits that reproduces distinctive characteristics such as fur, markings, shape, and size. Purebred is used for rabbits approximating their breed standard for at least three generations.",
         },
-        // Question 407
+        // Question 352
         {
             topic: "Genetics",
             studyTrack: "intermediate",
@@ -4552,7 +3896,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A mutation is a sudden change in a physical characteristic caused by an alteration in a gene. Rex and Satin are well-known mutations affecting fur structure.",
         },
-        // Question 408
+        // Question 353
         {
             topic: "Husbandry",
             studyTrack: "intermediate",
@@ -4561,7 +3905,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A roaster is a rabbit under 6 months of age weighing between 5.5 and 9 lb.",
         },
-        // Question 409
+        // Question 354
         {
             topic: "Husbandry",
             studyTrack: "intermediate",
@@ -4570,7 +3914,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A stewer is a rabbit over 6 months of age and over 8 lb.",
         },
-        // Question 410
+        // Question 355
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4579,7 +3923,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Definition means the sharpness and clarity of a color break on a hair shaft, such as ring color in agouti fur, and the contrast between two or more colors.",
         },
-        // Question 411
+        // Question 356
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4588,7 +3932,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A rabbit in prime condition exhibits ideal flesh and coat condition.",
         },
-        // Question 412
+        // Question 357
         {
             topic: "Husbandry",
             studyTrack: "junior",
@@ -4597,7 +3941,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "An adult is a mature rabbit of breeding age.",
         },
-        // Question 413
+        // Question 358
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4606,7 +3950,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Mandolin describes the semi-arch body shape, whose arch begins at the back of the shoulders rather than at the nape of the neck.",
         },
-        // Question 414
+        // Question 359
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4615,7 +3959,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A group is broader than a variety and is usually applied to color-pattern groupings. A variety is a division within a breed or group determined by color.",
         },
-        // Question 415
+        // Question 360
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4624,7 +3968,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Intermediate is used only in 6-class breeds with a minimum ideal senior weight of 9 lb or more. It includes rabbits 6 months to under 8 months old, subject to breed-standard weights.",
         },
-        // Question 416
+        // Question 361
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4633,7 +3977,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A senior is 6 months or older in 4-class breeds and 8 months or older in 6-class breeds, subject to any minimum senior weight in the breed standard.",
         },
-        // Question 417
+        // Question 362
         {
             topic: "Breeds & Judging",
             studyTrack: "junior",
@@ -4642,7 +3986,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A junior is under 6 months old. A pre-junior is under 3 months old and can be shown only when the breed's showroom classes specifically allow it, separately by sex and variety.",
         },
-        // Question 418
+        // Question 363
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4651,7 +3995,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Type is the physical conformation or structure unique to each recognized breed.",
         },
-        // Question 419
+        // Question 364
         {
             topic: "Husbandry",
             studyTrack: "intermediate",
@@ -4660,7 +4004,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Gestation is the length of time between conception and birth, usually about 31 days in rabbits.",
         },
-        // Question 420
+        // Question 365
         {
             topic: "Genetics",
             studyTrack: "intermediate",
@@ -4670,7 +4014,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact: "A strain is a genetically related bloodline with distinguishable traits, such as type, color, or coat, and the ability to pass those traits to offspring.",
         },
         // Coat and fur terminology - owner-supplied glossary
-        // Question 421
+        // Question 366
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4679,7 +4023,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Rollback fur returns gradually to normal after being stroked from hindquarters to shoulders. Flyback fur quickly returns to its smooth, normal position after the same stroke.",
         },
-        // Question 422
+        // Question 367
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4688,7 +4032,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Density is the number of fur fibers in an area. Texture is the tactile surface characteristic or feel of fur. A coat is the fur covering of a rabbit.",
         },
-        // Question 423
+        // Question 368
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4697,7 +4041,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A pelt is the hide and fur of an animal after it has been removed.",
         },
-        // Question 424
+        // Question 369
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4706,7 +4050,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Rex is a genetic recessive variation in which the guard hairs are upright and equal in length to the regular fur. Rex guard hairs should not protrude beyond the undercoat.",
         },
-        // Question 425
+        // Question 370
         {
             topic: "Husbandry",
             studyTrack: "junior",
@@ -4715,7 +4059,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A molt is the natural shedding of fur.",
         },
-        // Question 426
+        // Question 371
         {
             topic: "Husbandry",
             studyTrack: "junior",
@@ -4724,7 +4068,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Mats are areas of entangled wool or fur. Matted means wool or fur is entangled in a thick mass.",
         },
-        // Question 427
+        // Question 372
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4733,7 +4077,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Guard hairs are the longer, coarser, protruding hairs that protect the undercoat and give a coat wearing quality and resilience. In Rex fur, they ideally match the undercoat length rather than protruding.",
         },
-        // Question 428
+        // Question 373
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4742,7 +4086,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Glossy describes natural reflection, luster, or brightness in healthy fur. Luster is the brightness and brilliance of fur. Sheen is the bright luster characteristic of the satin mutation.",
         },
-        // Question 429
+        // Question 374
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4751,7 +4095,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Condition is a rabbit's overall physical state in relation to health, cleanliness, fur, and grooming. Finish is the desired degree of perfection in condition, including a fully prime coat, color, and flesh.",
         },
-        // Question 430
+        // Question 375
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4760,7 +4104,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Undercolor, also called base color, is the color at the base of the fur shaft next to the skin.",
         },
-        // Question 431
+        // Question 376
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4769,7 +4113,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Plush describes dense, fine hair with a very soft feel and is often used to describe Rex fur.",
         },
-        // Question 432
+        // Question 377
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4778,7 +4122,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "For wool breeds, the balance of guard hairs and underwool is judged by density, texture, and length. Undercoat is short fur partly concealed by longer, coarser guard hairs.",
         },
-        // Question 433
+        // Question 378
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4787,7 +4131,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Standing fur is unique to the Silver Fox. It is long and dense, remains upright when stroked from rump toward head, and returns to normal when stroked from head toward rump.",
         },
-        // Question 434
+        // Question 379
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4796,7 +4140,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Depth can mean the measurement straight down from any point on the topline to the lowest portion of the body, or the extension of color down the hair shaft.",
         },
-        // Question 435
+        // Question 380
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4806,7 +4150,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact: "Satin is a mutation that increases translucency of the outer hair shell, allowing pigment to show more clearly and reflect more light. Its sheen is the principal feature of this mutation.",
         },
         // Health and disqualification terminology - owner-supplied glossary
-        // Question 436
+        // Question 381
         {
             topic: "Health & Biosecurity",
             studyTrack: "senior",
@@ -4815,7 +4159,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Mastitis is inflammation of one or more mammary glands and is a disqualification from competition.",
         },
-        // Question 437
+        // Question 382
         {
             topic: "Breeds & Judging",
             studyTrack: "senior",
@@ -4824,7 +4168,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Simple malocclusion occurs when the top and bottom incisors meet evenly without the upper incisors overlapping the lower incisors. It is a disqualification from competition.",
         },
-        // Question 438
+        // Question 383
         {
             topic: "Health & Biosecurity",
             studyTrack: "senior",
@@ -4833,7 +4177,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Sore hocks are bruised areas under the hocks that may become infected or abscessed. They are not considered a disease.",
         },
-        // Question 439
+        // Question 384
         {
             topic: "Breeds & Judging",
             studyTrack: "senior",
@@ -4842,7 +4186,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Splay leg occurs when underdeveloped muscles and ligaments supporting the limbs cause the legs to spread outward. It may be hereditary and is a non-protestable disqualification from competition.",
         },
-        // Question 440
+        // Question 385
         {
             topic: "Breeds & Judging",
             studyTrack: "registrar",
@@ -4851,7 +4195,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A split penis is a disqualification in which a large opening extends more than halfway up or down the shaft. The shaft may splay open and can resemble a doe's genitalia.",
         },
-        // Question 441
+        // Question 386
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4860,7 +4204,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A disqualification is one or more defects, deformities, or blemishes that render a rabbit ineligible for competition or registration.",
         },
-        // Question 442
+        // Question 387
         {
             topic: "Breeds & Judging",
             studyTrack: "senior",
@@ -4869,7 +4213,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A wry tail is an abnormal tail permanently bent, carried, or twisted to one side. A corkscrew tail is a form of wry tail.",
         },
-        // Question 443
+        // Question 388
         {
             topic: "Breeds & Judging",
             studyTrack: "senior",
@@ -4878,7 +4222,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Pigeon breast is a narrow chest with a protruding V-shaped breastbone and is a non-protestable disqualification from competition.",
         },
-        // Question 444
+        // Question 389
         {
             topic: "Health & Biosecurity",
             studyTrack: "senior",
@@ -4887,7 +4231,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A hernia is a protrusion of an organ or other viscera through the wall or cavity containing it. It can occur near the abdomen, umbilicus, or genitals and is a disqualification from competition.",
         },
-        // Question 445
+        // Question 390
         {
             topic: "Health & Biosecurity",
             studyTrack: "senior",
@@ -4896,7 +4240,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A parasite lives on or within a host animal. Lice are sluggish, blood-sucking insects; mites are tiny pests that may appear as dandruff, often around the back of the neck. Parasites are disqualifications from competition.",
         },
-        // Question 446
+        // Question 391
         {
             topic: "Health & Biosecurity",
             studyTrack: "senior",
@@ -4905,7 +4249,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Pinworms are small worms approximately one-quarter inch long that may be found on or around the anus.",
         },
-        // Question 447
+        // Question 392
         {
             topic: "Health & Biosecurity",
             studyTrack: "senior",
@@ -4914,7 +4258,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Dead tail is hard and brittle because of lost circulation and is not a disqualification. A deviated spine has deformed or misaligned vertebrae, often detected by gentle topline palpation, and is a disqualification from competition.",
         },
-        // Question 448
+        // Question 393
         {
             topic: "Health & Biosecurity",
             studyTrack: "senior",
@@ -4923,7 +4267,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A caked teat or breast is a swollen, hard, milk-filled mammary gland caused by excessive milk production.",
         },
-        // Question 449
+        // Question 394
         {
             topic: "Health & Biosecurity",
             studyTrack: "senior",
@@ -4932,7 +4276,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Ringworm causes hair loss in circumscribed patches, usually on the head but sometimes elsewhere. It excludes a rabbit from competition until healed.",
         },
-        // Question 450
+        // Question 395
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4941,7 +4285,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Peg teeth are small residual incisors just behind the normal upper incisors. The term is sometimes incorrectly used for budding teeth.",
         },
-        // Question 451
+        // Question 396
         {
             topic: "Health & Biosecurity",
             studyTrack: "senior",
@@ -4950,7 +4294,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "An abscess or boil is a localized infection-related inflammation that may cause swelling, heat, redness, or pus. Purulent discharge is white pus from the nose or an abscess. Both are disqualifications from competition.",
         },
-        // Question 452
+        // Question 397
         {
             topic: "Health & Biosecurity",
             studyTrack: "senior",
@@ -4959,7 +4303,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Weepy eye is abnormal eye discharge that mats the area below the eye and is disqualifying if combined with conjunctivitis. A cataract is an opaque or white lens. Entropion is an inward-folding eyelid that can injure the eye; cataract and entropion are disqualifications from competition.",
         },
-        // Question 453
+        // Question 398
         {
             topic: "Breeds & Judging",
             studyTrack: "intermediate",
@@ -4968,7 +4312,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A blemish is any defect or fault that detracts from a rabbit's appearance.",
         },
-        // Question 454
+        // Question 399
         {
             topic: "Health & Biosecurity",
             studyTrack: "senior",
@@ -4977,7 +4321,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Wry neck is head tilt with loss of balance when the balance center in the ear or brain is disturbed. Possible causes include ear infection, E. cuniculi, head injury, liver disease, or dietary imbalance.",
         },
-        // Question 455
+        // Question 400
         {
             topic: "Health & Biosecurity",
             studyTrack: "senior",
@@ -4986,7 +4330,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Mange is a skin disease caused by parasitic mites and may cause itching, dandruff, lesions, scabs, hair loss, and disqualification. Ear mites cause an inflamed, scabby condition inside the ear and are a disqualification from competition.",
         },
-        // Question 456
+        // Question 401
         {
             topic: "Health & Biosecurity",
             studyTrack: "senior",
@@ -4994,459 +4338,10 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             options: ["A tissue growth, irregular breastbone, respiratory infection, and venereal rabbit disease", "Four types of fur", "Four show classes", "Four color groups"],
             correctIndex: 0,
             fact: "A tumor is an abnormal tissue growth. A deviated sternum is an irregular breastbone, often a lower-rib-cage lump or cone-shaped protrusion. A cold may include repeated sneezing and white nasal discharge. Vent disease affects both sexes and may cause scabby, reddened genitalia with pus. Each is a disqualification from competition.",
-        },
-    ];
-
-    /* Legacy controller retained below for reference while the study controller is initialized after it. */
-    /*
-    function pickRandomQuestions(pool, count) {
-        const copy = [...pool];
-        for (let i = copy.length - 1; i > 0; i -= 1) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [copy[i], copy[j]] = [copy[j], copy[i]];
-        }
-        return copy.slice(0, Math.min(count, copy.length));
-    }
-    
-    function setRandomBackground() {
-        const backgrounds = globalThis.RABBIT_WALLPAPERS;
-        const background = backgrounds[Math.floor(Math.random() * backgrounds.length)];
-        document.body.style.setProperty("--game-background", `url("${background}")`);
-    }
-    
-    function shuffleOptions(question) {
-        const optionEntries = question.options.map((text, index) => ({ text, index }));
-        for (let i = optionEntries.length - 1; i > 0; i -= 1) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [optionEntries[i], optionEntries[j]] = [optionEntries[j], optionEntries[i]];
-        }
-        const shuffledOptions = optionEntries.map((entry) => entry.text);
-        const newCorrectIndex = optionEntries.findIndex((entry) => entry.index === question.correctIndex);
-        return {
-            ...question,
-            options: shuffledOptions,
-            correctIndex: newCorrectIndex,
-        };
-    }
-    
-    let questions = [];
-    
-    const questionText = document.getElementById("question");
-    const optionsList = document.getElementById("options");
-    const factBox = document.getElementById("fact");
-    const progress = document.getElementById("progress");
-    const feedback = document.getElementById("feedback");
-    const score = document.getElementById("score");
-    const nextButton = document.getElementById("next");
-    const finishedButton = document.getElementById("finished");
-    const exitButton = document.getElementById("exit");
-    const statsElement = document.getElementById("stats");
-    const summarySection = document.getElementById("summary");
-    const recapPanel = document.getElementById("recap-panel");
-    const summaryNote = document.getElementById("summary-note");
-    const summaryList = document.getElementById("summary-list");
-    const celebration = document.getElementById("celebration");
-    const farewellModal = document.getElementById("farewell-modal");
-    const farewellMessage = document.getElementById("farewell-message");
-    const closeModalButton = document.getElementById("close-modal");
-    const reminderToast = document.getElementById("reminder-toast");
-    
-    const STORAGE_KEY = "rabbitHusbandryStats";
-    const DEFAULT_STATS = { bestScore: 0, gamesPlayed: 0 };
-    
-    function loadStats() {
-        try {
-            const raw = localStorage.getItem(STORAGE_KEY);
-            if (!raw) {
-                return { ...DEFAULT_STATS };
-            }
-            const parsed = JSON.parse(raw);
-            return {
-                bestScore: Number(parsed.bestScore) || 0,
-                gamesPlayed: Number(parsed.gamesPlayed) || 0,
-            };
-        } catch (error) {
-            console.warn("Unable to load stats", error);
-            return { ...DEFAULT_STATS };
-        }
-    }
-    
-    let stats = loadStats();
-    let answersLog = [];
-    
-    function saveStats() {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(stats));
-    }
-    
-    function updateStatsDisplay() {
-        if (!statsElement) {
-            return;
-        }
-        statsElement.textContent = `Best Score: ${stats.bestScore}/${QUESTIONS_PER_GAME} | Games Played: ${stats.gamesPlayed}`;
-    }
-    
-    updateStatsDisplay();
-    
-    let currentIndex = 0;
-    let currentScore = 0;
-    let waitingForNext = false;
-    let readyToRestart = false;
-    let pageWasHidden = false;
-    let toastTimeoutId = null;
-    
-    function unlockQuiz() {
-        answerInput.disabled = false;
-        form.querySelector("button").disabled = false;
-    }
-    
-    function lockQuiz() {
-        answerInput.disabled = true;
-        form.querySelector("button").disabled = true;
-    }
-    
-    function stopCelebration() {
-        if (!celebration) {
-            return;
-        }
-        celebration.classList.remove("show");
-    }
-    
-    function playCelebration() {
-        if (!celebration) {
-            return;
-        }
-        celebration.classList.add("show");
-    }
-    
-    function startNewGame() {
-        questions = pickRandomQuestions(allQuestions, QUESTIONS_PER_GAME).map(shuffleOptions);
-        currentIndex = 0;
-        currentScore = 0;
-        waitingForNext = false;
-        readyToRestart = false;
-        answersLog = [];
-        stopCelebration();
-        hideFarewellModal();
-        hideReminderToast();
-        if (summarySection) {
-            summarySection.hidden = true;
-        }
-        if (summaryList) {
-            summaryList.innerHTML = "";
-        }
-        if (summaryNote) {
-            summaryNote.textContent = "";
-        }
-        unlockQuiz();
-        updateActionButtons();
-        renderQuestion();
-    }
-    
-    function renderQuestion() {
-        if (!questionText || !optionsList || !factBox || !progress) {
-            return;
-        }
-    
-        const current = questions[currentIndex];
-        progress.textContent = `Question ${currentIndex + 1} of ${questions.length}`;
-        questionText.textContent = current.prompt;
-        optionsList.innerHTML = "";
-        current.options.forEach((option) => {
-            const li = document.createElement("li");
-            li.textContent = option;
-            optionsList.appendChild(li);
-        });
-        factBox.textContent = "";
-        feedback.textContent = "";
-        feedback.classList.remove("correct", "incorrect");
-        score.textContent = `Score: ${currentScore} / ${questions.length}`;
-        answerInput.value = "";
-        answerInput.focus();
-        waitingForNext = false;
-        readyToRestart = false;
-        updateActionButtons();
-        stopCelebration();
-    }
-    
-    function recordAnswer(question, selectedIndex) {
-        const chosen = selectedIndex >= 0 ? question.options[selectedIndex] : null;
-        const questionNumber = answersLog.length + 1;
-        answersLog.push({
-            questionNumber,
-            prompt: question.prompt,
-            correct: question.options[question.correctIndex],
-            chosen,
-            isCorrect: selectedIndex === question.correctIndex,
-        });
-    }
-    
-    function setFeedbackState(isCorrect) {
-        feedback.classList.remove("correct", "incorrect");
-        if (isCorrect === true) {
-            feedback.classList.add("correct");
-        } else if (isCorrect === false) {
-            feedback.classList.add("incorrect");
-        }
-    }
-    
-    function updateActionButtons() {
-        if (!nextButton) {
-            return;
-        }
-        const shouldShowNext = waitingForNext || readyToRestart;
-        nextButton.hidden = !shouldShowNext;
-        if (readyToRestart) {
-            nextButton.textContent = "Play Again";
-        } else if (questions.length && currentIndex === questions.length - 1) {
-            nextButton.textContent = "Finish";
-        } else {
-            nextButton.textContent = "Next Question";
-        }
-    
-        const shouldShowSecondary = shouldShowNext;
-        if (finishedButton) {
-            finishedButton.hidden = !shouldShowSecondary;
-            finishedButton.textContent = readyToRestart ? "Finished" : "Finish Round";
-        }
-        if (exitButton) {
-            exitButton.hidden = !shouldShowSecondary;
-            exitButton.textContent = readyToRestart ? "Exit" : "Exit Early";
-        }
-    }
-    
-    function showFarewellModal(message) {
-        if (!farewellModal || !farewellMessage || !closeModalButton) {
-            return;
-        }
-        farewellMessage.textContent = message;
-        farewellModal.hidden = false;
-        farewellModal.setAttribute("aria-hidden", "false");
-        requestAnimationFrame(() => {
-            farewellModal.classList.add("show");
-            closeModalButton.focus();
-        });
-    }
-    
-    function hideFarewellModal() {
-        if (!farewellModal) {
-            return;
-        }
-        farewellModal.classList.remove("show");
-        farewellModal.setAttribute("aria-hidden", "true");
-        setTimeout(() => {
-            if (farewellModal.classList.contains("show")) {
-                return;
-            }
-            farewellModal.hidden = true;
-        }, 220);
-    }
-    
-    function showReminderToast(message = "We missed you! Come play again, please.") {
-        if (!reminderToast) {
-            return;
-        }
-        reminderToast.textContent = message;
-        reminderToast.hidden = false;
-        requestAnimationFrame(() => reminderToast.classList.add("show"));
-        if (toastTimeoutId) {
-            clearTimeout(toastTimeoutId);
-        }
-        toastTimeoutId = setTimeout(() => {
-            hideReminderToast();
-        }, 5000);
-    }
-    
-    function hideReminderToast() {
-        if (!reminderToast) {
-            return;
-        }
-        reminderToast.classList.remove("show");
-        if (toastTimeoutId) {
-            clearTimeout(toastTimeoutId);
-            toastTimeoutId = null;
-        }
-        setTimeout(() => {
-            if (!reminderToast.classList.contains("show")) {
-                reminderToast.hidden = true;
-            }
-        }, 220);
-    }
-    
-    form.addEventListener("submit", (event) => {
-        event.preventDefault();
-        if (waitingForNext || readyToRestart) {
-            return;
-        }
-        const current = questions[currentIndex];
-        const value = Number(answerInput.value) - 1;
-    
-        if (Number.isNaN(value) || value < 0 || value >= current.options.length) {
-            feedback.textContent = "Enter a valid option number.";
-            setFeedbackState();
-            stopCelebration();
-            return;
-        }
-    
-        recordAnswer(current, value);
-        if (value === current.correctIndex) {
-            feedback.textContent = "Correct!";
-            currentScore += 1;
-            setFeedbackState(true);
-            playCelebration();
-        } else {
-            feedback.textContent = `Answer: ${current.options[current.correctIndex]}`;
-            setFeedbackState(false);
-            stopCelebration();
-        }
-    
-        factBox.textContent = current.fact || "";
-        score.textContent = `Score: ${currentScore} / ${questions.length}`;
-    
-        waitingForNext = true;
-        updateActionButtons();
-    });
-    
-    function showCompletionState() {
-        feedback.textContent += " Quiz complete.";
-        factBox.textContent = "";
-        lockQuiz();
-        waitingForNext = false;
-        readyToRestart = true;
-        updateActionButtons();
-        finalizeRound();
-        showFarewellModal("Thanks for practicing with Rabbit Savvy!");
-    }
-    
-    function finalizeRound() {
-        stats.gamesPlayed += 1;
-        if (currentScore > stats.bestScore) {
-            stats.bestScore = currentScore;
-        }
-        saveStats();
-        updateStatsDisplay();
-        renderSummary();
-    }
-    
-    function renderSummary() {
-        if (!summarySection || !summaryList || !summaryNote) {
-            return;
-        }
-    
-        const misses = answersLog.filter((entry) => !entry.isCorrect);
-        summaryList.innerHTML = "";
-    
-        if (misses.length === 0) {
-            summaryNote.textContent = "Perfect round! Every question was correct.";
-        } else {
-            summaryNote.textContent = "Review these topics and try again:";
-            misses.forEach((miss) => {
-                const item = document.createElement("li");
-                item.innerHTML = `<strong>Q${miss.questionNumber}:</strong> ${miss.prompt}<br />Correct answer: ${miss.correct}`;
-                if (miss.chosen && miss.chosen !== miss.correct) {
-                    item.innerHTML += `<br />You answered: ${miss.chosen}`;
-                }
-                summaryList.appendChild(item);
-            });
-        }
-    
-        summarySection.hidden = false;
-        summarySection.focus();
-    }
-    
-    nextButton.addEventListener("click", () => {
-        if (readyToRestart) {
-            startNewGame();
-            return;
-        }
-    
-        if (!waitingForNext) {
-            return;
-        }
-    
-        currentIndex += 1;
-        if (currentIndex < questions.length) {
-            renderQuestion();
-        } else {
-            showCompletionState();
-        }
-    });
-    
-    if (finishedButton) {
-        finishedButton.addEventListener("click", () => {
-            if (readyToRestart) {
-                showFarewellModal("We hope you had fun! Hop back in anytime.");
-                return;
-            }
-            if (!waitingForNext) {
-                return;
-            }
-            showCompletionState();
-        });
-    }
-    
-    if (exitButton) {
-        exitButton.addEventListener("click", () => {
-            if (!waitingForNext && !readyToRestart) {
-                return;
-            }
-            lockQuiz();
-            waitingForNext = false;
-            readyToRestart = true;
-            stopCelebration();
-            feedback.textContent = "Taking a break? We will be ready when you are.";
-            setFeedbackState();
-            updateActionButtons();
-            showFarewellModal("We already miss you! Come play again soon.");
-        });
-    }
-    
-    if (closeModalButton) {
-        closeModalButton.addEventListener("click", () => {
-            hideFarewellModal();
-        });
-    }
-    
-    if (farewellModal) {
-        farewellModal.addEventListener("click", (event) => {
-            if (event.target === farewellModal) {
-                hideFarewellModal();
-            }
-        });
-    }
-    
-    if (reminderToast) {
-        reminderToast.addEventListener("click", () => {
-            hideReminderToast();
-        });
-    }
-    
-    document.addEventListener("visibilitychange", () => {
-        if (document.visibilityState === "hidden") {
-            pageWasHidden = true;
-            hideReminderToast();
-            return;
-        }
-        if (pageWasHidden) {
-            pageWasHidden = false;
-            showReminderToast("We missed you! Come play again, please.");
-        }
-    });
-    
-    startNewGame();
-    */
-
-    const TOPICS = ["Husbandry", "Health & Biosecurity", "Genetics", "the association Procedures", "Breeds & Judging"];
-    const DEFAULT_STATS = { bestScore: 0, gamesPlayed: 0, history: [], misses: [], recentQuestionIds: [], topicResults: {} };
-    const STORAGE_KEY = "rabbitHusbandryStudyStats";
-    const WALLPAPER_DECK_STORAGE_KEY = "rabbitHusbandryWallpaperDeck";
-    const LAST_WALLPAPER_STORAGE_KEY = "rabbitHusbandryLastWallpaper";
-    const FULL_ACCESS_STORAGE_KEY = "rabbitHusbandryFullAccess";
-    const FULL_ACCESS_PRODUCT_ID = "full_question_bank";
-    const TUTORIAL_SEEN_STORAGE_KEY = "rabbitHusbandryTutorialSeen";
-    const RECENT_QUESTION_LIMIT = 120;
+        },]
 
     const scenarioQuestions = [
-        // Question 457
+        // Question 402
         {
             id: "scenario-returning-rabbit",
             topic: "Health & Biosecurity",
@@ -5456,7 +4351,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Returning rabbits should be quarantined, monitored, and handled with separate equipment to protect the herd.",
         },
-        // Question 458
+        // Question 403
         {
             id: "scenario-registration-tattoo",
             topic: "ARBA Procedures",
@@ -5466,7 +4361,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 1,
             fact: "Permanent identification and paperwork must agree. Resolve discrepancies before proceeding with registration.",
         },
-        // Question 459
+        // Question 404
         {
             id: "scenario-heat-stress",
             topic: "Husbandry",
@@ -5476,7 +4371,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Act promptly and cool gradually. Seek veterinary guidance if signs are severe or do not improve.",
         },
-        // Question 460
+        // Question 405
         {
             id: "genetics-tyr-melanin",
             topic: "Genetics",
@@ -5487,7 +4382,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A rabbit study linked a TYR 3' UTR deletion to reduced melanin and a gray coat phenotype.",
         },
-        // Question 461
+        // Question 406
         {
             id: "genetics-tyr-utr",
             topic: "Genetics",
@@ -5498,7 +4393,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The study used CRISPR/Cas9 to delete the 3' UTR of TYR and observed graying with reduced melanin.",
         },
-        // Question 462
+        // Question 407
         {
             id: "genetics-asip-black-tan",
             topic: "Genetics",
@@ -5509,7 +4404,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "Animal Genetics reported an ASIP-region deletion strongly associated with the black-and-tan phenotype in rabbits.",
         },
-        // Question 463
+        // Question 408
         {
             id: "genetics-asip-protein",
             topic: "Genetics",
@@ -5520,7 +4415,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "ASIP encodes agouti signaling protein, a regulator of pigmentation signaling.",
         },
-        // Question 464
+        // Question 409
         {
             id: "genetics-black-tan-pattern",
             topic: "Genetics",
@@ -5531,7 +4426,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The study describes black-and-tan rabbits as having tan ventral surfaces sharply separated from black dorsal surfaces.",
         },
-        // Question 465
+        // Question 410
         {
             id: "genetics-methylation",
             topic: "Genetics",
@@ -5542,7 +4437,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "A Frontiers in Genetics study found an association between coat-color dilution and DNA methylation differences in hair follicles.",
         },
-        // Question 466
+        // Question 411
         {
             id: "genetics-wgbs",
             topic: "Genetics",
@@ -5553,7 +4448,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The study used whole-genome bisulfite sequencing to compare methylation patterns in hair follicles.",
         },
-        // Question 467
+        // Question 412
         {
             id: "genetics-gnai2-melanin",
             topic: "Genetics",
@@ -5564,7 +4459,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "In cultured rabbit melanocytes, GNAI2 overexpression increased melanin content and cell proliferation.",
         },
-        // Question 468
+        // Question 413
         {
             id: "genetics-gnai2-expression",
             topic: "Genetics",
@@ -5575,7 +4470,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             correctIndex: 0,
             fact: "The study reported the highest GNAI2 levels in black skin and the lowest in white skin among the groups examined.",
         },
-        // Question 469
+        // Question 414
         {
             id: "genetics-replication",
             topic: "Genetics",
@@ -5587,5 +4482,6 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             fact: "The coat-dilution study notes its small sample size and the need for replication; responsible breeding decisions use multiple reliable sources.",
         },
     ]
+
     return { QUESTIONS_PER_GAME, allQuestions, scenarioQuestions };
 })();
