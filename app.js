@@ -5144,14 +5144,20 @@ function inferStudyTrack(question) {
     return "junior";
 }
 
-const questionBank = [...allQuestions, ...scenarioQuestions].map((question, index) => ({
-    ...question,
-    id: question.id || `question-${index + 1}`,
-    topic: question.topic || inferTopic(question),
-    studyTrack: question.studyTrack || inferStudyTrack(question),
-    source: question.source || (inferTopic(question) === "ARBA Procedures" ? "Practice question | ARBA procedures" : "Practice question | General husbandry guidance"),
-    reviewStatus: question.reviewStatus || "Practice content - verify current guidance",
-}));
+const sourceQuestions = [...allQuestions, ...scenarioQuestions];
+const latestQuestionByPrompt = new Map();
+sourceQuestions.forEach((question) => latestQuestionByPrompt.set(question.prompt, question));
+
+const questionBank = sourceQuestions
+    .filter((question) => latestQuestionByPrompt.get(question.prompt) === question)
+    .map((question, index) => ({
+        ...question,
+        id: question.id || `question-${index + 1}`,
+        topic: question.topic || inferTopic(question),
+        studyTrack: question.studyTrack || inferStudyTrack(question),
+        source: question.source || (inferTopic(question) === "ARBA Procedures" ? "Practice question | ARBA procedures" : "Practice question | General husbandry guidance"),
+        reviewStatus: question.reviewStatus || "Practice content - verify current guidance",
+    }));
 
 const STUDY_TRACKS = ["cloverbud", "junior", "intermediate", "senior", "registrar"];
 

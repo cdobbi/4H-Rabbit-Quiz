@@ -7,7 +7,7 @@ Rabbit Husbandry Quiz
 Study 50 rabbit-care questions free. Unlock the complete offline Rabbit Savvy study companion.
 
 ## Full description
-Rabbit Savvy is a comprehensive, independently authored rabbit-study companion for exhibitors, breeders, and serious rabbit people. Start free with 50 of 469 questions across rabbit care topics. Unlock the remaining 419 questions with a one-time $14.99 Google Play purchase and study the complete question bank offline.
+Rabbit Savvy is a comprehensive, independently authored rabbit-study companion for exhibitors, breeders, and serious rabbit people. Start free with 50 of 414 questions across rabbit care topics. Unlock the remaining 364 questions with a one-time $14.99 Google Play purchase and study the complete question bank offline.
 
 Features:
 - Study rabbit husbandry, health and biosecurity, genetics, ARBA procedures, and breeds and judging.
@@ -15,7 +15,7 @@ Features:
 - Use Learn, Exam, and Missed Questions modes.
 - Track local study history and confidence for answers.
 - Practice offline with no account required.
-- Try 50 of 469 questions free, then unlock the remaining 419 questions with one lifetime purchase. No subscription and no ads.
+- Try 50 of 414 questions free, then unlock the remaining 364 questions with one lifetime purchase. No subscription and no ads.
 
 This app provides independent practice material and is not affiliated with or endorsed by the American Rabbit Breeders Association. Verify current official standards and Registrar materials with ARBA resources.
 
