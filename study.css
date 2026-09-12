@@ -466,6 +466,16 @@ select {
     margin: 4px 0 0;
 }
 
+.round-controls {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.round-controls button {
+    flex: 1 1 0;
+}
+
 .question-card {
     border: 1px solid #d5e7f0;
     border-top: 3px solid var(--mint);

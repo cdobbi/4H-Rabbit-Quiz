@@ -89,13 +89,15 @@
                 </fieldset>
                 <p id="stats" aria-live="polite"></p>
                 <p id="score"></p>
+                <div class="round-controls">
+                    <button id="pause" type="button" hidden>Pause Round</button>
+                    <button id="exit" type="button" hidden>Quit Round</button>
+                </div>
             </div>
         </div>
         <p id="feedback" role="status" aria-live="assertive"></p>
         <div class="action-buttons">
             <button id="next" type="button" hidden>Next Question</button>
-            <button id="pause" type="button" hidden>Pause Round</button>
-            <button id="exit" type="button" hidden>Quit Round</button>
         </div>
         <details class="collapsible-panel" id="recap-panel" hidden>
             <summary>Round recap</summary>
