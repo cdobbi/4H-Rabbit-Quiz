@@ -22,7 +22,7 @@ export class RabbitQuiz {
     constructor(private questions: RabbitQuestion[]) { }
 
     async start(): Promise<void> {
-        console.log("🐇 Welcome to the Rabbit Husbandry Quiz!");
+        console.log("Welcome to Rabbit Savvy!");
         await this.askQuestion(0);
         console.log(`Quiz complete! You scored ${this.score} out of ${this.questions.length}.`);
         this.reader.close();

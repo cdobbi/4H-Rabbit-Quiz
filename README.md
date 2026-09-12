@@ -1,7 +1,7 @@
-# Overview
-I built a small command-line rabbit husbandry quiz to sharpen my TypeScript skills while practicing object-oriented patterns, recursion, and async workflows. The program guides a 4-H exhibitor through breeder-focused questions and shares quick husbandry tips after every answer.
+# Rabbit Savvy
+Rabbit Savvy is a rabbit-study companion for 4-H exhibitors, breeders, and serious rabbit people. Its command-line practice mode demonstrates TypeScript object-oriented patterns, recursion, and async workflows while presenting breeder-focused questions and practical rabbit-care notes.
 
-My goal was to deepen my understanding of TypeScript syntax (classes, generics-ready structures, async/await) and how to pair it with Node.js console utilities to craft useful training tools for youth breeders.
+The original development goal was to deepen understanding of TypeScript syntax (classes, generics-ready structures, async/await) and how to pair it with Node.js console utilities to craft useful training tools for youth breeders.
 
 [Software Demo Video](http://youtube.link.goes.here)
 

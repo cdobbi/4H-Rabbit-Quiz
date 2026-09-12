@@ -23,7 +23,7 @@
     "url": "https://github.com/cdobbi/Rabbit-Savvy/issues"
   },
   "homepage": "https://github.com/cdobbi/Rabbit-Savvy#readme",
-  "description": "Command-line rabbit husbandry quiz built with TypeScript",
+  "description": "Rabbit Savvy rabbit-study companion",
   "devDependencies": {
     "@capacitor/assets": "^3.0.5",
     "@capacitor/cli": "^8.5.1",

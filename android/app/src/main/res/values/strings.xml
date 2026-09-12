@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">Rabbit Husbandry Quiz</string>
-    <string name="title_activity_main">Rabbit Husbandry Quiz</string>
+    <string name="app_name">Rabbit Savvy</string>
+    <string name="title_activity_main">Rabbit Savvy</string>
     <string name="package_name">io.github.cdobbi.rabbithusbandryquiz</string>
     <string name="custom_url_scheme">io.github.cdobbi.rabbithusbandryquiz</string>
 </resources>

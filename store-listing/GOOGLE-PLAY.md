@@ -1,7 +1,7 @@
-# Rabbit Husbandry Quiz - Google Play Listing
+# Rabbit Savvy - Google Play Listing
 
 ## App name
-Rabbit Husbandry Quiz
+Rabbit Savvy
 
 ## Short description
 Study 50 rabbit-care questions free. Unlock the complete offline Rabbit Savvy study companion.
