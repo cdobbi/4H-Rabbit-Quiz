@@ -5314,7 +5314,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         readyToRestart = true;
         updateActionButtons();
         finalizeRound();
-        showFarewellModal("Thanks for practicing rabbit husbandry!");
+        showFarewellModal("Thanks for practicing with Rabbit Savvy!");
     }
     
     function finalizeRound() {
