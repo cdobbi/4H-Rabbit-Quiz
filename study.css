@@ -232,6 +232,14 @@ h1 {
 
 .game-setup-panel {
     margin-bottom: 32px;
+    border-color: #a9cddd;
+    border-top: 5px solid #175b7a;
+    background: #f3faff;
+}
+
+.game-setup-panel>.study-setup {
+    background: #f3faff;
+    box-shadow: none;
 }
 
 .collapsible-panel summary {
@@ -441,6 +449,10 @@ select {
     margin: 0 0 8px;
 }
 
+.confidence-area {
+    padding-top: 26px;
+}
+
 .confidence-area #stats {
     margin: 10px 0 0;
 }
@@ -570,9 +582,10 @@ input[type="number"] {
 .confidence {
     margin: 0;
     padding: 10px 12px;
-    border: 1px solid #d5e7f0;
-    border-radius: 6px;
-    background: #fbfdff;
+    border: 1px solid #a9cddd;
+    border-top: 5px solid #175b7a;
+    border-radius: 8px;
+    background: #f3faff;
 }
 
 .confidence:disabled {
@@ -612,15 +625,23 @@ input[type="number"] {
 }
 
 #pause,
-#exit,
+#exit {
+    border: 1px solid #a9cddd;
+    background: #f3faff;
+    color: #175b7a;
+}
+
+#pause:hover:not(:disabled),
+#exit:hover:not(:disabled) {
+    background: #e7f4fa;
+}
+
 #print-report {
     border: 1px solid #bfd5e0;
     background: #e2edf2;
     color: #254a60;
 }
 
-#pause:hover:not(:disabled),
-#exit:hover:not(:disabled),
 #print-report:hover:not(:disabled) {
     background: #d2e4ec;
 }
@@ -783,6 +804,10 @@ input[type="number"] {
 
     .question-workspace {
         grid-template-columns: 1fr;
+    }
+
+    .confidence-area {
+        padding-top: 0;
     }
 
     .confidence {
