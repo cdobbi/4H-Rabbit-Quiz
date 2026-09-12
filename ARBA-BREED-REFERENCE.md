@@ -168,3 +168,22 @@ This document records the project owner's supplied breed specifications and term
 - Hock: weight-bearing foot area. Pastern: ankle and portion below it; rear pastern is below the hock. Stifle: knee joint.
 - Crown: strong cartilage ridge at the top of the head forming the ear base on some lop breeds.
 - Dewclaws: on the inside of front legs only; none on hind legs.
+
+## Additional Rabbit Terms
+
+- Fault: a deviation from perfection or physical imperfection.
+- Buck: an intact male rabbit. Doe: an intact female rabbit.
+- Tattoo: a permanent identification mark in the left ear or both ears; a right-ear tattoo indicates an ARBA-registered rabbit.
+- Lactate: to produce milk. Kindle: the act of giving birth by rabbits.
+- Pedigree: genealogy of male and female ancestors that includes birth date, parents, grandparents, great-grandparents, and may include color, weight, and registration numbers.
+- Fryer or single fryer: market rabbit under 10 weeks old, weighing 3.5-5.5 lb. Roaster: under 6 months old, 5.5-9 lb. Stewer: over 6 months old and over 8 lb.
+- White toenail: a nail without pigmentation, showing only the pink cast of the blood vessel.
+- Breeder: a person raising a breed or variety to the Standard of Perfection, or a rabbit used primarily to produce offspring.
+- Breed: a class of domestic rabbits that reproduces distinctive characteristics such as fur, markings, shape, and size. Purebred: loosely, a rabbit meeting breed requirements for at least three generations.
+- Mutation: a sudden physical change caused by a gene alteration; Rex and Satin are well-known fur-structure mutations.
+- Definition: sharpness and clarity of a color break on a hair shaft, or contrast between two or more colors. Prime: ideal flesh and coat condition. Adult: a mature rabbit of breeding age.
+- Mandolin: a semi-arch body whose arch begins at the back of the shoulders rather than the nape of the neck.
+- Intermediate: in eligible 6-class breeds with a minimum ideal senior weight of 9 lb or more, a rabbit 6 months to under 8 months old, subject to breed-standard weights.
+- Senior: 6 months or older in 4-class breeds; 8 months or older in 6-class breeds, subject to minimum senior weight where stated.
+- Junior: under 6 months old. Pre-junior: under 3 months old, shown separately by sex and variety only where a breed's showroom classes allow it.
+- Strain: a genetically related bloodline with distinguishable heritable characteristics such as type, color, or coat.

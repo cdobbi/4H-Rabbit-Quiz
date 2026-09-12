@@ -4,10 +4,10 @@
 Rabbit Husbandry Quiz
 
 ## Short description
-Study 75 of 410 rabbit-care questions free. Unlock 335 more questions and Registrar practice.
+Study 75 of 433 rabbit-care questions free. Unlock 358 more questions and Registrar practice.
 
 ## Full description
-Rabbit Husbandry Quiz is a friendly study tool for 4-H rabbit exhibitors and learners preparing to strengthen their rabbit care knowledge. Start free with 75 of 410 questions across rabbit care topics. Unlock the remaining 335 questions with a one-time $19.99 Google Play purchase, including the complete Registrar study guide.
+Rabbit Husbandry Quiz is a friendly study tool for 4-H rabbit exhibitors and learners preparing to strengthen their rabbit care knowledge. Start free with 75 of 433 questions across rabbit care topics. Unlock the remaining 358 questions with a one-time $19.99 Google Play purchase, including the complete Registrar study guide.
 
 Features:
 - Study rabbit husbandry, health and biosecurity, genetics, ARBA procedures, and breeds and judging.
@@ -15,7 +15,7 @@ Features:
 - Use Learn, Exam, and Missed Questions modes.
 - Track local study history and confidence for answers.
 - Practice offline with no account required.
-- Try 75 of 410 questions free, then unlock the remaining 335 questions with one lifetime purchase. No subscription and no ads.
+- Try 75 of 433 questions free, then unlock the remaining 358 questions with one lifetime purchase. No subscription and no ads.
 
 This app provides independent practice material and is not affiliated with or endorsed by the American Rabbit Breeders Association. Verify current official standards and Registrar materials with ARBA resources.
 
