@@ -5187,9 +5187,8 @@ validateQuestionBank();
 
 const nonRegistrarQuestions = questionBank.filter((question) => question.studyTrack !== "registrar");
 const freeQuestionIds = new Set([
-    ...TOPICS.flatMap((topic) => nonRegistrarQuestions.filter((question) => question.topic === topic).slice(0, 15)),
-    ...nonRegistrarQuestions,
-].slice(0, 75).map((question) => question.id));
+    ...TOPICS.flatMap((topic) => nonRegistrarQuestions.filter((question) => question.topic === topic).slice(0, 10)),
+].map((question) => question.id));
 
 const questionText = document.getElementById("question");
 const questionCard = document.getElementById("question-card");
@@ -5254,8 +5253,8 @@ let waitingForNext = false;
 let roundComplete = false;
 let roundPaused = false;
 let celebrationTimeoutId;
-const betaFullAccess = true;
-let hasFullAccess = true;
+const betaFullAccess = false;
+let hasFullAccess = localStorage.getItem(FULL_ACCESS_STORAGE_KEY) === "true";
 
 function saveStats() { localStorage.setItem(STORAGE_KEY, JSON.stringify(stats)); }
 function selectedTopics() { return [...topicFilters.querySelectorAll("input:checked")].map((input) => input.value); }
@@ -5364,9 +5363,9 @@ function updateUpgradePanel() {
     upgradePanel.classList.toggle("unlocked", hasFullAccess);
     upgradeDetails.textContent = hasFullAccess
         ? betaFullAccess
-            ? `Beta access is on: all ${questionBank.length} questions, including the Registrar study guide, are ready to test.`
-            : `Full Question Bank unlocked: all ${questionBank.length} questions, including the Registrar study guide.`
-        : `Unlock ${lockedQuestionCount} more questions, including the complete Registrar study guide, for one payment of $19.99. Lifetime access, no subscription, and study offline anytime.`;
+            ? `Beta access is on: all ${questionBank.length} questions are ready to test.`
+            : `Full Question Bank unlocked: all ${questionBank.length} questions are ready to study.`
+        : `Unlock the complete Rabbit Savvy study guide: comprehensive, structured rabbit knowledge across care, health, genetics, ARBA procedures, and breeds and judging. Includes ${lockedQuestionCount} more questions for one payment of $19.99, lifetime access, no subscription, and study offline anytime.`;
     upgradeButton.hidden = hasFullAccess;
     restorePurchaseButton.hidden = hasFullAccess;
     updateTopicFilters();
