@@ -159,7 +159,7 @@ h1 {
 
 .upgrade-kicker {
     margin: 0 0 2px;
-    color: #28789d;
+    color: #175b7a;
     font-size: 0.76rem;
     font-weight: 700;
     letter-spacing: 0.04em;
@@ -176,7 +176,7 @@ h1 {
 
 .upgrade-panel p:not(.upgrade-kicker) {
     margin: 4px 0 0;
-    color: #486d85;
+    color: #365e73;
     font-size: 0.85rem;
     line-height: 1.35;
 }
@@ -196,7 +196,7 @@ h1 {
 .secondary-button {
     border: 1px solid #9bc3d8;
     background: #ffffff;
-    color: #28789d;
+    color: #175b7a;
 }
 
 .secondary-button:hover:not(:disabled) {
@@ -254,7 +254,7 @@ h1 {
 .control-group {
     display: grid;
     gap: 5px;
-    color: #315a75;
+    color: #254b63;
     font-family: Georgia, serif;
     font-size: 0.95rem;
     font-weight: 600;
@@ -298,14 +298,14 @@ select {
 #topic-filters legend {
     grid-column: 1 / -1;
     margin-bottom: 2px;
-    color: #315a75;
+    color: #254b63;
     font-weight: 700;
 }
 
 .confidence-title {
     width: 100%;
     margin: 0;
-    color: #315a75;
+    color: #254b63;
     font-weight: 700;
 }
 
@@ -419,7 +419,7 @@ select {
 }
 
 #stats {
-    color: #486d85;
+    color: #365e73;
 }
 
 .question-card {
@@ -681,14 +681,14 @@ input[type="number"] {
 
 .tutorial-content p {
     margin: 0 0 12px;
-    color: #315a75;
+    color: #254b63;
     line-height: 1.45;
 }
 
 .tutorial-content .tutorial-disclaimer {
     padding-top: 12px;
     border-top: 1px solid #d5e7f0;
-    color: #486d85;
+    color: #365e73;
     font-size: 0.82rem;
 }
 
