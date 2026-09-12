@@ -5365,7 +5365,7 @@ function updateUpgradePanel() {
         ? betaFullAccess
             ? `Beta access is on: all ${questionBank.length} questions are ready to test.`
             : `Full Question Bank unlocked: all ${questionBank.length} questions are ready to study.`
-        : `Unlock the complete Rabbit Savvy study guide: comprehensive, structured rabbit knowledge across care, health, genetics, ARBA procedures, and breeds and judging. Includes ${lockedQuestionCount} more questions for one payment of $19.99, lifetime access, no subscription, and study offline anytime.`;
+        : `Unlock Rabbit Savvy's comprehensive, independently authored study companion for exhibitors, breeders, and serious rabbit people. Explore structured rabbit knowledge across care, health, genetics, ARBA procedures, and breeds and judging - all available offline. Includes ${lockedQuestionCount} more questions for one payment of $14.99, lifetime access, and no subscription.`;
     upgradeButton.hidden = hasFullAccess;
     restorePurchaseButton.hidden = hasFullAccess;
     updateTopicFilters();
