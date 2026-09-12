@@ -19,7 +19,7 @@ rmSync(webDirectory, { recursive: true, force: true });
 mkdirSync(fontDirectory, { recursive: true });
 mkdirSync(localFontDirectory, { recursive: true });
 
-for (const fileName of ["index.html", "app.js", "study.css", "wallpapers.js"]) {
+for (const fileName of ["index.html", "app.js", "questions.js", "study.css", "wallpapers.js"]) {
     cpSync(join(__dirname, fileName), join(webDirectory, fileName));
 }
 
@@ -28,7 +28,7 @@ const bundledIndex = join(webDirectory, "index.html");
 const indexContent = require("node:fs").readFileSync(bundledIndex, "utf8");
 writeFileSync(bundledIndex, indexContent.replace(
     '<script src="wallpapers.js"></script>\n    <script src="app.js" defer></script>',
-    `<script src="app-config.js"></script>\n    <script src="wallpapers.js?v=${buildVersion}"></script>\n    <script src="app.js?v=${buildVersion}" defer></script>`,
+    `<script src="app-config.js"></script>\n    <script src="wallpapers.js?v=${buildVersion}"></script>\n    <script src="questions.js?v=${buildVersion}"></script>\n    <script src="app.js?v=${buildVersion}" defer></script>`,
 ));
 
 for (const fileName of wallpaperFiles) {
