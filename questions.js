@@ -359,6 +359,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 44
         {
+            studyTrack: "intermediate",
             prompt: "Why does the association require a permanent tattoo in the rabbit's left ear?",
             options: [
                 "It is decorative",
@@ -431,6 +432,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 51
         {
+            studyTrack: "intermediate",
             prompt: "What body type describes meat breeds like the New Zealand or Californian?",
             options: ["Semi-arch", "Commercial", "Compact"],
             correctIndex: 1,
@@ -456,6 +458,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 54
         {
+            studyTrack: "intermediate",
             prompt: "What does the term 'moon eye' describe in rabbit judging?",
             options: [
                 "A desirable blue sheen",
@@ -977,6 +980,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 100
         {
+            studyTrack: "intermediate",
             prompt: "What are the four breeding programs?",
             options: [
                 "Line breeding, inbreeding, outcrossing, crossbreeding",
@@ -1038,6 +1042,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 105
         {
+            studyTrack: "intermediate",
             prompt: "What is coprophagy?",
             options: [
                 "Eating cecotropes",
@@ -1087,6 +1092,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         // Market Rabbit Project - Juniors
         // Question 109
         {
+            studyTrack: "intermediate",
             prompt: "In the United States, are rabbits classified as livestock?",
             options: [
                 "Yes",
@@ -1111,6 +1117,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 111
         {
+            studyTrack: "intermediate",
             prompt: "In which ear should rabbits be tattooed?",
             options: [
                 "Left",
@@ -1208,6 +1215,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 119
         {
+            studyTrack: "intermediate",
             prompt: "What is the minimum age for a rabbit to be registered for a show?",
             options: [
                 "6 weeks",
@@ -1305,6 +1313,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 127
         {
+            studyTrack: "intermediate",
             prompt: "Which breed originated in France?",
             options: [
                 "Champagne d'Argent",
@@ -1329,6 +1338,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 129
         {
+            studyTrack: "intermediate",
             prompt: "Which of the following is a temporary disqualification?",
             options: [
                 "Sore hocks",
