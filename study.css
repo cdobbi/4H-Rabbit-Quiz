@@ -136,6 +136,16 @@ h1 {
     white-space: nowrap;
 }
 
+.audience-note {
+    max-width: 42rem;
+    margin: 0 auto 8px;
+    color: #365e73;
+    font-family: Georgia, serif;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    text-align: center;
+}
+
 #question-bank-count {
     color: #000000;
     font-weight: 400;
@@ -176,7 +186,7 @@ h1 {
 
 .upgrade-panel p:not(.upgrade-kicker) {
     margin: 4px 0 0;
-    color: #365e73;
+    color: #254b63;
     font-size: 0.85rem;
     line-height: 1.35;
 }
@@ -371,7 +381,7 @@ select {
     margin: 0 0 16px;
     padding: 10px 0 0;
     border: 0;
-    color: #315a75;
+    color: #254b63;
     font-size: 0.9rem;
     font-weight: 600;
 }
@@ -688,7 +698,7 @@ input[type="number"] {
 .tutorial-content .tutorial-disclaimer {
     padding-top: 12px;
     border-top: 1px solid #d5e7f0;
-    color: #365e73;
+    color: #254b63;
     font-size: 0.82rem;
 }
 
@@ -967,7 +977,7 @@ input[type="number"] {
 
 .shortcut-note {
     margin: 10px 0 0;
-    color: #567b90;
+    color: #254b63;
     font-family: Georgia, serif;
     font-size: 0.78rem;
 }
