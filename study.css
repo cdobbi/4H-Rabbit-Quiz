@@ -139,7 +139,7 @@ h1 {
 .audience-note {
     max-width: 42rem;
     margin: 0 auto 8px;
-    color: #365e73;
+    color: #254b63;
     font-family: Georgia, serif;
     font-size: 0.9rem;
     line-height: 1.45;
@@ -397,7 +397,7 @@ select {
 }
 
 #topic-filters label[data-topic="husbandry"] {
-    --topic-color: #28789d;
+    --topic-color: #175b7a;
 }
 
 #topic-filters label[data-topic="health-biosecurity"] {
@@ -429,7 +429,18 @@ select {
 }
 
 #stats {
-    color: #365e73;
+    color: #254b63;
+}
+
+.question-workspace {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(190px, 1fr);
+    align-items: start;
+    gap: 16px;
+}
+
+.question-workspace .confidence {
+    grid-column: auto;
 }
 
 .question-card {
@@ -440,7 +451,7 @@ select {
 }
 
 .question-card[data-topic="husbandry"] {
-    --topic-color: #28789d;
+    --topic-color: #175b7a;
     --topic-wash: #dff1f8;
 }
 
@@ -504,7 +515,7 @@ button:hover:not(:disabled) {
 
 button:disabled {
     background: #c5d9e3;
-    color: #617987;
+    color: #4b6675;
     cursor: not-allowed;
 }
 
@@ -551,7 +562,7 @@ input[type="number"] {
 }
 
 .confidence {
-    margin-top: 12px;
+    margin: 0;
     padding: 10px 12px;
     border: 1px solid #d5e7f0;
     border-radius: 6px;
@@ -559,7 +570,7 @@ input[type="number"] {
 }
 
 .confidence:disabled {
-    color: #6c8290;
+    color: #4b6675;
 }
 
 #feedback {
@@ -762,6 +773,14 @@ input[type="number"] {
 
     .study-track-filters {
         gap: 8px 12px;
+    }
+
+    .question-workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .confidence {
+        margin-top: 12px;
     }
 }
 
