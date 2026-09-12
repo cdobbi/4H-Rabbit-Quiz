@@ -169,6 +169,21 @@ This document records the project owner's supplied breed specifications and term
 - Crown: strong cartilage ridge at the top of the head forming the ear base on some lop breeds.
 - Dewclaws: on the inside of front legs only; none on hind legs.
 
+## Coat and Fur Glossary
+
+- Rollback: gradual return of fur to normal after it is stroked from hindquarters to shoulders; slower than flyback. Flyback: fur quickly returns to its smooth, normal position after the same stroke.
+- Density: number of fur fibers in a given area. Texture: the tactile surface characteristic or feel of fur. Coat: the fur covering of a rabbit. Fur: the hair coat of a rabbit.
+- Pelt: the hide and fur of an animal after removal. Molt: natural shedding of fur. Mats: areas of entangled wool or fur. Matted: wool or fur entangled in a thick mass.
+- Rex: a genetic recessive variation in which upright guard hairs are equal to the regular fur, producing an even coat. Rex guard hairs should not protrude and ideally match the undercoat length. Plush: dense, fine, very soft hair, often describing Rex fur.
+- Satin: a mutation creating greater outer hair-shell translucency, allowing pigment to show clearly and reflect more light. Sheen is the principal bright, natural luster caused by the glass-like translucent guard-hair shell.
+- Guard hair: longer, coarser, protruding coat hair that protects undercoat and gives resilience and wearing quality. Undercoat: short fur partly concealed by guard hairs.
+- Wool: judged as a balanced combination of guard hairs and underwool according to density, texture, and length for each wool breed.
+- Glossy: natural reflection, luster, or brightness of healthy fur. Luster: brightness and brilliance of fur.
+- Condition: overall physical state in relation to health, cleanliness, fur, and grooming. Finish: desired degree of perfection in condition, including prime coat, color, and flesh.
+- Undercolor or base color: color at the base of the fur shaft next to skin.
+- Standing fur: Silver Fox fur type; long and dense, it stays upright when stroked from rump toward head and returns only when stroked from head toward rump.
+- Depth: a straight measurement from any topline point to the lowest body point there, or the extension of color down the hair shaft.
+
 ## Additional Rabbit Terms
 
 - Fault: a deviation from perfection or physical imperfection.
