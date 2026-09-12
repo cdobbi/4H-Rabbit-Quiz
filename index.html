@@ -76,9 +76,9 @@
             <div class="fact" id="fact" aria-live="polite"></div>
         </section>
         <p class="shortcut-note">Tip: press 1, 2, or 3 to choose an answer.</p>
-        <fieldset id="confidence" class="confidence">
-            <legend>Confidence check <button id="confidence-help" class="help-button" type="button"
-                    aria-label="Why rate confidence?">?</button></legend>
+        <fieldset id="confidence" class="confidence" aria-labelledby="confidence-label">
+            <div id="confidence-label" class="confidence-title">Confidence check <button id="confidence-help" class="help-button"
+                    type="button" aria-label="Why rate confidence?">?</button></div>
             <label><input type="radio" name="confidence" value="guessing" /> Guessing</label>
             <label><input type="radio" name="confidence" value="somewhat" /> Somewhat sure</label>
             <label><input type="radio" name="confidence" value="certain" /> Certain</label>

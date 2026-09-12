@@ -288,8 +288,9 @@ select {
     flex-wrap: wrap;
     gap: 8px 14px;
     margin: 0;
-    padding: 8px 0 0;
-    border: 0;
+    padding: 10px 12px 12px;
+    border: 1px solid #d5e7f0;
+    border-radius: 8px;
     font-family: Georgia, serif;
     font-size: 0.84rem;
 }
@@ -301,9 +302,9 @@ select {
     font-weight: 700;
 }
 
-.confidence legend {
+.confidence-title {
     width: 100%;
-    margin-bottom: 2px;
+    margin: 0;
     color: #315a75;
     font-weight: 700;
 }
@@ -570,13 +571,17 @@ input[type="number"] {
 
 .action-buttons {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 12px;
     margin-top: 16px;
 }
 
 .action-buttons button {
-    width: 100%;
+    flex: 1 1 0;
+}
+
+.action-buttons #next {
+    flex-basis: 100%;
 }
 
 #pause,
