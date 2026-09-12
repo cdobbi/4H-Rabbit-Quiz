@@ -10,7 +10,7 @@ Study 50 rabbit-care questions free. Unlock the complete offline Rabbit Savvy st
 Rabbit Savvy is a comprehensive, independently authored rabbit-study companion for exhibitors, breeders, and serious rabbit people. Start free with 50 of 414 questions across rabbit care topics. Unlock the remaining 364 questions with a one-time $14.99 Google Play purchase and study the complete question bank offline.
 
 Features:
-- Study rabbit husbandry, health and biosecurity, genetics, ARBA procedures, and breeds and judging.
+- Study rabbit husbandry, health and biosecurity, genetics, show procedures, and breeds and judging.
 - Choose Cloverbud, Junior, Intermediate, Senior, or Registrar study paths.
 - Use Learn, Exam, and Missed Questions modes.
 - Track local study history and confidence for answers.

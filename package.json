@@ -6,6 +6,7 @@
     "start": "ts-node src/index.ts",
     "build": "tsc",
     "test": "jest",
+    "questions:validate": "node validate-questions.js",
     "web:build": "node build-web.js",
     "web:build:beta": "node build-web.js --beta",
     "android:sync": "npm run web:build && npx cap sync android",

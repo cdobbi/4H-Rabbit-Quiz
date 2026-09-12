@@ -1,44 +1,45 @@
 # Rabbit Savvy
-Rabbit Savvy is a rabbit-study companion for 4-H exhibitors, breeders, and serious rabbit people. Its command-line practice mode demonstrates TypeScript object-oriented patterns, recursion, and async workflows while presenting breeder-focused questions and practical rabbit-care notes.
+Rabbit Savvy is a comprehensive, independently authored rabbit-study companion for 4-H exhibitors, breeders, and serious rabbit people. The browser app works offline and offers a 50-question free sample, with a one-time unlock for the full question bank.
 
-The original development goal was to deepen understanding of TypeScript syntax (classes, generics-ready structures, async/await) and how to pair it with Node.js console utilities to craft useful training tools for youth breeders.
+Rabbit Savvy is independent practice material, not an official licensing product. Verify current show standards and registration material against official resources.
 
-[Software Demo Video](http://youtube.link.goes.here)
+## Development
 
-# Development Environment
-- Visual Studio Code with the official TypeScript extension for editing and IntelliSense.
-- Node.js 20.x runtime plus npm scripts for building and running.
-- TypeScript compiler (`tsc`) with `ts-node` for quick execution, and Jest/ts-jest for testing hooks.
+- `questions.js` contains the browser question data.
+- `app.js` contains quiz behavior, access rules, validation, and UI logic.
+- `build-web.js` creates the offline browser bundle in `www/`.
 
-The language is TypeScript, and the key libraries are `readline/promises` from Node for asynchronous input along with `ts-node` and `jest` tooling packages.
+Run these checks after changing questions or app behavior:
 
-# Useful Websites
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
-- [Node.js Readline API](https://nodejs.org/api/readline.html)
-- [Jest Documentation](https://jestjs.io/docs/getting-started)
+```powershell
+npm run questions:validate
+npm test -- --runInBand
+npm run web:build
+```
 
-# Future Work
-- Add unit tests that cover the scoring logic and error handling paths.
-- Persist quiz results to a JSON or CSV log for tracking improvement.
-- Expand the genetics section with pedigree-based follow-up questions.
+`questions:validate` checks for malformed or duplicate prompts, sequential question markers, valid topic/track metadata, and exactly 10 free questions in each topic.
 
-# Android and Google Play
-The browser quiz is packaged as an offline Android app through Capacitor. Install dependencies, then run:
+## Android and Google Play
+
+Rabbit Savvy is packaged as an offline Android app through Capacitor. Use the public build for the purchase-gated release:
 
 ```powershell
 npm run android:sync
-.\android\gradlew.bat -p android assembleDebug
-```
-
-For a Google Play closed-test build with all questions available and no purchase flow, sync the beta bundle instead:
-
-```powershell
-npm run android:sync:beta
 .\android\gradlew.bat -p android bundleRelease
 ```
 
-Use `npm run android:sync` for the public, purchase-gated release.
+Use the beta build only for closed testing with all questions available:
 
-The debug APK is created under `android/app/build/outputs/apk/debug/`. For a release bundle, open the native project with `npm run android:open`, configure secure release signing in Android Studio, and generate a signed Android App Bundle (`.aab`). Do not commit signing keys or passwords.
+```powershell
+npm run android:sync:beta
+```
 
-The draft privacy policy is in `privacy-policy.html`, and the Google Play listing copy/checklist is in `store-listing/GOOGLE-PLAY.md`. Host the privacy policy at a public HTTPS URL before entering it in Google Play Console.
+Before Play submission:
+
+- Host [privacy-policy.html](privacy-policy.html) at a permanent public HTTPS URL.
+- Create the one-time `full_question_bank` managed product at $14.99 in Play Console.
+- Test purchase and Restore Purchase on a physical Android device using an internal testing track.
+- Configure a signing key outside this repository and produce a signed `.aab`.
+- Complete the artwork in [store-listing/assets/README.md](store-listing/assets/README.md).
+
+The Play listing copy and setup checklist are in [store-listing/GOOGLE-PLAY.md](store-listing/GOOGLE-PLAY.md). Do not commit signing keys or passwords.

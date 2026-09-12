@@ -359,6 +359,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 44
         {
+            topic: "ARBA Procedures",
             studyTrack: "intermediate",
             prompt: "Why does the association require a permanent tattoo in the rabbit's left ear?",
             options: [
@@ -432,6 +433,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 51
         {
+            topic: "ARBA Procedures",
             studyTrack: "intermediate",
             prompt: "What body type describes meat breeds like the New Zealand or Californian?",
             options: ["Semi-arch", "Commercial", "Compact"],
@@ -458,6 +460,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 54
         {
+            topic: "ARBA Procedures",
             studyTrack: "intermediate",
             prompt: "What does the term 'moon eye' describe in rabbit judging?",
             options: [
@@ -980,6 +983,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 100
         {
+            topic: "ARBA Procedures",
             studyTrack: "intermediate",
             prompt: "What are the four breeding programs?",
             options: [
@@ -1042,6 +1046,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 105
         {
+            topic: "ARBA Procedures",
             studyTrack: "intermediate",
             prompt: "What is coprophagy?",
             options: [
@@ -1215,6 +1220,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 119
         {
+            topic: "ARBA Procedures",
             studyTrack: "intermediate",
             prompt: "What is the minimum age for a rabbit to be registered for a show?",
             options: [
@@ -1229,6 +1235,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
 
         // Question 120
         {
+            topic: "ARBA Procedures",
             prompt: "What does the 'E' locus control in rabbit genetics?",
             options: [
                 "Fur texture",
@@ -1338,6 +1345,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 129
         {
+            topic: "ARBA Procedures",
             studyTrack: "intermediate",
             prompt: "Which of the following is a temporary disqualification?",
             options: [
@@ -1435,6 +1443,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 137
         {
+            topic: "ARBA Procedures",
             prompt: "Which breed is known for satin fur?",
             options: [
                 "Satin",
@@ -1460,6 +1469,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 139
         {
+            topic: "ARBA Procedures",
             prompt: "Which breed is known for wool fur?",
             options: [
                 "Angora",
