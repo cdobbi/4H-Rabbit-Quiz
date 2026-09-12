@@ -136,16 +136,6 @@ h1 {
     white-space: nowrap;
 }
 
-.audience-note {
-    max-width: 42rem;
-    margin: 0 auto 8px;
-    color: #254b63;
-    font-family: Georgia, serif;
-    font-size: 0.9rem;
-    line-height: 1.45;
-    text-align: center;
-}
-
 #question-bank-count {
     color: #000000;
     font-weight: 400;
