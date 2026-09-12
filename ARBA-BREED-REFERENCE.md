@@ -202,3 +202,35 @@ This document records the project owner's supplied breed specifications and term
 - Senior: 6 months or older in 4-class breeds; 8 months or older in 6-class breeds, subject to minimum senior weight where stated.
 - Junior: under 6 months old. Pre-junior: under 3 months old, shown separately by sex and variety only where a breed's showroom classes allow it.
 - Strain: a genetically related bloodline with distinguishable heritable characteristics such as type, color, or coat.
+
+## Health and Disqualification Glossary
+
+- Mastitis: inflammation of one or more mammary glands; a disqualification from competition.
+- Simple malocclusion: upper and lower incisors meet evenly without the upper incisors overlapping the lower incisors; a disqualification from competition. Malocclusion is a disqualification.
+- Sore hocks: bruised areas under the hocks that may become infected or abscessed; not considered a disease.
+- Splay leg: underdeveloped muscles and ligaments supporting the limbs allow the legs to spread outward. It may be hereditary and is a non-protestable disqualification from competition.
+- Split penis: a large opening extending more than halfway up or down the shaft; it may splay open and resemble a doe's genitalia. It is a disqualification from competition.
+- Disqualification: one or more defects, deformities, or blemishes that render a rabbit ineligible for competition or registration.
+- Wry tail: a tail permanently bent, carried, or twisted to one side; a corkscrew tail is a form of wry tail. It is a disqualification from competition.
+- Pigeon breast: a narrow chest with a protruding V-shaped breastbone; a non-protestable disqualification from competition.
+- Hernia: protrusion of an organ or other viscera through the wall or cavity containing it, possibly near the abdomen, umbilicus, or genitals; a disqualification from competition.
+- Parasite: an organism living on or within a host animal. Lice are sluggish, blood-sucking insects. Mites are tiny pests that may appear as dandruff, often around the back of the neck. Parasites are disqualifications from competition.
+- Pinworm: a small worm approximately one-quarter inch long that may be found on or around the anus.
+- Dead tail: hard and brittle because of lost circulation; user stated it is not a disqualification.
+- Deviated spine: deformed or misaligned vertebrae, often detected by gentle topline palpation; a disqualification from competition.
+- Caked teat or breast: a swollen, hard, milk-filled mammary gland caused by excessive milk production.
+- Ringworm: hair loss in circumscribed patches, usually on the head but sometimes elsewhere; excludes a rabbit from competition until healed.
+- Peg teeth: small residual incisors just behind the normal upper incisors; the term is sometimes incorrectly used for budding teeth.
+- Abscess or boil: localized infection-related inflammation that may cause swelling, heat, redness, or pus; a disqualification from competition.
+- Purulent discharge: white pus from the nose or an abscess; a disqualification from competition.
+- Weepy eye: abnormal eye discharge that mats the area below the eye; disqualifying if combined with conjunctivitis.
+- Cataract: an opaque or white lens; a disqualification from competition.
+- Entropion: an inward-folding eyelid that can injure the eye; a disqualification from competition.
+- Blemish: any defect or fault that detracts from a rabbit's appearance.
+- Wry neck: head tilt with loss of balance when the balance center in the ear or brain is disturbed. Possible causes include ear infection, E. cuniculi, head injury, liver disease, or dietary imbalance.
+- Tumor: an abnormal tissue growth; a disqualification from competition.
+- Mange: skin disease caused by parasitic mites that may cause itching, dandruff, lesions, scabs, and hair loss; a disqualification from competition.
+- Deviated sternum: an irregular breastbone, often a lower-rib-cage lump or cone-shaped protrusion; a disqualification from competition.
+- Ear mites: cause an inflamed, scabby condition inside the ear; a disqualification from competition.
+- Cold: may include repeated sneezing and white nasal discharge; a disqualification from competition.
+- Vent disease: affects both sexes and may cause scabby, reddened genitalia with pus; a disqualification from competition.
