@@ -30,6 +30,6 @@ Host `privacy-policy.html` at a public HTTPS address before submitting to Google
 - Set the target audience and complete the content rating questionnaire accurately.
 - Declare no data collected in the Data Safety form, provided the app remains offline-only.
 - In Play Console, create a managed product with ID `full_question_bank`, set it as a one-time product, and set its price to $14.99 before testing purchases.
-- Upload a 512 x 512 PNG app icon, at least two phone screenshots, and a 1024 x 500 feature graphic.
+- Review and upload the prepared icon, screenshots, and feature graphic in `store-listing/assets/`.
 - Upload the signed Android App Bundle (`.aab`) to Internal testing before Production.
 - Store the signing key and its passwords securely. Do not commit them to this repository.
