@@ -359,7 +359,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 44
         {
-            prompt: "How many generations must appear on a pedigree for ARBA registration?",
+            prompt: "How many generations must appear on a pedigree for show registration?",
             options: ["Two", "Three", "Four", "Five"],
             correctIndex: 2,
             fact:
@@ -367,7 +367,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 45
         {
-            prompt: "Why does ARBA require a permanent tattoo in the rabbit's left ear?",
+            prompt: "Why does the association require a permanent tattoo in the rabbit's left ear?",
             options: [
                 "It is decorative",
                 "It is the official identification that matches show paperwork",
@@ -439,7 +439,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 52
         {
-            prompt: "What ARBA body type describes meat breeds like the New Zealand or Californian?",
+            prompt: "What body type describes meat breeds like the New Zealand or Californian?",
             options: ["Semi-arch", "Commercial", "Compact"],
             correctIndex: 1,
             fact:
@@ -456,7 +456,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         // Question 54
         {
             prompt:
-                "Which ARBA grouping highlights primarily pet or fancy breeds such as Dutch or Holland Lops?",
+                "Which show grouping highlights primarily pet or fancy breeds such as Dutch or Holland Lops?",
             options: ["Commercial", "Fancy", "Meat pen"],
             correctIndex: 1,
             fact:
@@ -484,7 +484,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 57
         {
-            prompt: "Which of the following is recognized as a giant breed by ARBA?",
+            prompt: "Which of the following is recognized as a giant breed in the Standard?",
             options: ["Netherland Dwarf", "Flemish Giant", "Dutch"],
             correctIndex: 1,
             fact:
@@ -496,7 +496,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             options: ["Holland Lop", "Silver Marten", "Belgian Hare"],
             correctIndex: 0,
             fact:
-                "Holland Lops top ARBA registration lists due to their compact body type, rollback fur, and friendly nature.",
+                "Holland Lops top show registration lists due to their compact body type, rollback fur, and friendly nature.",
         },
         // Question 59
         {
@@ -804,7 +804,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 86
         {
-            prompt: "According to ARBA, how many breeds of rabbits are there? Name the most recent breed.",
+            prompt: "According to the Standard, how many breeds of rabbits are there? Name the most recent breed.",
             options: [
                 "20, Lionhead",
                 "50, Lionhead",
@@ -812,19 +812,19 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
                 "100, Flemish Giant",
             ],
             correctIndex: 2,
-            fact: "ARBA recognizes over 50 breeds, with Lionhead being one of the most recently accepted breeds.",
+            fact: "The standard recognizes over 50 breeds, with Lionhead being one of the most recently accepted breeds.",
         },
         // Question 87
         {
-            prompt: "What is ARBA?",
+            prompt: "What does a national rabbit-breeders association provide?",
             options: [
-                "American Rabbit Breeders Association",
-                "Animal Rescue Bureau of America",
-                "Association of Rabbit Breeding Agencies",
-                "American Rodent Breeders Association",
+                "A national rabbit-breeders association",
+                "A national animal-rescue bureau",
+                "A rabbit-breeding agency network",
+                "A national rodent-breeders association",
             ],
             correctIndex: 0,
-            fact: "ARBA is the American Rabbit Breeders Association, the primary organization for rabbit breeders and shows.",
+            fact: "A national rabbit-breeders association provides breed standards, registration, education, and show programs.",
         },
         // Question 88
         {
@@ -1042,7 +1042,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
                 "Guard, Undercoat, Wool, Satin",
             ],
             correctIndex: 0,
-            fact: "ARBA recognizes four fur types: Normal, Rex, Satin, and Wool.",
+            fact: "The standard recognizes four fur types: Normal, Rex, Satin, and Wool.",
         },
         // Question 106
         {
@@ -1084,13 +1084,13 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         {
             prompt: "What is the Standard of Perfection?",
             options: [
-                "ARBA guide for judging rabbits",
+                "Standard of Perfection guide for judging rabbits",
                 "A feeding program",
                 "A tattooing method",
                 "A breeding plan",
             ],
             correctIndex: 0,
-            fact: "The Standard of Perfection is ARBA's official guide describing ideal characteristics for each breed.",
+            fact: "The Standard of Perfection is The standard's official guide describing ideal characteristics for each breed.",
         },
         // Market Rabbit Project - Juniors
         // Question 110
@@ -1127,12 +1127,12 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
                 "Either is acceptable",
             ],
             correctIndex: 0,
-            fact: "Official ARBA identification requires tattooing in the left ear only.",
+            fact: "Official rabbit identification requires tattooing in the left ear only.",
         },
         // ARBA Standard & Genetics - Advanced
         // Question 113
         {
-            prompt: "Which breed is recognized by ARBA as having a 'mandolin' body type?",
+            prompt: "Which breed is recognized in the Standard as having a 'mandolin' body type?",
             options: [
                 "Mini Rex",
                 "American Fuzzy Lop",
@@ -1144,7 +1144,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 114
         {
-            prompt: "Which breed was most recently added to the ARBA Standard of Perfection?",
+            prompt: "Which breed was most recently added to the Standard of Perfection?",
             options: [
                 "Lionhead",
                 "Silver Marten",
@@ -1152,7 +1152,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
                 "Champagne d'Argent",
             ],
             correctIndex: 0,
-            fact: "Lionhead was among the most recently accepted breeds in ARBA's Standard of Perfection.",
+            fact: "Lionhead was among the most recently accepted breeds in The standard's Standard of Perfection.",
         },
         // Question 115
         {
@@ -1180,7 +1180,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 117
         {
-            prompt: "Which of the following is a disqualification in ARBA shows?",
+            prompt: "Which of the following is a disqualification in rabbit shows?",
             options: [
                 "Missing toenail",
                 "Slightly uneven fur",
@@ -1204,7 +1204,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 119
         {
-            prompt: "To register a rabbit with ARBA, what must be true?",
+            prompt: "To register a rabbit for a show, what must be true?",
             options: [
                 "Rabbit must meet breed standard and have a complete 4-generation pedigree",
                 "Rabbit must be tattooed and weigh over 5 lbs",
@@ -1212,11 +1212,11 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
                 "Rabbit must be bred by the registrar",
             ],
             correctIndex: 0,
-            fact: "ARBA registration requires meeting breed standards and providing a documented four-generation pedigree.",
+            fact: "show registration requires meeting breed standards and providing a documented four-generation pedigree.",
         },
         // Question 120
         {
-            prompt: "What is the minimum age for a rabbit to be registered with ARBA?",
+            prompt: "What is the minimum age for a rabbit to be registered for a show?",
             options: [
                 "6 weeks",
                 "3 months",
@@ -1224,7 +1224,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
                 "1 year",
             ],
             correctIndex: 2,
-            fact: "ARBA registration requires a rabbit to be at least 6 months old. Show entry requires a rabbit to be at least 3 months old.",
+            fact: "show registration requires a rabbit to be at least 6 months old. Show entry requires a rabbit to be at least 3 months old.",
         },
 
         // Question 121
@@ -1241,7 +1241,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 122
         {
-            prompt: "What is the definition of 'finish' in ARBA judging?",
+            prompt: "What is the definition of 'finish' in the association judging?",
             options: [
                 "The overall condition of flesh and fur",
                 "The tattoo process",
@@ -1277,19 +1277,19 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 125
         {
-            prompt: "What is the ARBA motto?",
+            prompt: "What is the the association motto?",
             options: [
                 "To Make the Best Better",
                 "Dedicated to the Betterment of Rabbits and Cavy",
                 "Learning by Doing",
-                "Grow with ARBA",
+                "Grow with the association",
             ],
             correctIndex: 1,
-            fact: "ARBA's official motto is 'Dedicated to the Betterment of Rabbits and Cavy.'",
+            fact: "The association's official motto is 'Dedicated to the Betterment of Rabbits and Cavy.'",
         },
         // Question 126
         {
-            prompt: "Which body type is NOT recognized by ARBA?",
+            prompt: "Which body type is NOT recognized in the Standard?",
             options: [
                 "Compact",
                 "Commercial",
@@ -1297,7 +1297,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
                 "Athletic",
             ],
             correctIndex: 3,
-            fact: "ARBA recognizes compact, commercial, cylindrical, semi-arch, and full-arch body types.",
+            fact: "The standard recognizes compact, commercial, cylindrical, semi-arch, and full-arch body types.",
         },
         // Question 127
         {
@@ -1409,7 +1409,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 136
         {
-            prompt: "What is the ARBA Standard of Perfection used for?",
+            prompt: "What is the Standard of Perfection used for?",
             options: [
                 "Judging rabbits",
                 "Feeding rabbits",
@@ -1421,7 +1421,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 137
         {
-            prompt: "Which of the following is NOT a recognized fur type by ARBA?",
+            prompt: "Which of the following is NOT a recognized fur type in the Standard?",
             options: [
                 "Normal",
                 "Rex",
@@ -1429,7 +1429,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
                 "Curly",
             ],
             correctIndex: 3,
-            fact: "ARBA recognizes Normal, Rex, Satin, and Wool fur types; Curly is not an official category.",
+            fact: "The standard recognizes Normal, Rex, Satin, and Wool fur types; Curly is not an official category.",
         },
         // Question 138
         {
@@ -1457,7 +1457,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 140
         {
-            prompt: "What is the definition of 'finish' in ARBA judging?",
+            prompt: "What is the definition of 'finish' in the association judging?",
             options: [
                 "The overall condition of flesh and fur",
                 "The tattoo process",
@@ -1493,19 +1493,19 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 143
         {
-            prompt: "What is the ARBA motto?",
+            prompt: "What is the the association motto?",
             options: [
                 "To Make the Best Better",
                 "Dedicated to the Betterment of Rabbits and Cavy",
                 "Learning by Doing",
-                "Grow with ARBA",
+                "Grow with the association",
             ],
             correctIndex: 1,
-            fact: "ARBA's official motto is 'Dedicated to the Betterment of Rabbits and Cavy.'",
+            fact: "The association's official motto is 'Dedicated to the Betterment of Rabbits and Cavy.'",
         },
         // Question 144
         {
-            prompt: "Which body type is NOT recognized by ARBA?",
+            prompt: "Which body type is NOT recognized in the Standard?",
             options: [
                 "Compact",
                 "Commercial",
@@ -1513,7 +1513,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
                 "Athletic",
             ],
             correctIndex: 3,
-            fact: "ARBA recognizes compact, commercial, cylindrical, semi-arch, and full-arch body types.",
+            fact: "The standard recognizes compact, commercial, cylindrical, semi-arch, and full-arch body types.",
         },
         // Question 145
         {
@@ -1625,7 +1625,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 154
         {
-            prompt: "What is the ARBA Standard of Perfection used for?",
+            prompt: "What is the Standard of Perfection used for?",
             options: [
                 "Judging rabbits",
                 "Feeding rabbits",
@@ -1637,7 +1637,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 155
         {
-            prompt: "Which of the following is NOT a recognized fur type by ARBA?",
+            prompt: "Which of the following is NOT a recognized fur type in the Standard?",
             options: [
                 "Normal",
                 "Rex",
@@ -1645,7 +1645,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
                 "Curly",
             ],
             correctIndex: 3,
-            fact: "ARBA recognizes Normal, Rex, Satin, and Wool fur types; Curly is not an official category.",
+            fact: "The standard recognizes Normal, Rex, Satin, and Wool fur types; Curly is not an official category.",
         },
         // Question 156
         {
@@ -1673,7 +1673,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 158
         {
-            prompt: "What is the definition of 'finish' in ARBA judging?",
+            prompt: "What is the definition of 'finish' in the association judging?",
             options: [
                 "The overall condition of flesh and fur",
                 "The tattoo process",
@@ -1709,19 +1709,19 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 161
         {
-            prompt: "What is the ARBA motto?",
+            prompt: "What is the the association motto?",
             options: [
                 "To Make the Best Better",
                 "Dedicated to the Betterment of Rabbits and Cavy",
                 "Learning by Doing",
-                "Grow with ARBA",
+                "Grow with the association",
             ],
             correctIndex: 1,
-            fact: "ARBA's official motto is 'Dedicated to the Betterment of Rabbits and Cavy.'",
+            fact: "The association's official motto is 'Dedicated to the Betterment of Rabbits and Cavy.'",
         },
         // Question 162
         {
-            prompt: "Which body type is NOT recognized by ARBA?",
+            prompt: "Which body type is NOT recognized in the Standard?",
             options: [
                 "Compact",
                 "Commercial",
@@ -1729,7 +1729,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
                 "Athletic",
             ],
             correctIndex: 3,
-            fact: "ARBA recognizes compact, commercial, cylindrical, semi-arch, and full-arch body types.",
+            fact: "The standard recognizes compact, commercial, cylindrical, semi-arch, and full-arch body types.",
         },
         // Question 163
         {
@@ -1841,7 +1841,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 172
         {
-            prompt: "What is the ARBA Standard of Perfection used for?",
+            prompt: "What is the Standard of Perfection used for?",
             options: [
                 "Judging rabbits",
                 "Feeding rabbits",
@@ -1853,7 +1853,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 173
         {
-            prompt: "Which of the following is NOT a recognized fur type by ARBA?",
+            prompt: "Which of the following is NOT a recognized fur type in the Standard?",
             options: [
                 "Normal",
                 "Rex",
@@ -1861,7 +1861,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
                 "Curly",
             ],
             correctIndex: 3,
-            fact: "ARBA recognizes Normal, Rex, Satin, and Wool fur types; Curly is not an official category.",
+            fact: "The standard recognizes Normal, Rex, Satin, and Wool fur types; Curly is not an official category.",
         },
         // Question 174
         {
@@ -1889,7 +1889,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 176
         {
-            prompt: "What is the definition of 'finish' in ARBA judging?",
+            prompt: "What is the definition of 'finish' in the association judging?",
             options: [
                 "The overall condition of flesh and fur",
                 "The tattoo process",
@@ -1925,19 +1925,19 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 179
         {
-            prompt: "What is the ARBA motto?",
+            prompt: "What is the the association motto?",
             options: [
                 "To Make the Best Better",
                 "Dedicated to the Betterment of Rabbits and Cavy",
                 "Learning by Doing",
-                "Grow with ARBA",
+                "Grow with the association",
             ],
             correctIndex: 1,
-            fact: "ARBA's official motto is 'Dedicated to the Betterment of Rabbits and Cavy.'",
+            fact: "The association's official motto is 'Dedicated to the Betterment of Rabbits and Cavy.'",
         },
         // Question 180
         {
-            prompt: "Which body type is NOT recognized by ARBA?",
+            prompt: "Which body type is NOT recognized in the Standard?",
             options: [
                 "Compact",
                 "Commercial",
@@ -1945,7 +1945,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
                 "Athletic",
             ],
             correctIndex: 3,
-            fact: "ARBA recognizes compact, commercial, cylindrical, semi-arch, and full-arch body types.",
+            fact: "The standard recognizes compact, commercial, cylindrical, semi-arch, and full-arch body types.",
         },
         // Question 181
         {
@@ -2057,7 +2057,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 190
         {
-            prompt: "What is the ARBA Standard of Perfection used for?",
+            prompt: "What is the Standard of Perfection used for?",
             options: [
                 "Judging rabbits",
                 "Feeding rabbits",
@@ -2069,7 +2069,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 191
         {
-            prompt: "Which of the following is NOT a recognized fur type by ARBA?",
+            prompt: "Which of the following is NOT a recognized fur type in the Standard?",
             options: [
                 "Normal",
                 "Rex",
@@ -2077,7 +2077,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
                 "Curly",
             ],
             correctIndex: 3,
-            fact: "ARBA recognizes Normal, Rex, Satin, and Wool fur types; Curly is not an official category.",
+            fact: "The standard recognizes Normal, Rex, Satin, and Wool fur types; Curly is not an official category.",
         },
         // Question 192
         {
@@ -2130,7 +2130,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 196
         {
-            prompt: "Which of the following is required for rabbit registration with ARBA?",
+            prompt: "Which of the following is required for rabbit show registration?",
             options: [
                 "Tattoo",
                 "Show record",
@@ -2138,7 +2138,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
                 "Fur type approval",
             ],
             correctIndex: 0,
-            fact: "A permanent tattoo in the left ear is required for ARBA registration to link the rabbit to its papers.",
+            fact: "A permanent tattoo in the left ear is required for show registration to link the rabbit to its papers.",
         },
         // Advanced Genetics - Gene Loci
         // Question 197
@@ -2252,7 +2252,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         // Registration & Registrar Rules
         // Question 206
         {
-            prompt: "How many generations must appear on a pedigree for ARBA registration?",
+            prompt: "How many generations must appear on a pedigree for show registration?",
             options: [
                 "2 generations",
                 "3 generations",
@@ -2260,19 +2260,19 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
                 "5 generations",
             ],
             correctIndex: 2,
-            fact: "ARBA requires four generations: the rabbit, its parents, grandparents, and great-grandparents.",
+            fact: "Show registration requires four generations: the rabbit, its parents, grandparents, and great-grandparents.",
         },
         // Question 207
         {
-            prompt: "Who is authorized to issue ARBA registration numbers?",
+            prompt: "Who is authorized to issue registration numbers?",
             options: [
                 "Any breeder",
-                "The ARBA Registrar",
+                "The Registrar",
                 "Show secretary",
                 "Judge only",
             ],
             correctIndex: 1,
-            fact: "Only authorized ARBA registrars can issue official registration certificates.",
+            fact: "Only authorized registrars can issue official registration certificates.",
         },
         // Question 208
         {
@@ -2288,7 +2288,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 209
         {
-            prompt: "How long is an ARBA registration valid?",
+            prompt: "How long is an show registration valid?",
             options: [
                 "For 1 year",
                 "For 3 years",
@@ -2296,11 +2296,11 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
                 "For the life of the rabbit",
             ],
             correctIndex: 3,
-            fact: "ARBA registration is permanent and remains valid throughout the rabbit's lifetime.",
+            fact: "show registration is permanent and remains valid throughout the rabbit's lifetime.",
         },
         // Question 210
         {
-            prompt: "How many ARBA show legs are required for a rabbit to earn a Grand Champion certificate?",
+            prompt: "How many qualifying show legs are required for a rabbit to earn a Grand Champion certificate?",
             options: [
                 "2 legs",
                 "3 legs",
@@ -2308,19 +2308,19 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
                 "5 legs",
             ],
             correctIndex: 1,
-            fact: "A rabbit must be registered and earn 3 ARBA qualifying legs to become a Grand Champion.",
+            fact: "A rabbit must be registered and earn 3 qualifying show legs to become a Grand Champion.",
         },
         // Question 211
         {
             prompt: "Who can issue a Grand Champion certificate?",
             options: [
                 "Any breeder",
-                "An ARBA Registrar",
+                "An Registrar",
                 "Show secretary only",
                 "Judge only",
             ],
             correctIndex: 1,
-            fact: "Only ARBA registrars are authorized to issue Grand Champion certificates.",
+            fact: "Only registrars are authorized to issue Grand Champion certificates.",
         },
         // Disqualifications - Eye Color
         // Question 212
@@ -2387,7 +2387,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         // Show & SOP Knowledge - Body Types
         // Question 217
         {
-            prompt: "How many body types are recognized by ARBA?",
+            prompt: "How many body types are recognized in the Standard?",
             options: [
                 "4 types",
                 "5 types",
@@ -2395,7 +2395,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
                 "7 types",
             ],
             correctIndex: 1,
-            fact: "ARBA recognizes five body types: Compact, Commercial, Cylindrical, Semi-Arch, and Full-Arch.",
+            fact: "The standard recognizes five body types: Compact, Commercial, Cylindrical, Semi-Arch, and Full-Arch.",
         },
         // Show & SOP Knowledge - Fur Types
         // Question 218
@@ -2462,7 +2462,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 223
         {
-            prompt: "What is the primary purpose of the ARBA Standard of Perfection?",
+            prompt: "What is the primary purpose of the Standard of Perfection?",
             options: [
                 "To provide judging criteria that promote breed improvement",
                 "To record pedigrees",
@@ -2474,7 +2474,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 224
         {
-            prompt: "What is the maximum number of rabbits a registrar may register in one day without ARBA approval?",
+            prompt: "What is the maximum number of rabbits a registrar may register in one day without registrar approval?",
             options: [
                 "25 rabbits",
                 "50 rabbits",
@@ -2482,7 +2482,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
                 "100 rabbits",
             ],
             correctIndex: 1,
-            fact: "Registrars may register up to 50 rabbits per day without special ARBA approval; larger batches require authorization.",
+            fact: "Registrars may register up to 50 rabbits per day without special registrar approval; larger batches require authorization.",
         },
         // Question 225
         {
@@ -2544,7 +2544,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
                 "Only if tattooed",
             ],
             correctIndex: 1,
-            fact: "ARBA requires a complete four-generation pedigree; missing ancestors disqualify registration.",
+            fact: "Show registration requires a complete four-generation pedigree; missing ancestors disqualify registration.",
         },
         // Question 230
         {
@@ -2568,11 +2568,11 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
                 "Register with photo ID",
             ],
             correctIndex: 1,
-            fact: "A permanent tattoo in the left ear is required for ARBA registration and must be provided before registration.",
+            fact: "A permanent tattoo in the left ear is required for show registration and must be provided before registration.",
         },
         // Question 232
         {
-            prompt: "A rabbit has three ARBA show legs but is not yet registered. Can it be a Grand Champion?",
+            prompt: "A rabbit has three qualifying show legs but is not yet registered. Can it be a Grand Champion?",
             options: [
                 "Yes, immediately",
                 "No, it must be registered first",
@@ -2620,7 +2620,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 236
         {
-            prompt: "The Netherland Dwarf is classified as which type of ARBA class?",
+            prompt: "The Netherland Dwarf is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -2632,7 +2632,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 237
         {
-            prompt: "The Holland Lop is classified as which type of ARBA class?",
+            prompt: "The Holland Lop is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -2645,7 +2645,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
 
         // Question 238
         {
-            prompt: "The Mini Rex is classified as which type of ARBA class?",
+            prompt: "The Mini Rex is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -2657,7 +2657,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 239
         {
-            prompt: "The Mini Satin is classified as which type of ARBA class?",
+            prompt: "The Mini Satin is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -2669,7 +2669,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 240
         {
-            prompt: "The Polish is classified as which type of ARBA class?",
+            prompt: "The Polish is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -2681,7 +2681,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 241
         {
-            prompt: "The Britannia Petite is classified as which type of ARBA class?",
+            prompt: "The Britannia Petite is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -2693,7 +2693,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 242
         {
-            prompt: "The Dwarf Hotot is classified as which type of ARBA class?",
+            prompt: "The Dwarf Hotot is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -2705,7 +2705,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 243
         {
-            prompt: "The Lionhead is classified as which type of ARBA class?",
+            prompt: "The Lionhead is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -2717,7 +2717,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 244
         {
-            prompt: "The American Fuzzy Lop is classified as which type of ARBA class?",
+            prompt: "The American Fuzzy Lop is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -2729,7 +2729,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 245
         {
-            prompt: "The Jersey Wooly is classified as which type of ARBA class?",
+            prompt: "The Jersey Wooly is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -2741,7 +2741,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 246
         {
-            prompt: "The Standard Chinchilla is classified as which type of ARBA class?",
+            prompt: "The Standard Chinchilla is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -2753,7 +2753,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 247
         {
-            prompt: "The Silver is classified as which type of ARBA class?",
+            prompt: "The Silver is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -2765,7 +2765,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 248
         {
-            prompt: "The Silver Marten is classified as which type of ARBA class?",
+            prompt: "The Silver Marten is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -2777,7 +2777,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 249
         {
-            prompt: "The Tan is classified as which type of ARBA class?",
+            prompt: "The Tan is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -2789,7 +2789,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 250
         {
-            prompt: "The Himalayan is classified as which type of ARBA class?",
+            prompt: "The Himalayan is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -2838,7 +2838,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 254
         {
-            prompt: "The Czech Frosty is classified as which type of ARBA class?",
+            prompt: "The Czech Frosty is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -2862,7 +2862,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 256
         {
-            prompt: "The Blue Hollister is classified as which type of ARBA class?",
+            prompt: "The Blue Hollister is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -2874,7 +2874,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 257
         {
-            prompt: "The Dutch is classified as which type of ARBA class?",
+            prompt: "The Dutch is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -2886,7 +2886,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 258
         {
-            prompt: "The Havana is classified as which type of ARBA class?",
+            prompt: "The Havana is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -2898,7 +2898,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 259
         {
-            prompt: "The Harlequin is classified as which type of ARBA class?",
+            prompt: "The Harlequin is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -2910,7 +2910,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 260
         {
-            prompt: "The English Angora is classified as which type of ARBA class?",
+            prompt: "The English Angora is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -2922,7 +2922,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 261
         {
-            prompt: "The Satin Angora is classified as which type of ARBA class?",
+            prompt: "The Satin Angora is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -2936,7 +2936,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
 
         // Question 262
         {
-            prompt: "The French Angora is classified as which type of ARBA class?",
+            prompt: "The French Angora is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -2948,7 +2948,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 263
         {
-            prompt: "The American Sable is classified as which type of ARBA class?",
+            prompt: "The American Sable is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -3151,7 +3151,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         // ARBA Breed Classes - 6-Class Breeds
         // Question 285
         {
-            prompt: "The New Zealand is classified as which type of ARBA class?",
+            prompt: "The New Zealand is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -3163,7 +3163,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 286
         {
-            prompt: "The Californian is classified as which type of ARBA class?",
+            prompt: "The Californian is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -3175,7 +3175,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 287
         {
-            prompt: "The Flemish Giant is classified as which type of ARBA class?",
+            prompt: "The Flemish Giant is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -3187,7 +3187,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 288
         {
-            prompt: "The American is classified as which type of ARBA class?",
+            prompt: "The American is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -3284,7 +3284,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 296
         {
-            prompt: "The Giant Angora is classified as which type of ARBA class?",
+            prompt: "The Giant Angora is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -3296,7 +3296,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 297
         {
-            prompt: "The Giant Chinchilla is classified as which type of ARBA class?",
+            prompt: "The Giant Chinchilla is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -3308,7 +3308,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 298
         {
-            prompt: "The Checkered Giant is classified as which type of ARBA class?",
+            prompt: "The Checkered Giant is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -3320,7 +3320,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 299
         {
-            prompt: "The English Lop is classified as which type of ARBA class?",
+            prompt: "The English Lop is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -3332,7 +3332,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 300
         {
-            prompt: "The French Lop is classified as which type of ARBA class?",
+            prompt: "The French Lop is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -3344,7 +3344,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 301
         {
-            prompt: "The American Chinchilla is classified as which type of ARBA class?",
+            prompt: "The American Chinchilla is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -3356,7 +3356,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 302
         {
-            prompt: "The Champagne d'Argent is classified as which type of ARBA class?",
+            prompt: "The Champagne d'Argent is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -3368,7 +3368,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 303
         {
-            prompt: "The Crème d'Argent is classified as which type of ARBA class?",
+            prompt: "The Crème d'Argent is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -3380,7 +3380,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 304
         {
-            prompt: "The Palomino is classified as which type of ARBA class?",
+            prompt: "The Palomino is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -3392,7 +3392,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 305
         {
-            prompt: "The Satin is classified as which type of ARBA class?",
+            prompt: "The Satin is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -3405,7 +3405,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         // Question 306
         {
             // AUTHORITATIVE per owner (breeder): Rex is a 4-CLASS breed. Do NOT change to 6-class.
-            prompt: "The Rex is classified as which type of ARBA class?",
+            prompt: "The Rex is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -3417,7 +3417,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 307
         {
-            prompt: "The Argente Brun is classified as which type of ARBA class?",
+            prompt: "The Argente Brun is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -3429,7 +3429,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 308
         {
-            prompt: "The Cinnamon is classified as which type of ARBA class?",
+            prompt: "The Cinnamon is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -3441,7 +3441,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 309
         {
-            prompt: "The English Spot is classified as which type of ARBA class?",
+            prompt: "The English Spot is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -3453,7 +3453,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 310
         {
-            prompt: "The Belgian Hare is classified as which type of ARBA class?",
+            prompt: "The Belgian Hare is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -3465,7 +3465,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 311
         {
-            prompt: "The Blanc de Hotot is classified as which type of ARBA class?",
+            prompt: "The Blanc de Hotot is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -3477,7 +3477,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 312
         {
-            prompt: "The Beveren is classified as which type of ARBA class?",
+            prompt: "The Beveren is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -3489,7 +3489,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 313
         {
-            prompt: "The Rhinelander is classified as which type of ARBA class?",
+            prompt: "The Rhinelander is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -3598,7 +3598,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
         },
         // Question 322
         {
-            prompt: "The Silver Fox is classified as which type of ARBA class?",
+            prompt: "The Silver Fox is classified as which type of the association class?",
             options: [
                 "4-class",
                 "6-class",
@@ -4485,9 +4485,9 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             topic: "ARBA Procedures",
             studyTrack: "registrar",
             prompt: "What does a tattoo identify on a rabbit?",
-            options: ["A permanent identification mark; a right-ear tattoo indicates ARBA registration", "A temporary color mark on the coat", "The rabbit's body type", "Its age class"],
+            options: ["A permanent identification mark; a right-ear tattoo indicates show registration", "A temporary color mark on the coat", "The rabbit's body type", "Its age class"],
             correctIndex: 0,
-            fact: "A tattoo is a permanent identification mark placed in the left ear or both ears. A tattoo in the right ear indicates an ARBA-registered rabbit.",
+            fact: "A tattoo is a permanent identification mark placed in the left ear or both ears. A tattoo in the right ear indicates an officially registered rabbit.",
         },
         // Question 401
         {
@@ -4530,7 +4530,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
             topic: "Husbandry",
             studyTrack: "junior",
             prompt: "What can the term breeder mean?",
-            options: ["A person raising rabbits to a standard, or a rabbit used primarily to produce offspring", "Only an ARBA registrar", "Only a male rabbit", "A market-class rabbit"],
+            options: ["A person raising rabbits to a standard, or a rabbit used primarily to produce offspring", "Only an the association registrar", "Only a male rabbit", "A market-class rabbit"],
             correctIndex: 0,
             fact: "A breeder can be a person who raises a breed or variety meeting the Standard of Perfection, or a rabbit used primarily to produce offspring.",
         },
@@ -5435,7 +5435,7 @@ globalThis.RABBIT_SAVVY_QUESTION_DATA = (() => {
     startNewGame();
     */
 
-    const TOPICS = ["Husbandry", "Health & Biosecurity", "Genetics", "ARBA Procedures", "Breeds & Judging"];
+    const TOPICS = ["Husbandry", "Health & Biosecurity", "Genetics", "the association Procedures", "Breeds & Judging"];
     const DEFAULT_STATS = { bestScore: 0, gamesPlayed: 0, history: [], misses: [], recentQuestionIds: [], topicResults: {} };
     const STORAGE_KEY = "rabbitHusbandryStudyStats";
     const WALLPAPER_DECK_STORAGE_KEY = "rabbitHusbandryWallpaperDeck";
