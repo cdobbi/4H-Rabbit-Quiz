@@ -136,6 +136,11 @@ h1 {
     white-space: nowrap;
 }
 
+#question-bank-count {
+    color: #000000;
+    font-weight: 400;
+}
+
 .upgrade-panel {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
