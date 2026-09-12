@@ -15,70 +15,72 @@
             height: 500px;
             margin: 0;
             overflow: hidden;
-            background: #d8ebf4;
-            color: #102b3f;
-            font-family: Georgia, serif;
+            background: #143a54;
+            color: #ffffff;
+            font-family: "Poppins", Arial, sans-serif;
         }
 
         main {
             position: relative;
             width: 100%;
             height: 100%;
-            padding: 58px 62px;
             overflow: hidden;
-            background: #d8ebf4 url("../../assets/rabbitking.avif") no-repeat 83% 40% / 430px auto;
+            background: #d8ebf4;
         }
 
         main::before {
             position: absolute;
-            inset: 0;
-            width: 61%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 46%;
             content: "";
-            background: #d8ebf4;
+            background: url("../../assets/rabbitking.avif") no-repeat 52% 38% / cover;
         }
 
         main::after {
             position: absolute;
             top: 0;
             bottom: 0;
-            left: 52%;
-            width: 80px;
+            left: 54%;
+            width: 8px;
             content: "";
-            background: #d8ebf4;
-            transform: skewX(-10deg);
+            background: #e78263;
         }
 
         .content {
             position: relative;
             z-index: 1;
-            width: 490px;
+            width: 54%;
+            height: 100%;
+            padding: 58px 55px;
+            background: #143a54;
         }
 
         .eyebrow {
-            margin: 0 0 20px;
-            color: #28789d;
-            font-family: Arial, sans-serif;
-            font-size: 18px;
+            margin: 0 0 14px;
+            color: #9bd0e6;
+            font-size: 16px;
             font-weight: 700;
-            letter-spacing: 1.7px;
+            letter-spacing: 1.4px;
             text-transform: uppercase;
         }
 
         h1 {
             margin: 0;
-            color: #102b3f;
-            font-size: 72px;
-            line-height: 0.95;
+            color: #ffffff;
+            font-family: Georgia, serif;
+            font-size: 68px;
+            line-height: 0.98;
         }
 
         p {
-            width: 425px;
-            margin: 24px 0 30px;
-            color: #315a75;
-            font-family: Arial, sans-serif;
-            font-size: 25px;
+            width: 410px;
+            margin: 19px 0 25px;
+            color: #d8ebf4;
+            font-size: 21px;
             font-weight: 600;
-            line-height: 1.3;
+            line-height: 1.35;
         }
 
         .topics {
@@ -88,12 +90,11 @@
         }
 
         .topics span {
-            padding: 7px 10px;
-            border: 1px solid #8fc5db;
+            padding: 7px 9px;
+            border: 1px solid #6eaec8;
             border-radius: 4px;
-            background: #f7fcff;
-            color: #28789d;
-            font-family: Arial, sans-serif;
+            background: #1d5878;
+            color: #ffffff;
             font-size: 14px;
             font-weight: 700;
         }
