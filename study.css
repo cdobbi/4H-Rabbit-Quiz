@@ -101,6 +101,10 @@ main::before {
 }
 
 h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
     margin: 0 0 3px;
     padding-top: 40px;
     color: #000000;
@@ -110,6 +114,14 @@ h1 {
     letter-spacing: 0;
     line-height: 1;
     text-align: center;
+}
+
+.title-icon {
+    width: 54px;
+    height: 54px;
+    flex: 0 0 54px;
+    border-radius: 14px;
+    object-fit: cover;
 }
 
 .subtitle {
@@ -697,6 +709,13 @@ input[type="number"] {
     h1 {
         padding-top: 0;
         font-size: 2.2rem;
+    }
+
+    .title-icon {
+        width: 42px;
+        height: 42px;
+        flex-basis: 42px;
+        border-radius: 11px;
     }
 
     .study-setup {
