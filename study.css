@@ -233,13 +233,18 @@ h1 {
 .game-setup-panel {
     margin-bottom: 32px;
     border-color: #a9cddd;
-    border-top: 5px solid #175b7a;
+    border-top: 3px solid #3d86ad;
     background: #f3faff;
 }
 
 .game-setup-panel>.study-setup {
     background: #f3faff;
     box-shadow: none;
+}
+
+#history-panel,
+#upgrade-details-panel {
+    border-top: 3px solid #3d86ad;
 }
 
 .collapsible-panel summary {
@@ -463,7 +468,7 @@ select {
 
 .question-card {
     border: 1px solid #d5e7f0;
-    border-top: 5px solid var(--mint);
+    border-top: 3px solid var(--mint);
     border-radius: 8px;
     background: #ffffff;
 }
@@ -583,7 +588,7 @@ input[type="number"] {
     margin: 0;
     padding: 10px 12px;
     border: 1px solid #a9cddd;
-    border-top: 5px solid #175b7a;
+    border-top: 3px solid #3d86ad;
     border-radius: 8px;
     background: #f3faff;
 }
@@ -627,6 +632,7 @@ input[type="number"] {
 #pause,
 #exit {
     border: 1px solid #a9cddd;
+    border-top: 3px solid #3d86ad;
     background: #f3faff;
     color: #175b7a;
 }
