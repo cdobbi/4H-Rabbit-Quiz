@@ -617,7 +617,8 @@ input[type="number"] {
     justify-content: center;
     gap: 4px 12px;
     margin-top: 24px;
-    color: #52778c;
+    color: #26495c;
+    font-family: Roboto, Arial, sans-serif;
     font-size: 0.72rem;
     font-weight: 600;
     letter-spacing: 0.04em;
@@ -625,7 +626,7 @@ input[type="number"] {
 }
 
 .app-trademark a {
-    color: #28789d;
+    color: #175b7a;
 }
 
 .tutorial-help {
